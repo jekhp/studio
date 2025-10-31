@@ -1,9 +1,9 @@
 "use client";
 
 import * as React from "react";
-import { Wand2, Sparkles, PartyPopper, Calendar, Mountain, Music } from "lucide-react";
+import { Wand2, Sparkles, PartyPopper } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
@@ -31,7 +31,7 @@ const quizQuestions = [
         text: 'What kind of vibe are you looking for?',
         type: 'radio',
         options: [
-            { value: 'party', label: 'A vibrant, lively party', points: { 'paucartambo-virgen-del-carmen': 1 } },
+            { value: 'party', label: 'A vibrant, lively party', points: { 'paucartambo-virgen-del-carmen': 1, 'corpus-christi': 1 } },
             { value: 'spiritual', label: 'A deep, spiritual experience', points: { 'qoyllur-riti': 1 } },
             { value: 'historic', label: 'A grand, historical reenactment', points: { 'inti-raymi': 1 } },
         ],
@@ -41,7 +41,7 @@ const quizQuestions = [
         text: 'What kind of activity interests you most?',
         type: 'radio',
         options: [
-            { value: 'procession', label: 'Watching colorful processions', points: { 'inti-raymi': 1, 'paucartambo-virgen-del-carmen': 1 } },
+            { value: 'procession', label: 'Watching colorful processions', points: { 'inti-raymi': 1, 'paucartambo-virgen-del-carmen': 1, 'corpus-christi': 1 } },
             { value: 'pilgrimage', label: 'Participating in a unique pilgrimage', points: { 'qoyllur-riti': 1 } },
             { value: 'dance', label: 'Seeing traditional masked dances', points: { 'paucartambo-virgen-del-carmen': 1 } },
         ],
@@ -51,7 +51,7 @@ const quizQuestions = [
         text: 'Choose a location type:',
         type: 'radio',
         options: [
-            { value: 'city', label: 'A major historical site in Cusco city', points: { 'inti-raymi': 1 } },
+            { value: 'city', label: 'A major historical site in Cusco city', points: { 'inti-raymi': 1, 'corpus-christi': 1 } },
             { value: 'town', label: 'A charming colonial town', points: { 'paucartambo-virgen-del-carmen': 1 } },
             { value: 'mountain', label: 'A remote, sacred mountain valley', points: { 'qoyllur-riti': 1 } },
         ],
@@ -71,8 +71,8 @@ export default function RecommendationsPage() {
   };
 
   const calculateRecommendations = () => {
-    const scores: { [festivalId: string]: number } = {};
-    festivals.forEach(f => scores[f.id] = 0);
+    const scores: { [festivalSlug: string]: number } = {};
+    festivals.forEach(f => scores[f.slug] = 0);
 
     const monthAnswer = answers.find(a => a.questionId === 'month');
     if (!monthAnswer) return; // Month is mandatory
@@ -82,8 +82,8 @@ export default function RecommendationsPage() {
       if (question && question.type === 'radio') {
         const option = question.options.find(o => o.value === answer.value);
         if (option?.points) {
-          for (const festivalId in option.points) {
-            scores[festivalId] += option.points[festivalId as keyof typeof option.points];
+          for (const festivalSlug in option.points) {
+            scores[festivalSlug] += option.points[festivalSlug as keyof typeof option.points];
           }
         }
       }
@@ -91,7 +91,7 @@ export default function RecommendationsPage() {
     
     const recommendedFestivals = festivals.filter(festival => {
       const festivalMonth = festival.date.start.getMonth();
-      return festivalMonth === parseInt(monthAnswer.value, 10) && scores[festival.id] >= 1;
+      return festivalMonth === parseInt(monthAnswer.value, 10) && scores[festival.slug] >= 1;
     });
 
     setRecommendations(recommendedFestivals);

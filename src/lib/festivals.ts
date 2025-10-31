@@ -130,4 +130,39 @@ export const festivals: Festival[] = [
       { id: 2, user: 'PhotoNomad', rating: 5, comment: 'A photographer\'s dream. So much color and action. The town has a magical atmosphere during the festival.' },
     ],
   },
+  {
+    id: '4',
+    slug: 'corpus-christi',
+    name: 'Corpus Christi',
+    description: 'A massive religious procession with saints parading through Cusco\'s streets.',
+    longDescription:
+      'Corpus Christi is one of the most important dates in Cusco\'s Catholic religious calendar. The festival is a vibrant display of syncretism, where fifteen saints and virgins from various parishes are carried on ornate litters in a grand procession to the Cathedral of Cusco. They "visit" the body of Christ, which is held in a magnificent gold monstrance. The streets are filled with music, dancers, and traditional foods, most notably "Chiriuchu," a cold dish featuring a variety of meats and other ingredients.',
+    date: { start: new Date(new Date().getFullYear(), 4, 30), end: new Date(new Date().getFullYear(), 4, 30) },
+    location: 'Plaza de Armas, Cusco',
+    coords: [-13.5165, -71.979],
+    history:
+      'Introduced by the Spanish in the 16th century, Corpus Christi was meant to replace the Inca tradition of parading the mummies of their rulers. The Andean people adapted the festival, associating their own deities and traditions with the Catholic saints, creating the unique blend seen today.',
+    traditions: ['Procession of 15 saints and virgins', 'Traditional "Chiriuchu" meal', 'Folkloric dances accompanying the processions', 'Eight-day celebration with various events following the main procession.'],
+    schedule: [
+      {
+        day: 'Main Day (Thursday)',
+        events: [
+          { time: '11:00 AM', description: 'Main procession begins, with saints entering the Cathedral.' },
+          { time: 'All Day', description: 'Food stalls and celebrations in the Plaza de Armas.' },
+        ],
+      },
+      {
+        day: 'Octave (Following Thursday)',
+        events: [
+          { time: '2:00 PM', description: 'The saints leave the Cathedral and begin their procession back to their home parishes.' },
+        ],
+      },
+    ],
+    image: 'corpus-christi',
+    rating: 4.7,
+    reviews: [
+      { id: 1, user: 'CultureVulture', rating: 5, comment: 'The pageantry is incredible. Seeing all the saints together in the plaza is a powerful sight.' },
+      { id: 2, user: 'FoodieGavin', rating: 4, comment: 'Came for the parade, stayed for the Chiriuchu. It\'s a wild combination of flavors but you have to try it!' },
+    ],
+  },
 ];
