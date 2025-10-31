@@ -19,14 +19,12 @@ const defaultIcon = L.icon({
 });
 
 const userIcon = L.icon({
-    iconRetinaUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon-2x.png',
-    iconUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon.png',
-    shadowUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-shadow.png',
+    iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png',
+    shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
     iconSize: [25, 41],
     iconAnchor: [12, 41],
     popupAnchor: [1, -34],
-    shadowSize: [41, 41],
-    className: 'leaflet-marker-user'
+    shadowSize: [41, 41]
 });
 
 
@@ -107,13 +105,6 @@ const LeafletMap = ({ locations, center, zoom }: LeafletMapProps) => {
 
   return(
     <>
-    <style>
-      {`
-        .leaflet-marker-user {
-            filter: hue-rotate(0deg) saturate(10) brightness(0.7);
-        }
-      `}
-    </style>
     <div ref={mapContainerRef} style={{ height: '100%', width: '100%' }} />
     </>
   );
