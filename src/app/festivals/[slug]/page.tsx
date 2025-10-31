@@ -2,6 +2,7 @@ import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { Calendar, Clock, MapPin, Sparkles, Star } from 'lucide-react';
 import { format } from 'date-fns';
+import dynamic from 'next/dynamic';
 
 import { festivals, type Review } from '@/lib/festivals';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
@@ -14,6 +15,10 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Button } from '@/components/ui/button';
 import { Textarea } from '@/components/ui/textarea';
 import { Input } from '@/components/ui/input';
+
+const LeafletMap = dynamic(() => import('@/components/LeafletMap'), {
+  ssr: false,
+});
 
 export async function generateStaticParams() {
   return festivals.map((festival) => ({
@@ -77,9 +82,6 @@ export default function FestivalDetailPage({ params }: { params: { slug: string 
 
   const placeholder = PlaceHolderImages.find((p) => p.id === festival.image);
   const formattedDateRange = `${format(festival.date.start, 'MMMM do')} - ${format(festival.date.end, 'MMMM do, yyyy')}`;
-
-  const mapSrc = `https://maps.google.com/maps?q=${encodeURIComponent(festival.location)}&output=embed&z=13`;
-
 
   return (
     <div className="bg-background">
@@ -183,18 +185,8 @@ export default function FestivalDetailPage({ params }: { params: { slug: string 
                <TabsContent value="location">
                 <Card>
                   <CardContent className="pt-6">
-                    <div className="aspect-video w-full">
-                      <iframe
-                        title={`Map of ${festival.name}`}
-                        src={mapSrc}
-                        width="100%"
-                        height="100%"
-                        style={{ border: 0 }}
-                        allowFullScreen={false}
-                        loading="lazy"
-                        referrerPolicy="no-referrer-when-downgrade"
-                        className="rounded-lg"
-                      ></iframe>
+                    <div className="aspect-video w-full rounded-lg overflow-hidden">
+                       <LeafletMap locations={[{ coords: festival.coords, popup: `<b>${festival.name}</b>` }]} zoom={13} />
                     </div>
                   </CardContent>
                 </Card>

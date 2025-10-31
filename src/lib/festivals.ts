@@ -13,6 +13,7 @@ export type Festival = {
   longDescription: string;
   date: { start: Date; end: Date };
   location: string;
+  coords: [number, number];
   history: string;
   traditions: string[];
   schedule: { day: string; events: { time: string; description: string }[] }[];
@@ -31,6 +32,7 @@ export const festivals: Festival[] = [
       'Inti Raymi, the "Festival of the Sun," was the most important religious ceremony of the Inca Empire in honor of the god Inti. Today, it is a massive theatrical representation held every year on June 24 in Cusco. It involves hundreds of actors in vibrant costumes, with historical rituals, dances, and processions that take place at Qorikancha, the Plaza de Armas, and the fortress of Sacsayhuamán.',
     date: { start: new Date(new Date().getFullYear(), 5, 24), end: new Date(new Date().getFullYear(), 5, 24) },
     location: 'Sacsayhuamán, Cusco',
+    coords: [-13.507, -71.982],
     history:
       'Originally established by the Inca Pachacuti in the 15th century, the festival marked the winter solstice and the start of the new year. It was banned by the Spanish in the 16th century but was revived in the 20th century as a theatrical event to honor Cusco\'s heritage.',
     traditions: ['Processions with traditional music', 'Symbolic sacrifice of a llama', 'Ritual offerings of chicha (corn beer)', 'Folkloric dances from the four suyus (regions) of the Inca Empire'],
@@ -60,6 +62,7 @@ export const festivals: Festival[] = [
       'Qoyllur Rit\'i, or the "Snow Star Festival," is a centuries-old religious pilgrimage that takes place in the remote Sinakara Valley at the foot of Mount Ausangate. Tens of thousands of pilgrims from surrounding villages travel for days, bringing large crosses to the sanctuary. The festival is a unique syncretism of Catholic and Andean pre-Columbian beliefs, celebrating the stars, the mountain spirits (Apus), and the Lord of Qoyllur Rit\'i.',
     date: { start: new Date(new Date().getFullYear(), 4, 29), end: new Date(new Date().getFullYear(), 5, 2) },
     location: 'Sinakara Valley, Ocongate',
+    coords: [-13.63, -71.23],
     history:
       'The festival\'s origins are a blend of an 18th-century Catholic miracle story and ancient Andean mountain worship. It centers on the appearance of the Christ child to a young shepherd boy. It has been recognized by UNESCO as part of the Intangible Cultural Heritage of Humanity.',
     traditions: ['Night-long vigils with music and dance', 'Processions of "Ukukus" (bear-men dancers) to the glacier', 'Elaborate dance performances by different "nations" representing their communities', 'A final 24-hour procession for the Corpus Christi festival in Cusco'],
@@ -96,6 +99,7 @@ export const festivals: Festival[] = [
       'The festival in honor of the Virgen del Carmen is one of Peru\'s most celebrated and wild parties. For several days, the quiet colonial town of Paucartambo erupts in a riot of color, music, and dance. troupes of masked dancers in spectacular costumes take over the streets, each representing different characters and stories from Peruvian history and folklore. The festival culminates in a procession where the statue of the Virgin blesses the town and battles costumed demons on the rooftops.',
     date: { start: new Date(new Date().getFullYear(), 6, 15), end: new Date(new Date().getFullYear(), 6, 18) },
     location: 'Paucartambo',
+    coords: [-13.31, -71.59],
     history:
       'The devotion to the Virgen del Carmen (also known as Mamacha Carmen) dates back to the colonial era. Legend says her face miraculously appeared on a rock, and the festival grew around this veneration. The dances themselves are a syncretic mix of Catholic, Andean, and even Amazonian influences.',
     traditions: ['Parades of costumed dance troupes like Saqra (devils), Qhapaq Negro, and Maqta', 'Musical battles between different groups', 'Acrobatic displays and mock battles', 'The "burning" of the demons on the final day'],
