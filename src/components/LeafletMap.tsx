@@ -3,7 +3,6 @@
 import { useEffect, useRef, useState } from 'react';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
-import { cuscoBoundary } from '@/lib/cusco-boundary';
 
 // Fix for default icon issue with webpack
 // @ts-ignore
@@ -83,15 +82,6 @@ const LeafletMap = ({ locations, center, zoom }: LeafletMapProps) => {
 
       L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-      }).addTo(map);
-
-      // Add Cusco boundary
-      L.polygon(cuscoBoundary, { 
-        color: "hsl(var(--primary))",
-        weight: 2,
-        opacity: 0.5,
-        fillColor: "hsl(var(--primary))",
-        fillOpacity: 0.1
       }).addTo(map);
 
       locations.forEach(loc => {
