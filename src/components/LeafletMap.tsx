@@ -61,13 +61,13 @@ const LeafletMap = ({ locations, center, zoom }: LeafletMapProps) => {
             east: -70.0,
           };
 
-          const isOutsideCusco =
-            latitude > cuscoBounds.north ||
-            latitude < cuscoBounds.south ||
-            longitude > cuscoBounds.east ||
-            longitude < cuscoBounds.west;
+          const isInsideCusco =
+            latitude <= cuscoBounds.north &&
+            latitude >= cuscoBounds.south &&
+            longitude <= cuscoBounds.east &&
+            longitude >= cuscoBounds.west;
 
-          if (isOutsideCusco) {
+          if (isInsideCusco) {
             setUserLocation([latitude, longitude]);
           }
         },
