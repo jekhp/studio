@@ -1,149 +1,184 @@
 "use client";
 
 import * as React from "react";
-import { useForm, type SubmitHandler } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { z } from "zod";
-import { Wand2, Loader2, Sparkles } from "lucide-react";
-
+import { Wand2, Sparkles, PartyPopper, Calendar, Mountain, Music } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import {
-  Form,
-  FormControl,
-  FormDescription,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Card, CardContent } from "@/components/ui/card";
-import { getFestivalRecommendations } from "@/ai/flows/festival-recommendation";
-import { useToast } from "@/hooks/use-toast";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import { Label } from "@/components/ui/label";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { festivals, type Festival } from "@/lib/festivals";
+import { FestivalCard } from "@/components/FestivalCard";
 
-const formSchema = z.object({
-  interests: z.string().min(3, "Please tell us at least one interest."),
-  preferences: z.string().optional(),
-});
+type Answer = {
+  questionId: string;
+  value: string;
+};
 
-type FormValues = z.infer<typeof formSchema>;
+const quizQuestions = [
+    {
+        id: 'month',
+        text: 'First, when are you planning to travel?',
+        type: 'select',
+        options: [
+            { value: '4', label: 'May' },
+            { value: '5', label: 'June' },
+            { value: '6', label: 'July' },
+        ],
+    },
+    {
+        id: 'vibe',
+        text: 'What kind of vibe are you looking for?',
+        type: 'radio',
+        options: [
+            { value: 'party', label: 'A vibrant, lively party', points: { 'paucartambo-virgen-del-carmen': 1 } },
+            { value: 'spiritual', label: 'A deep, spiritual experience', points: { 'qoyllur-riti': 1 } },
+            { value: 'historic', label: 'A grand, historical reenactment', points: { 'inti-raymi': 1 } },
+        ],
+    },
+    {
+        id: 'activity',
+        text: 'What kind of activity interests you most?',
+        type: 'radio',
+        options: [
+            { value: 'procession', label: 'Watching colorful processions', points: { 'inti-raymi': 1, 'paucartambo-virgen-del-carmen': 1 } },
+            { value: 'pilgrimage', label: 'Participating in a unique pilgrimage', points: { 'qoyllur-riti': 1 } },
+            { value: 'dance', label: 'Seeing traditional masked dances', points: { 'paucartambo-virgen-del-carmen': 1 } },
+        ],
+    },
+    {
+        id: 'location',
+        text: 'Choose a location type:',
+        type: 'radio',
+        options: [
+            { value: 'city', label: 'A major historical site in Cusco city', points: { 'inti-raymi': 1 } },
+            { value: 'town', label: 'A charming colonial town', points: { 'paucartambo-virgen-del-carmen': 1 } },
+            { value: 'mountain', label: 'A remote, sacred mountain valley', points: { 'qoyllur-riti': 1 } },
+        ],
+    },
+];
 
 export default function RecommendationsPage() {
-  const [recommendations, setRecommendations] = React.useState<string | null>(null);
-  const [isLoading, setIsLoading] = React.useState(false);
-  const { toast } = useToast();
+  const [answers, setAnswers] = React.useState<Answer[]>([]);
+  const [recommendations, setRecommendations] = React.useState<Festival[]>([]);
+  const [quizCompleted, setQuizCompleted] = React.useState(false);
 
-  const form = useForm<FormValues>({
-    resolver: zodResolver(formSchema),
-    defaultValues: {
-      interests: "",
-      preferences: "",
-    },
-  });
-
-  const onSubmit: SubmitHandler<FormValues> = async (data) => {
-    setIsLoading(true);
-    setRecommendations(null);
-    try {
-      const result = await getFestivalRecommendations(data);
-      setRecommendations(result.recommendations);
-    } catch (error) {
-      console.error("Failed to get recommendations:", error);
-      toast({
-        title: "Error",
-        description: "Sorry, we couldn't generate recommendations at this time. Please try again later.",
-        variant: "destructive",
-      });
-    } finally {
-      setIsLoading(false);
-    }
+  const handleAnswerChange = (questionId: string, value: string) => {
+    setAnswers(prev => {
+      const otherAnswers = prev.filter(a => a.questionId !== questionId);
+      return [...otherAnswers, { questionId, value }];
+    });
   };
+
+  const calculateRecommendations = () => {
+    const scores: { [festivalId: string]: number } = {};
+    festivals.forEach(f => scores[f.id] = 0);
+
+    const monthAnswer = answers.find(a => a.questionId === 'month');
+    if (!monthAnswer) return; // Month is mandatory
+
+    answers.forEach(answer => {
+      const question = quizQuestions.find(q => q.id === answer.questionId);
+      if (question && question.type === 'radio') {
+        const option = question.options.find(o => o.value === answer.value);
+        if (option?.points) {
+          for (const festivalId in option.points) {
+            scores[festivalId] += option.points[festivalId as keyof typeof option.points];
+          }
+        }
+      }
+    });
+    
+    const recommendedFestivals = festivals.filter(festival => {
+      const festivalMonth = festival.date.start.getMonth();
+      return festivalMonth === parseInt(monthAnswer.value, 10) && scores[festival.id] >= 1;
+    });
+
+    setRecommendations(recommendedFestivals);
+    setQuizCompleted(true);
+  };
+  
+  const resetQuiz = () => {
+    setAnswers([]);
+    setRecommendations([]);
+    setQuizCompleted(false);
+  }
+
+  const isQuizAnswered = answers.length === quizQuestions.length;
 
   return (
     <div className="container mx-auto px-4 py-16">
       <div className="text-center mb-12">
         <h1 className="text-4xl md:text-5xl font-headline text-foreground flex items-center justify-center gap-3">
           <Wand2 className="h-10 w-10 text-primary" />
-          AI Festival Finder
+          Festival Finder Quiz
         </h1>
         <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
-          Not sure where to start? Describe your interests, and our AI will suggest the perfect Cusco festivals for you.
+          Answer a few questions to find the perfect Cusco festival for you.
         </p>
       </div>
 
       <div className="max-w-2xl mx-auto">
-        <Card>
-          <CardContent className="p-6">
-            <Form {...form}>
-              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
-                <FormField
-                  control={form.control}
-                  name="interests"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel className="text-lg">Your Interests</FormLabel>
-                      <FormControl>
-                        <Input placeholder="e.g., electronic music, traditional dance, history, street food" {...field} />
-                      </FormControl>
-                      <FormDescription>
-                        List a few things you enjoy, separated by commas.
-                      </FormDescription>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-                <FormField
-                  control={form.control}
-                  name="preferences"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel className="text-lg">Preferences (Optional)</FormLabel>
-                      <FormControl>
-                        <Textarea placeholder="e.g., traveling in June, on a budget, looking for family-friendly events" {...field} />
-                      </FormControl>
-                      <FormDescription>
-                        Add any other details like travel dates, budget, or specific needs.
-                      </FormDescription>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-                <Button type="submit" disabled={isLoading} className="w-full bg-primary text-primary-foreground">
-                  {isLoading ? (
-                    <>
-                      <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                      Generating...
-                    </>
-                  ) : (
-                    "Get Recommendations"
-                  )}
+        {!quizCompleted ? (
+            <Card>
+            <CardContent className="p-6 space-y-8">
+                {quizQuestions.map(q => (
+                <div key={q.id}>
+                    <h3 className="font-semibold text-lg mb-4">{q.text}</h3>
+                    {q.type === 'select' ? (
+                        <Select onValueChange={(value) => handleAnswerChange(q.id, value)}>
+                            <SelectTrigger>
+                                <SelectValue placeholder="Select a month..." />
+                            </SelectTrigger>
+                            <SelectContent>
+                                {q.options.map(opt => (
+                                    <SelectItem key={opt.value} value={opt.value}>{opt.label}</SelectItem>
+                                ))}
+                            </SelectContent>
+                        </Select>
+                    ) : (
+                        <RadioGroup onValueChange={(value) => handleAnswerChange(q.id, value)}>
+                            {q.options.map(opt => (
+                                <div key={opt.value} className="flex items-center space-x-2">
+                                    <RadioGroupItem value={opt.value} id={`${q.id}-${opt.value}`} />
+                                    <Label htmlFor={`${q.id}-${opt.value}`}>{opt.label}</Label>
+                                </div>
+                            ))}
+                        </RadioGroup>
+                    )}
+                </div>
+                ))}
+                <Button onClick={calculateRecommendations} disabled={!isQuizAnswered} className="w-full bg-primary text-primary-foreground">
+                    Get Recommendations
                 </Button>
-              </form>
-            </Form>
-          </CardContent>
-        </Card>
-
-        {isLoading && (
-          <div className="text-center mt-8">
-            <Loader2 className="mx-auto h-8 w-8 text-primary animate-spin" />
-            <p className="text-muted-foreground mt-2">Our AI is curating your personal festival guide...</p>
-          </div>
-        )}
-
-        {recommendations && (
-          <div className="mt-12">
+            </CardContent>
+            </Card>
+        ) : (
+          <div>
             <h2 className="text-3xl font-headline text-center mb-6 flex items-center justify-center gap-2">
               <Sparkles className="h-6 w-6 text-primary"/>
               Your Personal Recommendations
             </h2>
-            <Card className="bg-card/50">
-              <CardContent className="p-6">
-                <div className="prose prose-sm max-w-none text-muted-foreground whitespace-pre-wrap">
-                  {recommendations}
+            {recommendations.length > 0 ? (
+                <div className="grid grid-cols-1 gap-8">
+                    {recommendations.map(festival => (
+                        <FestivalCard key={festival.id} festival={festival} />
+                    ))}
                 </div>
-              </CardContent>
-            </Card>
+            ) : (
+                <Card className="text-center">
+                    <CardContent className="p-8">
+                        <PartyPopper className="h-12 w-12 text-muted-foreground mx-auto mb-4"/>
+                        <p className="text-muted-foreground">No festivals match your specific criteria for the selected month.</p>
+                        <p className="text-sm text-muted-foreground mt-2">Try different answers or another month!</p>
+                    </CardContent>
+                </Card>
+            )}
+            <div className="text-center mt-8">
+                <Button onClick={resetQuiz} variant="outline">
+                    Take the Quiz Again
+                </Button>
+            </div>
           </div>
         )}
       </div>
