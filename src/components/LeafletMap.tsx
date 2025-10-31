@@ -98,7 +98,7 @@ const LeafletMap = ({ locations, center, zoom }: LeafletMapProps) => {
     // Add user location marker if it exists and map is initialized
     if (userLocation && mapRef.current) {
         const marker = L.marker(userLocation, { icon: userIcon }).addTo(mapRef.current);
-        marker.bindPopup("You are here");
+        marker.bindPopup("Estás aquí");
     }
 
   }, [locations, mapCenter, zoom, userLocation]);
@@ -110,7 +110,7 @@ const LeafletMap = ({ locations, center, zoom }: LeafletMapProps) => {
     <style>
       {`
         .leaflet-marker-user {
-            filter: hue-rotate(330deg) saturate(1.5);
+            filter: hue-rotate(0deg) saturate(10) brightness(0.7);
         }
       `}
     </style>
