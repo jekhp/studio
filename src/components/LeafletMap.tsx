@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
 import dynamic from 'next/dynamic';
@@ -9,11 +9,30 @@ import dynamic from 'next/dynamic';
 // @ts-ignore
 delete L.Icon.Default.prototype._getIconUrl;
 
-L.Icon.Default.mergeOptions({
+const defaultIcon = L.icon({
   iconRetinaUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon-2x.png',
   iconUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon.png',
   shadowUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-shadow.png',
+  iconSize: [25, 41],
+  iconAnchor: [12, 41],
+  popupAnchor: [1, -34],
+  shadowSize: [41, 41]
 });
+
+const userIcon = new L.Icon({
+    iconUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon.png',
+    iconRetinaUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon-2x.png',
+    shadowUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-shadow.png',
+    iconSize: [25, 41],
+    iconAnchor: [12, 41],
+    popupAnchor: [1, -34],
+    shadowSize: [41, 41],
+    className: 'leaflet-marker-user'
+});
+
+
+L.Marker.prototype.options.icon = defaultIcon;
+
 
 interface LeafletMapProps {
   locations: {
@@ -27,7 +46,37 @@ interface LeafletMapProps {
 const LeafletMap = ({ locations, center, zoom }: LeafletMapProps) => {
   const mapContainerRef = useRef<HTMLDivElement>(null);
   const mapRef = useRef<L.Map | null>(null);
+  const [userLocation, setUserLocation] = useState<[number, number] | null>(null);
   const mapCenter = center ?? locations[0]?.coords;
+
+  useEffect(() => {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          const { latitude, longitude } = position.coords;
+          const cuscoBounds = {
+            north: -12.0,
+            south: -15.0,
+            west: -73.5,
+            east: -70.0,
+          };
+
+          const isOutsideCusco =
+            latitude > cuscoBounds.north ||
+            latitude < cuscoBounds.south ||
+            longitude > cuscoBounds.east ||
+            longitude < cuscoBounds.west;
+
+          if (isOutsideCusco) {
+            setUserLocation([latitude, longitude]);
+          }
+        },
+        () => {
+          console.log("User denied geolocation.");
+        }
+      );
+    }
+  }, []);
 
   useEffect(() => {
     if (mapContainerRef.current && !mapRef.current) { // Only initialize map once
@@ -43,11 +92,29 @@ const LeafletMap = ({ locations, center, zoom }: LeafletMapProps) => {
           .bindPopup(loc.popup);
       });
     }
-  }, [locations, mapCenter, zoom]);
+
+    // Add user location marker if it exists and map is initialized
+    if (userLocation && mapRef.current) {
+        const marker = L.marker(userLocation, { icon: userIcon }).addTo(mapRef.current);
+        marker.bindPopup("You are here");
+    }
+
+  }, [locations, mapCenter, zoom, userLocation]);
   
   if (!mapCenter) return <div>Loading map...</div>;
 
-  return <div ref={mapContainerRef} style={{ height: '100%', width: '100%' }} />;
+  return(
+    <>
+    <style>
+      {`
+        .leaflet-marker-user {
+            filter: hue-rotate(120deg);
+        }
+      `}
+    </style>
+    <div ref={mapContainerRef} style={{ height: '100%', width: '100%' }} />
+    </>
+  );
 };
 
 export default dynamic(() => Promise.resolve(LeafletMap), { ssr: false });
