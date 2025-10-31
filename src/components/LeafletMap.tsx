@@ -67,11 +67,14 @@ const LeafletMap = ({ locations, center, zoom }: LeafletMapProps) => {
             longitude >= cuscoBounds.west;
 
           if (isInsideCusco) {
+            alert('Estás dentro de la región de Cusco. Mostrando tu ubicación.');
             setUserLocation([latitude, longitude]);
+          } else {
+            alert('Estás fuera de la región de Cusco. No se mostrará tu ubicación.');
           }
         },
         () => {
-          console.log("User denied geolocation.");
+          alert('El usuario denegó la geolocalización.');
         }
       );
     }
