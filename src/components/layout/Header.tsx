@@ -16,6 +16,7 @@ const navLinks = [
   { href: '/', label: 'Home' },
   { href: '/festivals', label: 'Festivals' },
   { href: '/calendar', label: 'Calendar' },
+  { href: '/map', label: 'Map' },
   { href: '/recommendations', label: 'Recommendations' },
 ];
 

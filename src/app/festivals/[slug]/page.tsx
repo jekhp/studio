@@ -78,6 +78,9 @@ export default function FestivalDetailPage({ params }: { params: { slug: string 
   const placeholder = PlaceHolderImages.find((p) => p.id === festival.image);
   const formattedDateRange = `${format(festival.date.start, 'MMMM do')} - ${format(festival.date.end, 'MMMM do, yyyy')}`;
 
+  const mapSrc = `https://maps.google.com/maps?q=${encodeURIComponent(festival.location)}&output=embed&z=13`;
+
+
   return (
     <div className="bg-background">
       <div className="relative h-[40vh] md:h-[55vh] w-full">
@@ -128,10 +131,11 @@ export default function FestivalDetailPage({ params }: { params: { slug: string 
             </Card>
 
             <Tabs defaultValue="schedule" className="w-full">
-              <TabsList className="grid w-full grid-cols-3">
+              <TabsList className="grid w-full grid-cols-4">
                 <TabsTrigger value="schedule">Schedule</TabsTrigger>
                 <TabsTrigger value="history">History</TabsTrigger>
                 <TabsTrigger value="traditions">Traditions</TabsTrigger>
+                <TabsTrigger value="location">Location</TabsTrigger>
               </TabsList>
               <TabsContent value="schedule">
                 <Card>
@@ -174,6 +178,25 @@ export default function FestivalDetailPage({ params }: { params: { slug: string 
                             ))}
                         </ul>
                     </CardContent>
+                </Card>
+              </TabsContent>
+               <TabsContent value="location">
+                <Card>
+                  <CardContent className="pt-6">
+                    <div className="aspect-video w-full">
+                      <iframe
+                        title={`Map of ${festival.name}`}
+                        src={mapSrc}
+                        width="100%"
+                        height="100%"
+                        style={{ border: 0 }}
+                        allowFullScreen={false}
+                        loading="lazy"
+                        referrerPolicy="no-referrer-when-downgrade"
+                        className="rounded-lg"
+                      ></iframe>
+                    </div>
+                  </CardContent>
                 </Card>
               </TabsContent>
             </Tabs>
