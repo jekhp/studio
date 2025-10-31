@@ -2,7 +2,6 @@ import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { Calendar, Clock, MapPin, Sparkles, Star } from 'lucide-react';
 import { format } from 'date-fns';
-import dynamic from 'next/dynamic';
 
 import { festivals, type Review } from '@/lib/festivals';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
@@ -183,7 +182,7 @@ export default function FestivalDetailPage({ params }: { params: { slug: string 
                 <Card>
                   <CardContent className="pt-6">
                     <div className="aspect-video w-full rounded-lg overflow-hidden">
-                       <LeafletMap locations={[{ coords: festival.coords, popup: `<b>${festival.name}</b>` }]} zoom={13} />
+                       <LeafletMap locations={[{ coords: festival.coords, popup: `<div class="w-48"><h3 class="font-bold text-base">${festival.name}</h3><p class="text-xs">${festival.location}</p></div>` }]} zoom={13} />
                     </div>
                   </CardContent>
                 </Card>

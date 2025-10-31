@@ -3,12 +3,19 @@
 import dynamic from 'next/dynamic';
 import { festivals } from '@/lib/festivals';
 import LeafletMap from '@/components/LeafletMap';
-
+import { format } from 'date-fns';
 
 export default function MapPage() {
   const locations = festivals.map(f => ({
     coords: f.coords,
-    popup: `<b>${f.name}</b><br>${f.location}`,
+    popup: `
+      <div class="w-48">
+        <h3 class="font-bold text-base mb-1">${f.name}</h3>
+        <p class="text-xs mb-2">${f.description}</p>
+        <p class="text-xs font-semibold mb-2">Starts: ${format(f.date.start, 'MMMM do')}</p>
+        <a href="/festivals/${f.slug}" class="text-primary font-bold text-xs hover:underline">View Details &rarr;</a>
+      </div>
+    `,
   }));
 
   return (
