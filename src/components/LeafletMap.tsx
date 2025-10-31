@@ -1,6 +1,6 @@
 'use client';
 
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import { useEffect, useRef } from 'react';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
 
@@ -24,25 +24,29 @@ interface LeafletMapProps {
 }
 
 const LeafletMap = ({ locations, center, zoom }: LeafletMapProps) => {
+  const mapContainerRef = useRef<HTMLDivElement>(null);
+  const mapRef = useRef<L.Map | null>(null);
   const mapCenter = center ?? locations[0]?.coords;
 
+  useEffect(() => {
+    if (mapContainerRef.current && !mapRef.current) { // Only initialize map once
+      const map = L.map(mapContainerRef.current).setView(mapCenter, zoom);
+      mapRef.current = map;
+
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+      }).addTo(map);
+
+      locations.forEach(loc => {
+        L.marker(loc.coords).addTo(map)
+          .bindPopup(loc.popup);
+      });
+    }
+  }, [locations, mapCenter, zoom]);
+  
   if (!mapCenter) return <div>Loading map...</div>;
 
-  return (
-    <MapContainer center={mapCenter} zoom={zoom} scrollWheelZoom={false} style={{ height: '100%', width: '100%' }}>
-      <TileLayer
-        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-      />
-      {locations.map((loc, index) => (
-        <Marker key={index} position={loc.coords}>
-          <Popup>
-            <div dangerouslySetInnerHTML={{ __html: loc.popup }} />
-          </Popup>
-        </Marker>
-      ))}
-    </MapContainer>
-  );
+  return <div ref={mapContainerRef} style={{ height: '100%', width: '100%' }} />;
 };
 
 export default LeafletMap;
