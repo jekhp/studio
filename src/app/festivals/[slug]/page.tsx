@@ -14,7 +14,7 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Button } from '@/components/ui/button';
 import { Textarea } from '@/components/ui/textarea';
 import { Input } from '@/components/ui/input';
-import LeafletMap from '@/components/LeafletMap';
+import { FestivalMap } from '@/components/FestivalMap';
 
 export async function generateStaticParams() {
   return festivals.map((festival) => ({
@@ -182,7 +182,7 @@ export default function FestivalDetailPage({ params }: { params: { slug: string 
                 <Card>
                   <CardContent className="pt-6">
                     <div className="aspect-video w-full rounded-lg overflow-hidden">
-                       <LeafletMap locations={[{ coords: festival.coords, popup: `<div class="w-48"><h3 class="font-bold text-base">${festival.name}</h3><p class="text-xs">${festival.location}</p></div>` }]} zoom={13} />
+                       <FestivalMap locations={[{ coords: festival.coords, popup: `<div class="w-48"><h3 class="font-bold text-base">${festival.name}</h3><p class="text-xs">${festival.location}</p></div>` }]} zoom={13} />
                     </div>
                   </CardContent>
                 </Card>

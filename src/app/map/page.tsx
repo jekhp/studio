@@ -2,8 +2,9 @@
 
 import dynamic from 'next/dynamic';
 import { festivals } from '@/lib/festivals';
-import LeafletMap from '@/components/LeafletMap';
 import { format } from 'date-fns';
+
+const LeafletMap = dynamic(() => import('@/components/LeafletMap'), { ssr: false });
 
 export default function MapPage() {
   const locations = festivals.map(f => ({

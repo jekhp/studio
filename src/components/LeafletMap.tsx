@@ -3,7 +3,6 @@
 import { useEffect, useRef, useState } from 'react';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
-import dynamic from 'next/dynamic';
 
 // Fix for default icon issue with webpack
 // @ts-ignore
@@ -19,9 +18,9 @@ const defaultIcon = L.icon({
   shadowSize: [41, 41]
 });
 
-const userIcon = new L.Icon({
-    iconUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon.png',
+const userIcon = L.icon({
     iconRetinaUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon-2x.png',
+    iconUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon.png',
     shadowUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-shadow.png',
     iconSize: [25, 41],
     iconAnchor: [12, 41],
@@ -108,7 +107,7 @@ const LeafletMap = ({ locations, center, zoom }: LeafletMapProps) => {
     <style>
       {`
         .leaflet-marker-user {
-            filter: hue-rotate(120deg);
+            filter: hue-rotate(330deg) saturate(1.5);
         }
       `}
     </style>
@@ -117,4 +116,4 @@ const LeafletMap = ({ locations, center, zoom }: LeafletMapProps) => {
   );
 };
 
-export default dynamic(() => Promise.resolve(LeafletMap), { ssr: false });
+export default LeafletMap;
