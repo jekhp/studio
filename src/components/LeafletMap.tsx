@@ -3,6 +3,7 @@
 import { useEffect, useRef } from 'react';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
+import dynamic from 'next/dynamic';
 
 // Fix for default icon issue with webpack
 // @ts-ignore
@@ -49,4 +50,4 @@ const LeafletMap = ({ locations, center, zoom }: LeafletMapProps) => {
   return <div ref={mapContainerRef} style={{ height: '100%', width: '100%' }} />;
 };
 
-export default LeafletMap;
+export default dynamic(() => Promise.resolve(LeafletMap), { ssr: false });

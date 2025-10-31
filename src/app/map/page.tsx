@@ -2,10 +2,8 @@
 
 import dynamic from 'next/dynamic';
 import { festivals } from '@/lib/festivals';
+import LeafletMap from '@/components/LeafletMap';
 
-const LeafletMap = dynamic(() => import('@/components/LeafletMap'), {
-  ssr: false,
-});
 
 export default function MapPage() {
   const locations = festivals.map(f => ({
@@ -18,7 +16,7 @@ export default function MapPage() {
       <div className="text-center mb-12">
         <h1 className="text-4xl md:text-5xl font-headline text-foreground">Festival Map</h1>
         <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
-          Explore the locations of Cusco&apos;s vibrant festivals on the map below.
+          Explore the locations of Cusco's vibrant festivals on the map below.
         </p>
       </div>
       <div className="aspect-[16/9] w-full bg-muted rounded-lg shadow-lg overflow-hidden">

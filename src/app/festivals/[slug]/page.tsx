@@ -15,10 +15,7 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Button } from '@/components/ui/button';
 import { Textarea } from '@/components/ui/textarea';
 import { Input } from '@/components/ui/input';
-
-const LeafletMap = dynamic(() => import('@/components/LeafletMap'), {
-  ssr: false,
-});
+import LeafletMap from '@/components/LeafletMap';
 
 export async function generateStaticParams() {
   return festivals.map((festival) => ({
