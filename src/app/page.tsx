@@ -1,14 +1,26 @@
+"use client";
+
+import React, { useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import Autoplay from 'embla-carousel-autoplay';
 
 import { Button } from '@/components/ui/button';
 import { FestivalCard } from '@/components/FestivalCard';
 import { festivals } from '@/lib/festivals';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from '@/components/ui/carousel';
 
 export default function Home() {
   const featuredFestivals = festivals.slice(0, 3);
   const heroImage = PlaceHolderImages.find(p => p.id === 'hero');
+  const plugin = useRef(Autoplay({ delay: 3000, stopOnInteraction: true }));
 
   return (
     <div className="flex flex-col">
@@ -45,11 +57,27 @@ export default function Home() {
               Get a glimpse of the most iconic celebrations that define Cusco&apos;s cultural landscape.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {featuredFestivals.map((festival) => (
-              <FestivalCard key={festival.id} festival={festival} />
-            ))}
-          </div>
+          <Carousel
+            plugins={[plugin.current]}
+            className="w-full max-w-xs sm:max-w-xl md:max-w-2xl lg:max-w-4xl xl:max-w-6xl mx-auto"
+            onMouseEnter={plugin.current.stop}
+            onMouseLeave={plugin.current.reset}
+            opts={{
+              loop: true,
+            }}
+          >
+            <CarouselContent>
+              {festivals.map((festival) => (
+                <CarouselItem key={festival.id} className="md:basis-1/2 lg:basis-1/3">
+                  <div className="p-1">
+                    <FestivalCard festival={festival} />
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="hidden sm:flex" />
+            <CarouselNext className="hidden sm:flex" />
+          </Carousel>
         </div>
       </section>
     </div>
