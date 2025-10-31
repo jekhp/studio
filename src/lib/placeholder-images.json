@@ -29,6 +29,72 @@
       "description": "Saints on litters during the Corpus Christi procession in Cusco's main square.",
       "imageUrl": "https://images.unsplash.com/photo-1744662513800-3db37682a948?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8cmVsaWdpb3VzJTIwcHJvY2Vzc2lvbnxlbnwwfHx8fDE3NjE5Mjg4Mjl8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "religious procession"
+    },
+    {
+      "id": "ollantaytambo-festival",
+      "description": "A festival procession in the ancient streets of Ollantaytambo.",
+      "imageUrl": "https://images.unsplash.com/photo-1739249429917-b58172e8a79e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHx0b3duJTIwcHJvY2Vzc2lvbnxlbnwwfHx8fDE3NjE5NDU1ODR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "town procession"
+    },
+    {
+      "id": "huancaro-fair",
+      "description": "An aerial view of a bustling agricultural fair with tents and crowds.",
+      "imageUrl": "https://images.unsplash.com/photo-1632341198257-bf5b859a56bd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxhZ3JpY3VsdHVyYWwlMjBmYWlyfGVufDB8fHx8MTc2MTk0NTU4NHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "agricultural fair"
+    },
+    {
+      "id": "combapata-festival",
+      "description": "People in historical costumes reenacting a battle in a town square.",
+      "imageUrl": "https://images.unsplash.com/photo-1599779101693-79a9f2b8effa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxiYXR0bGUlMjByZWVuYWN0bWVudHxlbnwwfHx8fDE3NjE5NDU1ODR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "battle reenactment"
+    },
+    {
+      "id": "anta-festival",
+      "description": "Folkloric dancers in colorful attire performing in a street parade.",
+      "imageUrl": "https://images.unsplash.com/photo-1652784644588-57432174bfc6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxmb2xrbG9yaWMlMjBkYW5jZXxlbnwwfHx8fDE3NjE5NDU1ODR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "folkloric dance"
+    },
+    {
+      "id": "quillabamba-coffee",
+      "description": "Close-up of freshly roasted coffee beans in a sack at a market.",
+      "imageUrl": "https://images.unsplash.com/photo-1690983326555-8b8e27843a32?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxjb2ZmZWUlMjBiZWFuc3xlbnwwfHx8fDE3NjE5NDQ1NTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "coffee beans"
+    },
+    {
+      "id": "acomayo-carnival",
+      "description": "Young people in traditional Andean clothing dancing in a field.",
+      "imageUrl": "https://images.unsplash.com/photo-1718913955000-f72fd511f358?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxhbmRlYW4lMjBjYXJuaXZhbHxlbnwwfHx8fDE3NjE5NDU1ODR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "andean carnival"
+    },
+    {
+      "id": "qeswachaka-bridge",
+      "description": "A traditional Inca rope bridge spanning a deep river canyon.",
+      "imageUrl": "https://images.unsplash.com/photo-1724117320287-b08c254c5534?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxyb3BlJTIwYnJpZGdlfGVufDB8fHx8MTc2MTk0NTU4NHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "rope bridge"
+    },
+    {
+      "id": "chumbivilcas-horses",
+      "description": "A group of skilled riders on horseback racing across a high-altitude plain.",
+      "imageUrl": "https://images.unsplash.com/flagged/photo-1569319388901-605a6d2d1299?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxob3JzZSUyMHJhY2V8ZW58MHx8fHwxNzYxOTQ1NTg0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "horse race"
+    },
+    {
+      "id": "espinar-harvest",
+      "description": "A display of many different varieties and colors of native potatoes.",
+      "imageUrl": "https://images.unsplash.com/photo-1741517922282-45b999eb9e49?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxwb3RhdG8lMjBoYXJ2ZXN0fGVufDB8fHx8MTc2MTkxNjY0NXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "potato harvest"
+    },
+    {
+      "id": "paruro-bullfight",
+      "description": "A horseman in traditional garb facing a bull in a rural arena.",
+      "imageUrl": "https://images.unsplash.com/photo-1759532078994-67f70adb2f4f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx0cmFkaXRpb25hbCUyMGJ1bGxmaWdodHxlbnwwfHx8fDE3NjE5NDU1ODR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "traditional bullfight"
+    },
+    {
+      "id": "senor-de-huanca",
+      "description": "Thousands of candles lighting up a sanctuary at night during a religious pilgrimage.",
+      "imageUrl": "https://images.unsplash.com/photo-1522186742692-f2379705939e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8cmVsaWdpb3VzJTIwcGlsZ3JpbWFnZXxlbnwwfHx8fDE3NjE5NDU1ODR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "religious pilgrimage"
     }
   ]
 }
