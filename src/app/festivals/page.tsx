@@ -100,7 +100,7 @@ export default function FestivalsPage() {
       
       {festivalsToShow.length > 0 ? (
          <>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 auto-rows-[20px]">
+          <div className="columns-1 md:columns-2 lg:columns-3 xl:columns-4 gap-6 space-y-6">
               <AnimatePresence>
                 {festivalsToShow.map((festival) => (
                   <motion.div
@@ -110,10 +110,7 @@ export default function FestivalsPage() {
                     animate={{ opacity: 1, scale: 1 }}
                     exit={{ opacity: 0, scale: 0.9 }}
                     transition={{ duration: 0.3 }}
-                    className={`
-                      ${festival.description.length > 100 ? 'row-span-[24]' : 'row-span-[20]'}
-                      ${festival.description.length < 50 ? 'row-span-[18]' : ''}
-                    `}
+                    className="break-inside-avoid"
                   >
                     <FestivalCard festival={festival} />
                   </motion.div>
