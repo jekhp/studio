@@ -1,16 +1,12 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowRight, Calendar, MapPin } from 'lucide-react';
+import { Calendar, MapPin } from 'lucide-react';
 import { format } from 'date-fns';
 
 import type { Festival } from '@/lib/festivals';
 import {
   Card,
   CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
 } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
@@ -24,21 +20,21 @@ export function FestivalCard({ festival }: FestivalCardProps) {
   const formattedDate = format(festival.date.start, 'MMMM do');
 
   return (
-    <Link href={`/festivals/${festival.slug}`} className="group block">
+    <Link href={`/festivals/${festival.slug}`} className="group block h-full">
       <Card className="h-full flex flex-col transition-all duration-300 ease-in-out group-hover:shadow-xl group-hover:-translate-y-1 overflow-hidden">
         {placeholder && (
-          <div className="relative w-full overflow-hidden">
+          <div className="relative w-full h-48">
               <Image
                 src={placeholder.imageUrl}
                 alt={placeholder.description}
-                width={400}
-                height={Math.floor(Math.random() * (500 - 300 + 1) + 300)} // Random height
+                fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 className="object-cover transition-transform duration-300 ease-in-out group-hover:scale-105"
                 data-ai-hint={placeholder.imageHint}
               />
           </div>
         )}
-         <div className="p-4 flex-grow flex flex-col">
+         <CardContent className="p-4 flex-grow flex flex-col">
             <h3 className="font-headline text-lg mb-2 font-semibold text-foreground">{festival.name}</h3>
             <p className="text-sm text-muted-foreground mb-4 flex-grow">{festival.description}</p>
             
@@ -52,7 +48,12 @@ export function FestivalCard({ festival }: FestivalCardProps) {
                 <span>{festival.location}</span>
               </Badge>
             </div>
-        </div>
+            <div className="flex flex-wrap gap-1">
+                {festival.categories.map(category => (
+                    <Badge key={category} variant="outline" className="text-xs">{category}</Badge>
+                ))}
+            </div>
+        </CardContent>
       </Card>
     </Link>
   );

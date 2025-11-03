@@ -22,6 +22,7 @@ export type Festival = {
   reviews: Review[];
   interest: number;
   isFree: boolean;
+  categories: string[];
 };
 
 export const festivals: Festival[] = [
@@ -56,6 +57,7 @@ export const festivals: Festival[] = [
     ],
     interest: 2.1,
     isFree: false,
+    categories: ['andino', 'histórico', 'danza', 'espectáculo'],
   },
   {
     id: '2',
@@ -63,9 +65,9 @@ export const festivals: Festival[] = [
     name: 'Qoyllur Rit\'i',
     description: 'A spiritual pilgrimage to the Sinakara Valley, blending Catholic and Andean beliefs.',
     longDescription:
-      'Qoyllur Rit\'i, or the "Snow Star Festival," is a centuries-old religious pilgrimage that takes place in the remote Sinakara Valley at the foot of Mount Ausangate. Tens of thousands of pilgrims from surrounding villages travel for days, bringing large crosses to the sanctuary. The festival is a unique syncretism of Catholic and Andean pre-Columbian beliefs, celebrating the stars, the mountain spirits (Apus), and the Lord of Qoyllur Rit\'i.',
+      'Qoyllur Rit\'i, or the "Snow Star Festival," is a centuries-old religious pilgrimage that takes place in the remote Sinakara Valley at the foot of Mount Ausangate. Tens of thousands of pilgrims from surrounding villages travel for days, bringing large crosses to the sanctuary. The festival is a unique syncretism of Catholic and Andean beliefs, celebrating the stars, the mountain spirits (Apus), and the Lord of Qoyllur Rit\'i.',
     date: { start: new Date(new Date().getFullYear(), 4, 29), end: new Date(new Date().getFullYear(), 5, 2) },
-    location: 'Sinakara Valley, Ocongate (Quispicanchi)',
+    location: 'Sinakara Valley, Ocongate',
     coords: [-13.63, -71.23],
     history:
       'The festival\'s origins are a blend of an 18th-century Catholic miracle story and ancient Andean mountain worship. It centers on the appearance of the Christ child to a young shepherd boy. It has been recognized by UNESCO as part of the Intangible Cultural Heritage of Humanity.',
@@ -95,6 +97,7 @@ export const festivals: Festival[] = [
     ],
     interest: 1.8,
     isFree: true,
+    categories: ['andino', 'religioso', 'peregrinación', 'aventura'],
   },
   {
     id: '3',
@@ -104,7 +107,7 @@ export const festivals: Festival[] = [
     longDescription:
       'The festival in honor of the Virgen del Carmen is one of Peru\'s most celebrated and wild parties. For several days, the quiet colonial town of Paucartambo erupts in a riot of color, music, and dance. troupes of masked dancers in spectacular costumes take over the streets, each representing different characters and stories from Peruvian history and folklore. The festival culminates in a procession where the statue of the Virgin blesses the town and battles costumed demons on the rooftops.',
     date: { start: new Date(new Date().getFullYear(), 6, 15), end: new Date(new Date().getFullYear(), 6, 18) },
-    location: 'Paucartambo (Paucartambo)',
+    location: 'Paucartambo',
     coords: [-13.31, -71.59],
     history:
       'The devotion to the Virgen del Carmen (also known as Mamacha Carmen) dates back to the colonial era. Legend says her face miraculously appeared on a rock, and the festival grew around this veneration. The dances themselves are a syncretic mix of Catholic, Andean, and even Amazonian influences.',
@@ -137,6 +140,7 @@ export const festivals: Festival[] = [
     ],
     interest: 1.5,
     isFree: true,
+    categories: ['religioso', 'danza', 'tradicional', 'espectáculo'],
   },
   {
     id: '4',
@@ -146,7 +150,7 @@ export const festivals: Festival[] = [
     longDescription:
       'Corpus Christi is one of the most important dates in Cusco\'s Catholic religious calendar. The festival is a vibrant display of syncretism, where fifteen saints and virgins from various parishes are carried on ornate litters in a grand procession to the Cathedral of Cusco. They "visit" the body of Christ, which is held in a magnificent gold monstrance. The streets are filled with music, dancers, and traditional foods, most notably "Chiriuchu," a cold dish featuring a variety of meats and other ingredients.',
     date: { start: new Date(new Date().getFullYear(), 4, 30), end: new Date(new Date().getFullYear(), 4, 30) },
-    location: 'Plaza de Armas, Cusco (Cusco)',
+    location: 'Plaza de Armas, Cusco',
     coords: [-13.5165, -71.979],
     history:
       'Introduced by the Spanish in the 16th century, Corpus Christi was meant to replace the Inca tradition of parading the mummies of their rulers. The Andean people adapted the festival, associating their own deities and traditions with the Catholic saints, creating the unique blend seen today.',
@@ -174,6 +178,7 @@ export const festivals: Festival[] = [
     ],
     interest: 1.2,
     isFree: true,
+    categories: ['religioso', 'gastronómico', 'tradicional', 'espectáculo'],
   },
   {
     id: '5',
@@ -183,7 +188,7 @@ export const festivals: Festival[] = [
     longDescription:
       'The festival of the Señor de Choquekillka is the most important religious celebration in Ollantaytambo, a town famous for its impressive Inca fortress. The festival is held during Pentecost and lasts for several days, featuring vibrant processions, folkloric dances, bullfights, and a palpable sense of community devotion. The image of the Señor de Choquekillka, a crucified Christ, is paraded through the ancient streets, accompanied by various dance troupes and musical bands.',
     date: { start: new Date(new Date().getFullYear(), 5, 6), end: new Date(new Date().getFullYear(), 5, 9) },
-    location: 'Ollantaytambo (Urubamba)',
+    location: 'Ollantaytambo, Urubamba',
     coords: [-13.259, -72.264],
     history:
       'The origin of this devotion is linked to the discovery of a cross in the 18th century, which became the patron of the town. The festival integrates pre-Hispanic agricultural rites with Catholic celebrations, making it a powerful example of Andean syncretism. It reinforces social ties and cultural identity among the people of Ollantaytambo.',
@@ -204,6 +209,7 @@ export const festivals: Festival[] = [
     ],
     interest: 0.9,
     isFree: true,
+    categories: ['religioso', 'tradicional', 'danza'],
   },
   {
     id: '6',
@@ -213,7 +219,7 @@ export const festivals: Festival[] = [
     longDescription:
       'Held throughout the month of June, the Feria de Huancaro is a grand exposition that coincides with the jubilee celebrations of Cusco. It brings together producers, artisans, and artists from all over the region. Visitors can enjoy exhibitions of the best livestock, taste a huge variety of typical foods, purchase high-quality crafts, and enjoy live music concerts. It\'s a vibrant showcase of the economic and cultural richness of Cusco.',
     date: { start: new Date(new Date().getFullYear(), 5, 1), end: new Date(new Date().getFullYear(), 5, 30) },
-    location: 'Huancaro, Santiago (Cusco)',
+    location: 'Huancaro, Cusco',
     coords: [-13.535, -71.964],
     history:
       'The fair has grown over the decades to become the most important commercial and cultural event of its kind in the southern Peruvian Andes. It serves as a vital platform for rural producers and a major attraction for both locals and tourists during Cusco\'s busiest month.',
@@ -233,6 +239,7 @@ export const festivals: Festival[] = [
     ],
     interest: 1.1,
     isFree: false,
+    categories: ['feria', 'gastronómico', 'conciertos', 'artesanía'],
   },
   {
     id: '7',
@@ -242,7 +249,7 @@ export const festivals: Festival[] = [
     longDescription:
       'Celebrated in the town of Combapata, this festival honors the Virgen del Rosario. The event is famous for its folkloric richness, especially the traditional dances and the dramatic reenactment of a historic battle, or "guerrilla," between different communities, symbolizing ancient rivalries and alliances. The entire town participates in the processions, music, and feasting.',
     date: { start: new Date(new Date().getFullYear(), 9, 7), end: new Date(new Date().getFullYear(), 9, 10) },
-    location: 'Combapata (Canchis)',
+    location: 'Combapata, Canchis',
     coords: [-14.110, -71.493],
     history:
       'The devotion to the Virgen del Rosario was introduced during the colonial period. The festival\'s unique character comes from the blending of this Catholic faith with local history, particularly the memory of conflicts and heroism, which are performed in the mock battles.',
@@ -263,6 +270,7 @@ export const festivals: Festival[] = [
     ],
     interest: 0.5,
     isFree: true,
+    categories: ['religioso', 'tradicional', 'histórico', 'danza'],
   },
   {
     id: '8',
@@ -272,7 +280,7 @@ export const festivals: Festival[] = [
     longDescription:
       'The "Tourist Week of Anta" is a modern festival designed to promote the rich heritage of the Anta province. The week is packed with activities including gastronomic fairs, agricultural expos, folkloric dance competitions, adventure sports like canoeing on the Huarocondo lagoon, and tours of important archaeological sites like Killarumiyoq. It\'s a comprehensive display of Anta\'s identity.',
     date: { start: new Date(new Date().getFullYear(), 8, 20), end: new Date(new Date().getFullYear(), 8, 27) },
-    location: 'Izcuchaca, Anta (Anta)',
+    location: 'Izcuchaca, Anta',
     coords: [-13.483, -72.183],
     history:
       'Established in recent decades to boost local tourism and pride, the festival has quickly become a major event in the regional calendar, successfully highlighting the often-overlooked attractions of the pampa de Anta.',
@@ -292,6 +300,7 @@ export const festivals: Festival[] = [
     ],
     interest: 0.4,
     isFree: true,
+    categories: ['feria', 'gastronómico', 'danza', 'aventura'],
   },
   {
     id: '9',
@@ -301,7 +310,7 @@ export const festivals: Festival[] = [
     longDescription:
       'Quillabamba, the capital of La Convención, is the heart of Cusco\'s coffee and cocoa region. This festival, held during the city\'s anniversary, celebrates its most famous product. It features coffee tasting competitions, barista championships, tours of coffee plantations, and cultural events. It\'s a perfect event for coffee lovers to taste some of Peru\'s best beans directly from the source.',
     date: { start: new Date(new Date().getFullYear(), 6, 25), end: new Date(new Date().getFullYear(), 6, 29) },
-    location: 'Quillabamba (La Convención)',
+    location: 'Quillabamba, La Convención',
     coords: [-12.865, -72.693],
     history:
       'The festival was created to promote the local coffee industry and has become a key event for producers to showcase their quality and for visitors to learn about the coffee production process, from bean to cup.',
@@ -322,6 +331,7 @@ export const festivals: Festival[] = [
     ],
     interest: 0.8,
     isFree: false,
+    categories: ['feria', 'gastronómico', 'conciertos'],
   },
   {
     id: '10',
@@ -331,7 +341,7 @@ export const festivals: Festival[] = [
     longDescription:
       'The Carnival of Wayllati is a vibrant and authentic celebration in the Acomayo province. It is characterized by the "Tupay," a ritual battle between young men and women who sing and dance, often engaging in playful confrontations. The music, featuring charangos and quenas, is unique to the region. It is a festivity full of joy, color, and youthful energy, celebrating fertility and the harvest season.',
     date: { start: new Date(new Date().getFullYear(), 1, 20), end: new Date(new Date().getFullYear(), 1, 25) },
-    location: 'Sangarará (Acomayo)',
+    location: 'Sangarará, Acomayo',
     coords: [-13.963, -71.603],
     history:
       'This carnival has deep pre-Hispanic roots related to agricultural cycles and community rituals. It has maintained much of its original character, making it a valuable expression of living Andean culture, less influenced by modern commercialism.',
@@ -351,6 +361,7 @@ export const festivals: Festival[] = [
     ],
     interest: 0.6,
     isFree: true,
+    categories: ['carnaval', 'andino', 'danza', 'tradicional'],
   },
   {
     id: '11',
@@ -360,7 +371,7 @@ export const festivals: Festival[] = [
     longDescription:
       'Every year, for three days, four communities near the Apurímac canyon come together to rebuild the Q\'eswachaka bridge using traditional Inca techniques. This ancestral ritual involves twisting grass (q\'oya) into strong cables. The men are responsible for braiding and pulling the new bridge across the canyon, while the women braid the smaller ropes. The festival culminates with the inauguration of the new bridge, followed by a celebration with native music and dance. It is a UNESCO Intangible Cultural Heritage of Humanity.',
     date: { start: new Date(new Date().getFullYear(), 5, 8), end: new Date(new Date().getFullYear(), 5, 11) },
-    location: 'Quehue (Canas)',
+    location: 'Quehue, Canas',
     coords: [-14.364, -71.503],
     history:
       'This tradition has been passed down for over 500 years, since the time of the Incas, who built these types of bridges as part of their vast road network (Qhapaq Ñan). The annual reconstruction is a testament to the community\'s respect for their ancestors and the Pacha Mama (Mother Earth).',
@@ -382,16 +393,17 @@ export const festivals: Festival[] = [
     ],
     interest: 1.9,
     isFree: false,
+    categories: ['andino', 'tradicional', 'histórico', 'espectáculo'],
   },
   {
     id: '12',
     slug: 'wata-qallariy',
     name: 'Wata Qallariy',
-    description: 'An Andean New Year ritual celebrated in Chumbivilcas with horse races and music.',
+    description: 'An Andean New Year ritual in Chumbivilcas with horse races and music.',
     longDescription:
       'In the province of Chumbivilcas, the Wata Qallariy (Start of the Year) is celebrated with unique traditions. While it coincides with the Catholic All Saints\' Day, it has its own character, focused on honoring the ancestors and the land. The festival is known for its "Takanakuy" (ritual combat) and daring horse races. It is a celebration of the strength and resilience of the Chumbivilcas people.',
     date: { start: new Date(new Date().getFullYear(), 10, 1), end: new Date(new Date().getFullYear(), 10, 2) },
-    location: 'Santo Tomás (Chumbivilcas)',
+    location: 'Santo Tomás, Chumbivilcas',
     coords: [-14.444, -72.083],
     history:
       'Wata Qallariy blends ancestral veneration of the dead with a celebration of life and strength. The horse, introduced by the Spanish, was integrated into the local culture, becoming a symbol of power and skill, which is displayed in the thrilling races.',
@@ -412,6 +424,7 @@ export const festivals: Festival[] = [
     ],
     interest: 0.7,
     isFree: true,
+    categories: ['andino', 'tradicional', 'carreras'],
   },
   {
     id: '13',
@@ -421,7 +434,7 @@ export const festivals: Festival[] = [
     longDescription:
       'K\'ana Raymi is a festival that celebrates the harvest, particularly the potato, which is central to Andean life. Held in the K\'ana culture\'s heartland in Espinar, the event showcases the region\'s agricultural biodiversity. It includes ritual offerings to the Pacha Mama, competitions for the largest and most diverse potatoes, gastronomic fairs, and powerful traditional dances like the "Sipaschay."',
     date: { start: new Date(new Date().getFullYear(), 5, 19), end: new Date(new Date().getFullYear(), 5, 21) },
-    location: 'Yauri (Espinar)',
+    location: 'Yauri, Espinar',
     coords: [-14.791, -71.414],
     history:
       'The festival was established to revalue the ancestral culture of the K\'ana nation, which predates the Incas. It seeks to strengthen cultural identity and promote the region\'s unique agricultural heritage in the face of modern challenges.',
@@ -442,6 +455,7 @@ export const festivals: Festival[] = [
     ],
     interest: 0.3,
     isFree: true,
+    categories: ['andino', 'agrícola', 'gastronómico', 'danza'],
   },
   {
     id: '14',
@@ -451,7 +465,7 @@ export const festivals: Festival[] = [
     longDescription:
       'The Feast of Saint John the Baptist in Paruro is a traditional patron saint festival that combines Catholic fervor with Andean customs. The central events are the processions of the saint, masses, and the always popular bullfights, which draw crowds from all surrounding communities. The town comes alive with music, dancing, and a large fair.',
     date: { start: new Date(new Date().getFullYear(), 5, 23), end: new Date(new Date().getFullYear(), 5, 25) },
-    location: 'Paruro (Paruro)',
+    location: 'Paruro',
     coords: [-13.762, -71.854],
     history:
       'Like many patron saint festivals, this one was established during the colonial era to evangelize the local population. Over time, it incorporated local elements, becoming a key event for the social and cultural life of the Paruro province.',
@@ -472,6 +486,7 @@ export const festivals: Festival[] = [
     ],
     interest: 0.2,
     isFree: true,
+    categories: ['religioso', 'tradicional', 'taurino'],
   },
   {
     id: '15',
@@ -481,7 +496,7 @@ export const festivals: Festival[] = [
     longDescription:
       'Thousands of devotees from Peru and Bolivia flock to the Sanctuary of the Señor de Huanca, located in the Calca province. They come seeking miracles and healing from the image of the martyred Christ, which is painted on a rock. The pilgrimage involves a long walk, night vigils, and ceremonies. The main day is September 14, but people visit throughout the month. The area is filled with an atmosphere of intense faith and devotion.',
     date: { start: new Date(new Date().getFullYear(), 8, 14), end: new Date(new Date().getFullYear(), 8, 14) },
-    location: 'San Salvador (Calca)',
+    location: 'San Salvador, Calca',
     coords: [-13.491, -71.748],
     history:
       'The story dates back to 1775 when, according to tradition, Jesus Christ appeared to a humble Andean miner. A painter later depicted the image on the rock where it appeared, and the site became a center of miracles and pilgrimage. The sanctuary was built around this sacred rock.',
@@ -502,6 +517,7 @@ export const festivals: Festival[] = [
     ],
     interest: 1.7,
     isFree: true,
+    categories: ['religioso', 'peregrinación', 'tradicional'],
   },
   {
     id: '16',
@@ -511,7 +527,7 @@ export const festivals: Festival[] = [
     longDescription:
       'The T\'ikapallana Carnival in Tinta (Canchis) is a festival full of youthful energy, focused on collecting the first flowers of the season (T\'ikas). Young men and women engage in playful ritual games and dances, celebrating fertility and the abundance of the land. It is a colorful and musical event that highlights the strong community bonds and connection to nature.',
     date: { start: new Date(new Date().getFullYear(), 1, 22), end: new Date(new Date().getFullYear(), 1, 24) },
-    location: 'Tinta (Canchis)',
+    location: 'Tinta, Canchis',
     coords: [-14.144, -71.408],
     history:
       'This carnival maintains strong pre-Hispanic roots tied to agricultural cycles and rites of passage for young people. It is a celebration of life and the transition from adolescence to adulthood within the community.',
@@ -531,6 +547,7 @@ export const festivals: Festival[] = [
     ],
     interest: 0.8,
     isFree: true,
+    categories: ['carnaval', 'andino', 'tradicional', 'danza'],
   },
   {
     id: '17',
@@ -540,7 +557,7 @@ export const festivals: Festival[] = [
     longDescription:
       'The festival in honor of Saint Sebastian is one of the most important in the immediate vicinity of Cusco. For several days, the district is filled with processions, dances, and music. The image of the saint is carried through the streets, accompanied by various dance troupes and thousands of faithful. The festival showcases the deep-rooted faith and vibrant culture of the district.',
     date: { start: new Date(new Date().getFullYear(), 0, 18), end: new Date(new Date().getFullYear(), 0, 22) },
-    location: 'San Sebastián (Cusco)',
+    location: 'San Sebastián, Cusco',
     coords: [-13.535, -71.937],
     history:
       'The devotion to Saint Sebastian dates back to the early colonial period. The festival is a rich expression of religious syncretism, where Catholic traditions are interwoven with Andean cultural practices.',
@@ -561,6 +578,7 @@ export const festivals: Festival[] = [
     ],
     interest: 1.3,
     isFree: true,
+    categories: ['religioso', 'danza', 'tradicional', 'gastronómico'],
   },
   {
     id: '18',
@@ -570,7 +588,7 @@ export const festivals: Festival[] = [
     longDescription:
       'Takanakuy, which means "to hit each other" in Quechua, is a unique and controversial festival held on Christmas Day in several communities in Chumbivilcas. Participants, often wearing elaborate masks, settle personal disputes from the past year through public, bare-knuckle fighting. The fights are supervised and serve as a social catharsis, ensuring the new year begins with a clean slate. The day also includes music, dancing, and drinking.',
     date: { start: new Date(new Date().getFullYear(), 11, 25), end: new Date(new Date().getFullYear(), 11, 25) },
-    location: 'Santo Tomás (Chumbivilcas)',
+    location: 'Santo Tomás, Chumbivilcas',
     coords: [-14.444, -72.083],
     history:
       'The origins of Takanakuy are debated, but it is seen as a pre-Hispanic tradition of ritual combat adapted to the Catholic calendar. It functions as a community-level justice system and a way to display courage and resolve conflicts before the start of a new agricultural cycle.',
@@ -592,6 +610,7 @@ export const festivals: Festival[] = [
     ],
     interest: 1.6,
     isFree: true,
+    categories: ['andino', 'tradicional', 'combate ritual'],
   },
   {
     id: '19',
@@ -601,7 +620,7 @@ export const festivals: Festival[] = [
     longDescription:
       'In the remote district of Mollomarka, this carnival is one of the most traditional and less-visited in the Cusco region. It is a celebration of the harvest and fertility, with deep roots in Andean cosmology. The festival features unique music, energetic dancing, and ritual offerings to the Pacha Mama and the Apus. The "Yunza" or "Cortamonte," a tree laden with gifts that is danced around and eventually cut down, is a central element.',
     date: { start: new Date(new Date().getFullYear(), 1, 25), end: new Date(new Date().getFullYear(), 1, 27) },
-    location: 'Mollomarka (Chumbivilcas)',
+    location: 'Mollomarka, Chumbivilcas',
     coords: [-14.331, -71.933],
     history: 'This carnival preserves ancient rituals that have been passed down through generations, offering a glimpse into the heart of Andean culture, away from major tourist circuits. The music and dance styles are specific to this micro-region.',
     traditions: ['Cortamonte/Yunza (tree cutting ceremony)', 'Traditional carnival music with charangos and bandurrias', 'Community feasting and sharing of chicha', 'Horseback riding displays by local cowboys (qorilazos)'],
@@ -620,6 +639,7 @@ export const festivals: Festival[] = [
     ],
     interest: 0.4,
     isFree: true,
+    categories: ['carnaval', 'andino', 'tradicional', 'danza'],
   },
   {
     id: '20',
@@ -629,7 +649,7 @@ export const festivals: Festival[] = [
     longDescription:
       'The anniversary of the province of La Convención, with its capital in Quillabamba, is a week-long celebration of the region\'s identity, also known as the "eyebrow of the jungle." The festival features parades, beauty pageants (election of the "Miss Coffee"), agricultural fairs showcasing coffee, cocoa, and tropical fruits, and lively concerts with jungle music (cumbia amazónica). It is a festive time that highlights the unique culture of Cusco\'s tropical region.',
     date: { start: new Date(new Date().getFullYear(), 6, 20), end: new Date(new Date().getFullYear(), 6, 25) },
-    location: 'Quillabamba (La Convención)',
+    location: 'Quillabamba, La Convención',
     coords: [-12.865, -72.693],
     history: 'This celebration marks the political creation of the province and has become a major event to promote its economic potential and distinct cultural identity, different from the Andean highlands.',
     traditions: ['Civic and school parades', 'Agricultural and artisanal fairs', 'Election of beauty queens representing local products', 'Live music concerts and parties'],
@@ -649,5 +669,6 @@ export const festivals: Festival[] = [
     ],
     interest: 0.7,
     isFree: false,
+    categories: ['feria', 'conciertos', 'moderno'],
   }
 ];

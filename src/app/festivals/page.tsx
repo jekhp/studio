@@ -5,16 +5,22 @@ import { FestivalCard } from '@/components/FestivalCard';
 import { festivals, type Festival } from '@/lib/festivals';
 import { Input } from '@/components/ui/input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
-import { Label } from '@/components/ui/label';
 import { Button } from '@/components/ui/button';
-import { ListFilter, Search, X } from 'lucide-react';
+import { Search, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+
+const allMonths = Array.from(new Set(festivals.map(f => f.date.start.getMonth())));
+const monthOptions = allMonths.map(month => ({
+  value: month.toString(),
+  label: new Date(0, month).toLocaleString('es-ES', { month: 'long' }),
+})).sort((a, b) => parseInt(a.value) - parseInt(b.value));
+
+const allCategories = Array.from(new Set(festivals.flatMap(f => f.categories)));
 
 export default function FestivalsPage() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedMonth, setSelectedMonth] = useState('all');
-  const [priceFilter, setPriceFilter] = useState('all');
+  const [selectedCategory, setSelectedCategory] = useState('all');
   const [visibleCount, setVisibleCount] = useState(9);
 
   const filteredFestivals = useMemo(() => {
@@ -22,29 +28,20 @@ export default function FestivalsPage() {
       .filter(festival => {
         const matchesSearch = festival.name.toLowerCase().includes(searchTerm.toLowerCase());
         const matchesMonth = selectedMonth === 'all' || festival.date.start.getMonth() === parseInt(selectedMonth, 10);
-        const matchesPrice =
-          priceFilter === 'all' ||
-          (priceFilter === 'free' && festival.isFree) ||
-          (priceFilter === 'paid' && !festival.isFree);
-        return matchesSearch && matchesMonth && matchesPrice;
+        const matchesCategory = selectedCategory === 'all' || festival.categories.includes(selectedCategory);
+        return matchesSearch && matchesMonth && matchesCategory;
       })
       .sort((a, b) => a.date.start.getTime() - b.date.start.getTime());
-  }, [searchTerm, selectedMonth, priceFilter]);
+  }, [searchTerm, selectedMonth, selectedCategory]);
 
   const festivalsToShow = filteredFestivals.slice(0, visibleCount);
 
   const clearFilters = () => {
     setSearchTerm('');
     setSelectedMonth('all');
-    setPriceFilter('all');
+    setSelectedCategory('all');
+    setVisibleCount(9);
   };
-  
-  const allMonths = Array.from(new Set(festivals.map(f => f.date.start.getMonth())));
-  const monthOptions = allMonths.map(month => ({
-    value: month.toString(),
-    label: new Date(0, month).toLocaleString('es-ES', { month: 'long' }),
-  })).sort((a, b) => parseInt(a.value) - parseInt(b.value));
-
 
   return (
     <div className="container mx-auto px-4 py-16">
@@ -68,9 +65,9 @@ export default function FestivalsPage() {
                 className="pl-10 w-full"
               />
             </div>
-            <div className='flex gap-4 w-full md:w-auto'>
+            <div className='flex gap-4 w-full md:w-auto flex-wrap'>
                 <Select value={selectedMonth} onValueChange={setSelectedMonth}>
-                  <SelectTrigger className="w-full md:w-[180px]">
+                  <SelectTrigger className="w-full sm:w-[150px]">
                     <SelectValue placeholder="Filter by month" />
                   </SelectTrigger>
                   <SelectContent>
@@ -80,23 +77,19 @@ export default function FestivalsPage() {
                     ))}
                   </SelectContent>
                 </Select>
+                
+                <Select value={selectedCategory} onValueChange={setSelectedCategory}>
+                  <SelectTrigger className="w-full sm:w-[150px]">
+                    <SelectValue placeholder="Filter by category" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="all">All Categories</SelectItem>
+                    {allCategories.map(c => (
+                        <SelectItem key={c} value={c}>{c.charAt(0).toUpperCase() + c.slice(1)}</SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
 
-                <div className='flex items-center space-x-4 border rounded-md px-3 py-2'>
-                    <RadioGroup value={priceFilter} onValueChange={setPriceFilter} className='flex items-center space-x-4'>
-                        <div className="flex items-center space-x-2">
-                            <RadioGroupItem value="all" id="r-all" />
-                            <Label htmlFor="r-all" className="text-sm">All</Label>
-                        </div>
-                        <div className="flex items-center space-x-2">
-                            <RadioGroupItem value="free" id="r-free" />
-                            <Label htmlFor="r-free" className="text-sm">Free</Label>
-                        </div>
-                        <div className="flex items-center space-x-2">
-                            <RadioGroupItem value="paid" id="r-paid" />
-                            <Label htmlFor="r-paid" className="text-sm">Paid</Label>
-                        </div>
-                    </RadioGroup>
-                </div>
                 <Button variant="ghost" onClick={clearFilters} className="text-muted-foreground">
                     <X className="h-4 w-4 mr-2"/>
                     Clear
@@ -107,7 +100,7 @@ export default function FestivalsPage() {
       
       {festivalsToShow.length > 0 ? (
          <>
-          <div className="columns-1 md:columns-2 lg:columns-3 xl:columns-4 gap-6 space-y-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 auto-rows-[20px]">
               <AnimatePresence>
                 {festivalsToShow.map((festival) => (
                   <motion.div
@@ -117,7 +110,10 @@ export default function FestivalsPage() {
                     animate={{ opacity: 1, scale: 1 }}
                     exit={{ opacity: 0, scale: 0.9 }}
                     transition={{ duration: 0.3 }}
-                    className="break-inside-avoid"
+                    className={`
+                      ${festival.description.length > 100 ? 'row-span-[24]' : 'row-span-[20]'}
+                      ${festival.description.length < 50 ? 'row-span-[18]' : ''}
+                    `}
                   >
                     <FestivalCard festival={festival} />
                   </motion.div>
