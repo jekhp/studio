@@ -9,9 +9,9 @@ import L from 'leaflet';
 delete L.Icon.Default.prototype._getIconUrl;
 
 const defaultIcon = L.icon({
-  iconRetinaUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon-2x.png',
-  iconUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon.png',
-  shadowUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-shadow.png',
+  iconRetinaUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon-2x.png',
+  iconUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png',
+  shadowUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png',
   iconSize: [25, 41],
   iconAnchor: [12, 41],
   popupAnchor: [1, -34],
@@ -69,7 +69,7 @@ const LeafletMap = ({ locations, center, zoom }: LeafletMapProps) => {
           }
         },
         () => {
-          // User denied geolocation
+          console.log("User denied geolocation.");
         }
       );
     }
@@ -77,7 +77,9 @@ const LeafletMap = ({ locations, center, zoom }: LeafletMapProps) => {
 
   useEffect(() => {
     if (mapContainerRef.current && !mapRef.current) { // Only initialize map once
-      const map = L.map(mapContainerRef.current).setView(mapCenter, zoom);
+      const map = L.map(mapContainerRef.current, {
+          scrollWheelZoom: false, // disable zoom on scroll
+      }).setView(mapCenter, zoom);
       mapRef.current = map;
 
       L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
