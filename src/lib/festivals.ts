@@ -389,7 +389,7 @@ export const festivals: Festival[] = [
   },
   {
     id: '13',
-    slug: 'k\'ana-raymi',
+    slug: 'k-ana-raymi',
     name: 'K\'ana Raymi',
     description: 'An agricultural festival in Espinar celebrating the potato and local identity.',
     longDescription:
@@ -469,6 +469,90 @@ export const festivals: Festival[] = [
     rating: 4.8,
     reviews: [
       { id: 1, user: 'FaithfulPilgrim', rating: 5, comment: 'The amount of faith you can feel here is overwhelming. A deeply moving experience.' },
+    ],
+  },
+  {
+    id: '16',
+    slug: 'carnaval-tkapuy',
+    name: 'Carnaval T\'ikapallana de Tinta',
+    description: 'A vibrant carnival in Canchis celebrating youth and the harvest with flowers.',
+    longDescription:
+      'The T\'ikapallana Carnival in Tinta (Canchis) is a festival full of youthful energy, focused on collecting the first flowers of the season (T\'ikas). Young men and women engage in playful ritual games and dances, celebrating fertility and the abundance of the land. It is a colorful and musical event that highlights the strong community bonds and connection to nature.',
+    date: { start: new Date(new Date().getFullYear(), 1, 22), end: new Date(new Date().getFullYear(), 1, 24) },
+    location: 'Tinta (Canchis)',
+    coords: [-14.144, -71.408],
+    history:
+      'This carnival maintains strong pre-Hispanic roots tied to agricultural cycles and rites of passage for young people. It is a celebration of life and the transition from adolescence to adulthood within the community.',
+    traditions: ['Ritual collection of flowers ("T\'ikapallana")', 'Playful duels and games between young men and women', 'Traditional carnival music with charangos', 'Abundant food and chicha shared among the community'],
+    schedule: [
+      {
+        day: 'Carnival Sunday',
+        events: [
+          { time: 'All Day', description: 'Main celebration in the Plaza de Tinta with music, dance, and games.' },
+        ],
+      },
+    ],
+    image: 'tinta-carnival',
+    rating: 4.5,
+    reviews: [
+      { id: 1, user: 'AnthroStudent', rating: 5, comment: 'A beautiful and very authentic ritual. The flower symbolism is fascinating.' },
+    ],
+  },
+  {
+    id: '17',
+    slug: 'san-sebastian-patron-feast',
+    name: 'Fiesta Patronal de San Sebastián',
+    description: 'A major patron saint festival in the district of San Sebastián, just outside Cusco city.',
+    longDescription:
+      'The festival in honor of Saint Sebastian is one of the most important in the immediate vicinity of Cusco. For several days, the district is filled with processions, dances, and music. The image of the saint is carried through the streets, accompanied by various dance troupes and thousands of faithful. The festival showcases the deep-rooted faith and vibrant culture of the district.',
+    date: { start: new Date(new Date().getFullYear(), 0, 18), end: new Date(new Date().getFullYear(), 0, 22) },
+    location: 'San Sebastián (Cusco)',
+    coords: [-13.535, -71.937],
+    history:
+      'The devotion to Saint Sebastian dates back to the early colonial period. The festival is a rich expression of religious syncretism, where Catholic traditions are interwoven with Andean cultural practices.',
+    traditions: ['Processions of the patron saint', 'Performances by numerous folkloric dance groups', 'Gastronomic fairs with typical dishes', 'Fireworks and musical bands'],
+    schedule: [
+      {
+        day: 'January 20 (Main Day)',
+        events: [
+          { time: '11:00 AM', description: 'Central Mass in the main church.' },
+          { time: '2:00 PM', description: 'Grand procession of Saint Sebastian through the main streets.' },
+        ],
+      },
+    ],
+    image: 'san-sebastian-festival',
+    rating: 4.6,
+    reviews: [
+      { id: 1, user: 'CuscoLocal', rating: 5, comment: 'As a local, this is one of my favorite festivals. The dancing is non-stop and the atmosphere is electric.' },
+    ],
+  },
+  {
+    id: '18',
+    slug: 'takanakuy-chumbivilcas',
+    name: 'Takanakuy',
+    description: 'A unique Christmas celebration in Chumbivilcas featuring ritual fighting to settle scores.',
+    longDescription:
+      'Takanakuy, which means "to hit each other" in Quechua, is a unique and controversial festival held on Christmas Day in several communities in Chumbivilcas. Participants, often wearing elaborate masks, settle personal disputes from the past year through public, bare-knuckle fighting. The fights are supervised and serve as a social catharsis, ensuring the new year begins with a clean slate. The day also includes music, dancing, and drinking.',
+    date: { start: new Date(new Date().getFullYear(), 11, 25), end: new Date(new Date().getFullYear(), 11, 25) },
+    location: 'Santo Tomás (Chumbivilcas)',
+    coords: [-14.444, -72.083],
+    history:
+      'The origins of Takanakuy are debated, but it is seen as a pre-Hispanic tradition of ritual combat adapted to the Catholic calendar. It functions as a community-level justice system and a way to display courage and resolve conflicts before the start of a new agricultural cycle.',
+    traditions: ['Ritual combat between individuals', 'Use of elaborate masks representing different characters', 'The "Huayliya" music and dance that accompanies the event', 'Community-wide celebration after the fights'],
+    schedule: [
+      {
+        day: 'December 25',
+        events: [
+          { time: 'Morning', description: 'Processions and preparations.' },
+          { time: 'Afternoon', description: 'The Takanakuy fights take place in the local bullring or plaza.' },
+          { time: 'Evening', description: 'Celebrations continue with music and dance.' },
+        ],
+      },
+    ],
+    image: 'takanakuy-fight',
+    rating: 4.7,
+    reviews: [
+      { id: 1, user: 'ExtremeTravel', rating: 5, comment: 'Like nothing I have ever seen. Intense, raw, and absolutely fascinating. A true cultural immersion.' },
     ],
   },
 ];

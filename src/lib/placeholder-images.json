@@ -95,6 +95,24 @@
       "description": "Thousands of candles lighting up a sanctuary at night during a religious pilgrimage.",
       "imageUrl": "https://images.unsplash.com/photo-1522186742692-f2379705939e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8cmVsaWdpb3VzJTIwcGlsZ3JpbWFnZXxlbnwwfHx8fDE3NjE5NDU1ODR8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "religious pilgrimage"
+    },
+    {
+      "id": "tinta-carnival",
+      "description": "People celebrating carnival with colorful flowers and traditional clothes.",
+      "imageUrl": "https://images.unsplash.com/photo-1634820491179-03ae219ff58b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8Zmxvd2VyJTIwY2Fybml2YWx8ZW58MHx8fHwxNzYyMTg0ODM1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "flower carnival"
+    },
+    {
+      "id": "san-sebastian-festival",
+      "description": "A religious procession with a saint's statue decorated with flowers.",
+      "imageUrl": "https://images.unsplash.com/photo-1572290187599-39198d3dd438?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxzYWludCUyMHByb2Nlc3Npb258ZW58MHx8fHwxNzYyMTg0ODM1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "saint procession"
+    },
+    {
+      "id": "takanakuy-fight",
+      "description": "Two people in masks facing each other in a ritual fight.",
+      "imageUrl": "https://images.unsplash.com/photo-1707405432940-6124db71c729?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyaXR1YWwlMjBmaWdodHxlbnwwfHx8fDE3NjIxODQ4MzV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "ritual fight"
     }
   ]
 }
