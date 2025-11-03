@@ -4,78 +4,77 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { Heart, MapPin, Calendar, Star } from 'lucide-react';
-import { format } from 'date-fns';
+import { format, differenceInHours } from 'date-fns';
 import { cn } from '@/lib/utils';
 import type { Festival } from '@/lib/festivals';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 
-interface UpcomingFestivalCardProps {
-  festival: Festival;
+interface CountdownProps {
+  targetDate: Date;
 }
 
-const Countdown = ({ targetDate }: { targetDate: Date }) => {
-  const [timeLeft, setTimeLeft] = useState<{
-    days?: number;
-    hours?: number;
-    minutes?: number;
-    seconds?: number;
-  }>({});
+const Countdown: React.FC<CountdownProps> = ({ targetDate }) => {
+  const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0 });
 
   useEffect(() => {
     const calculateTimeLeft = () => {
-      const difference = +new Date(targetDate) - +new Date();
+      const now = new Date();
+      const difference = targetDate.getTime() - now.getTime();
+      
       if (difference > 0) {
-        return {
-          days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-          hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
-          minutes: Math.floor((difference / 1000 / 60) % 60),
-          seconds: Math.floor((difference / 1000) % 60),
-        };
+        const totalHours = Math.floor(difference / (1000 * 60 * 60));
+        const days = Math.floor(totalHours / 24);
+        const hours = totalHours % 24;
+        setTimeLeft({ days, hours });
+      } else {
+        setTimeLeft({ days: 0, hours: 0 });
       }
-      return {};
     };
-    
-    // Set initial time left
-    setTimeLeft(calculateTimeLeft());
 
-    const timer = setInterval(() => {
-      setTimeLeft(calculateTimeLeft());
-    }, 1000);
+    calculateTimeLeft();
+    const timer = setInterval(calculateTimeLeft, 1000 * 60 * 60); // Update every hour
 
     return () => clearInterval(timer);
   }, [targetDate]);
 
-  const timerComponents: {label: string, value: number | undefined}[] = [
-    { label: 'Días', value: timeLeft.days },
-    { label: 'Horas', value: timeLeft.hours },
-    { label: 'Min', value: timeLeft.minutes },
-    { label: 'Seg', value: timeLeft.seconds },
-  ];
+  const totalHoursLeft = timeLeft.days * 24 + timeLeft.hours;
 
-  if (Object.keys(timeLeft).length === 0) {
+  if (totalHoursLeft <= 0) {
     return null;
   }
 
   return (
-    <div 
-        className="absolute bottom-4 left-1/2 -translate-x-1/2 w-[90%] bg-background/90 backdrop-blur-md rounded-xl p-3 shadow-lg flex justify-around text-center"
-    >
-        {timerComponents.map(({label, value}) => (
-           value !== undefined && (
-            <div key={label} className="flex flex-col">
-                <span className="text-2xl font-bold text-primary">{String(value).padStart(2, '0')}</span>
-                <span className="text-xs text-muted-foreground">{label}</span>
-            </div>
-           )
-        ))}
+    <div className="absolute bottom-4 left-1/2 -translate-x-1/2 w-auto bg-background/90 backdrop-blur-md rounded-xl p-3 px-5 shadow-lg flex justify-around text-center items-baseline gap-4">
+      {totalHoursLeft > 48 ? (
+        <div className="flex flex-col">
+          <span className="text-2xl font-bold text-primary">{timeLeft.days}</span>
+          <span className="text-xs text-muted-foreground">Días</span>
+        </div>
+      ) : totalHoursLeft > 24 ? (
+        <>
+          <div className="flex flex-col">
+            <span className="text-2xl font-bold text-primary">{timeLeft.days}</span>
+            <span className="text-xs text-muted-foreground">Día</span>
+          </div>
+          <div className="flex flex-col">
+            <span className="text-2xl font-bold text-primary">{timeLeft.hours}</span>
+            <span className="text-xs text-muted-foreground">Horas</span>
+          </div>
+        </>
+      ) : (
+        <div className="flex flex-col">
+          <span className="text-2xl font-bold text-primary">{timeLeft.hours}</span>
+          <span className="text-xs text-muted-foreground">Horas</span>
+        </div>
+      )}
     </div>
   );
 };
 
 
-export const UpcomingFestivalCard = ({ festival }: UpcomingFestivalCardProps) => {
+export const UpcomingFestivalCard = ({ festival }: { festival: Festival }) => {
   const [isInterested, setIsInterested] = useState(false);
   const [isClient, setIsClient] = useState(false);
   
@@ -87,12 +86,16 @@ export const UpcomingFestivalCard = ({ festival }: UpcomingFestivalCardProps) =>
   
   if (!isClient) {
     // Render a placeholder or null on the server to avoid hydration errors
-    return null;
+    return (
+        <div className="group relative rounded-xl border bg-card text-card-foreground shadow-md transition-all duration-300 hover:shadow-2xl aspect-[3/4]">
+             <div className="w-full h-full bg-muted animate-pulse rounded-xl" />
+        </div>
+    );
   }
   
   const now = new Date();
   const isFinished = now > festival.date.end;
-  const isImminent = !isFinished && (festival.date.start.getTime() - now.getTime()) < 24 * 60 * 60 * 1000;
+  const isImminent = !isFinished && differenceInHours(festival.date.start, now) < 24;
 
   const cardStateClasses = cn({
     'opacity-60': isFinished,
