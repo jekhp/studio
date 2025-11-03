@@ -11,17 +11,20 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet"
 import { Button } from '../ui/button';
+import { LanguageSwitcher } from './LanguageSwitcher';
+import { useLanguage } from '@/context/language-context';
 
 const navLinks = [
-  { href: '/', label: 'Home' },
-  { href: '/festivals', label: 'Festivals' },
-  { href: '/calendar', label: 'Calendar' },
-  { href: '/map', label: 'Map' },
-  { href: '/recommendations', label: 'Recommendations' },
+  { href: '/', label: 'navHome' },
+  { href: '/festivals', label: 'navFestivals' },
+  { href: '/calendar', label: 'navCalendar' },
+  { href: '/map', label: 'navMap' },
+  { href: '/recommendations', label: 'navRecommendations' },
 ];
 
 export function Header() {
   const pathname = usePathname();
+  const { t } = useLanguage();
 
   const NavLinks = ({ className }: { className?: string }) => (
     <nav className={cn("flex items-center space-x-4 lg:space-x-6", className)}>
@@ -34,7 +37,7 @@ export function Header() {
             pathname === link.href ? 'text-primary' : 'text-muted-foreground'
           )}
         >
-          {link.label}
+          {t(link.label)}
         </Link>
       ))}
     </nav>
@@ -50,6 +53,7 @@ export function Header() {
 
         <div className="hidden md:flex flex-1 items-center justify-end space-x-4">
           <NavLinks />
+          <LanguageSwitcher />
         </div>
         
         <div className="md:hidden">
@@ -71,7 +75,7 @@ export function Header() {
                        pathname === link.href ? 'text-primary' : 'text-foreground'
                     )}
                   >
-                    {link.label}
+                    {t(link.label)}
                   </Link>
                 ))}
               </div>

@@ -17,8 +17,10 @@ import {
   CarouselPrevious,
 } from '@/components/ui/carousel';
 import { UpcomingFestivalCard } from '@/components/UpcomingFestivalCard';
+import { useLanguage } from '@/context/language-context';
 
 export default function Home() {
+  const { t } = useLanguage();
   const heroImage = PlaceHolderImages.find(p => p.id === 'hero');
   const plugin = useRef(Autoplay({ delay: 3000, stopOnInteraction: true }));
 
@@ -53,13 +55,13 @@ export default function Home() {
         )}
         <div className="relative z-20 container mx-auto h-full flex flex-col items-center justify-center text-center space-y-6">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-headline tracking-tight">
-            The Ultimate Guide to Cusco's Festivals
+            {t('heroTitle')}
           </h1>
           <p className="max-w-3xl text-lg md:text-xl text-primary-foreground/90">
-            Welcome to the only platform that documents every celebration in the 13 provinces of the region. From the majestic Inti Raymi to the hidden gems of each district, your cultural adventure begins here.
+            {t('heroSubtitle')}
           </p>
           <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 transition-transform duration-300 ease-in-out hover:scale-105">
-            <Link href="/festivals">Explore Festivals</Link>
+            <Link href="/festivals">{t('exploreFestivals')}</Link>
           </Button>
         </div>
       </section>
@@ -67,9 +69,9 @@ export default function Home() {
       <section className="py-16 md:py-24 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-headline text-foreground">Featured Festivals</h2>
+            <h2 className="text-3xl md:text-4xl font-headline text-foreground">{t('featuredFestivalsTitle')}</h2>
             <p className="mt-2 text-lg text-muted-foreground max-w-2xl mx-auto">
-              Get a glimpse of the most iconic celebrations that define Cusco's cultural landscape.
+              {t('featuredFestivalsSubtitle')}
             </p>
           </div>
           <Carousel
@@ -99,9 +101,9 @@ export default function Home() {
       <section className="py-16 md:py-24 bg-secondary">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-headline text-foreground">Upcoming Festivals</h2>
+            <h2 className="text-3xl md:text-4xl font-headline text-foreground">{t('upcomingFestivalsTitle')}</h2>
             <p className="mt-2 text-lg text-muted-foreground max-w-2xl mx-auto">
-              Don&apos;t miss out! These festivals are just around the corner.
+              {t('upcomingFestivalsSubtitle')}
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

@@ -4,8 +4,10 @@ import { Wand2 } from "lucide-react";
 import { FestivalQuiz } from "@/components/FestivalQuiz";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import Image from "next/image";
+import { useLanguage } from "@/context/language-context";
 
 export default function RecommendationsPage() {
+  const { t } = useLanguage();
   const char1 = PlaceHolderImages.find(p => p.id === 'quiz-character-1');
   const char2 = PlaceHolderImages.find(p => p.id === 'quiz-character-2');
 
@@ -14,10 +16,10 @@ export default function RecommendationsPage() {
       <div className="text-center mb-12">
         <h1 className="text-4xl md:text-5xl font-headline text-foreground flex items-center justify-center gap-3">
           <Wand2 className="h-10 w-10 text-primary" />
-          Festival Finder Quiz
+          {t('recommendationsTitle')}
         </h1>
         <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
-          Answer a few questions and we'll find the perfect festival for you in Cusco.
+          {t('recommendationsSubtitle')}
         </p>
       </div>
 

@@ -1,6 +1,6 @@
 "use client";
 
-import { MessageSquare, Bot, Wand2, Calendar, Map, Star } from 'lucide-react';
+import { Bot, Star, Wand2, Map as MapIcon } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import {
   Sheet,
@@ -17,65 +17,68 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion"
 import Link from 'next/link';
+import { useLanguage } from '@/context/language-context';
 
-const faqSections = [
+export function ChatSupport() {
+  const { t } = useLanguage();
+
+  const faqSections = [
     {
-        title: "Popular Questions",
+        title: t('chatFaqPopularTitle'),
         icon: Star,
         questions: [
             {
-                question: "What is the biggest festival in Cusco?",
-                answer: "Inti Raymi, the Festival of the Sun, is the largest and most famous theatrical reenactment of an ancient Inca ceremony.",
+                question: t('chatFaqPopularQ1'),
+                answer: t('chatFaqPopularA1'),
                 link: "/festivals/inti-raymi",
-                linkLabel: "Discover Inti Raymi"
+                linkLabel: t('chatFaqPopularL1')
             },
             {
-                question: "Which month has the most festivals?",
-                answer: "June is a particularly busy month for festivals in Cusco, including the famous Inti Raymi and Corpus Christi.",
+                question: t('chatFaqPopularQ2'),
+                answer: t('chatFaqPopularA2'),
                 link: "/calendar",
-                linkLabel: "View June Calendar"
+                linkLabel: t('chatFaqPopularL2')
             },
         ]
     },
     {
-        title: "Which festival is for me?",
+        title: t('chatFaqQuizTitle'),
         icon: Wand2,
         questions: [
             {
-                question: "I don't know where to start! Can you help?",
-                answer: "Of course! Our Festival Finder quiz will ask you a few questions to give you personalized recommendations based on your interests.",
+                question: t('chatFaqQuizQ1'),
+                answer: t('chatFaqQuizA1'),
                 link: "/recommendations",
-                linkLabel: "Take the Quiz"
+                linkLabel: t('chatFaqQuizL1')
             },
              {
-                question: "I'm looking for a deep spiritual experience.",
-                answer: "We recommend Qoyllur Rit'i or the pilgrimage to the Lord of Huanca, both are powerful experiences of faith and devotion.",
+                question: t('chatFaqQuizQ2'),
+                answer: t('chatFaqQuizA2'),
                 link: "/festivals/qoyllur-riti",
-                linkLabel: "Explore Qoyllur Rit'i"
+                linkLabel: t('chatFaqQuizL2')
             },
         ]
     },
     {
-        title: "Planning My Visit",
-        icon: Map,
+        title: t('chatFaqPlanningTitle'),
+        icon: MapIcon,
         questions: [
             {
-                question: "Can I see all the festivals on a map?",
-                answer: "Yes, on our Map page you can see the location of all the festivals to better plan your route.",
+                question: t('chatFaqPlanningQ1'),
+                answer: t('chatFaqPlanningA1'),
                 link: "/map",
-                linkLabel: "Go to the Map"
+                linkLabel: t('chatFaqPlanningL1')
             },
             {
-                question: "How can I find out the exact dates?",
-                answer: "Our interactive Calendar allows you to explore festivals by date and see what's happening each day.",
+                question: t('chatFaqPlanningQ2'),
+                answer: t('chatFaqPlanningA2'),
                 link: "/calendar",
-                linkLabel: "Check the Calendar"
+                linkLabel: t('chatFaqPlanningL2')
             },
         ]
     }
 ];
 
-export function ChatSupport() {
   return (
     <Sheet>
       <SheetTrigger asChild>
@@ -91,10 +94,10 @@ export function ChatSupport() {
         <SheetHeader className="px-6 pt-6">
           <SheetTitle className='flex items-center gap-2 font-headline text-2xl'>
             <Bot className="h-6 w-6 text-primary"/>
-            Virtual Assistant
+            {t('chatTitle')}
           </SheetTitle>
           <SheetDescription>
-            Hello! I'm here to help you explore the festivals of Cusco. Find answers to common questions below.
+            {t('chatDescription')}
           </SheetDescription>
         </SheetHeader>
         <div className="py-4 space-y-2 overflow-y-auto flex-grow px-6">

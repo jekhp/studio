@@ -8,31 +8,61 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { Button } from '@/components/ui/button';
 import { Search, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useLanguage } from '@/context/language-context';
 
 const allMonths = Array.from(new Set(festivals.map(f => f.date.start.getMonth())));
-const monthOptions = allMonths.map(month => ({
-  value: month.toString(),
-  label: new Date(0, month).toLocaleString('en-US', { month: 'long' }),
-})).sort((a, b) => parseInt(a.value) - parseInt(b.value));
-
 const allCategories = Array.from(new Set(festivals.flatMap(f => f.categories)));
 
+const categoryTranslations: { [key: string]: string } = {
+  religioso: 'categoryReligious',
+  gastronómico: 'categoryGastronomic',
+  tradicional: 'categoryTraditional',
+  espectáculo: 'categoryShow',
+  feria: 'categoryFair',
+  conciertos: 'categoryConcerts',
+  artesanía: 'categoryHandicrafts',
+  andino: 'categoryAndean',
+  histórico: 'categoryHistoric',
+  danza: 'categoryDance',
+  peregrinación: 'categoryPilgrimage',
+  aventura: 'categoryAdventure',
+  carreras: 'categoryRaces',
+  'combate ritual': 'categoryRitualCombat',
+  agrícola: 'categoryAgricultural',
+  taurino: 'categoryBullfighting',
+  carnaval: 'categoryCarnival',
+  moderno: 'categoryModern',
+};
+
 export default function FestivalsPage() {
+  const { t, language } = useLanguage();
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedMonth, setSelectedMonth] = useState('all');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [visibleCount, setVisibleCount] = useState(9);
 
+  const monthOptions = useMemo(() => {
+    const monthNames = [
+      t('monthJanuary'), t('monthFebruary'), t('monthMarch'), t('monthApril'), t('monthMay'), t('monthJune'),
+      t('monthJuly'), t('monthAugust'), t('monthSeptember'), t('monthOctober'), t('monthNovember'), t('monthDecember')
+    ];
+    return allMonths.map(month => ({
+      value: month.toString(),
+      label: monthNames[month],
+    })).sort((a, b) => parseInt(a.value) - parseInt(b.value));
+  }, [t]);
+
   const filteredFestivals = useMemo(() => {
     return festivals
       .filter(festival => {
-        const matchesSearch = festival.name.toLowerCase().includes(searchTerm.toLowerCase());
+        const festivalName = language === 'es' ? festival.name : festival.name; // Keep original name
+        const matchesSearch = festivalName.toLowerCase().includes(searchTerm.toLowerCase());
         const matchesMonth = selectedMonth === 'all' || festival.date.start.getMonth() === parseInt(selectedMonth, 10);
         const matchesCategory = selectedCategory === 'all' || festival.categories.includes(selectedCategory);
         return matchesSearch && matchesMonth && matchesCategory;
       })
       .sort((a, b) => a.date.start.getTime() - b.date.start.getTime());
-  }, [searchTerm, selectedMonth, selectedCategory]);
+  }, [searchTerm, selectedMonth, selectedCategory, language]);
 
   const festivalsToShow = filteredFestivals.slice(0, visibleCount);
 
@@ -46,9 +76,9 @@ export default function FestivalsPage() {
   return (
     <div className="container mx-auto px-4 py-16">
       <div className="text-center mb-8">
-        <h1 className="text-4xl md:text-5xl font-headline text-foreground">Cusco's Festivals</h1>
+        <h1 className="text-4xl md:text-5xl font-headline text-foreground">{t('festivalsPageTitle')}</h1>
         <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
-          Immerse yourself in the rich tapestry of culture and tradition. Here is a comprehensive list of festivals that bring the heart of the Andes to life.
+          {t('festivalsPageSubtitle')}
         </p>
       </div>
 
@@ -59,7 +89,7 @@ export default function FestivalsPage() {
               <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
               <Input
                 type="text"
-                placeholder="Search by festival name..."
+                placeholder={t('searchPlaceholder')}
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="pl-10 w-full"
@@ -68,10 +98,10 @@ export default function FestivalsPage() {
             <div className='flex gap-2 w-full md:w-auto'>
                 <Select value={selectedMonth} onValueChange={setSelectedMonth}>
                   <SelectTrigger className="w-full sm:w-[150px]">
-                    <SelectValue placeholder="Filter by month" />
+                    <SelectValue placeholder={t('filterByMonth')} />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="all">All Months</SelectItem>
+                    <SelectItem value="all">{t('allMonths')}</SelectItem>
                     {monthOptions.map(m => (
                         <SelectItem key={m.value} value={m.value}>{m.label}</SelectItem>
                     ))}
@@ -80,19 +110,19 @@ export default function FestivalsPage() {
                 
                 <Select value={selectedCategory} onValueChange={setSelectedCategory}>
                   <SelectTrigger className="w-full sm:w-[150px]">
-                    <SelectValue placeholder="Filter by category" />
+                    <SelectValue placeholder={t('filterByCategory')} />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="all">All Categories</SelectItem>
+                    <SelectItem value="all">{t('allCategories')}</SelectItem>
                     {allCategories.map(c => (
-                        <SelectItem key={c} value={c}>{c.charAt(0).toUpperCase() + c.slice(1)}</SelectItem>
+                        <SelectItem key={c} value={c}>{t(categoryTranslations[c] || c)}</SelectItem>
                     ))}
                   </SelectContent>
                 </Select>
 
                 <Button variant="ghost" onClick={clearFilters} className="text-muted-foreground">
                     <X className="h-4 w-4 md:mr-2"/>
-                    <span className="hidden md:inline">Clear</span>
+                    <span className="hidden md:inline">{t('clearFilters')}</span>
                 </Button>
             </div>
         </div>
@@ -120,14 +150,14 @@ export default function FestivalsPage() {
           {visibleCount < filteredFestivals.length && (
             <div className="text-center mt-12">
               <Button onClick={() => setVisibleCount(prev => prev + 9)}>
-                Load More
+                {t('loadMore')}
               </Button>
             </div>
           )}
         </>
       ) : (
         <div className="text-center py-16">
-            <p className="text-lg text-muted-foreground">No festivals found matching your criteria.</p>
+            <p className="text-lg text-muted-foreground">{t('noFestivalsFound')}</p>
         </div>
       )}
 

@@ -5,6 +5,7 @@ import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { Toaster } from '@/components/ui/toaster';
 import { ChatSupport } from '@/components/ChatSupport';
+import { LanguageProvider } from '@/context/language-context';
 
 export const metadata: Metadata = {
   title: 'CuscoFest',
@@ -27,11 +28,13 @@ export default function RootLayout({
           crossOrigin=""/>
       </head>
       <body className={cn('font-body antialiased min-h-screen flex flex-col')}>
-        <Header />
-        <main className="flex-grow">{children}</main>
-        <Footer />
-        <Toaster />
-        <ChatSupport />
+        <LanguageProvider>
+            <Header />
+            <main className="flex-grow">{children}</main>
+            <Footer />
+            <Toaster />
+            <ChatSupport />
+        </LanguageProvider>
       </body>
     </html>
   );

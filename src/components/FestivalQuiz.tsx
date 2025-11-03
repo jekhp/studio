@@ -6,9 +6,10 @@ import { ArrowRight, RotateCcw, Heart, Calendar, Mountain, Users, User } from 'l
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Progress } from '@/components/ui/progress';
-import { festivals, type Festival } from '@/lib/festivals';
+import { festivals } from '@/lib/festivals';
 import { FestivalCard } from './FestivalCard';
 import Link from 'next/link';
+import { useLanguage } from '@/context/language-context';
 
 type Answer = {
     vibe: string;
@@ -19,32 +20,32 @@ type Answer = {
 const quizSteps = [
     {
         id: 'vibe',
-        question: 'What kind of vibe are you looking for?',
+        question: 'quizVibeQuestion',
         options: [
-            { value: 'espiritual', label: 'Spiritual', icon: Heart, description: 'Connection, tradition, and pilgrimage.' },
-            { value: 'fiesta', label: 'Party', icon: Heart, description: 'Music, dancing, and vibrant celebrations.' },
-            { value: 'cultural', label: 'Cultural', icon: Heart, description: 'History, art, and unique performances.' },
-            { value: 'aventura', label: 'Adventure', icon: Mountain, description: 'Exploration, nature, and challenges.' },
+            { value: 'espiritual', label: 'quizVibeSpiritual', icon: Heart, description: 'quizVibeSpiritualDesc' },
+            { value: 'fiesta', label: 'quizVibeParty', icon: Heart, description: 'quizVibePartyDesc' },
+            { value: 'cultural', label: 'quizVibeCultural', icon: Heart, description: 'quizVibeCulturalDesc' },
+            { value: 'aventura', label: 'quizVibeAdventure', icon: Mountain, description: 'quizVibeAdventureDesc' },
         ],
     },
     {
         id: 'season',
-        question: 'What time of year would you like to travel?',
+        question: 'quizSeasonQuestion',
         options: [
-            { value: 'summer', label: 'Summer (Dec-Mar)', icon: Calendar, description: 'Rainy season, green landscapes.' },
-            { value: 'autumn', label: 'Autumn (Apr-Jun)', icon: Calendar, description: 'Dry season, major festivals.' },
-            { value: 'winter', label: 'Winter (Jul-Sep)', icon: Calendar, description: 'Dry and sunny, high season.' },
-            { value: 'spring', label: 'Spring (Oct-Nov)', icon: Calendar, description: 'Fewer crowds, pleasant weather.' },
+            { value: 'summer', label: 'quizSeasonSummer', icon: Calendar, description: 'quizSeasonSummerDesc' },
+            { value: 'autumn', label: 'quizSeasonAutumn', icon: Calendar, description: 'quizSeasonAutumnDesc' },
+            { value: 'winter', label: 'quizSeasonWinter', icon: Calendar, description: 'quizSeasonWinterDesc' },
+            { value: 'spring', label: 'quizSeasonSpring', icon: Calendar, description: 'quizSeasonSpringDesc' },
         ],
     },
     {
         id: 'company',
-        question: 'Who are you traveling with?',
+        question: 'quizCompanyQuestion',
         options: [
-            { value: 'solo', label: 'Solo', icon: User, description: 'A personal, introspective adventure.' },
-            { value: 'couple', label: 'As a Couple', icon: Users, description: 'A romantic and memorable getaway.' },
-            { value: 'friends', label: 'With Friends', icon: Users, description: 'Fun, parties, and new experiences.' },
-            { value: 'family', label: 'With Family', icon: Users, description: 'Activities for all ages.' },
+            { value: 'solo', label: 'quizCompanySolo', icon: User, description: 'quizCompanySoloDesc' },
+            { value: 'couple', label: 'quizCompanyCouple', icon: Users, description: 'quizCompanyCoupleDesc' },
+            { value: 'friends', label: 'quizCompanyFriends', icon: Users, description: 'quizCompanyFriendsDesc' },
+            { value: 'family', label: 'quizCompanyFamily', icon: Users, description: 'quizCompanyFamilyDesc' },
         ],
     }
 ];
@@ -71,6 +72,7 @@ const scoringProfile = {
 }
 
 export function FestivalQuiz() {
+    const { t } = useLanguage();
     const [step, setStep] = useState(0);
     const [answers, setAnswers] = useState<Partial<Answer>>({});
     const [showResults, setShowResults] = useState(false);
@@ -149,8 +151,8 @@ export function FestivalQuiz() {
                         animate={{ opacity: 1 }}
                         className="p-6 md:p-8"
                     >
-                        <h2 className="text-2xl md:text-3xl font-headline text-center mb-2">Here are your recommendations!</h2>
-                        <p className="text-muted-foreground text-center mb-8">Based on your answers, we think you'll love these festivals.</p>
+                        <h2 className="text-2xl md:text-3xl font-headline text-center mb-2">{t('quizResultsTitle')}</h2>
+                        <p className="text-muted-foreground text-center mb-8">{t('quizResultsSubtitle')}</p>
                         <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
                             {recommendedFestivals.map(({festival}) => (
                                 <div key={festival.id} className="break-inside-avoid">
@@ -161,11 +163,11 @@ export function FestivalQuiz() {
                         <div className="text-center mt-8 space-x-4">
                             <Button onClick={restartQuiz}>
                                 <RotateCcw className="mr-2 h-4 w-4" />
-                                Retake Quiz
+                                {t('retakeQuiz')}
                             </Button>
                             <Button asChild variant="outline">
                                 <Link href="/festivals">
-                                    See All Festivals <ArrowRight className="ml-2 h-4 w-4" />
+                                    {t('seeAllFestivals')} <ArrowRight className="ml-2 h-4 w-4" />
                                 </Link>
                             </Button>
                         </div>
@@ -181,8 +183,8 @@ export function FestivalQuiz() {
                     >
                         <div className="p-6 md:p-8">
                             <Progress value={progress} className="mb-4" />
-                            <p className="text-sm font-medium text-primary mb-2">Step {step + 1} of {quizSteps.length}</p>
-                            <h2 className="text-2xl md:text-3xl font-headline mb-8">{currentStep.question}</h2>
+                            <p className="text-sm font-medium text-primary mb-2">{t('quizStep').replace('{step}', String(step + 1)).replace('{total}', String(quizSteps.length))}</p>
+                            <h2 className="text-2xl md:text-3xl font-headline mb-8">{t(currentStep.question)}</h2>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 {currentStep.options.map(option => (
                                     <Card
@@ -195,8 +197,8 @@ export function FestivalQuiz() {
                                                 <option.icon className="h-6 w-6 text-primary" />
                                             </div>
                                             <div>
-                                                <h3 className="font-semibold">{option.label}</h3>
-                                                <p className="text-sm text-muted-foreground">{option.description}</p>
+                                                <h3 className="font-semibold">{t(option.label)}</h3>
+                                                <p className="text-sm text-muted-foreground">{t(option.description)}</p>
                                             </div>
                                         </CardContent>
                                     </Card>
