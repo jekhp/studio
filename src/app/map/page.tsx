@@ -17,6 +17,7 @@ export default function MapPage() {
           ${placeholder ? `<img src="${placeholder.imageUrl}" alt="${f.name}" class="w-full h-24 object-cover rounded-t-lg" />` : ''}
           <div class="p-2">
             <h3 class="font-bold text-sm mb-1">${f.name}</h3>
+            <p class="text-xs text-muted-foreground mb-2">${f.description}</p>
             <p class="text-xs text-muted-foreground">${format(f.date.start, 'MMMM do')}</p>
           </div>
         </a>
