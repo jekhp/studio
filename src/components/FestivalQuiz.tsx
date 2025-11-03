@@ -8,6 +8,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Progress } from '@/components/ui/progress';
 import { festivals, type Festival } from '@/lib/festivals';
 import { FestivalCard } from './FestivalCard';
+import Link from 'next/link';
 
 type Answer = {
     vibe: string;
@@ -18,32 +19,32 @@ type Answer = {
 const quizSteps = [
     {
         id: 'vibe',
-        question: '¿Qué tipo de ambiente prefieres?',
+        question: 'What kind of vibe are you looking for?',
         options: [
-            { value: 'espiritual', label: 'Espiritual', icon: Heart, description: 'Conexión, tradición y peregrinación.' },
-            { value: 'fiesta', label: 'Fiesta', icon: Heart, description: 'Música, baile y celebraciones vibrantes.' },
-            { value: 'cultural', label: 'Cultural', icon: Heart, description: 'Historia, arte y espectáculos únicos.' },
-            { value: 'aventura', label: 'Aventura', icon: Mountain, description: 'Exploración, naturaleza y retos.' },
+            { value: 'espiritual', label: 'Spiritual', icon: Heart, description: 'Connection, tradition, and pilgrimage.' },
+            { value: 'fiesta', label: 'Party', icon: Heart, description: 'Music, dancing, and vibrant celebrations.' },
+            { value: 'cultural', label: 'Cultural', icon: Heart, description: 'History, art, and unique performances.' },
+            { value: 'aventura', label: 'Adventure', icon: Mountain, description: 'Exploration, nature, and challenges.' },
         ],
     },
     {
         id: 'season',
-        question: '¿En qué época te gustaría viajar?',
+        question: 'What time of year would you like to travel?',
         options: [
-            { value: 'summer', label: 'Verano (Dic-Mar)', icon: Calendar, description: 'Temporada de lluvias, paisajes verdes.' },
-            { value: 'autumn', label: 'Otoño (Abr-Jun)', icon: Calendar, description: 'Temporada seca, festivales grandes.' },
-            { value: 'winter', label: 'Invierno (Jul-Sep)', icon: Calendar, description: 'Clima seco y soleado, temporada alta.' },
-            { value: 'spring', label: 'Primavera (Oct-Nov)', icon: Calendar, description: 'Menos multitudes, clima agradable.' },
+            { value: 'summer', label: 'Summer (Dec-Mar)', icon: Calendar, description: 'Rainy season, green landscapes.' },
+            { value: 'autumn', label: 'Autumn (Apr-Jun)', icon: Calendar, description: 'Dry season, major festivals.' },
+            { value: 'winter', label: 'Winter (Jul-Sep)', icon: Calendar, description: 'Dry and sunny, high season.' },
+            { value: 'spring', label: 'Spring (Oct-Nov)', icon: Calendar, description: 'Fewer crowds, pleasant weather.' },
         ],
     },
     {
         id: 'company',
-        question: '¿Con quién viajas?',
+        question: 'Who are you traveling with?',
         options: [
-            { value: 'solo', label: 'Solo', icon: User, description: 'Una aventura personal e introspectiva.' },
-            { value: 'couple', label: 'En Pareja', icon: Users, description: 'Una escapada romántica y memorable.' },
-            { value: 'friends', label: 'Con Amigos', icon: Users, description: 'Diversión, fiesta y nuevas experiencias.' },
-            { value: 'family', label: 'En Familia', icon: Users, description: 'Actividades para todas las edades.' },
+            { value: 'solo', label: 'Solo', icon: User, description: 'A personal, introspective adventure.' },
+            { value: 'couple', label: 'As a Couple', icon: Users, description: 'A romantic and memorable getaway.' },
+            { value: 'friends', label: 'With Friends', icon: Users, description: 'Fun, parties, and new experiences.' },
+            { value: 'family', label: 'With Family', icon: Users, description: 'Activities for all ages.' },
         ],
     }
 ];
@@ -148,8 +149,8 @@ export function FestivalQuiz() {
                         animate={{ opacity: 1 }}
                         className="p-6 md:p-8"
                     >
-                        <h2 className="text-2xl md:text-3xl font-headline text-center mb-2">¡Aquí están tus recomendaciones!</h2>
-                        <p className="text-muted-foreground text-center mb-8">Basado en tus respuestas, creemos que estos festivales te encantarán.</p>
+                        <h2 className="text-2xl md:text-3xl font-headline text-center mb-2">Here are your recommendations!</h2>
+                        <p className="text-muted-foreground text-center mb-8">Based on your answers, we think you'll love these festivals.</p>
                         <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
                             {recommendedFestivals.map(({festival}) => (
                                 <div key={festival.id} className="break-inside-avoid">
@@ -157,10 +158,15 @@ export function FestivalQuiz() {
                                 </div>
                             ))}
                         </div>
-                        <div className="text-center mt-8">
+                        <div className="text-center mt-8 space-x-4">
                             <Button onClick={restartQuiz}>
                                 <RotateCcw className="mr-2 h-4 w-4" />
-                                Hacer el quiz de nuevo
+                                Retake Quiz
+                            </Button>
+                            <Button asChild variant="outline">
+                                <Link href="/festivals">
+                                    See All Festivals <ArrowRight className="ml-2 h-4 w-4" />
+                                </Link>
                             </Button>
                         </div>
                     </motion.div>
@@ -175,7 +181,7 @@ export function FestivalQuiz() {
                     >
                         <div className="p-6 md:p-8">
                             <Progress value={progress} className="mb-4" />
-                            <p className="text-sm font-medium text-primary mb-2">Paso {step + 1} de {quizSteps.length}</p>
+                            <p className="text-sm font-medium text-primary mb-2">Step {step + 1} of {quizSteps.length}</p>
                             <h2 className="text-2xl md:text-3xl font-headline mb-8">{currentStep.question}</h2>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 {currentStep.options.map(option => (

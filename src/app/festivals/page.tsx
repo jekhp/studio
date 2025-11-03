@@ -12,7 +12,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 const allMonths = Array.from(new Set(festivals.map(f => f.date.start.getMonth())));
 const monthOptions = allMonths.map(month => ({
   value: month.toString(),
-  label: new Date(0, month).toLocaleString('es-ES', { month: 'long' }),
+  label: new Date(0, month).toLocaleString('en-US', { month: 'long' }),
 })).sort((a, b) => parseInt(a.value) - parseInt(b.value));
 
 const allCategories = Array.from(new Set(festivals.flatMap(f => f.categories)));
@@ -73,7 +73,7 @@ export default function FestivalsPage() {
                   <SelectContent>
                     <SelectItem value="all">All Months</SelectItem>
                     {monthOptions.map(m => (
-                        <SelectItem key={m.value} value={m.value}>{m.label.charAt(0).toUpperCase() + m.label.slice(1)}</SelectItem>
+                        <SelectItem key={m.value} value={m.value}>{m.label}</SelectItem>
                     ))}
                   </SelectContent>
                 </Select>

@@ -53,13 +53,13 @@ export default function Home() {
         )}
         <div className="relative z-20 container mx-auto h-full flex flex-col items-center justify-center text-center space-y-6">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-headline tracking-tight">
-            La Guía Definitiva de los Festivales de Cusco
+            The Ultimate Guide to Cusco's Festivals
           </h1>
           <p className="max-w-3xl text-lg md:text-xl text-primary-foreground/90">
-            Bienvenido a la única plataforma que documenta cada celebración en las 13 provincias de la región. Desde el majestuoso Inti Raymi hasta las joyas ocultas de cada distrito, tu aventura cultural comienza aquí.
+            Welcome to the only platform that documents every celebration in the 13 provinces of the region. From the majestic Inti Raymi to the hidden gems of each district, your cultural adventure begins here.
           </p>
           <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 transition-transform duration-300 ease-in-out hover:scale-105">
-            <Link href="/festivals">Explora los Festivales</Link>
+            <Link href="/festivals">Explore Festivals</Link>
           </Button>
         </div>
       </section>

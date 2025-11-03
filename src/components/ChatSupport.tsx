@@ -20,56 +20,56 @@ import Link from 'next/link';
 
 const faqSections = [
     {
-        title: "Preguntas Populares",
+        title: "Popular Questions",
         icon: Star,
         questions: [
             {
-                question: "¿Cuál es el festival más grande de Cusco?",
-                answer: "Inti Raymi, el Festival del Sol, es la representación teatral más grande y famosa de una antigua ceremonia inca.",
+                question: "What is the biggest festival in Cusco?",
+                answer: "Inti Raymi, the Festival of the Sun, is the largest and most famous theatrical reenactment of an ancient Inca ceremony.",
                 link: "/festivals/inti-raymi",
-                linkLabel: "Descubre Inti Raymi"
+                linkLabel: "Discover Inti Raymi"
             },
             {
-                question: "¿En qué mes hay más festivales?",
-                answer: "Junio es un mes particularmente ocupado para los festivales en Cusco, incluyendo los famosos Inti Raymi y Corpus Christi.",
+                question: "Which month has the most festivals?",
+                answer: "June is a particularly busy month for festivals in Cusco, including the famous Inti Raymi and Corpus Christi.",
                 link: "/calendar",
-                linkLabel: "Ver Calendario de Junio"
+                linkLabel: "View June Calendar"
             },
         ]
     },
     {
-        title: "¿Qué festival es para mí?",
+        title: "Which festival is for me?",
         icon: Wand2,
         questions: [
             {
-                question: "¡No sé por dónde empezar! ¿Pueden ayudarme?",
-                answer: "¡Claro! Nuestro Buscador de Festivales te hará algunas preguntas para darte recomendaciones personalizadas basadas en tus intereses.",
+                question: "I don't know where to start! Can you help?",
+                answer: "Of course! Our Festival Finder quiz will ask you a few questions to give you personalized recommendations based on your interests.",
                 link: "/recommendations",
-                linkLabel: "Hacer el Quiz"
+                linkLabel: "Take the Quiz"
             },
              {
-                question: "Busco una experiencia espiritual profunda.",
-                answer: "Te recomendamos Qoyllur Rit'i o la peregrinación al Señor de Huanca, ambas son experiencias de fe y devoción muy poderosas.",
+                question: "I'm looking for a deep spiritual experience.",
+                answer: "We recommend Qoyllur Rit'i or the pilgrimage to the Lord of Huanca, both are powerful experiences of faith and devotion.",
                 link: "/festivals/qoyllur-riti",
-                linkLabel: "Explorar Qoyllur Rit'i"
+                linkLabel: "Explore Qoyllur Rit'i"
             },
         ]
     },
     {
-        title: "Planificando mi visita",
+        title: "Planning My Visit",
         icon: Map,
         questions: [
             {
-                question: "¿Puedo ver todos los festivales en un mapa?",
-                answer: "Sí, en nuestra página de Mapa puedes ver la ubicación de todos los festivales para planificar mejor tu ruta.",
+                question: "Can I see all the festivals on a map?",
+                answer: "Yes, on our Map page you can see the location of all the festivals to better plan your route.",
                 link: "/map",
-                linkLabel: "Ir al Mapa"
+                linkLabel: "Go to the Map"
             },
             {
-                question: "¿Cómo puedo saber las fechas exactas?",
-                answer: "Nuestro Calendario Interactivo te permite explorar los festivales por fecha y ver qué se celebra cada día.",
+                question: "How can I find out the exact dates?",
+                answer: "Our interactive Calendar allows you to explore festivals by date and see what's happening each day.",
                 link: "/calendar",
-                linkLabel: "Consultar el Calendario"
+                linkLabel: "Check the Calendar"
             },
         ]
     }
@@ -90,11 +90,11 @@ export function ChatSupport() {
       <SheetContent className="flex flex-col">
         <SheetHeader className="px-6 pt-6">
           <SheetTitle className='flex items-center gap-2 font-headline text-2xl'>
-            <Wand2 className="h-6 w-6 text-primary"/>
-            Asistente Virtual
+            <Bot className="h-6 w-6 text-primary"/>
+            Virtual Assistant
           </SheetTitle>
           <SheetDescription>
-            ¡Hola! Estoy aquí para ayudarte a explorar los festivales de Cusco. Encuentra respuestas a preguntas comunes a continuación.
+            Hello! I'm here to help you explore the festivals of Cusco. Find answers to common questions below.
           </SheetDescription>
         </SheetHeader>
         <div className="py-4 space-y-2 overflow-y-auto flex-grow px-6">

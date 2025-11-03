@@ -17,7 +17,7 @@ export default function RecommendationsPage() {
           Festival Finder Quiz
         </h1>
         <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
-          Responde unas pocas preguntas y encontraremos el festival perfecto para ti en Cusco.
+          Answer a few questions and we'll find the perfect festival for you in Cusco.
         </p>
       </div>
 
