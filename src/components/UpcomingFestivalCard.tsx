@@ -10,6 +10,7 @@ import type { Festival } from '@/lib/festivals';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
+import Link from 'next/link';
 
 interface CountdownProps {
   targetDate: Date;
@@ -104,8 +105,14 @@ export const UpcomingFestivalCard = ({ festival }: { festival: Festival }) => {
 
   const formattedDateRange = `${format(festival.date.start, 'dd MMM')} - ${format(festival.date.end, 'dd MMM, yyyy')}`;
 
+  const handleInterestClick = (e: React.MouseEvent) => {
+    e.preventDefault(); // Evita que el enlace se active
+    e.stopPropagation(); // Detiene la propagación del evento al enlace contenedor
+    setIsInterested(!isInterested);
+  }
+
   return (
-    <div className={cn("group relative rounded-xl border bg-card text-card-foreground shadow-md transition-all duration-300 hover:shadow-2xl", cardStateClasses)}>
+    <Link href={`/festivals/${festival.slug}`} className={cn("group relative block rounded-xl border bg-card text-card-foreground shadow-md transition-all duration-300 hover:shadow-2xl", cardStateClasses)}>
       <div className="relative h-64 w-full overflow-hidden rounded-t-xl">
         {placeholder && (
           <Image
@@ -151,7 +158,7 @@ export const UpcomingFestivalCard = ({ festival }: { festival: Festival }) => {
             <Button 
               variant={isInterested ? 'default' : 'outline'} 
               size="sm"
-              onClick={() => setIsInterested(!isInterested)}
+              onClick={handleInterestClick}
               className="transition-colors group-hover:bg-primary group-hover:text-primary-foreground"
             >
               <Heart className={cn("mr-2 h-4 w-4", isInterested && "fill-current")} />
@@ -159,6 +166,6 @@ export const UpcomingFestivalCard = ({ festival }: { festival: Festival }) => {
             </Button>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
