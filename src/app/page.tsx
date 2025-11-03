@@ -16,11 +16,23 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from '@/components/ui/carousel';
+import { UpcomingFestivalCard } from '@/components/UpcomingFestivalCard';
 
 export default function Home() {
-  const featuredFestivals = festivals.slice(0, 3);
   const heroImage = PlaceHolderImages.find(p => p.id === 'hero');
   const plugin = useRef(Autoplay({ delay: 3000, stopOnInteraction: true }));
+
+  const upcomingFestivals = festivals
+    .filter(f => f.date.end > new Date())
+    .sort((a, b) => a.date.start.getTime() - b.date.start.getTime())
+    .slice(0, 3);
+    
+  const pastFestivals = festivals
+    .filter(f => f.date.end <= new Date())
+    .sort((a,b) => b.date.end.getTime() - a.date.end.getTime())
+    .slice(0, 3);
+
+  const displayedUpcomingFestivals = [...upcomingFestivals, ...pastFestivals].slice(0,3);
 
   return (
     <div className="flex flex-col">
@@ -80,6 +92,23 @@ export default function Home() {
           </Carousel>
         </div>
       </section>
+
+      <section className="py-16 md:py-24 bg-secondary">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-headline text-foreground">Upcoming Festivals</h2>
+            <p className="mt-2 text-lg text-muted-foreground max-w-2xl mx-auto">
+              Don&apos;t miss out! These festivals are just around the corner.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {displayedUpcomingFestivals.map((festival) => (
+              <UpcomingFestivalCard key={festival.id} festival={festival} />
+            ))}
+          </div>
+        </div>
+      </section>
+
     </div>
   );
 }

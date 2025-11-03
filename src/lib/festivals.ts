@@ -20,6 +20,7 @@ export type Festival = {
   image: string;
   rating: number;
   reviews: Review[];
+  interest: number;
 };
 
 export const festivals: Festival[] = [
@@ -52,6 +53,7 @@ export const festivals: Festival[] = [
       { id: 1, user: 'TravelerJane', rating: 5, comment: 'Absolutely breathtaking! The scale and colors are something you have to see to believe.' },
       { id: 2, user: 'HistoryBuff_88', rating: 5, comment: 'A fantastic representation of Inca culture. Very well organized.' },
     ],
+    interest: 2.1
   },
   {
     id: '2',
@@ -89,6 +91,7 @@ export const festivals: Festival[] = [
       { id: 1, user: 'AdventurousSoul', rating: 5, comment: 'A truly profound and spiritual experience. The energy is incredible, but be prepared for the cold and altitude.' },
       { id: 2, user: 'CulturalExplorer', rating: 4, comment: 'Fascinating to see the blend of beliefs. It\'s not for the faint of heart, but it\'s very authentic.' },
     ],
+    interest: 1.8
   },
   {
     id: '3',
@@ -129,6 +132,7 @@ export const festivals: Festival[] = [
       { id: 1, user: 'FiestaFinder', rating: 5, comment: 'Incredible party! The costumes of the Saqra dancers are amazing and a little terrifying. Loved every minute.' },
       { id: 2, user: 'PhotoNomad', rating: 5, comment: 'A photographer\'s dream. So much color and action. The town has a magical atmosphere during the festival.' },
     ],
+    interest: 1.5
   },
   {
     id: '4',
@@ -164,6 +168,7 @@ export const festivals: Festival[] = [
       { id: 1, user: 'CultureVulture', rating: 5, comment: 'The pageantry is incredible. Seeing all the saints together in the plaza is a powerful sight.' },
       { id: 2, user: 'FoodieGavin', rating: 4, comment: 'Came for the parade, stayed for the Chiriuchu. It\'s a wild combination of flavors but you have to try it!' },
     ],
+    interest: 1.2
   },
   {
     id: '5',
@@ -192,6 +197,7 @@ export const festivals: Festival[] = [
     reviews: [
       { id: 1, user: 'HistoryLover', rating: 5, comment: 'Seeing the procession against the backdrop of the Inca ruins is unforgettable.' },
     ],
+    interest: 0.9
   },
   {
     id: '6',
@@ -219,6 +225,7 @@ export const festivals: Festival[] = [
     reviews: [
       { id: 1, user: 'FoodCritic', rating: 5, comment: 'The food variety is insane! A must-visit for anyone who wants to taste authentic Andean cuisine.' },
     ],
+    interest: 1.1
   },
   {
     id: '7',
@@ -247,6 +254,7 @@ export const festivals: Festival[] = [
     reviews: [
       { id: 1, user: 'AdventureSeeker', rating: 4, comment: 'The battle reenactment is wild and chaotic! Very impressive.' },
     ],
+    interest: 0.5
   },
   {
     id: '8',
@@ -274,6 +282,7 @@ export const festivals: Festival[] = [
     reviews: [
       { id: 1, user: 'LocalExplorer', rating: 4, comment: 'A great way to discover what Anta has to offer. Very well organized and friendly atmosphere.' },
     ],
+    interest: 0.4
   },
   {
     id: '9',
@@ -302,6 +311,7 @@ export const festivals: Festival[] = [
     reviews: [
       { id: 1, user: 'CoffeeLover', rating: 5, comment: 'Heaven for a coffee addict like me! The quality is outstanding.' },
     ],
+    interest: 0.8
   },
   {
     id: '10',
@@ -329,6 +339,7 @@ export const festivals: Festival[] = [
     reviews: [
       { id: 1, user: 'CultureSeeker', rating: 5, comment: 'So authentic and full of life. It felt like stepping back in time.' },
     ],
+    interest: 0.6
   },
   {
     id: '11',
@@ -358,6 +369,7 @@ export const festivals: Festival[] = [
     reviews: [
       { id: 1, user: 'Engineer_Mike', rating: 5, comment: 'An incredible feat of engineering and community spirit. Truly one of a kind.' },
     ],
+    interest: 1.9
   },
   {
     id: '12',
@@ -386,6 +398,7 @@ export const festivals: Festival[] = [
     reviews: [
       { id: 1, user: 'Cowboy_Fan', rating: 5, comment: 'The horsemanship is absolutely stunning. Very raw and exciting festival.' },
     ],
+    interest: 0.7
   },
   {
     id: '13',
@@ -414,6 +427,7 @@ export const festivals: Festival[] = [
     reviews: [
       { id: 1, user: 'EcoTraveler', rating: 4, comment: 'Fascinating to see so many types of potatoes! A great celebration of biodiversity.' },
     ],
+    interest: 0.3
   },
   {
     id: '14',
@@ -442,6 +456,7 @@ export const festivals: Festival[] = [
     reviews: [
       { id: 1, user: 'TraditionLover', rating: 4, comment: 'A very classic and lively Andean festival. The bullfights are the main event.' },
     ],
+    interest: 0.2
   },
   {
     id: '15',
@@ -470,6 +485,7 @@ export const festivals: Festival[] = [
     reviews: [
       { id: 1, user: 'FaithfulPilgrim', rating: 5, comment: 'The amount of faith you can feel here is overwhelming. A deeply moving experience.' },
     ],
+    interest: 1.7
   },
   {
     id: '16',
@@ -497,6 +513,7 @@ export const festivals: Festival[] = [
     reviews: [
       { id: 1, user: 'AnthroStudent', rating: 5, comment: 'A beautiful and very authentic ritual. The flower symbolism is fascinating.' },
     ],
+    interest: 0.8
   },
   {
     id: '17',
@@ -525,6 +542,7 @@ export const festivals: Festival[] = [
     reviews: [
       { id: 1, user: 'CuscoLocal', rating: 5, comment: 'As a local, this is one of my favorite festivals. The dancing is non-stop and the atmosphere is electric.' },
     ],
+    interest: 1.3
   },
   {
     id: '18',
@@ -554,5 +572,61 @@ export const festivals: Festival[] = [
     reviews: [
       { id: 1, user: 'ExtremeTravel', rating: 5, comment: 'Like nothing I have ever seen. Intense, raw, and absolutely fascinating. A true cultural immersion.' },
     ],
+    interest: 1.6
   },
+  {
+    id: '19',
+    slug: 'carnaval-de-mollomarka',
+    name: 'Carnaval de Mollomarka',
+    description: 'An authentic high-altitude carnival in the province of Chumbivilcas.',
+    longDescription:
+      'In the remote district of Mollomarka, this carnival is one of the most traditional and less-visited in the Cusco region. It is a celebration of the harvest and fertility, with deep roots in Andean cosmology. The festival features unique music, energetic dancing, and ritual offerings to the Pacha Mama and the Apus. The "Yunza" or "Cortamonte," a tree laden with gifts that is danced around and eventually cut down, is a central element.',
+    date: { start: new Date(new Date().getFullYear(), 1, 25), end: new Date(new Date().getFullYear(), 1, 27) },
+    location: 'Mollomarka (Chumbivilcas)',
+    coords: [-14.331, -71.933],
+    history: 'This carnival preserves ancient rituals that have been passed down through generations, offering a glimpse into the heart of Andean culture, away from major tourist circuits. The music and dance styles are specific to this micro-region.',
+    traditions: ['Cortamonte/Yunza (tree cutting ceremony)', 'Traditional carnival music with charangos and bandurrias', 'Community feasting and sharing of chicha', 'Horseback riding displays by local cowboys (qorilazos)'],
+    schedule: [
+      {
+        day: 'Carnival Sunday',
+        events: [
+          { time: 'All Day', description: 'Main celebration with music, dancing, and the Cortamonte ceremony in the evening.' },
+        ],
+      },
+    ],
+    image: 'mollomarka-carnival',
+    rating: 4.6,
+    reviews: [
+      { id: 1, user: 'OffTheBeatenPath', rating: 5, comment: 'A truly authentic experience. No tourists, just pure local culture. The scenery is also spectacular.' },
+    ],
+    interest: 0.4
+  },
+  {
+    id: '20',
+    slug: 'aniversario-de-la-convencion',
+    name: 'Aniversario de La Convención',
+    description: 'The anniversary celebration of the tropical province of La Convención.',
+    longDescription:
+      'The anniversary of the province of La Convención, with its capital in Quillabamba, is a week-long celebration of the region\'s identity, also known as the "eyebrow of the jungle." The festival features parades, beauty pageants (election of the "Miss Coffee"), agricultural fairs showcasing coffee, cocoa, and tropical fruits, and lively concerts with jungle music (cumbia amazónica). It is a festive time that highlights the unique culture of Cusco\'s tropical region.',
+    date: { start: new Date(new Date().getFullYear(), 6, 20), end: new Date(new Date().getFullYear(), 6, 25) },
+    location: 'Quillabamba (La Convención)',
+    coords: [-12.865, -72.693],
+    history: 'This celebration marks the political creation of the province and has become a major event to promote its economic potential and distinct cultural identity, different from the Andean highlands.',
+    traditions: ['Civic and school parades', 'Agricultural and artisanal fairs', 'Election of beauty queens representing local products', 'Live music concerts and parties'],
+    schedule: [
+      {
+        day: 'July 25 (Main Day)',
+        events: [
+          { time: '10:00 AM', description: 'Grand civic-military parade in the main square.' },
+          { time: '8:00 PM', description: 'Serenata and main concert with national artists.' },
+        ],
+      },
+    ],
+    image: 'quillabamba-anniversary',
+    rating: 4.5,
+    reviews: [
+      { id: 1, user: 'TropicalVibes', rating: 4, comment: 'A fun party with a very different feel from the rest of Cusco. Lots of dancing!' },
+    ],
+    interest: 0.7
+  }
 ];

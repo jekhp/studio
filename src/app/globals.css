@@ -86,3 +86,14 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+@layer utilities {
+  .blinking-border {
+    animation: blink 1.5s infinite;
+  }
+
+  @keyframes blink {
+    0%, 100% { border-color: hsl(var(--destructive)); }
+    50% { border-color: transparent; }
+  }
+}
