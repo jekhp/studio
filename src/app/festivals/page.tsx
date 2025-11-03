@@ -65,7 +65,7 @@ export default function FestivalsPage() {
                 className="pl-10 w-full"
               />
             </div>
-            <div className='flex gap-4 w-full md:w-auto flex-wrap'>
+            <div className='flex gap-2 w-full md:w-auto'>
                 <Select value={selectedMonth} onValueChange={setSelectedMonth}>
                   <SelectTrigger className="w-full sm:w-[150px]">
                     <SelectValue placeholder="Filter by month" />
@@ -91,8 +91,8 @@ export default function FestivalsPage() {
                 </Select>
 
                 <Button variant="ghost" onClick={clearFilters} className="text-muted-foreground">
-                    <X className="h-4 w-4 mr-2"/>
-                    Clear
+                    <X className="h-4 w-4 md:mr-2"/>
+                    <span className="hidden md:inline">Clear</span>
                 </Button>
             </div>
         </div>
