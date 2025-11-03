@@ -21,6 +21,7 @@ export type Festival = {
   rating: number;
   reviews: Review[];
   interest: number;
+  isFree: boolean;
 };
 
 export const festivals: Festival[] = [
@@ -53,7 +54,8 @@ export const festivals: Festival[] = [
       { id: 1, user: 'TravelerJane', rating: 5, comment: 'Absolutely breathtaking! The scale and colors are something you have to see to believe.' },
       { id: 2, user: 'HistoryBuff_88', rating: 5, comment: 'A fantastic representation of Inca culture. Very well organized.' },
     ],
-    interest: 2.1
+    interest: 2.1,
+    isFree: false,
   },
   {
     id: '2',
@@ -91,7 +93,8 @@ export const festivals: Festival[] = [
       { id: 1, user: 'AdventurousSoul', rating: 5, comment: 'A truly profound and spiritual experience. The energy is incredible, but be prepared for the cold and altitude.' },
       { id: 2, user: 'CulturalExplorer', rating: 4, comment: 'Fascinating to see the blend of beliefs. It\'s not for the faint of heart, but it\'s very authentic.' },
     ],
-    interest: 1.8
+    interest: 1.8,
+    isFree: true,
   },
   {
     id: '3',
@@ -132,7 +135,8 @@ export const festivals: Festival[] = [
       { id: 1, user: 'FiestaFinder', rating: 5, comment: 'Incredible party! The costumes of the Saqra dancers are amazing and a little terrifying. Loved every minute.' },
       { id: 2, user: 'PhotoNomad', rating: 5, comment: 'A photographer\'s dream. So much color and action. The town has a magical atmosphere during the festival.' },
     ],
-    interest: 1.5
+    interest: 1.5,
+    isFree: true,
   },
   {
     id: '4',
@@ -168,7 +172,8 @@ export const festivals: Festival[] = [
       { id: 1, user: 'CultureVulture', rating: 5, comment: 'The pageantry is incredible. Seeing all the saints together in the plaza is a powerful sight.' },
       { id: 2, user: 'FoodieGavin', rating: 4, comment: 'Came for the parade, stayed for the Chiriuchu. It\'s a wild combination of flavors but you have to try it!' },
     ],
-    interest: 1.2
+    interest: 1.2,
+    isFree: true,
   },
   {
     id: '5',
@@ -197,7 +202,8 @@ export const festivals: Festival[] = [
     reviews: [
       { id: 1, user: 'HistoryLover', rating: 5, comment: 'Seeing the procession against the backdrop of the Inca ruins is unforgettable.' },
     ],
-    interest: 0.9
+    interest: 0.9,
+    isFree: true,
   },
   {
     id: '6',
@@ -225,7 +231,8 @@ export const festivals: Festival[] = [
     reviews: [
       { id: 1, user: 'FoodCritic', rating: 5, comment: 'The food variety is insane! A must-visit for anyone who wants to taste authentic Andean cuisine.' },
     ],
-    interest: 1.1
+    interest: 1.1,
+    isFree: false,
   },
   {
     id: '7',
@@ -254,7 +261,8 @@ export const festivals: Festival[] = [
     reviews: [
       { id: 1, user: 'AdventureSeeker', rating: 4, comment: 'The battle reenactment is wild and chaotic! Very impressive.' },
     ],
-    interest: 0.5
+    interest: 0.5,
+    isFree: true,
   },
   {
     id: '8',
@@ -282,7 +290,8 @@ export const festivals: Festival[] = [
     reviews: [
       { id: 1, user: 'LocalExplorer', rating: 4, comment: 'A great way to discover what Anta has to offer. Very well organized and friendly atmosphere.' },
     ],
-    interest: 0.4
+    interest: 0.4,
+    isFree: true,
   },
   {
     id: '9',
@@ -311,7 +320,8 @@ export const festivals: Festival[] = [
     reviews: [
       { id: 1, user: 'CoffeeLover', rating: 5, comment: 'Heaven for a coffee addict like me! The quality is outstanding.' },
     ],
-    interest: 0.8
+    interest: 0.8,
+    isFree: false,
   },
   {
     id: '10',
@@ -339,7 +349,8 @@ export const festivals: Festival[] = [
     reviews: [
       { id: 1, user: 'CultureSeeker', rating: 5, comment: 'So authentic and full of life. It felt like stepping back in time.' },
     ],
-    interest: 0.6
+    interest: 0.6,
+    isFree: true,
   },
   {
     id: '11',
@@ -369,7 +380,8 @@ export const festivals: Festival[] = [
     reviews: [
       { id: 1, user: 'Engineer_Mike', rating: 5, comment: 'An incredible feat of engineering and community spirit. Truly one of a kind.' },
     ],
-    interest: 1.9
+    interest: 1.9,
+    isFree: false,
   },
   {
     id: '12',
@@ -398,7 +410,8 @@ export const festivals: Festival[] = [
     reviews: [
       { id: 1, user: 'Cowboy_Fan', rating: 5, comment: 'The horsemanship is absolutely stunning. Very raw and exciting festival.' },
     ],
-    interest: 0.7
+    interest: 0.7,
+    isFree: true,
   },
   {
     id: '13',
@@ -427,7 +440,8 @@ export const festivals: Festival[] = [
     reviews: [
       { id: 1, user: 'EcoTraveler', rating: 4, comment: 'Fascinating to see so many types of potatoes! A great celebration of biodiversity.' },
     ],
-    interest: 0.3
+    interest: 0.3,
+    isFree: true,
   },
   {
     id: '14',
@@ -456,7 +470,8 @@ export const festivals: Festival[] = [
     reviews: [
       { id: 1, user: 'TraditionLover', rating: 4, comment: 'A very classic and lively Andean festival. The bullfights are the main event.' },
     ],
-    interest: 0.2
+    interest: 0.2,
+    isFree: true,
   },
   {
     id: '15',
@@ -485,7 +500,8 @@ export const festivals: Festival[] = [
     reviews: [
       { id: 1, user: 'FaithfulPilgrim', rating: 5, comment: 'The amount of faith you can feel here is overwhelming. A deeply moving experience.' },
     ],
-    interest: 1.7
+    interest: 1.7,
+    isFree: true,
   },
   {
     id: '16',
@@ -513,7 +529,8 @@ export const festivals: Festival[] = [
     reviews: [
       { id: 1, user: 'AnthroStudent', rating: 5, comment: 'A beautiful and very authentic ritual. The flower symbolism is fascinating.' },
     ],
-    interest: 0.8
+    interest: 0.8,
+    isFree: true,
   },
   {
     id: '17',
@@ -542,7 +559,8 @@ export const festivals: Festival[] = [
     reviews: [
       { id: 1, user: 'CuscoLocal', rating: 5, comment: 'As a local, this is one of my favorite festivals. The dancing is non-stop and the atmosphere is electric.' },
     ],
-    interest: 1.3
+    interest: 1.3,
+    isFree: true,
   },
   {
     id: '18',
@@ -572,7 +590,8 @@ export const festivals: Festival[] = [
     reviews: [
       { id: 1, user: 'ExtremeTravel', rating: 5, comment: 'Like nothing I have ever seen. Intense, raw, and absolutely fascinating. A true cultural immersion.' },
     ],
-    interest: 1.6
+    interest: 1.6,
+    isFree: true,
   },
   {
     id: '19',
@@ -599,7 +618,8 @@ export const festivals: Festival[] = [
     reviews: [
       { id: 1, user: 'OffTheBeatenPath', rating: 5, comment: 'A truly authentic experience. No tourists, just pure local culture. The scenery is also spectacular.' },
     ],
-    interest: 0.4
+    interest: 0.4,
+    isFree: true,
   },
   {
     id: '20',
@@ -627,6 +647,7 @@ export const festivals: Festival[] = [
     reviews: [
       { id: 1, user: 'TropicalVibes', rating: 4, comment: 'A fun party with a very different feel from the rest of Cusco. Lots of dancing!' },
     ],
-    interest: 0.7
+    interest: 0.7,
+    isFree: false,
   }
 ];

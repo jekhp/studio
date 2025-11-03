@@ -25,27 +25,24 @@ export function FestivalCard({ festival }: FestivalCardProps) {
 
   return (
     <Link href={`/festivals/${festival.slug}`} className="group block">
-      <Card className="h-full flex flex-col transition-all duration-300 ease-in-out group-hover:shadow-xl group-hover:-translate-y-1">
-        <CardHeader className="p-0">
-          <div className="relative h-48 w-full overflow-hidden rounded-t-lg">
-            {placeholder && (
+      <Card className="h-full flex flex-col transition-all duration-300 ease-in-out group-hover:shadow-xl group-hover:-translate-y-1 overflow-hidden">
+        {placeholder && (
+          <div className="relative w-full overflow-hidden">
               <Image
                 src={placeholder.imageUrl}
                 alt={placeholder.description}
-                fill
+                width={400}
+                height={Math.floor(Math.random() * (500 - 300 + 1) + 300)} // Random height
                 className="object-cover transition-transform duration-300 ease-in-out group-hover:scale-105"
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 data-ai-hint={placeholder.imageHint}
               />
-            )}
           </div>
-        </CardHeader>
-        <CardContent className="flex-grow pt-6">
-          <CardTitle className="font-headline text-2xl mb-2">{festival.name}</CardTitle>
-          <CardDescription>{festival.description}</CardDescription>
-        </CardContent>
-        <CardFooter className="flex flex-col items-start gap-4">
-            <div className='flex flex-wrap gap-2'>
+        )}
+         <div className="p-4 flex-grow flex flex-col">
+            <h3 className="font-headline text-lg mb-2 font-semibold text-foreground">{festival.name}</h3>
+            <p className="text-sm text-muted-foreground mb-4 flex-grow">{festival.description}</p>
+            
+            <div className='flex flex-wrap gap-2 mb-4'>
               <Badge variant="secondary" className="flex items-center gap-1">
                 <Calendar className="h-3 w-3" />
                 <span>{formattedDate}</span>
@@ -55,11 +52,7 @@ export function FestivalCard({ festival }: FestivalCardProps) {
                 <span>{festival.location}</span>
               </Badge>
             </div>
-            <div className="flex items-center text-primary font-semibold text-sm">
-                <span>Learn More</span>
-                <ArrowRight className="h-4 w-4 ml-1 transform transition-transform duration-300 group-hover:translate-x-1" />
-            </div>
-        </CardFooter>
+        </div>
       </Card>
     </Link>
   );
