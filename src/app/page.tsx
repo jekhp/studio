@@ -53,13 +53,13 @@ export default function Home() {
         )}
         <div className="relative z-20 container mx-auto h-full flex flex-col items-center justify-center text-center space-y-6">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-headline tracking-tight">
-            Experience the Soul of Cusco
+            La Guía Definitiva de los Festivales de Cusco
           </h1>
           <p className="max-w-3xl text-lg md:text-xl text-primary-foreground/90">
-            Discover the vibrant traditions, breathtaking music, and unforgettable moments of Cusco&apos;s most celebrated festivals.
+            Bienvenido a la única plataforma que documenta cada celebración en las 13 provincias de la región. Desde el majestuoso Inti Raymi hasta las joyas ocultas de cada distrito, tu aventura cultural comienza aquí.
           </p>
           <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 transition-transform duration-300 ease-in-out hover:scale-105">
-            <Link href="/festivals">Explore Festivals</Link>
+            <Link href="/festivals">Explora los Festivales</Link>
           </Button>
         </div>
       </section>
@@ -69,7 +69,7 @@ export default function Home() {
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-headline text-foreground">Featured Festivals</h2>
             <p className="mt-2 text-lg text-muted-foreground max-w-2xl mx-auto">
-              Get a glimpse of the most iconic celebrations that define Cusco&apos;s cultural landscape.
+              Get a glimpse of the most iconic celebrations that define Cusco's cultural landscape.
             </p>
           </div>
           <Carousel
