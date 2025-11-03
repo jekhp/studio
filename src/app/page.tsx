@@ -22,17 +22,20 @@ export default function Home() {
   const heroImage = PlaceHolderImages.find(p => p.id === 'hero');
   const plugin = useRef(Autoplay({ delay: 3000, stopOnInteraction: true }));
 
+  const now = new Date();
+  const threeMonthsFromNow = new Date();
+  threeMonthsFromNow.setMonth(now.getMonth() + 3);
+
   const upcomingFestivals = festivals
-    .filter(f => f.date.end > new Date())
-    .sort((a, b) => a.date.start.getTime() - b.date.start.getTime())
-    .slice(0, 3);
+    .filter(f => f.date.start > now && f.date.start <= threeMonthsFromNow)
+    .sort((a, b) => a.date.start.getTime() - b.date.start.getTime());
     
   const pastFestivals = festivals
-    .filter(f => f.date.end <= new Date())
+    .filter(f => f.date.end <= now)
     .sort((a,b) => b.date.end.getTime() - a.date.end.getTime())
     .slice(0, 3);
 
-  const displayedUpcomingFestivals = [...upcomingFestivals, ...pastFestivals].slice(0,3);
+  const displayedUpcomingFestivals = (upcomingFestivals.length > 0 ? upcomingFestivals : pastFestivals).slice(0,3);
 
   return (
     <div className="flex flex-col">

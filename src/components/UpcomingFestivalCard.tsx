@@ -16,37 +16,47 @@ interface UpcomingFestivalCardProps {
 }
 
 const Countdown = ({ targetDate }: { targetDate: Date }) => {
-  const calculateTimeLeft = () => {
-    const difference = +new Date(targetDate) - +new Date();
-    let timeLeft = {};
-
-    if (difference > 0) {
-      timeLeft = {
-        days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-        hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
-        minutes: Math.floor((difference / 1000 / 60) % 60),
-        seconds: Math.floor((difference / 1000) % 60),
-      };
-    }
-    return timeLeft;
-  };
-
-  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
+  const [timeLeft, setTimeLeft] = useState<{
+    days?: number;
+    hours?: number;
+    minutes?: number;
+    seconds?: number;
+  }>({});
 
   useEffect(() => {
-    const timer = setTimeout(() => {
+    const calculateTimeLeft = () => {
+      const difference = +new Date(targetDate) - +new Date();
+      if (difference > 0) {
+        return {
+          days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+          hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+          minutes: Math.floor((difference / 1000 / 60) % 60),
+          seconds: Math.floor((difference / 1000) % 60),
+        };
+      }
+      return {};
+    };
+    
+    // Set initial time left
+    setTimeLeft(calculateTimeLeft());
+
+    const timer = setInterval(() => {
       setTimeLeft(calculateTimeLeft());
     }, 1000);
 
-    return () => clearTimeout(timer);
-  });
+    return () => clearInterval(timer);
+  }, [targetDate]);
 
-  const timerComponents: {label: string, value: number}[] = [
-    { label: 'Días', value: (timeLeft as any).days },
-    { label: 'Horas', value: (timeLeft as any).hours },
-    { label: 'Min', value: (timeLeft as any).minutes },
-    { label: 'Seg', value: (timeLeft as any).seconds },
+  const timerComponents: {label: string, value: number | undefined}[] = [
+    { label: 'Días', value: timeLeft.days },
+    { label: 'Horas', value: timeLeft.hours },
+    { label: 'Min', value: timeLeft.minutes },
+    { label: 'Seg', value: timeLeft.seconds },
   ];
+
+  if (Object.keys(timeLeft).length === 0) {
+    return null;
+  }
 
   return (
     <div 
@@ -67,8 +77,18 @@ const Countdown = ({ targetDate }: { targetDate: Date }) => {
 
 export const UpcomingFestivalCard = ({ festival }: UpcomingFestivalCardProps) => {
   const [isInterested, setIsInterested] = useState(false);
+  const [isClient, setIsClient] = useState(false);
   
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
   const placeholder = PlaceHolderImages.find((p) => p.id === festival.image);
+  
+  if (!isClient) {
+    // Render a placeholder or null on the server to avoid hydration errors
+    return null;
+  }
   
   const now = new Date();
   const isFinished = now > festival.date.end;
