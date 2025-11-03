@@ -113,6 +113,18 @@
       "description": "Two people in masks facing each other in a ritual fight.",
       "imageUrl": "https://images.unsplash.com/photo-1707405432940-6124db71c729?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyaXR1YWwlMjBmaWdodHxlbnwwfHx8fDE3NjIxODQ4MzV8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "ritual fight"
+    },
+    {
+      "id": "quiz-character-1",
+      "description": "A dancer in a 'Saqra' (devil) costume from the Paucartambo festival.",
+      "imageUrl": "https://images.unsplash.com/photo-1758998427892-e579f09c9fa7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxmZXN0aXZhbCUyMGNoYXJhY3RlcnxlbnwwfHx8fDE3NjIxODgwMjF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "festival character"
+    },
+    {
+      "id": "quiz-character-2",
+      "description": "A dancer in an 'Ukuku' (bear-man) costume from the Qoyllur Rit'i festival.",
+      "imageUrl": "https://picsum.photos/seed/qc2/300/500",
+      "imageHint": "andean character"
     }
   ]
 }
