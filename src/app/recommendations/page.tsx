@@ -1,157 +1,121 @@
 "use client";
 
 import * as React from "react";
-import { Wand2, Sparkles, PartyPopper } from "lucide-react";
+import { Wand2, Sparkles, BrainCircuit, PartyPopper } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
-import { Label } from "@/components/ui/label";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Textarea } from "@/components/ui/textarea";
+import { getFestivalRecommendations } from "@/ai/flows/festival-recommendation";
 import { festivals, type Festival } from "@/lib/festivals";
 import { FestivalCard } from "@/components/FestivalCard";
+import { Label } from "@/components/ui/label";
 
-type Answer = {
-  questionId: string;
-  value: string;
-};
-
-const quizQuestions = [
-    {
-        id: 'month',
-        text: 'First, when are you planning to travel?',
-        type: 'select',
-        options: [
-            { value: '4', label: 'May' },
-            { value: '5', label: 'June' },
-            { value: '6', label: 'July' },
-        ],
-    },
-    {
-        id: 'vibe',
-        text: 'What kind of vibe are you looking for?',
-        type: 'radio',
-        options: [
-            { value: 'party', label: 'A vibrant, lively party', points: { 'paucartambo-virgen-del-carmen': 1, 'corpus-christi': 1 } },
-            { value: 'spiritual', label: 'A deep, spiritual experience', points: { 'qoyllur-riti': 1 } },
-            { value: 'historic', label: 'A grand, historical reenactment', points: { 'inti-raymi': 1 } },
-        ],
-    },
-    {
-        id: 'activity',
-        text: 'What kind of activity interests you most?',
-        type: 'radio',
-        options: [
-            { value: 'procession', label: 'Watching colorful processions', points: { 'inti-raymi': 1, 'paucartambo-virgen-del-carmen': 1, 'corpus-christi': 1 } },
-            { value: 'pilgrimage', label: 'Participating in a unique pilgrimage', points: { 'qoyllur-riti': 1 } },
-            { value: 'dance', label: 'Seeing traditional masked dances', points: { 'paucartambo-virgen-del-carmen': 1 } },
-        ],
-    },
-    {
-        id: 'location',
-        text: 'Choose a location type:',
-        type: 'radio',
-        options: [
-            { value: 'city', label: 'A major historical site in Cusco city', points: { 'inti-raymi': 1, 'corpus-christi': 1 } },
-            { value: 'town', label: 'A charming colonial town', points: { 'paucartambo-virgen-del-carmen': 1 } },
-            { value: 'mountain', label: 'A remote, sacred mountain valley', points: { 'qoyllur-riti': 1 } },
-        ],
-    },
-];
 
 export default function RecommendationsPage() {
-  const [answers, setAnswers] = React.useState<Answer[]>([]);
-  const [recommendations, setRecommendations] = React.useState<Festival[]>([]);
-  const [quizCompleted, setQuizCompleted] = React.useState(false);
+  const [interests, setInterests] = React.useState('');
+  const [preferences, setPreferences] = React.useState('');
+  const [recommendationResult, setRecommendationResult] = React.useState<string | null>(null);
+  const [isLoading, setIsLoading] = React.useState(false);
 
-  const handleAnswerChange = (questionId: string, value: string) => {
-    setAnswers(prev => {
-      const otherAnswers = prev.filter(a => a.questionId !== questionId);
-      return [...otherAnswers, { questionId, value }];
-    });
+  const handleGetRecommendations = async () => {
+    if (!interests && !preferences) return;
+    setIsLoading(true);
+    setRecommendationResult(null);
+
+    try {
+      const result = await getFestivalRecommendations({ interests, preferences });
+      setRecommendationResult(result.recommendations);
+    } catch (error) {
+      console.error("Error getting recommendations:", error);
+      setRecommendationResult("I'm sorry, I encountered an error while generating recommendations. Please try again.");
+    } finally {
+      setIsLoading(false);
+    }
   };
 
-  const calculateRecommendations = () => {
-    const scores: { [festivalSlug: string]: number } = {};
-    festivals.forEach(f => scores[f.slug] = 0);
-
-    const monthAnswer = answers.find(a => a.questionId === 'month');
-    if (!monthAnswer) return; // Month is mandatory
-
-    answers.forEach(answer => {
-      const question = quizQuestions.find(q => q.id === answer.questionId);
-      if (question && question.type === 'radio') {
-        const option = question.options.find(o => o.value === answer.value);
-        if (option?.points) {
-          for (const festivalSlug in option.points) {
-            scores[festivalSlug] += option.points[festivalSlug as keyof typeof option.points];
-          }
+  const resetQuiz = () => {
+    setInterests('');
+    setPreferences('');
+    setRecommendationResult(null);
+    setIsLoading(false);
+  };
+  
+  // A simple function to find festival slugs mentioned in the text
+  const findFestivalsInText = (text: string): Festival[] => {
+    if (!text) return [];
+    const mentionedFestivals: Festival[] = [];
+    festivals.forEach(festival => {
+      const festivalNameRegex = new RegExp(festival.name.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&'), 'i');
+      if (festivalNameRegex.test(text)) {
+        if (!mentionedFestivals.some(f => f.id === festival.id)) {
+            mentionedFestivals.push(festival);
         }
       }
     });
-    
-    const recommendedFestivals = festivals.filter(festival => {
-      const festivalMonth = festival.date.start.getMonth();
-      return festivalMonth === parseInt(monthAnswer.value, 10) && scores[festival.slug] >= 1;
-    });
-
-    setRecommendations(recommendedFestivals);
-    setQuizCompleted(true);
-  };
-  
-  const resetQuiz = () => {
-    setAnswers([]);
-    setRecommendations([]);
-    setQuizCompleted(false);
+    return mentionedFestivals;
   }
 
-  const isQuizAnswered = answers.length === quizQuestions.length;
+  const recommendedFestivals = findFestivalsInText(recommendationResult || '');
 
   return (
     <div className="container mx-auto px-4 py-16">
       <div className="text-center mb-12">
         <h1 className="text-4xl md:text-5xl font-headline text-foreground flex items-center justify-center gap-3">
           <Wand2 className="h-10 w-10 text-primary" />
-          Festival Finder Quiz
+          AI Festival Finder
         </h1>
         <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
-          Answer a few questions to find the perfect Cusco festival for you.
+          Describe your perfect trip, and our AI assistant will find the best festivals for you.
         </p>
       </div>
 
       <div className="max-w-2xl mx-auto">
-        {!quizCompleted ? (
-            <Card>
-            <CardContent className="p-6 space-y-8">
-                {quizQuestions.map(q => (
-                <div key={q.id}>
-                    <h3 className="font-semibold text-lg mb-4">{q.text}</h3>
-                    {q.type === 'select' ? (
-                        <Select onValueChange={(value) => handleAnswerChange(q.id, value)}>
-                            <SelectTrigger>
-                                <SelectValue placeholder="Select a month..." />
-                            </SelectTrigger>
-                            <SelectContent>
-                                {q.options.map(opt => (
-                                    <SelectItem key={opt.value} value={opt.value}>{opt.label}</SelectItem>
-                                ))}
-                            </SelectContent>
-                        </Select>
-                    ) : (
-                        <RadioGroup onValueChange={(value) => handleAnswerChange(q.id, value)}>
-                            {q.options.map(opt => (
-                                <div key={opt.value} className="flex items-center space-x-2">
-                                    <RadioGroupItem value={opt.value} id={`${q.id}-${opt.value}`} />
-                                    <Label htmlFor={`${q.id}-${opt.value}`}>{opt.label}</Label>
-                                </div>
-                            ))}
-                        </RadioGroup>
-                    )}
+        {!recommendationResult && !isLoading ? (
+          <Card>
+            <CardHeader>
+                <CardTitle className="flex items-center gap-2">
+                    <BrainCircuit className="h-6 w-6 text-primary"/>
+                    Tell me about your ideal trip
+                </CardTitle>
+                <CardDescription>The more details you provide, the better the recommendations!</CardDescription>
+            </CardHeader>
+            <CardContent className="space-y-6">
+                <div className="grid w-full items-center gap-2">
+                    <Label htmlFor="interests">What are your interests?</Label>
+                    <Textarea 
+                        id="interests"
+                        placeholder="e.g., 'I love historical reenactments, traditional music, and trying new foods.'"
+                        value={interests}
+                        onChange={(e) => setInterests(e.target.value)}
+                        rows={3}
+                    />
+                     <p className="text-xs text-muted-foreground">Examples: music, dance, history, food, adventure, spirituality.</p>
                 </div>
-                ))}
-                <Button onClick={calculateRecommendations} disabled={!isQuizAnswered} className="w-full bg-primary text-primary-foreground">
-                    Get Recommendations
-                </Button>
+                <div className="grid w-full items-center gap-2">
+                    <Label htmlFor="preferences">Do you have any preferences?</Label>
+                    <Textarea 
+                        id="preferences"
+                        placeholder="e.g., 'I'm traveling in June with a small budget and I'd love something authentic, off the beaten path.'"
+                        value={preferences}
+                        onChange={(e) => setPreferences(e.target.value)}
+                        rows={3}
+                    />
+                    <p className="text-xs text-muted-foreground">Examples: travel dates, budget, crowd size, accessibility.</p>
+                </div>
+              <Button onClick={handleGetRecommendations} disabled={!interests && !preferences} className="w-full bg-primary text-primary-foreground">
+                <Sparkles className="mr-2 h-4 w-4"/>
+                Get AI Recommendations
+              </Button>
             </CardContent>
+          </Card>
+        ) : isLoading ? (
+            <Card className="text-center">
+                <CardContent className="p-8">
+                    <div className="flex justify-center items-center gap-3 text-muted-foreground">
+                        <Sparkles className="h-8 w-8 text-primary animate-pulse" />
+                        <p className="text-lg">Our AI is finding the perfect festivals for you...</p>
+                    </div>
+                </CardContent>
             </Card>
         ) : (
           <div>
@@ -159,9 +123,16 @@ export default function RecommendationsPage() {
               <Sparkles className="h-6 w-6 text-primary"/>
               Your Personal Recommendations
             </h2>
-            {recommendations.length > 0 ? (
-                <div className="grid grid-cols-1 gap-8">
-                    {recommendations.map(festival => (
+            
+            <Card className="mb-8 bg-secondary border-primary/20">
+                <CardContent className="p-6">
+                    <p className="text-foreground">{recommendationResult}</p>
+                </CardContent>
+            </Card>
+
+            {recommendedFestivals.length > 0 ? (
+                <div className="space-y-8">
+                    {recommendedFestivals.map(festival => (
                         <FestivalCard key={festival.id} festival={festival} />
                     ))}
                 </div>
@@ -169,14 +140,14 @@ export default function RecommendationsPage() {
                 <Card className="text-center">
                     <CardContent className="p-8">
                         <PartyPopper className="h-12 w-12 text-muted-foreground mx-auto mb-4"/>
-                        <p className="text-muted-foreground">No festivals match your specific criteria for the selected month.</p>
-                        <p className="text-sm text-muted-foreground mt-2">Try different answers or another month!</p>
+                        <p className="text-muted-foreground">The AI provided a great suggestion, but didn't pinpoint a specific festival from our list.</p>
+                        <p className="text-sm text-muted-foreground mt-2">Try being more specific with your interests or check out the full <a href="/festivals" className="text-primary hover:underline">list of festivals</a>!</p>
                     </CardContent>
                 </Card>
             )}
             <div className="text-center mt-8">
                 <Button onClick={resetQuiz} variant="outline">
-                    Take the Quiz Again
+                    Start Over
                 </Button>
             </div>
           </div>
