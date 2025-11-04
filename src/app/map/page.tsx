@@ -1,9 +1,10 @@
+
 'use client';
 
 import dynamic from 'next/dynamic';
 import { festivals } from '@/lib/festivals';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { format } from 'date-fns';
+import { format, endOfDay } from 'date-fns';
 import { useLanguage } from '@/context/language-context';
 import { Star } from 'lucide-react';
 
@@ -12,7 +13,14 @@ const LeafletMap = dynamic(() => import('@/components/LeafletMap'), { ssr: false
 export default function MapPage() {
     const { t } = useLanguage();
 
-    const locations = festivals.map(f => {
+    const now = new Date();
+
+    const activeFestivals = festivals.filter(f => {
+        // Show festival if its end date is today or in the future
+        return f.date.end >= endOfDay(now);
+    });
+
+    const locations = activeFestivals.map(f => {
         const placeholder = PlaceHolderImages.find(p => p.id === f.image);
         const imageUrl = placeholder ? placeholder.imageUrl : 'https://picsum.photos/seed/default/200/100';
         const locationDetail = t(`festivals:${f.slug}:location_detail`, { defaultValue: f.location });
@@ -39,7 +47,7 @@ export default function MapPage() {
             <div className="text-center mb-12">
                 <h1 className="text-4xl md:text-5xl font-headline text-foreground">Festival Map</h1>
                 <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
-                    Explore the locations of Cusco's vibrant festivals on the map below. Regional festivals are marked with a gold star.
+                    Explore the locations of upcoming and ongoing festivals in Cusco. Regional festivals are marked with a gold star.
                 </p>
             </div>
             <div className="aspect-[16/9] w-full bg-muted rounded-lg shadow-lg overflow-hidden border">
