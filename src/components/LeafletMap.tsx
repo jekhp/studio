@@ -3,7 +3,6 @@
 import { useEffect, useRef, useState } from 'react';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
-import 'overlapping-marker-spiderfier-leaflet/dist/oms.min.js';
 import type { Festival } from '@/lib/festivals';
 
 // Fix for default icon issue with webpack
@@ -54,6 +53,20 @@ const LeafletMap = ({ locations, center, zoom }: LeafletMapProps) => {
   const omsRef = useRef<any>(null);
   const [userLocation, setUserLocation] = useState<[number, number] | null>(null);
   const mapCenter = center ?? locations[0]?.coords;
+  const [omsLoaded, setOmsLoaded] = useState(false);
+
+  useEffect(() => {
+    // Dynamically load the OverlappingMarkerSpiderfier script
+    const script = document.createElement('script');
+    script.src = 'https://cdnjs.cloudflare.com/ajax/libs/OverlappingMarkerSpiderfier-Leaflet/0.2.6/oms.min.js';
+    script.async = true;
+    script.onload = () => setOmsLoaded(true);
+    document.body.appendChild(script);
+
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
 
   useEffect(() => {
     if (navigator.geolocation) {
@@ -85,14 +98,15 @@ const LeafletMap = ({ locations, center, zoom }: LeafletMapProps) => {
   }, []);
 
   useEffect(() => {
-    if (mapContainerRef.current && !mapRef.current) { // Only initialize map once
+    // Wait for the map container and the OMS script to be ready
+    if (mapContainerRef.current && !mapRef.current && omsLoaded) { 
       const map = L.map(mapContainerRef.current, {
           scrollWheelZoom: false, // disable zoom on scroll
       }).setView(mapCenter, zoom);
       mapRef.current = map;
 
-      // @ts-ignore
-      omsRef.current = new (L as any).OverlappingMarkerSpiderfier(map);
+      // @ts-ignore - L.OverlappingMarkerSpiderfier is loaded from script
+      omsRef.current = new (window as any).OverlappingMarkerSpiderfier(map);
 
       L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -112,7 +126,7 @@ const LeafletMap = ({ locations, center, zoom }: LeafletMapProps) => {
         marker.bindPopup("Estás aquí");
     }
 
-  }, [locations, mapCenter, zoom, userLocation]);
+  }, [locations, mapCenter, zoom, userLocation, omsLoaded]);
   
   if (!mapCenter) return <div>Loading map...</div>;
 
