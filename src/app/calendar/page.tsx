@@ -88,9 +88,9 @@ export default function CalendarPage() {
                 caption_label: "text-2xl font-headline font-bold text-foreground",
                 nav_button: "h-10 w-10 bg-primary/20 text-primary rounded-full hover:bg-primary/30",
                 head_cell: "text-muted-foreground rounded-md w-full font-bold text-sm pb-2 border-b-2 border-primary/50",
-                row: "flex w-full mt-4",
+                row: "flex w-full mt-4 gap-1",
                 cell: "w-14 h-14 text-center text-sm flex items-center justify-center",
-                day: "h-14 w-14 p-0"
+                day: "h-12 w-12 p-0"
               }}
               components={{
                 Day: DayWithFestival,
