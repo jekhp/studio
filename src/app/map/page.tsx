@@ -55,12 +55,12 @@ export default function MapPage() {
                     </p>
                 </div>
                 <div className="aspect-[16/9] w-full bg-muted rounded-lg shadow-lg overflow-hidden border z-0">
-                    <LeafletMap locations={locations} zoom={9} center={[-13.516, -71.979]} />
+                    <LeafletMap locations={mapFestivals} zoom={9} center={[-13.516, -71.979]} />
                 </div>
             </div>
 
             {regionalChristmasFestival && (
-                 <div className="absolute top-20 right-4 md:right-8 lg:right-12 z-10 w-full max-w-sm md:max-w-md">
+                 <div className="absolute top-20 right-4 md:right-8 lg:right-12 z-10 w-full max-w-xs md:max-w-sm">
                     <UpcomingFestivalCard festival={regionalChristmasFestival} />
                 </div>
             )}
