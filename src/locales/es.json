@@ -1,171 +1,198 @@
 {
-    "navHome": "Inicio",
-    "navFestivals": "Festivales",
-    "navCalendar": "Calendario",
-    "navMap": "Mapa",
-    "navRecommendations": "Recomendaciones",
-    "heroTitle": "La Guía Definitiva de los Festivales de Cusco",
-    "heroSubtitle": "Bienvenido a la única plataforma que documenta cada celebración en las 13 provincias de la región. Desde el majestuoso Inti Raymi hasta las joyas ocultas de cada distrito, tu aventura cultural comienza aquí.",
-    "exploreFestivals": "Explorar Festivales",
-    "featuredFestivalsTitle": "Festivales Destacados",
-    "featuredFestivalsSubtitle": "Descubre una muestra de las celebraciones más icónicas que definen el paisaje cultural de Cusco.",
-    "upcomingFestivalsTitle": "Próximos Festivales",
-    "upcomingFestivalsSubtitle": "¡No te los pierdas! Estos festivales están a la vuelta de la esquina.",
-    "festivalsPageTitle": "Festivales de Cusco",
-    "festivalsPageSubtitle": "Sumérgete en el rico tapiz de cultura y tradición. Aquí tienes una lista completa de los festivales que dan vida al corazón de los Andes.",
-    "searchPlaceholder": "Buscar por nombre de festival...",
-    "filterByMonth": "Filtrar por mes",
-    "allMonths": "Todos los Meses",
-    "filterByCategory": "Filtrar por categoría",
-    "allCategories": "Todas las Categorías",
-    "clearFilters": "Limpiar",
-    "loadMore": "Cargar Más",
-    "noFestivalsFound": "No se encontraron festivales que coincidan con tus criterios.",
-    "monthJanuary": "Enero",
-    "monthFebruary": "Febrero",
-    "monthMarch": "Marzo",
-    "monthApril": "Abril",
-    "monthMay": "Mayo",
-    "monthJune": "Junio",
-    "monthJuly": "Julio",
-    "monthAugust": "Agosto",
-    "monthSeptember": "Septiembre",
-    "monthOctober": "Octubre",
-    "monthNovember": "Noviembre",
-    "monthDecember": "Diciembre",
-    "categoryReligious": "Religioso",
-    "categoryGastronomic": "Gastronómico",
-    "categoryTraditional": "Tradicional",
-    "categoryShow": "Espectáculo",
-    "categoryFair": "Feria",
-    "categoryConcerts": "Conciertos",
-    "categoryHandicrafts": "Artesanía",
-    "categoryAndean": "Andino",
-    "categoryHistoric": "Histórico",
-    "categoryDance": "Danza",
-    "categoryPilgrimage": "Peregrinación",
-    "categoryAdventure": "Aventura",
-    "categoryRaces": "Carreras",
-    "categoryRitualCombat": "Combate Ritual",
-    "categoryAgricultural": "Agrícola",
-    "categoryBullfighting": "Taurino",
-    "categoryCarnival": "Carnaval",
-    "categoryModern": "Moderno",
-    "recommendationsTitle": "Quiz de Festivales",
-    "recommendationsSubtitle": "Responde unas pocas preguntas y encontraremos el festival perfecto para ti en Cusco.",
-    "quizStep": "Paso {step} de {total}",
-    "quizVibeQuestion": "¿Qué tipo de ambiente estás buscando?",
-    "quizVibeSpiritual": "Espiritual",
-    "quizVibeSpiritualDesc": "Conexión, tradición y peregrinación.",
-    "quizVibeParty": "Fiesta",
-    "quizVibePartyDesc": "Música, baile y celebraciones vibrantes.",
-    "quizVibeCultural": "Cultural",
-    "quizVibeCulturalDesc": "Historia, arte y espectáculos únicos.",
-    "quizVibeAdventure": "Aventura",
-    "quizVibeAdventureDesc": "Exploración, naturaleza y desafíos.",
-    "quizSeasonQuestion": "¿En qué época del año te gustaría viajar?",
-    "quizSeasonSummer": "Verano (Dic-Mar)",
-    "quizSeasonSummerDesc": "Época de lluvias, paisajes verdes.",
-    "quizSeasonAutumn": "Otoño (Abr-Jun)",
-    "quizSeasonAutumnDesc": "Época seca, festivales importantes.",
-    "quizSeasonWinter": "Invierno (Jul-Sep)",
-    "quizSeasonWinterDesc": "Seco y soleado, temporada alta.",
-    "quizSeasonSpring": "Primavera (Oct-Nov)",
-    "quizSeasonSpringDesc": "Menos multitudes, clima agradable.",
-    "quizCompanyQuestion": "¿Con quién viajas?",
-    "quizCompanySolo": "Solo",
-    "quizCompanySoloDesc": "Una aventura personal e introspectiva.",
-    "quizCompanyCouple": "En Pareja",
-    "quizCompanyCoupleDesc": "Una escapada romántica e inolvidable.",
-    "quizCompanyFriends": "Con Amigos",
-    "quizCompanyFriendsDesc": "Diversión, fiestas y nuevas experiencias.",
-    "quizCompanyFamily": "Con Familia",
-    "quizCompanyFamilyDesc": "Actividades para todas las edades.",
-    "quizResultsTitle": "¡Aquí están tus recomendaciones!",
-    "quizResultsSubtitle": "Basado en tus respuestas, creemos que te encantarán estos festivales.",
-    "retakeQuiz": "Repetir Quiz",
-    "seeAllFestivals": "Ver Todos los Festivales",
-    "chatTitle": "Asistente Virtual",
-    "chatDescription": "¡Hola! Estoy aquí para ayudarte a explorar los festivales de Cusco. Encuentra respuestas a preguntas comunes a continuación.",
-    "chatFaqPopularTitle": "Preguntas Populares",
-    "chatFaqPopularQ1": "¿Cuál es el festival más grande de Cusco?",
-    "chatFaqPopularA1": "Inti Raymi, la Fiesta del Sol, es la representación teatral más grande y famosa de una antigua ceremonia Inca.",
-    "chatFaqPopularL1": "Descubre el Inti Raymi",
-    "chatFaqPopularQ2": "¿Qué mes tiene más festivales?",
-    "chatFaqPopularA2": "Junio es un mes particularmente ocupado para los festivales en Cusco, incluyendo el famoso Inti Raymi y Corpus Christi.",
-    "chatFaqPopularL2": "Ver Calendario de Junio",
-    "chatFaqQuizTitle": "¿Qué festival es para mí?",
-    "chatFaqQuizQ1": "¡No sé por dónde empezar! ¿Puedes ayudarme?",
-    "chatFaqQuizA1": "¡Por supuesto! Nuestro Quiz de Festivales te hará algunas preguntas para darte recomendaciones personalizadas basadas en tus intereses.",
-    "chatFaqQuizL1": "Hacer el Quiz",
-    "chatFaqQuizQ2": "Busco una experiencia espiritual profunda.",
-    "chatFaqQuizA2": "Recomendamos Qoyllur Rit'i o la peregrinación al Señor de Huanca, ambas son experiencias poderosas de fe y devoción.",
-    "chatFaqQuizL2": "Explora Qoyllur Rit'i",
-    "chatFaqPlanningTitle": "Planificando Mi Visita",
-    "chatFaqPlanningQ1": "¿Puedo ver todos los festivales en un mapa?",
-    "chatFaqPlanningA1": "Sí, en nuestra página de Mapa puedes ver la ubicación de todos los festivales para planificar mejor tu ruta.",
-    "chatFaqPlanningL1": "Ir al Mapa",
-    "chatFaqPlanningQ2": "¿Cómo puedo saber las fechas exactas?",
-    "chatFaqPlanningA2": "Nuestro Calendario interactivo te permite explorar los festivales por fecha y ver qué sucede cada día.",
-    "chatFaqPlanningL2": "Revisar el Calendario",
-
-    "tabSchedule": "Programa",
-    "tabHistory": "Historia",
-    "tabTraditions": "Tradiciones",
-    "tabLocation": "Ubicación",
-    
-    "festival_inti-raymi_description": "El antiguo festival inca del sol, una espectacular recreación teatral.",
-    "festival_inti-raymi_longDescription": "Inti Raymi, el \"Festival del Sol\", fue la ceremonia religiosa más importante del Imperio Inca en honor al dios Inti. Hoy en día, es una representación teatral masiva que se celebra cada 24 de junio en Cusco. Involucra a cientos de actores con trajes vibrantes, con rituales históricos, danzas y procesiones que tienen lugar en Qorikancha, la Plaza de Armas y la fortaleza de Sacsayhuamán.",
-    "festival_inti-raymi_history": "Establecido originalmente por el Inca Pachacuti en el siglo XV, el festival marcaba el solsticio de invierno y el comienzo del nuevo año. Fue prohibido por los españoles en el siglo XVI pero fue revivido en el siglo XX como un evento teatral para honrar la herencia de Cusco.",
-    "festival_inti-raymi_tradition_1": "Procesiones con música tradicional",
-    "festival_inti-raymi_tradition_2": "Sacrificio simbólico de una llama",
-    "festival_inti-raymi_tradition_3": "Ofrendas rituales de chicha (cerveza de maíz)",
-    "festival_inti-raymi_tradition_4": "Danzas folclóricas de los cuatro suyus (regiones) del Imperio Inca",
-    "festival_inti-raymi_schedule_1_day": "24 de Junio",
-    "festival_inti-raymi_schedule_1_event_1_time": "9:00 AM",
-    "festival_inti-raymi_schedule_1_event_1_desc": "La ceremonia comienza en Qorikancha (Templo del Sol).",
-    "festival_inti-raymi_schedule_1_event_2_time": "11:00 AM",
-    "festival_inti-raymi_schedule_1_event_2_desc": "La procesión se traslada a la Plaza de Armas para el \"Encuentro de los Tiempos\".",
-    "festival_inti-raymi_schedule_1_event_3_time": "1:30 PM",
-    "festival_inti-raymi_schedule_1_event_3_desc": "Ceremonia principal en la explanada de Sacsayhuamán.",
-
-    "festival_qoyllur-riti_description": "Una peregrinación espiritual al Valle de Sinakara, que mezcla creencias católicas y andinas.",
-    "festival_qoyllur-riti_longDescription": "Qoyllur Rit'i, o el \"Festival de la Estrella de Nieve\", es una peregrinación religiosa centenaria que tiene lugar en el remoto Valle de Sinakara, al pie del nevado Ausangate. Decenas de miles de peregrinos de los pueblos de los alrededores viajan durante días, llevando grandes cruces al santuario. El festival es un sincretismo único de creencias católicas y andinas, que celebra las estrellas, los espíritus de las montañas (Apus) y el Señor de Qoyllur Rit'i.",
-    "festival_qoyllur-riti_history": "Los orígenes del festival son una mezcla de una historia de milagro católico del siglo XVIII y la antigua adoración a las montañas andinas. Se centra en la aparición del niño Cristo a un joven pastor. Ha sido reconocido por la UNESCO como parte del Patrimonio Cultural Inmaterial de la Humanidad.",
-    "festival_qoyllur-riti_tradition_1": "Vigilias nocturnas con música y danza",
-    "festival_qoyllur-riti_tradition_2": "Procesiones de \"Ukukus\" (danzantes hombres-oso) al glaciar",
-    "festival_qoyllur-riti_tradition_3": "Elaboradas danzas de diferentes \"naciones\" que representan a sus comunidades",
-    "festival_qoyllur-riti_tradition_4": "Una procesión final de 24 horas para el festival de Corpus Christi en Cusco",
-    "festival_qoyllur-riti_schedule_1_day": "Día 1",
-    "festival_qoyllur-riti_schedule_1_event_1_time": "Todo el día",
-    "festival_qoyllur-riti_schedule_1_event_1_desc": "Los peregrinos llegan a Mahuayani, comenzando la caminata de 8 km hasta el santuario.",
-    "festival_qoyllur-riti_schedule_2_day": "Día 2",
-    "festival_qoyllur-riti_schedule_2_event_1_time": "Todo el día",
-    "festival_qoyllur-riti_schedule_2_event_1_desc": "Día principal de celebración con música, bailes y servicios religiosos continuos.",
-    "festival_qoyllur-riti_schedule_3_day": "Día 3",
-    "festival_qoyllur-riti_schedule_3_event_1_time": "4:00 AM",
-    "festival_qoyllur-riti_schedule_3_event_1_desc": "Concierto de \"Serenata\" para el Cristo de Qoyllur Rit'i.",
-    "festival_qoyllur-riti_schedule_3_event_2_time": "12:00 PM",
-    "festival_qoyllur-riti_schedule_3_event_2_desc": "Procesiones y danzas de despedida mientras los peregrinos comienzan su viaje a casa.",
-
-    "festival_paucartambo-virgen-del-carmen_description": "Un festival vibrante y caótico en el pueblo colonial de Paucartambo con danzantes enmascarados.",
-    "festival_paucartambo-virgen-del-carmen_longDescription": "La fiesta en honor a la Virgen del Carmen es una de las fiestas más celebradas y salvajes de Perú. Durante varios días, el tranquilo pueblo colonial de Paucartambo estalla en un derroche de color, música y danza. Comparsas de danzantes enmascarados con trajes espectaculares toman las calles, cada uno representando diferentes personajes e historias de la historia y el folclore peruano. El festival culmina con una procesión donde la estatua de la Virgen bendice al pueblo y lucha contra demonios disfrazados en los tejados.",
-    "festival_paucartambo-virgen-del-carmen_history": "La devoción a la Virgen del Carmen (también conocida como Mamacha Carmen) se remonta a la época colonial. La leyenda dice que su rostro apareció milagrosamente en una roca, y el festival creció en torno a esta veneración. Las danzas en sí son una mezcla sincrética de influencias católicas, andinas e incluso amazónicas.",
-    "festival_paucartambo-virgen-del-carmen_tradition_1": "Desfiles de comparsas de danzantes disfrazados como Saqra (diablos), Qhapaq Negro y Maqta",
-    "festival_paucartambo-virgen-del-carmen_tradition_2": "Batallas musicales entre diferentes grupos",
-    "festival_paucartambo-virgen-del-carmen_tradition_3": "Exhibiciones acrobáticas y batallas simuladas",
-    "festival_paucartambo-virgen-del-carmen_tradition_4": "La \"quema\" de los demonios en el último día",
-    "festival_paucartambo-virgen-del-carmen_schedule_1_day": "15 de Julio",
-    "festival_paucartambo-virgen-del-carmen_schedule_1_event_1_time": "Mañana",
-    "festival_paucartambo-virgen-del-carmen_schedule_1_event_1_desc": "Fuegos artificiales y música marcan el inicio del festival.",
-    "festival_paucartambo-virgen-del-carmen_schedule_1_event_2_time": "Tarde",
-    "festival_paucartambo-virgen-del-carmen_schedule_1_event_2_desc": "Primera aparición de las comparsas de danza en la plaza principal.",
-    "festival_paucartambo-virgen-del-carmen_schedule_2_day": "16 de Julio (Día Principal)",
-    "festival_paucartambo-virgen-del-carmen_schedule_2_event_1_time": "10:00 AM",
-    "festival_paucartambo-virgen-del-carmen_schedule_2_event_1_desc": "Misa principal en honor a la Virgen del Carmen.",
-    "festival_paucartambo-virgen-del-carmen_schedule_2_event_2_time": "3:00 PM",
-    "festival_paucartambo-virgen-del-carmen_schedule_2_event_2_desc": "Gran procesión por las calles del pueblo con la estatua de la Virgen.",
-    "festival_paucartambo-virgen-del-carmen_schedule_3_day": "17 de Julio",
-    "festival_paucartambo-virgen-del-carmen_schedule_3_event_1_time": "Todo el día",
-    "festival_paucartambo-virgen-del-carmen_schedule_3_event_1_desc": "La batalla entre los ángeles y los demonios tiene lugar, con los demonios realizando acrobacias en los tejados."
+    "ui": {
+        "nav": {
+            "home": "Inicio",
+            "festivals": "Festivales",
+            "calendar": "Calendario",
+            "map": "Mapa",
+            "recommendations": "Recomendaciones"
+        },
+        "hero": {
+            "title": "La Guía Definitiva de los Festivales de Cusco",
+            "subtitle": "Bienvenido a la única plataforma que documenta cada celebración en las 13 provincias de la región. Desde el majestuoso Inti Raymi hasta las joyas ocultas de cada distrito, tu aventura cultural comienza aquí.",
+            "exploreButton": "Explorar Festivales"
+        },
+        "featured": {
+            "title": "Festivales Destacados",
+            "subtitle": "Descubre una muestra de las celebraciones más icónicas que definen el paisaje cultural de Cusco."
+        },
+        "upcoming": {
+            "title": "Próximos Festivales",
+            "subtitle": "¡No te los pierdas! Estos festivales están a la vuelta de la esquina."
+        },
+        "festivalsPage": {
+            "title": "Festivales de Cusco",
+            "subtitle": "Sumérgete en el rico tapiz de cultura y tradición. Aquí tienes una lista completa de los festivales que dan vida al corazón de los Andes.",
+            "searchPlaceholder": "Buscar por nombre de festival...",
+            "filterByMonth": "Filtrar por mes",
+            "allMonths": "Todos los Meses",
+            "filterByCategory": "Filtrar por categoría",
+            "allCategories": "Todas las Categorías",
+            "clearFilters": "Limpiar",
+            "loadMore": "Cargar Más",
+            "noFestivalsFound": "No se encontraron festivales que coincidan con tus criterios."
+        },
+        "months": {
+            "january": "Enero", "february": "Febrero", "march": "Marzo", "april": "Abril", "may": "Mayo", "june": "Junio",
+            "july": "Julio", "august": "Agosto", "september": "Septiembre", "october": "Octubre", "november": "Noviembre", "december": "Diciembre"
+        },
+        "categories": {
+            "religious": "Religioso", "gastronomic": "Gastronómico", "traditional": "Tradicional", "show": "Espectáculo",
+            "fair": "Feria", "concerts": "Conciertos", "handicrafts": "Artesanía", "andean": "Andino",
+            "historic": "Histórico", "dance": "Danza", "pilgrimage": "Peregrinación", "adventure": "Aventura",
+            "races": "Carreras", "ritualCombat": "Combate Ritual", "agricultural": "Agrícola", "bullfighting": "Taurino",
+            "carnival": "Carnaval", "modern": "Moderno"
+        },
+        "recommendations": {
+            "title": "Quiz de Festivales",
+            "subtitle": "Responde unas pocas preguntas y encontraremos el festival perfecto para ti en Cusco."
+        },
+        "quiz": {
+            "step": "Paso {step} de {total}",
+            "vibe": {
+                "question": "¿Qué tipo de ambiente estás buscando?",
+                "options": {
+                    "spiritual": { "label": "Espiritual", "description": "Conexión, tradición y peregrinación." },
+                    "party": { "label": "Fiesta", "description": "Música, baile y celebraciones vibrantes." },
+                    "cultural": { "label": "Cultural", "description": "Historia, arte y espectáculos únicos." },
+                    "adventure": { "label": "Aventura", "description": "Exploración, naturaleza y desafíos." }
+                }
+            },
+            "season": {
+                "question": "¿En qué época del año te gustaría viajar?",
+                "options": {
+                    "summer": { "label": "Verano (Dic-Mar)", "description": "Época de lluvias, paisajes verdes." },
+                    "autumn": { "label": "Otoño (Abr-Jun)", "description": "Época seca, festivales importantes." },
+                    "winter": { "label": "Invierno (Jul-Sep)", "description": "Seco y soleado, temporada alta." },
+                    "spring": { "label": "Primavera (Oct-Nov)", "description": "Menos multitudes, clima agradable." }
+                }
+            },
+            "company": {
+                "question": "¿Con quién viajas?",
+                "options": {
+                    "solo": { "label": "Solo", "description": "Una aventura personal e introspectiva." },
+                    "couple": { "label": "En Pareja", "description": "Una escapada romántica e inolvidable." },
+                    "friends": { "label": "Con Amigos", "description": "Diversión, fiestas y nuevas experiencias." },
+                    "family": { "label": "Con Familia", "description": "Actividades para todas las edades." }
+                }
+            },
+            "results": {
+                "title": "¡Aquí están tus recomendaciones!",
+                "subtitle": "Basado en tus respuestas, creemos que te encantarán estos festivales.",
+                "retakeButton": "Repetir Quiz",
+                "seeAllButton": "Ver Todos los Festivales"
+            }
+        },
+        "chat": {
+            "title": "Asistente Virtual",
+            "description": "¡Hola! Estoy aquí para ayudarte a explorar los festivales de Cusco. Encuentra respuestas a preguntas comunes a continuación.",
+            "faq": {
+                "popular": {
+                    "title": "Preguntas Populares",
+                    "q1_question": "¿Cuál es el festival más grande de Cusco?",
+                    "q1_answer": "Inti Raymi, la Fiesta del Sol, es la representación teatral más grande y famosa de una antigua ceremonia Inca.",
+                    "q1_link": "Descubre el Inti Raymi",
+                    "q2_question": "¿Qué mes tiene más festivales?",
+                    "q2_answer": "Junio es un mes particularmente ocupado para los festivales en Cusco, incluyendo el famoso Inti Raymi y Corpus Christi.",
+                    "q2_link": "Ver Calendario de Junio"
+                },
+                "quiz": {
+                    "title": "¿Qué festival es para mí?",
+                    "q1_question": "¡No sé por dónde empezar! ¿Puedes ayudarme?",
+                    "q1_answer": "¡Por supuesto! Nuestro Quiz de Festivales te hará algunas preguntas para darte recomendaciones personalizadas basadas en tus intereses.",
+                    "q1_link": "Hacer el Quiz",
+                    "q2_question": "Busco una experiencia espiritual profunda.",
+                    "q2_answer": "Recomendamos Qoyllur Rit'i o la peregrinación al Señor de Huanca, ambas son experiencias poderosas de fe y devoción.",
+                    "q2_link": "Explora Qoyllur Rit'i"
+                },
+                "planning": {
+                    "title": "Planificando Mi Visita",
+                    "q1_question": "¿Puedo ver todos los festivales en un mapa?",
+                    "q1_answer": "Sí, en nuestra página de Mapa puedes ver la ubicación de todos los festivales para planificar mejor tu ruta.",
+                    "q1_link": "Ir al Mapa",
+                    "q2_question": "¿Cómo puedo saber las fechas exactas?",
+                    "q2_answer": "Nuestro Calendario interactivo te permite explorar los festivales por fecha y ver qué sucede cada día.",
+                    "q2_link": "Revisar el Calendario"
+                }
+            }
+        },
+        "tabs": {
+            "schedule": "Programa",
+            "history": "Historia",
+            "traditions": "Tradiciones",
+            "location": "Ubicación"
+        }
+    },
+    "festivals": {
+        "inti-raymi": {
+            "description": "El antiguo festival inca del sol, una espectacular recreación teatral.",
+            "longDescription": "Inti Raymi, el \"Festival del Sol\", fue la ceremonia religiosa más importante del Imperio Inca en honor al dios Inti. Hoy en día, es una representación teatral masiva que se celebra cada 24 de junio en Cusco. Involucra a cientos de actores con trajes vibrantes, con rituales históricos, danzas y procesiones que tienen lugar en Qorikancha, la Plaza de Armas y la fortaleza de Sacsayhuamán.",
+            "history": "Establecido originalmente por el Inca Pachacuti en el siglo XV, el festival marcaba el solsticio de invierno y el comienzo del nuevo año. Fue prohibido por los españoles en el siglo XVI pero fue revivido en el siglo XX como un evento teatral para honrar la herencia de Cusco.",
+            "traditions": {
+                "tradition_1": "Procesiones con música tradicional",
+                "tradition_2": "Sacrificio simbólico de una llama",
+                "tradition_3": "Ofrendas rituales de chicha (cerveza de maíz)",
+                "tradition_4": "Danzas folclóricas de los cuatro suyus (regiones) del Imperio Inca"
+            },
+            "schedule": {
+                "day_1": "24 de Junio",
+                "event_1_time": "9:00 AM",
+                "event_1_desc": "La ceremonia comienza en Qorikancha (Templo del Sol).",
+                "event_2_time": "11:00 AM",
+                "event_2_desc": "La procesión se traslada a la Plaza de Armas para el \"Encuentro de los Tiempos\".",
+                "event_3_time": "1:30 PM",
+                "event_3_desc": "Ceremonia principal en la explanada de Sacsayhuamán."
+            }
+        },
+        "qoyllur-riti": {
+            "description": "Una peregrinación espiritual al Valle de Sinakara, que mezcla creencias católicas y andinas.",
+            "longDescription": "Qoyllur Rit'i, o el \"Festival de la Estrella de Nieve\", es una peregrinación religiosa centenaria que tiene lugar en el remoto Valle de Sinakara, al pie del nevado Ausangate. Decenas de miles de peregrinos de los pueblos de los alrededores viajan durante días, llevando grandes cruces al santuario. El festival es un sincretismo único de creencias católicas y andinas, que celebra las estrellas, los espíritus de las montañas (Apus) y el Señor de Qoyllur Rit'i.",
+            "history": "Los orígenes del festival son una mezcla de una historia de milagro católico del siglo XVIII y la antigua adoración a las montañas andinas. Se centra en la aparición del niño Cristo a un joven pastor. Ha sido reconocido por la UNESCO como parte del Patrimonio Cultural Inmaterial de la Humanidad.",
+            "traditions": {
+                "tradition_1": "Vigilias nocturnas con música y danza",
+                "tradition_2": "Procesiones de \"Ukukus\" (danzantes hombres-oso) al glaciar",
+                "tradition_3": "Elaboradas danzas de diferentes \"naciones\" que representan a sus comunidades",
+                "tradition_4": "Una procesión final de 24 horas para el festival de Corpus Christi en Cusco"
+            },
+            "schedule": {
+                "day_1": "Día 1",
+                "event_1_time": "Todo el día",
+                "event_1_desc": "Los peregrinos llegan a Mahuayani, comenzando la caminata de 8 km hasta el santuario.",
+                "day_2": "Día 2",
+                "day_2_event_1_time": "Todo el día",
+                "day_2_event_1_desc": "Día principal de celebración con música, bailes y servicios religiosos continuos.",
+                "day_3": "Día 3",
+                "day_3_event_1_time": "4:00 AM",
+                "day_3_event_1_desc": "Concierto de \"Serenata\" para el Cristo de Qoyllur Rit'i.",
+                "day_3_event_2_time": "12:00 PM",
+                "day_3_event_2_desc": "Procesiones y danzas de despedida mientras los peregrinos comienzan su viaje a casa."
+            }
+        },
+        "paucartambo-virgen-del-carmen": {
+            "description": "Un festival vibrante y caótico en el pueblo colonial de Paucartambo con danzantes enmascarados.",
+            "longDescription": "La fiesta en honor a la Virgen del Carmen es una de las fiestas más celebradas y salvajes de Perú. Durante varios días, el tranquilo pueblo colonial de Paucartambo estalla en un derroche de color, música y danza. Comparsas de danzantes enmascarados con trajes espectaculares toman las calles, cada uno representando diferentes personajes e historias de la historia y el folclore peruano. El festival culmina con una procesión donde la estatua de la Virgen bendice al pueblo y lucha contra demonios disfrazados en los tejados.",
+            "history": "La devoción a la Virgen del Carmen (también conocida como Mamacha Carmen) se remonta a la época colonial. La leyenda dice que su rostro apareció milagrosamente en una roca, y el festival creció en torno a esta veneración. Las danzas en sí son una mezcla sincrética de influencias católicas, andinas e incluso amazónicas.",
+            "traditions": {
+                "tradition_1": "Desfiles de comparsas de danzantes disfrazados como Saqra (diablos), Qhapaq Negro y Maqta",
+                "tradition_2": "Batallas musicales entre diferentes grupos",
+                "tradition_3": "Exhibiciones acrobáticas y batallas simuladas",
+                "tradition_4": "La \"quema\" de los demonios en el último día"
+            },
+            "schedule": {
+                "day_1": "15 de Julio",
+                "event_1_time": "Mañana",
+                "event_1_desc": "Fuegos artificiales y música marcan el inicio del festival.",
+                "event_2_time": "Tarde",
+                "event_2_desc": "Primera aparición de las comparsas de danza en la plaza principal.",
+                "day_2": "16 de Julio (Día Principal)",
+                "day_2_event_1_time": "10:00 AM",
+                "day_2_event_1_desc": "Misa principal en honor a la Virgen del Carmen.",
+                "day_2_event_2_time": "3:00 PM",
+                "day_2_event_2_desc": "Gran procesión por las calles del pueblo con la estatua de la Virgen.",
+                "day_3": "17 de Julio",
+                "day_3_event_1_time": "Todo el día",
+                "day_3_event_1_desc": "La batalla entre los ángeles y los demonios tiene lugar, con los demonios realizando acrobacias en los tejados."
+            }
+        }
+    }
 }

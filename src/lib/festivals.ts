@@ -36,18 +36,18 @@ const festivalsByProvince: Record<string, Omit<Festival, 'province'>[]> = {
       location: 'Sacsayhuamán, Cusco',
       coords: [-13.507, -71.982],
       traditionKeys: [
-        "festival_inti-raymi_tradition_1",
-        "festival_inti-raymi_tradition_2",
-        "festival_inti-raymi_tradition_3",
-        "festival_inti-raymi_tradition_4"
+        "tradition_1",
+        "tradition_2",
+        "tradition_3",
+        "tradition_4"
       ],
       scheduleKeys: [
         {
-          dayKey: 'festival_inti-raymi_schedule_1_day',
+          dayKey: 'day_1',
           eventKeys: [
-            { timeKey: 'festival_inti-raymi_schedule_1_event_1_time', descriptionKey: 'festival_inti-raymi_schedule_1_event_1_desc' },
-            { timeKey: 'festival_inti-raymi_schedule_1_event_2_time', descriptionKey: 'festival_inti-raymi_schedule_1_event_2_desc' },
-            { timeKey: 'festival_inti-raymi_schedule_1_event_3_time', descriptionKey: 'festival_inti-raymi_schedule_1_event_3_desc' },
+            { timeKey: 'event_1_time', descriptionKey: 'event_1_desc' },
+            { timeKey: 'event_2_time', descriptionKey: 'event_2_desc' },
+            { timeKey: 'event_3_time', descriptionKey: 'event_3_desc' },
           ],
         },
       ],
@@ -69,23 +69,23 @@ const festivalsByProvince: Record<string, Omit<Festival, 'province'>[]> = {
       location: 'Plaza de Armas, Cusco',
       coords: [-13.5165, -71.979],
       traditionKeys: [
-        "festival_corpus-christi_tradition_1",
-        "festival_corpus-christi_tradition_2",
-        "festival_corpus-christi_tradition_3",
-        "festival_corpus-christi_tradition_4"
+        "tradition_1",
+        "tradition_2",
+        "tradition_3",
+        "tradition_4"
       ],
       scheduleKeys: [
         {
-          dayKey: 'festival_corpus-christi_schedule_1_day',
+          dayKey: 'day_1',
           eventKeys: [
-            { timeKey: 'festival_corpus-christi_schedule_1_event_1_time', descriptionKey: 'festival_corpus-christi_schedule_1_event_1_desc' },
-            { timeKey: 'festival_corpus-christi_schedule_1_event_2_time', descriptionKey: 'festival_corpus-christi_schedule_1_event_2_desc' },
+            { timeKey: 'event_1_time', descriptionKey: 'event_1_desc' },
+            { timeKey: 'event_2_time', descriptionKey: 'event_2_desc' },
           ],
         },
         {
-            dayKey: 'festival_corpus-christi_schedule_2_day',
+            dayKey: 'day_2',
             eventKeys: [
-              { timeKey: 'festival_corpus-christi_schedule_2_event_1_time', descriptionKey: 'festival_corpus-christi_schedule_2_event_1_desc' },
+              { timeKey: 'event_1_time', descriptionKey: 'event_1_desc' },
             ],
           },
       ],
@@ -107,16 +107,16 @@ const festivalsByProvince: Record<string, Omit<Festival, 'province'>[]> = {
       location: 'Huancaro, Cusco',
       coords: [-13.535, -71.964],
       traditionKeys: [
-        "festival_feria-de-huancaro_tradition_1",
-        "festival_feria-de-huancaro_tradition_2",
-        "festival_feria-de-huancaro_tradition_3",
-        "festival_feria-de-huancaro_tradition_4"
+        "tradition_1",
+        "tradition_2",
+        "tradition_3",
+        "tradition_4"
       ],
       scheduleKeys: [
         {
-          dayKey: 'festival_feria-de-huancaro_schedule_1_day',
+          dayKey: 'day_1',
           eventKeys: [
-            { timeKey: 'festival_feria-de-huancaro_schedule_1_event_1_time', descriptionKey: 'festival_feria-de-huancaro_schedule_1_event_1_desc' },
+            { timeKey: 'event_1_time', descriptionKey: 'event_1_desc' },
           ],
         },
       ],
@@ -137,17 +137,17 @@ const festivalsByProvince: Record<string, Omit<Festival, 'province'>[]> = {
       location: 'San Sebastián, Cusco',
       coords: [-13.535, -71.937],
       traditionKeys: [
-        "festival_san-sebastian-patron-feast_tradition_1",
-        "festival_san-sebastian-patron-feast_tradition_2",
-        "festival_san-sebastian-patron-feast_tradition_3",
-        "festival_san-sebastian-patron-feast_tradition_4"
+        "tradition_1",
+        "tradition_2",
+        "tradition_3",
+        "tradition_4"
       ],
       scheduleKeys: [
         {
-          dayKey: 'festival_san-sebastian-patron-feast_schedule_1_day',
+          dayKey: 'day_1',
           eventKeys: [
-            { timeKey: 'festival_san-sebastian-patron-feast_schedule_1_event_1_time', descriptionKey: 'festival_san-sebastian-patron-feast_schedule_1_event_1_desc' },
-            { timeKey: 'festival_san-sebastian-patron-feast_schedule_1_event_2_time', descriptionKey: 'festival_san-sebastian-patron-feast_schedule_1_event_2_desc' },
+            { timeKey: 'event_1_time', descriptionKey: 'event_1_desc' },
+            { timeKey: 'event_2_time', descriptionKey: 'event_2_desc' },
           ],
         },
       ],
@@ -170,17 +170,17 @@ const festivalsByProvince: Record<string, Omit<Festival, 'province'>[]> = {
       location: 'Ollantaytambo, Urubamba',
       coords: [-13.259, -72.264],
       traditionKeys: [
-        "festival_senor-de-choquekillka_tradition_1",
-        "festival_senor-de-choquekillka_tradition_2",
-        "festival_senor-de-choquekillka_tradition_3",
-        "festival_senor-de-choquekillka_tradition_4"
+        "tradition_1",
+        "tradition_2",
+        "tradition_3",
+        "tradition_4"
       ],
       scheduleKeys: [
         {
-          dayKey: 'festival_senor-de-choquekillka_schedule_1_day',
+          dayKey: 'day_1',
           eventKeys: [
-            { timeKey: 'festival_senor-de-choquekillka_schedule_1_event_1_time', descriptionKey: 'festival_senor-de-choquekillka_schedule_1_event_1_desc' },
-            { timeKey: 'festival_senor-de-choquekillka_schedule_1_event_2_time', descriptionKey: 'festival_senor-de-choquekillka_schedule_1_event_2_desc' },
+            { timeKey: 'event_1_time', descriptionKey: 'event_1_desc' },
+            { timeKey: 'event_2_time', descriptionKey: 'event_2_desc' },
           ],
         },
       ],
@@ -203,25 +203,25 @@ const festivalsByProvince: Record<string, Omit<Festival, 'province'>[]> = {
       location: 'Sinakara Valley, Ocongate',
       coords: [-13.63, -71.23],
       traditionKeys: [
-        "festival_qoyllur-riti_tradition_1",
-        "festival_qoyllur-riti_tradition_2",
-        "festival_qoyllur-riti_tradition_3",
-        "festival_qoyllur-riti_tradition_4"
+        "tradition_1",
+        "tradition_2",
+        "tradition_3",
+        "tradition_4"
       ],
       scheduleKeys: [
         {
-          dayKey: 'festival_qoyllur-riti_schedule_1_day',
-          eventKeys: [{ timeKey: 'festival_qoyllur-riti_schedule_1_event_1_time', descriptionKey: 'festival_qoyllur-riti_schedule_1_event_1_desc' }],
+          dayKey: 'day_1',
+          eventKeys: [{ timeKey: 'event_1_time', descriptionKey: 'event_1_desc' }],
         },
         {
-          dayKey: 'festival_qoyllur-riti_schedule_2_day',
-          eventKeys: [{ timeKey: 'festival_qoyllur-riti_schedule_2_event_1_time', descriptionKey: 'festival_qoyllur-riti_schedule_2_event_1_desc' }],
+          dayKey: 'day_2',
+          eventKeys: [{ timeKey: 'event_1_time', descriptionKey: 'event_1_desc' }],
         },
         {
-          dayKey: 'festival_qoyllur-riti_schedule_3_day',
+          dayKey: 'day_3',
           eventKeys: [
-            { timeKey: 'festival_qoyllur-riti_schedule_3_event_1_time', descriptionKey: 'festival_qoyllur-riti_schedule_3_event_1_desc' },
-            { timeKey: 'festival_qoyllur-riti_schedule_3_event_2_time', descriptionKey: 'festival_qoyllur-riti_schedule_3_event_2_desc' },
+            { timeKey: 'event_1_time', descriptionKey: 'event_1_desc' },
+            { timeKey: 'event_2_time', descriptionKey: 'event_2_desc' },
           ],
         },
       ],
@@ -245,29 +245,29 @@ const festivalsByProvince: Record<string, Omit<Festival, 'province'>[]> = {
       location: 'Paucartambo',
       coords: [-13.31, -71.59],
       traditionKeys: [
-        "festival_paucartambo-virgen-del-carmen_tradition_1",
-        "festival_paucartambo-virgen-del-carmen_tradition_2",
-        "festival_paucartambo-virgen-del-carmen_tradition_3",
-        "festival_paucartambo-virgen-del-carmen_tradition_4"
+        "tradition_1",
+        "tradition_2",
+        "tradition_3",
+        "tradition_4"
       ],
       scheduleKeys: [
         {
-          dayKey: 'festival_paucartambo-virgen-del-carmen_schedule_1_day',
+          dayKey: 'day_1',
           eventKeys: [
-            { timeKey: 'festival_paucartambo-virgen-del-carmen_schedule_1_event_1_time', descriptionKey: 'festival_paucartambo-virgen-del-carmen_schedule_1_event_1_desc' },
-            { timeKey: 'festival_paucartambo-virgen-del-carmen_schedule_1_event_2_time', descriptionKey: 'festival_paucartambo-virgen-del-carmen_schedule_1_event_2_desc' },
+            { timeKey: 'event_1_time', descriptionKey: 'event_1_desc' },
+            { timeKey: 'event_2_time', descriptionKey: 'event_2_desc' },
           ],
         },
         {
-          dayKey: 'festival_paucartambo-virgen-del-carmen_schedule_2_day',
+          dayKey: 'day_2',
           eventKeys: [
-            { timeKey: 'festival_paucartambo-virgen-del-carmen_schedule_2_event_1_time', descriptionKey: 'festival_paucartambo-virgen-del-carmen_schedule_2_event_1_desc' },
-            { timeKey: 'festival_paucartambo-virgen-del-carmen_schedule_2_event_2_time', descriptionKey: 'festival_paucartambo-virgen-del-carmen_schedule_2_event_2_desc' },
+            { timeKey: 'event_1_time', descriptionKey: 'event_1_desc' },
+            { timeKey: 'event_2_time', descriptionKey: 'event_2_desc' },
           ],
         },
         {
-          dayKey: 'festival_paucartambo-virgen-del-carmen_schedule_3_day',
-          eventKeys: [{ timeKey: 'festival_paucartambo-virgen-del-carmen_schedule_3_event_1_time', descriptionKey: 'festival_paucartambo-virgen-del-carmen_schedule_3_event_1_desc' }],
+          dayKey: 'day_3',
+          eventKeys: [{ timeKey: 'event_1_time', descriptionKey: 'event_1_desc' }],
         },
       ],
       image: 'paucartambo',
@@ -290,17 +290,17 @@ const festivalsByProvince: Record<string, Omit<Festival, 'province'>[]> = {
       location: 'Combapata, Canchis',
       coords: [-14.110, -71.493],
       traditionKeys: [
-        "festival_fiesta-de-la-virgen-rosario-de-combapata_tradition_1",
-        "festival_fiesta-de-la-virgen-rosario-de-combapata_tradition_2",
-        "festival_fiesta-de-la-virgen-rosario-de-combapata_tradition_3",
-        "festival_fiesta-de-la-virgen-rosario-de-combapata_tradition_4"
+        "tradition_1",
+        "tradition_2",
+        "tradition_3",
+        "tradition_4"
       ],
       scheduleKeys: [
         {
-          dayKey: 'festival_fiesta-de-la-virgen-rosario-de-combapata_schedule_1_day',
+          dayKey: 'day_1',
           eventKeys: [
-            { timeKey: 'festival_fiesta-de-la-virgen-rosario-de-combapata_schedule_1_event_1_time', descriptionKey: 'festival_fiesta-de-la-virgen-rosario-de-combapata_schedule_1_event_1_desc' },
-            { timeKey: 'festival_fiesta-de-la-virgen-rosario-de-combapata_schedule_1_event_2_time', descriptionKey: 'festival_fiesta-de-la-virgen-rosario-de-combapata_schedule_1_event_2_desc' },
+            { timeKey: 'event_1_time', descriptionKey: 'event_1_desc' },
+            { timeKey: 'event_2_time', descriptionKey: 'event_2_desc' },
           ],
         },
       ],
@@ -321,16 +321,16 @@ const festivalsByProvince: Record<string, Omit<Festival, 'province'>[]> = {
       location: 'Tinta, Canchis',
       coords: [-14.144, -71.408],
       traditionKeys: [
-        "festival_carnaval-tkapuy_tradition_1",
-        "festival_carnaval-tkapuy_tradition_2",
-        "festival_carnaval-tkapuy_tradition_3",
-        "festival_carnaval-tkapuy_tradition_4"
+        "tradition_1",
+        "tradition_2",
+        "tradition_3",
+        "tradition_4"
       ],
       scheduleKeys: [
         {
-          dayKey: 'festival_carnaval-tkapuy_schedule_1_day',
+          dayKey: 'day_1',
           eventKeys: [
-            { timeKey: 'festival_carnaval-tkapuy_schedule_1_event_1_time', descriptionKey: 'festival_carnaval-tkapuy_schedule_1_event_1_desc' },
+            { timeKey: 'event_1_time', descriptionKey: 'event_1_desc' },
           ],
         },
       ],
@@ -353,16 +353,16 @@ const festivalsByProvince: Record<string, Omit<Festival, 'province'>[]> = {
       location: 'Izcuchaca, Anta',
       coords: [-13.483, -72.183],
       traditionKeys: [
-        "festival_semana-turistica-de-anta_tradition_1",
-        "festival_semana-turistica-de-anta_tradition_2",
-        "festival_semana-turistica-de-anta_tradition_3",
-        "festival_semana-turistica-de-anta_tradition_4"
+        "tradition_1",
+        "tradition_2",
+        "tradition_3",
+        "tradition_4"
       ],
       scheduleKeys: [
         {
-          dayKey: 'festival_semana-turistica-de-anta_schedule_1_day',
+          dayKey: 'day_1',
           eventKeys: [
-            { timeKey: 'festival_semana-turistica-de-anta_schedule_1_event_1_time', descriptionKey: 'festival_semana-turistica-de-anta_schedule_1_event_1_desc' },
+            { timeKey: 'event_1_time', descriptionKey: 'event_1_desc' },
           ],
         },
       ],
@@ -385,17 +385,17 @@ const festivalsByProvince: Record<string, Omit<Festival, 'province'>[]> = {
       location: 'Quillabamba, La Convención',
       coords: [-12.865, -72.693],
       traditionKeys: [
-        "festival_festival-del-cafe-quillabamba_tradition_1",
-        "festival_festival-del-cafe-quillabamba_tradition_2",
-        "festival_festival-del-cafe-quillabamba_tradition_3",
-        "festival_festival-del-cafe-quillabamba_tradition_4"
+        "tradition_1",
+        "tradition_2",
+        "tradition_3",
+        "tradition_4"
       ],
       scheduleKeys: [
         {
-          dayKey: 'festival_festival-del-cafe-quillabamba_schedule_1_day',
+          dayKey: 'day_1',
           eventKeys: [
-            { timeKey: 'festival_festival-del-cafe-quillabamba_schedule_1_event_1_time', descriptionKey: 'festival_festival-del-cafe-quillabamba_schedule_1_event_1_desc' },
-            { timeKey: 'festival_festival-del-cafe-quillabamba_schedule_1_event_2_time', descriptionKey: 'festival_festival-del-cafe-quillabamba_schedule_1_event_2_desc' },
+            { timeKey: 'event_1_time', descriptionKey: 'event_1_desc' },
+            { timeKey: 'event_2_time', descriptionKey: 'event_2_desc' },
           ],
         },
       ],
@@ -416,17 +416,17 @@ const festivalsByProvince: Record<string, Omit<Festival, 'province'>[]> = {
       location: 'Quillabamba, La Convención',
       coords: [-12.865, -72.693],
       traditionKeys: [
-        "festival_aniversario-de-la-convencion_tradition_1",
-        "festival_aniversario-de-la-convencion_tradition_2",
-        "festival_aniversario-de-la-convencion_tradition_3",
-        "festival_aniversario-de-la-convencion_tradition_4"
+        "tradition_1",
+        "tradition_2",
+        "tradition_3",
+        "tradition_4"
       ],
       scheduleKeys: [
         {
-          dayKey: 'festival_aniversario-de-la-convencion_schedule_1_day',
+          dayKey: 'day_1',
           eventKeys: [
-            { timeKey: 'festival_aniversario-de-la-convencion_schedule_1_event_1_time', descriptionKey: 'festival_aniversario-de-la-convencion_schedule_1_event_1_desc' },
-            { timeKey: 'festival_aniversario-de-la-convencion_schedule_1_event_2_time', descriptionKey: 'festival_aniversario-de-la-convencion_schedule_1_event_2_desc' },
+            { timeKey: 'event_1_time', descriptionKey: 'event_1_desc' },
+            { timeKey: 'event_2_time', descriptionKey: 'event_2_desc' },
           ],
         },
       ],
@@ -449,16 +449,16 @@ const festivalsByProvince: Record<string, Omit<Festival, 'province'>[]> = {
       location: 'Sangarará, Acomayo',
       coords: [-13.963, -71.603],
       traditionKeys: [
-        "festival_wayllati-carnaval_tradition_1",
-        "festival_wayllati-carnaval_tradition_2",
-        "festival_wayllati-carnaval_tradition_3",
-        "festival_wayllati-carnaval_tradition_4"
+        "tradition_1",
+        "tradition_2",
+        "tradition_3",
+        "tradition_4"
       ],
       scheduleKeys: [
         {
-          dayKey: 'festival_wayllati-carnaval_schedule_1_day',
+          dayKey: 'day_1',
           eventKeys: [
-            { timeKey: 'festival_wayllati-carnaval_schedule_1_event_1_time', descriptionKey: 'festival_wayllati-carnaval_schedule_1_event_1_desc' },
+            { timeKey: 'event_1_time', descriptionKey: 'event_1_desc' },
           ],
         },
       ],
@@ -481,19 +481,19 @@ const festivalsByProvince: Record<string, Omit<Festival, 'province'>[]> = {
       location: 'Quehue, Canas',
       coords: [-14.364, -71.503],
       traditionKeys: [
-        "festival_qeswachaka-bridge-festival_tradition_1",
-        "festival_qeswachaka-bridge-festival_tradition_2",
-        "festival_qeswachaka-bridge-festival_tradition_3",
-        "festival_qeswachaka-bridge-festival_tradition_4",
-        "festival_qeswachaka-bridge-festival_tradition_5"
+        "tradition_1",
+        "tradition_2",
+        "tradition_3",
+        "tradition_4",
+        "tradition_5"
       ],
       scheduleKeys: [
         {
-          dayKey: 'festival_qeswachaka-bridge-festival_schedule_1_day',
+          dayKey: 'day_1',
           eventKeys: [
-            { timeKey: 'festival_qeswachaka-bridge-festival_schedule_1_event_1_time', descriptionKey: 'festival_qeswachaka-bridge-festival_schedule_1_event_1_desc' },
-            { timeKey: 'festival_qeswachaka-bridge-festival_schedule_1_event_2_time', descriptionKey: 'festival_qeswachaka-bridge-festival_schedule_1_event_2_desc' },
-            { timeKey: 'festival_qeswachaka-bridge-festival_schedule_1_event_3_time', descriptionKey: 'festival_qeswachaka-bridge-festival_schedule_1_event_3_desc' },
+            { timeKey: 'event_1_time', descriptionKey: 'event_1_desc' },
+            { timeKey: 'event_2_time', descriptionKey: 'event_2_desc' },
+            { timeKey: 'event_3_time', descriptionKey: 'event_3_desc' },
           ],
         },
       ],
@@ -516,17 +516,17 @@ const festivalsByProvince: Record<string, Omit<Festival, 'province'>[]> = {
       location: 'Santo Tomás, Chumbivilcas',
       coords: [-14.444, -72.083],
       traditionKeys: [
-        "festival_wata-qallariy_tradition_1",
-        "festival_wata-qallariy_tradition_2",
-        "festival_wata-qallariy_tradition_3",
-        "festival_wata-qallariy_tradition_4"
+        "tradition_1",
+        "tradition_2",
+        "tradition_3",
+        "tradition_4"
       ],
       scheduleKeys: [
         {
-          dayKey: 'festival_wata-qallariy_schedule_1_day',
+          dayKey: 'day_1',
           eventKeys: [
-            { timeKey: 'festival_wata-qallariy_schedule_1_event_1_time', descriptionKey: 'festival_wata-qallariy_schedule_1_event_1_desc' },
-            { timeKey: 'festival_wata-qallariy_schedule_1_event_2_time', descriptionKey: 'festival_wata-qallariy_schedule_1_event_2_desc' },
+            { timeKey: 'event_1_time', descriptionKey: 'event_1_desc' },
+            { timeKey: 'event_2_time', descriptionKey: 'event_2_desc' },
           ],
         },
       ],
@@ -547,18 +547,18 @@ const festivalsByProvince: Record<string, Omit<Festival, 'province'>[]> = {
       location: 'Santo Tomás, Chumbivilcas',
       coords: [-14.444, -72.083],
       traditionKeys: [
-        "festival_takanakuy-chumbivilcas_tradition_1",
-        "festival_takanakuy-chumbivilcas_tradition_2",
-        "festival_takanakuy-chumbivilcas_tradition_3",
-        "festival_takanakuy-chumbivilcas_tradition_4"
+        "tradition_1",
+        "tradition_2",
+        "tradition_3",
+        "tradition_4"
       ],
       scheduleKeys: [
         {
-          dayKey: 'festival_takanakuy-chumbivilcas_schedule_1_day',
+          dayKey: 'day_1',
           eventKeys: [
-            { timeKey: 'festival_takanakuy-chumbivilcas_schedule_1_event_1_time', descriptionKey: 'festival_takanakuy-chumbivilcas_schedule_1_event_1_desc' },
-            { timeKey: 'festival_takanakuy-chumbivilcas_schedule_1_event_2_time', descriptionKey: 'festival_takanakuy-chumbivilcas_schedule_1_event_2_desc' },
-            { timeKey: 'festival_takanakuy-chumbivilcas_schedule_1_event_3_time', descriptionKey: 'festival_takanakuy-chumbivilcas_schedule_1_event_3_desc' },
+            { timeKey: 'event_1_time', descriptionKey: 'event_1_desc' },
+            { timeKey: 'event_2_time', descriptionKey: 'event_2_desc' },
+            { timeKey: 'event_3_time', descriptionKey: 'event_3_desc' },
           ],
         },
       ],
@@ -579,16 +579,16 @@ const festivalsByProvince: Record<string, Omit<Festival, 'province'>[]> = {
       location: 'Mollomarka, Chumbivilcas',
       coords: [-14.331, -71.933],
       traditionKeys: [
-        "festival_carnaval-de-mollomarka_tradition_1",
-        "festival_carnaval-de-mollomarka_tradition_2",
-        "festival_carnaval-de-mollomarka_tradition_3",
-        "festival_carnaval-de-mollomarka_tradition_4"
+        "tradition_1",
+        "tradition_2",
+        "tradition_3",
+        "tradition_4"
       ],
       scheduleKeys: [
         {
-          dayKey: 'festival_carnaval-de-mollomarka_schedule_1_day',
+          dayKey: 'day_1',
           eventKeys: [
-            { timeKey: 'festival_carnaval-de-mollomarka_schedule_1_event_1_time', descriptionKey: 'festival_carnaval-de-mollomarka_schedule_1_event_1_desc' },
+            { timeKey: 'event_1_time', descriptionKey: 'event_1_desc' },
           ],
         },
       ],
@@ -611,17 +611,17 @@ const festivalsByProvince: Record<string, Omit<Festival, 'province'>[]> = {
       location: 'Yauri, Espinar',
       coords: [-14.791, -71.414],
       traditionKeys: [
-        "festival_k-ana-raymi_tradition_1",
-        "festival_k-ana-raymi_tradition_2",
-        "festival_k-ana-raymi_tradition_3",
-        "festival_k-ana-raymi_tradition_4"
+        "tradition_1",
+        "tradition_2",
+        "tradition_3",
+        "tradition_4"
       ],
       scheduleKeys: [
         {
-          dayKey: 'festival_k-ana-raymi_schedule_1_day',
+          dayKey: 'day_1',
           eventKeys: [
-            { timeKey: 'festival_k-ana-raymi_schedule_1_event_1_time', descriptionKey: 'festival_k-ana-raymi_schedule_1_event_1_desc' },
-            { timeKey: 'festival_k-ana-raymi_schedule_1_event_2_time', descriptionKey: 'festival_k-ana-raymi_schedule_1_event_2_desc' },
+            { timeKey: 'event_1_time', descriptionKey: 'event_1_desc' },
+            { timeKey: 'event_2_time', descriptionKey: 'event_2_desc' },
           ],
         },
       ],
@@ -644,17 +644,17 @@ const festivalsByProvince: Record<string, Omit<Festival, 'province'>[]> = {
       location: 'Paruro',
       coords: [-13.762, -71.854],
       traditionKeys: [
-        "festival_fiesta-de-san-juan-de-paruro_tradition_1",
-        "festival_fiesta-de-san-juan-de-paruro_tradition_2",
-        "festival_fiesta-de-san-juan-de-paruro_tradition_3",
-        "festival_fiesta-de-san-juan-de-paruro_tradition_4"
+        "tradition_1",
+        "tradition_2",
+        "tradition_3",
+        "tradition_4"
       ],
       scheduleKeys: [
         {
-          dayKey: 'festival_fiesta-de-san-juan-de-paruro_schedule_1_day',
+          dayKey: 'day_1',
           eventKeys: [
-            { timeKey: 'festival_fiesta-de-san-juan-de-paruro_schedule_1_event_1_time', descriptionKey: 'festival_fiesta-de-san-juan-de-paruro_schedule_1_event_1_desc' },
-            { timeKey: 'festival_fiesta-de-san-juan-de-paruro_schedule_1_event_2_time', descriptionKey: 'festival_fiesta-de-san-juan-de-paruro_schedule_1_event_2_desc' },
+            { timeKey: 'event_1_time', descriptionKey: 'event_1_desc' },
+            { timeKey: 'event_2_time', descriptionKey: 'event_2_desc' },
           ],
         },
       ],
@@ -677,17 +677,17 @@ const festivalsByProvince: Record<string, Omit<Festival, 'province'>[]> = {
       location: 'San Salvador, Calca',
       coords: [-13.491, -71.748],
       traditionKeys: [
-        "festival_senor-de-huanca_tradition_1",
-        "festival_senor-de-huanca_tradition_2",
-        "festival_senor-de-huanca_tradition_3",
-        "festival_senor-de-huanca_tradition_4"
+        "tradition_1",
+        "tradition_2",
+        "tradition_3",
+        "tradition_4"
       ],
       scheduleKeys: [
         {
-          dayKey: 'festival_senor-de-huanca_schedule_1_day',
+          dayKey: 'day_1',
           eventKeys: [
-            { timeKey: 'festival_senor-de-huanca_schedule_1_event_1_time', descriptionKey: 'festival_senor-de-huanca_schedule_1_event_1_desc' },
-            { timeKey: 'festival_senor-de-huanca_schedule_1_event_2_time', descriptionKey: 'festival_senor-de-huanca_schedule_1_event_2_desc' },
+            { timeKey: 'event_1_time', descriptionKey: 'event_1_desc' },
+            { timeKey: 'event_2_time', descriptionKey: 'event_2_desc' },
           ],
         },
       ],

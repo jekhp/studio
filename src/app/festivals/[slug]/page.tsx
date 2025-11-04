@@ -127,23 +127,23 @@ export default function FestivalDetailPage({ params }: { params: { slug: string 
                 <CardTitle className="font-headline text-2xl">About {festival.name}</CardTitle>
               </CardHeader>
               <CardContent className="prose prose-sm max-w-none text-muted-foreground">
-                <TranslationWrapper translationKey={`festival_${festival.slug}_longDescription`} as="p" />
+                <TranslationWrapper translationKey={`festivals.${festival.slug}.longDescription`} as="p" />
               </CardContent>
             </Card>
 
             <Tabs defaultValue="schedule" className="w-full">
               <TabsList className="grid w-full grid-cols-4">
                 <TabsTrigger value="schedule">
-                    <TranslationWrapper translationKey="tabSchedule" />
+                    <TranslationWrapper translationKey="ui.tabs.schedule" />
                 </TabsTrigger>
                 <TabsTrigger value="history">
-                    <TranslationWrapper translationKey="tabHistory" />
+                    <TranslationWrapper translationKey="ui.tabs.history" />
                 </TabsTrigger>
                 <TabsTrigger value="traditions">
-                    <TranslationWrapper translationKey="tabTraditions" />
+                    <TranslationWrapper translationKey="ui.tabs.traditions" />
                 </TabsTrigger>
                 <TabsTrigger value="location">
-                    <TranslationWrapper translationKey="tabLocation" />
+                    <TranslationWrapper translationKey="ui.tabs.location" />
                 </TabsTrigger>
               </TabsList>
               <TabsContent value="schedule">
@@ -151,14 +151,14 @@ export default function FestivalDetailPage({ params }: { params: { slug: string 
                   <CardContent className="pt-6 space-y-6">
                     {scheduleKeys.map((day, i) => (
                       <div key={i}>
-                        <h3 className="font-semibold mb-2"><TranslationWrapper translationKey={day.dayKey} /></h3>
+                        <h3 className="font-semibold mb-2"><TranslationWrapper translationKey={`festivals.${festival.slug}.schedule.${day.dayKey}`} /></h3>
                         <div className="space-y-4">
                           {day.eventKeys.map((event, j) => (
                             <div key={j} className="flex items-start gap-3 pl-4 border-l-2 border-primary/50">
                               <Clock className="h-4 w-4 mt-1 text-primary flex-shrink-0" />
                               <div>
-                                <p className="font-medium"><TranslationWrapper translationKey={event.timeKey} /></p>
-                                <p className="text-sm text-muted-foreground"><TranslationWrapper translationKey={event.descriptionKey} /></p>
+                                <p className="font-medium"><TranslationWrapper translationKey={`festivals.${festival.slug}.schedule.${event.timeKey}`} /></p>
+                                <p className="text-sm text-muted-foreground"><TranslationWrapper translationKey={`festivals.${festival.slug}.schedule.${event.descriptionKey}`} /></p>
                               </div>
                             </div>
                           ))}
@@ -171,7 +171,7 @@ export default function FestivalDetailPage({ params }: { params: { slug: string 
               <TabsContent value="history">
                 <Card>
                     <CardContent className="pt-6 prose prose-sm max-w-none text-muted-foreground">
-                        <TranslationWrapper translationKey={`festival_${festival.slug}_history`} as="p" />
+                        <TranslationWrapper translationKey={`festivals.${festival.slug}.history`} as="p" />
                     </CardContent>
                 </Card>
               </TabsContent>
@@ -183,7 +183,7 @@ export default function FestivalDetailPage({ params }: { params: { slug: string 
                                 <li key={i} className="flex items-start gap-3">
                                     <Sparkles className="h-4 w-4 mt-1 text-primary flex-shrink-0"/>
                                     <span className="text-muted-foreground">
-                                        <TranslationWrapper translationKey={traditionKey} />
+                                        <TranslationWrapper translationKey={`festivals.${festival.slug}.traditions.${traditionKey}`} />
                                     </span>
                                 </li>
                             ))}

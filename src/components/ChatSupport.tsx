@@ -24,56 +24,56 @@ export function ChatSupport() {
 
   const faqSections = [
     {
-        title: t('chatFaqPopularTitle'),
+        title: t('ui.chat.faq.popular.title'),
         icon: Star,
         questions: [
             {
-                question: t('chatFaqPopularQ1'),
-                answer: t('chatFaqPopularA1'),
+                question: t('ui.chat.faq.popular.q1_question'),
+                answer: t('ui.chat.faq.popular.q1_answer'),
                 link: "/festivals/inti-raymi",
-                linkLabel: t('chatFaqPopularL1')
+                linkLabel: t('ui.chat.faq.popular.q1_link')
             },
             {
-                question: t('chatFaqPopularQ2'),
-                answer: t('chatFaqPopularA2'),
+                question: t('ui.chat.faq.popular.q2_question'),
+                answer: t('ui.chat.faq.popular.q2_answer'),
                 link: "/calendar",
-                linkLabel: t('chatFaqPopularL2')
+                linkLabel: t('ui.chat.faq.popular.q2_link')
             },
         ]
     },
     {
-        title: t('chatFaqQuizTitle'),
+        title: t('ui.chat.faq.quiz.title'),
         icon: Wand2,
         questions: [
             {
-                question: t('chatFaqQuizQ1'),
-                answer: t('chatFaqQuizA1'),
+                question: t('ui.chat.faq.quiz.q1_question'),
+                answer: t('ui.chat.faq.quiz.q1_answer'),
                 link: "/recommendations",
-                linkLabel: t('chatFaqQuizL1')
+                linkLabel: t('ui.chat.faq.quiz.q1_link')
             },
              {
-                question: t('chatFaqQuizQ2'),
-                answer: t('chatFaqQuizA2'),
+                question: t('ui.chat.faq.quiz.q2_question'),
+                answer: t('ui.chat.faq.quiz.q2_answer'),
                 link: "/festivals/qoyllur-riti",
-                linkLabel: t('chatFaqQuizL2')
+                linkLabel: t('ui.chat.faq.quiz.q2_link')
             },
         ]
     },
     {
-        title: t('chatFaqPlanningTitle'),
+        title: t('ui.chat.faq.planning.title'),
         icon: MapIcon,
         questions: [
             {
-                question: t('chatFaqPlanningQ1'),
-                answer: t('chatFaqPlanningA1'),
+                question: t('ui.chat.faq.planning.q1_question'),
+                answer: t('ui.chat.faq.planning.q1_answer'),
                 link: "/map",
-                linkLabel: t('chatFaqPlanningL1')
+                linkLabel: t('ui.chat.faq.planning.q1_link')
             },
             {
-                question: t('chatFaqPlanningQ2'),
-                answer: t('chatFaqPlanningA2'),
+                question: t('ui.chat.faq.planning.q2_question'),
+                answer: t('ui.chat.faq.planning.q2_answer'),
                 link: "/calendar",
-                linkLabel: t('chatFaqPlanningL2')
+                linkLabel: t('ui.chat.faq.planning.q2_link')
             },
         ]
     }
@@ -94,10 +94,10 @@ export function ChatSupport() {
         <SheetHeader className="px-6 pt-6">
           <SheetTitle className='flex items-center gap-2 font-headline text-2xl'>
             <Bot className="h-6 w-6 text-primary"/>
-            {t('chatTitle')}
+            {t('ui.chat.title')}
           </SheetTitle>
           <SheetDescription>
-            {t('chatDescription')}
+            {t('ui.chat.description')}
           </SheetDescription>
         </SheetHeader>
         <div className="py-4 space-y-2 overflow-y-auto flex-grow px-6">

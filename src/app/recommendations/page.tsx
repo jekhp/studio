@@ -16,10 +16,10 @@ export default function RecommendationsPage() {
       <div className="text-center mb-12">
         <h1 className="text-4xl md:text-5xl font-headline text-foreground flex items-center justify-center gap-3">
           <Wand2 className="h-10 w-10 text-primary" />
-          {t('recommendationsTitle')}
+          {t('ui.recommendations.title')}
         </h1>
         <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
-          {t('recommendationsSubtitle')}
+          {t('ui.recommendations.subtitle')}
         </p>
       </div>
 

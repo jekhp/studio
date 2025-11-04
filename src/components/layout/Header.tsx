@@ -18,11 +18,11 @@ import { useLanguage } from '@/context/language-context';
 import { Separator } from '../ui/separator';
 
 const navLinks = [
-  { href: '/', label: 'navHome' },
-  { href: '/festivals', label: 'navFestivals' },
-  { href: '/calendar', label: 'navCalendar' },
-  { href: '/map', label: 'navMap' },
-  { href: '/recommendations', label: 'navRecommendations' },
+  { href: '/', label: 'ui.nav.home' },
+  { href: '/festivals', label: 'ui.nav.festivals' },
+  { href: '/calendar', label: 'ui.nav.calendar' },
+  { href: '/map', label: 'ui.nav.map' },
+  { href: '/recommendations', label: 'ui.nav.recommendations' },
 ];
 
 export function Header() {
