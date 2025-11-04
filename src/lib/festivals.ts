@@ -25,6 +25,7 @@ export type Festival = {
   interest: number;
   isFree: boolean;
   categories: string[];
+  isRegional?: boolean;
   traditionKeys?: string[];
   scheduleKeys?: { 
     dayKey: string; 
@@ -60,12 +61,13 @@ export const festivals: Festival[] = [
       id: 'corpus-christi',
       slug: 'corpus-christi',
       name: 'Corpus Christi',
-      date: { start: new Date(currentYear, 4, 30), end: new Date(currentYear, 5, 6) }, // Corpus is a movable feast, this is an approximation
+      date: { start: new Date(currentYear, 4, 30), end: new Date(currentYear, 5, 6) },
       location: 'Plaza de Armas, Cusco',
       province: 'Cusco',
       coords: [-13.5165, -71.979],
       image: 'corpus-christi',
       rating: 4.7,
+      isRegional: true,
       reviews: [
         { id: '1', user: 'CultureVulture', rating: 5, comment: 'The pageantry is incredible. Seeing all the saints together in the plaza is a powerful sight.' },
         { id: '2', user: 'FoodieGavin', rating: 4, comment: 'Came for the parade, stayed for the Chiriuchu. It\'s a wild combination of flavors but you have to try it!' },
@@ -129,6 +131,7 @@ export const festivals: Festival[] = [
       reviews: [],
       interest: 0.8,
       isFree: true,
+      isRegional: true,
       categories: ['carnaval', 'tradicional', 'popular'],
       traditionKeys: ["tradition_1", "tradition_2", "tradition_3"],
       scheduleKeys: [{ dayKey: 'day_1', eventKeys: [{ timeKey: 'event_1_time', descriptionKey: 'event_1_desc' }] }],
@@ -146,6 +149,7 @@ export const festivals: Festival[] = [
       reviews: [],
       interest: 0.8,
       isFree: true,
+      isRegional: true,
       categories: ['carnaval', 'tradicional', 'popular'],
       traditionKeys: ["tradition_1", "tradition_2", "tradition_3"],
       scheduleKeys: [{ dayKey: 'day_1', eventKeys: [{ timeKey: 'event_1_time', descriptionKey: 'event_1_desc' }] }],
@@ -163,6 +167,7 @@ export const festivals: Festival[] = [
       reviews: [],
       interest: 1.5,
       isFree: true,
+      isRegional: true,
       categories: ['religioso', 'procesion', 'tradicional', 'gastronomico'],
       traditionKeys: ["tradition_1", "tradition_2", "tradition_3", "tradition_4"],
       scheduleKeys: [{ dayKey: 'day_1', eventKeys: [{ timeKey: 'event_1_time', descriptionKey: 'event_1_desc' }] }, { dayKey: 'day_2', eventKeys: [{ timeKey: 'event_1_time', descriptionKey: 'event_1_desc' }] }],
@@ -180,6 +185,7 @@ export const festivals: Festival[] = [
       reviews: [],
       interest: 1.9,
       isFree: true,
+      isRegional: true,
       categories: ['feria', 'artesania', 'religioso', 'tradicional'],
       traditionKeys: ["tradition_1", "tradition_2", "tradition_3"],
       scheduleKeys: [{ dayKey: 'day_1', eventKeys: [{ timeKey: 'event_1_time', descriptionKey: 'event_1_desc' }] }],
@@ -197,6 +203,7 @@ export const festivals: Festival[] = [
       reviews: [],
       interest: 1.7,
       isFree: true,
+      isRegional: true,
       categories: ['fiesta', 'popular', 'espectaculo'],
       traditionKeys: ["tradition_1", "tradition_2", "tradition_3"],
       scheduleKeys: [{ dayKey: 'day_1', eventKeys: [{ timeKey: 'event_1_time', descriptionKey: 'event_1_desc' }, { timeKey: 'event_2_time', descriptionKey: 'event_2_desc' }] }],
@@ -219,5 +226,20 @@ export const festivals: Festival[] = [
       categories: ['andino', 'tradicional', 'historico', 'espectaculo'],
       traditionKeys: ["tradition_1", "tradition_2", "tradition_3", "tradition_4", "tradition_5"],
       scheduleKeys: [{ dayKey: 'day_1', eventKeys: [{ timeKey: 'event_1_time', descriptionKey: 'event_1_desc' }, { timeKey: 'event_2_time', descriptionKey: 'event_2_desc' }, { timeKey: 'event_3_time', descriptionKey: 'event_3_desc' }] }],
+    },
+    {
+      id: "linderaje-chinchero",
+      slug: "linderaje-chinchero",
+      name: "Linderaje en Chinchero",
+      date: { start: new Date(currentYear, 0, 1), end: new Date(currentYear, 0, 1) },
+      location: "Chinchero",
+      province: "Urubamba",
+      coords: [-13.391, -72.046],
+      image: "linderaje-chinchero",
+      rating: 4.6,
+      reviews: [],
+      interest: 0.7,
+      isFree: true,
+      categories: ["combate-ritual", "tradicional", "andino"],
     },
 ];
