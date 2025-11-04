@@ -50,9 +50,9 @@ export default function CalendarPage() {
     const isSelected = date && isSameDay(date, date ?? new Date());
 
     return (
-      <div 
+      <span 
         className={
-          `h-12 w-full flex items-center justify-center rounded-lg transition-all duration-200 cursor-pointer relative
+          `h-12 w-12 flex items-center justify-center rounded-lg transition-all duration-200 cursor-pointer relative shadow-sm
           ${isOutsideMonth ? 'text-muted-foreground/30 bg-muted/20' : 'bg-card/80'}
           ${isFestivalDay && !isOutsideMonth ? 'font-bold text-primary-foreground bg-primary shadow-md hover:shadow-lg' : ''}
           ${isSelected ? 'ring-2 ring-destructive ring-offset-2 ring-offset-background' : ''}
@@ -63,7 +63,7 @@ export default function CalendarPage() {
         {isFestivalDay && !isOutsideMonth && (
           <PartyPopper className="absolute top-1 right-1 h-3 w-3 text-white/80" />
         )}
-      </div>
+      </span>
     );
   };
 
@@ -88,8 +88,8 @@ export default function CalendarPage() {
                 caption_label: "text-2xl font-headline font-bold text-foreground",
                 nav_button: "h-10 w-10 bg-primary/20 text-primary rounded-full hover:bg-primary/30",
                 head_cell: "text-muted-foreground rounded-md w-full font-bold text-sm pb-2 border-b-2 border-primary/50",
-                cell: "w-full text-center text-sm p-1",
-                day: "h-12 w-full p-0"
+                cell: "w-full text-center text-sm p-0 flex items-center justify-center",
+                day: "h-14 w-14 p-0"
               }}
               components={{
                 Day: DayWithFestival,
