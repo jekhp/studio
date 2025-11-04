@@ -2,7 +2,7 @@
 "use client";
 
 import * as React from 'react';
-import { Calendar } from '@/components/ui/calendar';
+import { Calendar as CalendarComponent, type DayProps } from 'react-day-picker';
 import { festivals, type Festival } from '@/lib/festivals';
 import { Card, CardContent } from '@/components/ui/card';
 import Link from 'next/link';
@@ -12,6 +12,8 @@ import { format, isSameDay, startOfDay, isWithinInterval, endOfDay } from 'date-
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/context/language-context';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
+import { components } from 'react-select';
+import { cn } from '@/lib/utils';
 
 export default function CalendarPage() {
   const { t } = useLanguage();
@@ -25,7 +27,7 @@ export default function CalendarPage() {
       // startOfDay normaliza todo a la medianoche, eliminando problemas de zona horaria.
       return isWithinInterval(startOfDay(date), {
         start: startOfDay(new Date(f.date.start)),
-        end: startOfDay(new Date(f.date.end)),
+        end: endOfDay(new Date(f.date.end)),
       });
     });
   }, [date]);
@@ -37,7 +39,7 @@ export default function CalendarPage() {
       const endDate = startOfDay(new Date(f.date.end));
       while (currentDate <= endDate) {
         dates.add(currentDate.toDateString());
-        currentDate.setDate(currentDate.getDate() + 1);
+        currentDate = new Date(currentDate.setDate(currentDate.getDate() + 1));
       }
     });
     return dates;
@@ -48,26 +50,21 @@ export default function CalendarPage() {
     setDate(new Date());
   }, []);
 
-  const DayWithFestival = ({ date: dayDate, displayMonth }: { date: Date, displayMonth: Date }) => {
+  function DayWithFestival(props: DayProps) {
+    const { date: dayDate, displayMonth } = props;
     const isOutsideMonth = dayDate.getMonth() !== displayMonth.getMonth();
     const isFestivalDay = festivalDays.has(startOfDay(dayDate).toDateString());
-    const isSelected = date && isSameDay(dayDate, date);
+    
+    // The original Day component is passed via props
+    const { Day } = components;
 
     return (
-      <span 
-        className={
-          `h-12 w-12 flex items-center justify-center rounded-lg transition-all duration-200 cursor-pointer relative shadow-sm
-          ${isOutsideMonth ? 'text-muted-foreground/30 bg-muted/20' : 'bg-card/80'}
-          ${isFestivalDay && !isOutsideMonth ? 'font-bold text-primary-foreground bg-primary shadow-md hover:shadow-lg' : ''}
-          ${isSelected ? 'ring-2 ring-destructive ring-offset-2 ring-offset-background' : ''}
-          hover:scale-105 hover:shadow-md`
-        }
-      >
-        <span>{format(dayDate, 'd')}</span>
+      <div className="relative">
+        <Day {...props} />
         {isFestivalDay && !isOutsideMonth && (
-          <PartyPopper className="absolute top-1 right-1 h-3 w-3 text-white/80" />
+          <PartyPopper className="absolute top-1 right-1 h-3 w-3 text-white/80 pointer-events-none" />
         )}
-      </span>
+      </div>
     );
   };
 
@@ -83,7 +80,7 @@ export default function CalendarPage() {
 
         <div className="flex flex-col lg:flex-row">
           <div className="lg:w-1/2 p-6 border-b lg:border-b-0 lg:border-r border-border flex justify-center items-center">
-            <Calendar
+            <CalendarComponent
               mode="single"
               selected={date}
               onSelect={(newDate) => {
@@ -95,9 +92,33 @@ export default function CalendarPage() {
                 caption_label: "text-2xl font-headline font-bold text-foreground",
                 nav_button: "h-10 w-10 bg-primary/20 text-primary rounded-full hover:bg-primary/30",
                 head_cell: "text-muted-foreground rounded-md w-full font-bold text-sm pb-2 border-b-2 border-primary/50",
-                row: "flex w-full mt-4 gap-1",
-                cell: "w-14 h-14 text-center text-sm p-0 flex items-center justify-center",
-                day: "h-12 w-12 p-0"
+                row: "flex w-full mt-2",
+                cell: "text-center text-sm p-0 relative [&:has([aria-selected])]:bg-accent first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md focus-within:relative focus-within:z-20",
+                day: cn(
+                  "h-12 w-12 p-0 font-normal transition-all duration-200",
+                  "hover:bg-accent/50 rounded-lg",
+                  "aria-selected:opacity-100"
+                ),
+                day_selected: "bg-primary text-primary-foreground hover:bg-primary hover:text-primary-foreground focus:bg-primary focus:text-primary-foreground",
+                day_today: "bg-accent text-accent-foreground",
+                day_outside: "text-muted-foreground opacity-30",
+                day_disabled: "text-muted-foreground opacity-50",
+                day_hidden: "invisible",
+                day_range_middle: "aria-selected:bg-accent aria-selected:text-accent-foreground",
+                day_range_end: "aria-selected:bg-accent aria-selected:text-accent-foreground",
+                day_range_start: "aria-selected:bg-accent aria-selected:text-accent-foreground",
+                ...Object.fromEntries(
+                    Array.from(festivalDays).map(day => [
+                        `day_${new Date(day).toISOString().split('T')[0].replace(/-/g, '')}`, 
+                        'font-bold text-primary-foreground bg-primary shadow-md'
+                    ])
+                )
+              }}
+              modifiers={{
+                festival: (day) => festivalDays.has(startOfDay(day).toDateString()),
+              }}
+              modifiersClassNames={{
+                festival: 'bg-primary text-primary-foreground font-bold',
               }}
               components={{
                 Day: DayWithFestival,
