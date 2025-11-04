@@ -1,3 +1,4 @@
+
 {
     "ui": {
         "nav": {
@@ -24,7 +25,8 @@
             "viewDetails": "View Details"
         },
         "calendar": {
-            "subtitle": "Plan your visit to Cusco with our interactive festival calendar. Hover over a date to see what's happening or click to view details.",
+            "title": "Cusco Festival Calendar",
+            "subtitle": "Plan your visit to the historic capital of Peru. Click on a highlighted date to see the festive events.",
             "eventsOn": "Events on {date}",
             "festivalsOn": "Festivals on {date}",
             "noFestivals": "No Festivals Scheduled",
