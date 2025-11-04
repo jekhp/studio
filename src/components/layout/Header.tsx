@@ -8,6 +8,8 @@ import { cn } from '@/lib/utils';
 import {
   Sheet,
   SheetContent,
+  SheetHeader,
+  SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet"
 import { Button } from '../ui/button';
@@ -66,6 +68,9 @@ export function Header() {
               </Button>
             </SheetTrigger>
             <SheetContent side="right" className="flex flex-col">
+              <SheetHeader>
+                <SheetTitle className="sr-only">Menu</SheetTitle>
+              </SheetHeader>
               <div className="flex-grow">
                 <div className="flex flex-col space-y-4 pt-8">
                   {navLinks.map((link) => (
