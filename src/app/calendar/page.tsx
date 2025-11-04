@@ -19,11 +19,16 @@ export default function CalendarPage() {
   
   const festivalsOnDate = React.useMemo(() => {
     if (!date) return [];
-    const selectedDayStart = startOfDay(date);
+    
+    // Normalize selected date to the start of the day
+    const selectedDay = startOfDay(date);
+
     return festivals.filter(f => {
-        const festivalStart = startOfDay(new Date(f.date.start));
-        const festivalEnd = startOfDay(new Date(f.date.end));
-        return isWithinInterval(selectedDayStart, { start: festivalStart, end: festivalEnd });
+      const festivalStart = startOfDay(new Date(f.date.start));
+      const festivalEnd = endOfDay(new Date(f.date.end));
+      
+      // Check if the selected day is within the festival's date range (inclusive)
+      return isWithinInterval(selectedDay, { start: festivalStart, end: festivalEnd });
     });
   }, [date]);
 
