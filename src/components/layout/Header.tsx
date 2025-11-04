@@ -13,6 +13,7 @@ import {
 import { Button } from '../ui/button';
 import { LanguageSwitcher } from './LanguageSwitcher';
 import { useLanguage } from '@/context/language-context';
+import { Separator } from '../ui/separator';
 
 const navLinks = [
   { href: '/', label: 'navHome' },
@@ -64,20 +65,26 @@ export function Header() {
                 <span className="sr-only">Toggle Menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="right">
-              <div className="flex flex-col space-y-4 pt-8">
-                {navLinks.map((link) => (
-                  <Link
-                    key={link.href}
-                    href={link.href}
-                    className={cn(
-                      'text-lg font-medium transition-colors hover:text-primary',
-                       pathname === link.href ? 'text-primary' : 'text-foreground'
-                    )}
-                  >
-                    {t(link.label)}
-                  </Link>
-                ))}
+            <SheetContent side="right" className="flex flex-col">
+              <div className="flex-grow">
+                <div className="flex flex-col space-y-4 pt-8">
+                  {navLinks.map((link) => (
+                    <Link
+                      key={link.href}
+                      href={link.href}
+                      className={cn(
+                        'text-lg font-medium transition-colors hover:text-primary',
+                        pathname === link.href ? 'text-primary' : 'text-foreground'
+                      )}
+                    >
+                      {t(link.label)}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+              <Separator className="my-4" />
+              <div className="flex justify-center pb-4">
+                <LanguageSwitcher />
               </div>
             </SheetContent>
           </Sheet>
