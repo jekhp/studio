@@ -20,15 +20,25 @@ export default function CalendarPage() {
   const festivalsOnDate = React.useMemo(() => {
     if (!date) return [];
     
-    // Normalize selected date to the start of the day
     const selectedDay = startOfDay(date);
 
     return festivals.filter(f => {
       const festivalStart = startOfDay(new Date(f.date.start));
       const festivalEnd = endOfDay(new Date(f.date.end));
+      const isWithin = isWithinInterval(selectedDay, { start: festivalStart, end: festivalEnd });
+
+      // Prueba de depuración para un festival específico
+      if (f.slug === 'navidad-cusquena-santurantikuy') {
+        alert(
+          `DEBUG: Navidad Cusqueña\n` +
+          `Fecha Seleccionada: ${selectedDay.toString()}\n` +
+          `Inicio Festival: ${festivalStart.toString()}\n` +
+          `Fin Festival: ${festivalEnd.toString()}\n` +
+          `¿Está dentro del rango?: ${isWithin}`
+        );
+      }
       
-      // Check if the selected day is within the festival's date range (inclusive)
-      return isWithinInterval(selectedDay, { start: festivalStart, end: festivalEnd });
+      return isWithin;
     });
   }, [date]);
 
@@ -75,7 +85,7 @@ export default function CalendarPage() {
 
   return (
     <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-6xl mx-auto bg-background/80 backdrop-blur-sm rounded-2xl shadow-2xl overflow-hidden">
+      <div className="max-w-6xl mx-auto rounded-2xl shadow-2xl overflow-hidden">
         <div className="p-8 text-center">
           <h1 className="text-4xl md:text-5xl font-headline">{t('ui.calendar.title', {defaultValue: "Festival Calendar"})}</h1>
           <p className="mt-4 text-lg max-w-3xl mx-auto text-muted-foreground">
