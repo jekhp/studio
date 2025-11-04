@@ -15,6 +15,7 @@ import { Button } from '@/components/ui/button';
 import { Textarea } from '@/components/ui/textarea';
 import { Input } from '@/components/ui/input';
 import { FestivalMap } from '@/components/FestivalMap';
+import { TranslationWrapper } from '@/components/TranslationWrapper';
 
 export async function generateStaticParams() {
   return festivals.map((festival) => ({
@@ -31,7 +32,6 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   }
   return {
     title: `${festival.name} | CuscoFest`,
-    description: festival.description,
   };
 }
 
@@ -79,6 +79,9 @@ export default function FestivalDetailPage({ params }: { params: { slug: string 
   const placeholder = PlaceHolderImages.find((p) => p.id === festival.image);
   const formattedDateRange = `${format(festival.date.start, 'MMMM do')} - ${format(festival.date.end, 'MMMM do, yyyy')}`;
 
+  const scheduleKeys = festival.scheduleKeys || [];
+  const traditionKeys = festival.traditionKeys || [];
+
   return (
     <div className="bg-background">
       <div className="relative h-[40vh] md:h-[55vh] w-full">
@@ -124,30 +127,38 @@ export default function FestivalDetailPage({ params }: { params: { slug: string 
                 <CardTitle className="font-headline text-2xl">About {festival.name}</CardTitle>
               </CardHeader>
               <CardContent className="prose prose-sm max-w-none text-muted-foreground">
-                <p>{festival.longDescription}</p>
+                <TranslationWrapper translationKey={`festival_${festival.slug}_longDescription`} as="p" />
               </CardContent>
             </Card>
 
             <Tabs defaultValue="schedule" className="w-full">
               <TabsList className="grid w-full grid-cols-4">
-                <TabsTrigger value="schedule">Schedule</TabsTrigger>
-                <TabsTrigger value="history">History</TabsTrigger>
-                <TabsTrigger value="traditions">Traditions</TabsTrigger>
-                <TabsTrigger value="location">Location</TabsTrigger>
+                <TabsTrigger value="schedule">
+                    <TranslationWrapper translationKey="tabSchedule" />
+                </TabsTrigger>
+                <TabsTrigger value="history">
+                    <TranslationWrapper translationKey="tabHistory" />
+                </TabsTrigger>
+                <TabsTrigger value="traditions">
+                    <TranslationWrapper translationKey="tabTraditions" />
+                </TabsTrigger>
+                <TabsTrigger value="location">
+                    <TranslationWrapper translationKey="tabLocation" />
+                </TabsTrigger>
               </TabsList>
               <TabsContent value="schedule">
                 <Card>
                   <CardContent className="pt-6 space-y-6">
-                    {festival.schedule.map((day, i) => (
+                    {scheduleKeys.map((day, i) => (
                       <div key={i}>
-                        <h3 className="font-semibold mb-2">{day.day}</h3>
+                        <h3 className="font-semibold mb-2"><TranslationWrapper translationKey={day.dayKey} /></h3>
                         <div className="space-y-4">
-                          {day.events.map((event, j) => (
+                          {day.eventKeys.map((event, j) => (
                             <div key={j} className="flex items-start gap-3 pl-4 border-l-2 border-primary/50">
                               <Clock className="h-4 w-4 mt-1 text-primary flex-shrink-0" />
                               <div>
-                                <p className="font-medium">{event.time}</p>
-                                <p className="text-sm text-muted-foreground">{event.description}</p>
+                                <p className="font-medium"><TranslationWrapper translationKey={event.timeKey} /></p>
+                                <p className="text-sm text-muted-foreground"><TranslationWrapper translationKey={event.descriptionKey} /></p>
                               </div>
                             </div>
                           ))}
@@ -160,7 +171,7 @@ export default function FestivalDetailPage({ params }: { params: { slug: string 
               <TabsContent value="history">
                 <Card>
                     <CardContent className="pt-6 prose prose-sm max-w-none text-muted-foreground">
-                        <p>{festival.history}</p>
+                        <TranslationWrapper translationKey={`festival_${festival.slug}_history`} as="p" />
                     </CardContent>
                 </Card>
               </TabsContent>
@@ -168,10 +179,12 @@ export default function FestivalDetailPage({ params }: { params: { slug: string 
                 <Card>
                     <CardContent className="pt-6">
                         <ul className="space-y-3">
-                            {festival.traditions.map((tradition, i) => (
+                            {traditionKeys.map((traditionKey, i) => (
                                 <li key={i} className="flex items-start gap-3">
                                     <Sparkles className="h-4 w-4 mt-1 text-primary flex-shrink-0"/>
-                                    <span className="text-muted-foreground">{tradition}</span>
+                                    <span className="text-muted-foreground">
+                                        <TranslationWrapper translationKey={traditionKey} />
+                                    </span>
                                 </li>
                             ))}
                         </ul>
