@@ -42,7 +42,8 @@
             "feria": "Fair", "conciertos": "Concerts", "artesania": "Handicrafts", "andino": "Andean",
             "historico": "Historic", "danza": "Dance", "peregrinacion": "Pilgrimage", "aventura": "Adventure",
             "carreras": "Races", "combate-ritual": "Ritual Combat", "agricola": "Agricultural", "taurino": "Bullfighting",
-            "carnaval": "Carnival", "moderno": "Modern", "popular": "Popular", "procesion": "Procession"
+            "carnaval": "Carnival", "moderno": "Modern", "popular": "Popular", "procesion": "Procession",
+            "espiritual": "Spiritual"
         },
         "recommendations": {
             "title": "Festival Finder Quiz",
@@ -257,6 +258,177 @@
                 "day_1": "January 1",
                 "event_1_time": "Afternoon",
                 "event_1_desc": "The communities gather at the boundary lines to begin the ritual."
+            }
+        },
+        "carnaval-de-tinta": {
+            "location_detail": "Tinta, Canchis",
+            "description": "A traditional and colorful carnival with competitive dances.",
+            "longDescription": "The Carnival of Tinta is one of the most recognized in the Cusco region for its competitive spirit. Different communities present their best dancers and musicians in a 'qhaswa' (celebratory competition) that fills the main square with energy and color. It's a celebration of abundance and fertility, with deep roots in Andean culture.",
+            "history": "Carnivals in the Andes are a syncretism of European pre-Lenten celebrations and Andean rituals of harvest and praise to the Pachamama (Mother Earth). Tinta has preserved a very traditional version of this festival.",
+            "traditions": {
+                "tradition_1": "Dance competitions between communities.",
+                "tradition_2": "The 'Yunza' or 'Cortamonte,' where a tree laden with gifts is cut down.",
+                "tradition_3": "Traditional food and drink.",
+                "tradition_4": "Playful games with water and foam."
+            },
+            "schedule": {
+                "day_1": "Main Sunday of Carnival",
+                "event_1_time": "All Day",
+                "event_1_desc": "Main competition of dance troupes in the Plaza de Armas of Tinta."
+            }
+        },
+        "ollantaytambo-reyes": {
+            "location_detail": "Ollantaytambo, Urubamba",
+            "description": "A procession of the Christ Child, 'Niño Jesús', through the ancient Inca town.",
+            "longDescription": "The Adoration of the Magi in Ollantaytambo is a charming and solemn festival. It celebrates the journey of the Christ Child from the church of San Blas in Cusco to his temple in Marcacocha, near Ollantaytambo. The procession is accompanied by traditional dances and music, winding through the impressive Inca streets of the town.",
+            "history": "This festival blends the Catholic celebration of the Epiphany with local Andean traditions. The devotion to the 'Niño de Marcacocha' is central to the identity of Ollantaytambo and its surrounding communities.",
+            "traditions": {
+                "tradition_1": "The main procession with the statue of the Christ Child.",
+                "tradition_2": "Dances such as 'Huiloconas' and 'Mollos'.",
+                "tradition_3": "Masses and religious services.",
+                "tradition_4": "Community feasts to celebrate."
+            },
+            "schedule": {
+                "day_1": "January 6",
+                "event_1_time": "Afternoon",
+                "event_1_desc": "Main procession through the streets of Ollantaytambo."
+            }
+        },
+        "feria-huancaro": {
+            "location_detail": "Huancaro, Cusco",
+            "description": "The largest agricultural, livestock, and craft fair in the Cusco region.",
+            "longDescription": "The Huancaro Fair is the great showcase of Cusco's economic and cultural life. For a week, it brings together producers, artisans, and artists from all 13 provinces. It's a massive event with livestock exhibitions, sales of agricultural products, craft fairs, food courts, and live music concerts. It's an unmissable event to get to know the contemporary culture of Cusco.",
+            "history": "The fair was established as the official event for the month of celebrations in Cusco. Its purpose is to promote regional economic activity and serve as a meeting point for urban and rural communities.",
+            "traditions": {
+                "tradition_1": "Judging of cattle and South American camelids.",
+                "tradition_2": "Exhibition and sale of native potatoes and other Andean products.",
+                "tradition_3": "Gastronomic area with typical dishes from all provinces.",
+                "tradition_4": "Nightly concerts with national and international artists."
+            },
+            "schedule": {
+                "day_1": "Third week of June",
+                "event_1_time": "All Day, Every Day",
+                "event_1_desc": "The fairgrounds are open from morning until night with various activities."
+            }
+        },
+        "wata-qallariy": {
+            "location_detail": "Various Andean Communities",
+            "description": "Andean New Year and the beginning of the offerings to Pachamama (Mother Earth).",
+            "longDescription": "Wata Qallariy marks the beginning of the Andean agricultural year. August 1st is the central day, when communities perform ceremonies of offering to Pachamama (Mother Earth) to thank her for her fruits and ask for a prosperous new agricultural cycle. It is a time of deep spiritual connection with the earth.",
+            "history": "This is an ancient practice, predating the Incas, based on the Andean agricultural calendar. August is considered a sacred month when the earth 'opens up' to receive offerings.",
+            "traditions": {
+                "tradition_1": "Despacho' or offering ceremonies led by an 'altomisayoq' (Andean priest).",
+                "tradition_2": "Burning of the offering to send the 'essence' to the Apus and Pachamama.",
+                "tradition_3": "Communal meals and chicha drinking.",
+                "tradition_4": "Rituals of purification and flowering."
+            },
+            "schedule": {
+                "day_1": "August 1",
+                "event_1_time": "All Day",
+                "event_1_desc": "Offering ceremonies are held in homes and on sacred mountains (Apus)."
+            }
+        },
+        "senor-de-huanca": {
+            "location_detail": "Sanctuary of Huanca, San Salvador, Calca",
+            "description": "A massive pilgrimage to the sanctuary of the Lord of Huanca.",
+            "longDescription": "The pilgrimage to the Lord of Huanca is one of the most important acts of faith in southern Peru. Thousands of devotees travel, many on foot, to the sanctuary located in a ravine near Cusco. They seek healing, miracles, and blessings from the image of a martyred Christ painted on a rock.",
+            "history": "According to tradition, in 1675, Jesus Christ appeared to a miner in a cave in Huanca. The local bishop ordered a painting of the scene on the rock, which became a place of worship. The devotion has grown exponentially since then.",
+            "traditions": {
+                "tradition_1": "Night pilgrimages from Cusco and other points.",
+                "tradition_2": "Masses and blessing ceremonies for pilgrims and their vehicles.",
+                "tradition_3": "Ritual baths in the stream that runs through the sanctuary.",
+                "tradition_4": "Purchase of 'alasitas' (miniatures) representing the devotee's desires."
+            },
+            "schedule": {
+                "day_1": "September 14",
+                "event_1_time": "All Day & Night",
+                "event_1_desc": "The sanctuary receives pilgrims continuously, with masses and ceremonies throughout the day."
+            }
+        },
+        "takanakuy-chumbivilcas": {
+            "location_detail": "Santo Tomás, Chumbivilcas",
+            "description": "A ritual fighting festival to resolve conflicts and start the new year fresh.",
+            "longDescription": "Takanakuy (Quechua for 'to hit each other') is a unique Christmas festival in the province of Chumbivilcas. Community members, dressed in elaborate costumes and masks, engage in public fistfights to settle personal disputes accumulated over the year. It's a socially sanctioned way to resolve conflicts and start the new year without grudges, followed by dancing and celebration.",
+            "history": "Its origins are uncertain, but it is believed to be a tradition that mixes pre-Hispanic ritual combat with a colonial representation of justice. It is a cultural mechanism for conflict resolution in a region historically far from state control.",
+            "traditions": {
+                "tradition_1": "Dressing up as characters like the 'majeño', 'qarawatana', or 'negro'.",
+                "tradition_2": "Public fights refereed by community authorities.",
+                "tradition_3": "The 'wayliya', a festive music and dance that accompanies the celebration.",
+                "tradition_4": "A hug and agreement to end the fight."
+            },
+            "schedule": {
+                "day_1": "December 25",
+                "event_1_time": "All Day",
+                "event_1_desc": "The community gathers in the main square for the fights and subsequent celebrations."
+            }
+        },
+        "fiesta-de-san-sebastian": {
+            "location_detail": "San Sebastián, Cusco",
+            "description": "A patronal feast with dances, processions, and a strong sense of local identity.",
+            "longDescription": "The festival in honor of Saint Sebastian is the most important celebration in this traditional Cusco district. For several days, the streets are filled with folkloric dancers, music, and processions. The festival reinforces the local identity and the historical rivalry with the neighboring district of San Jerónimo.",
+            "history": "The devotion to Saint Sebastian, protector against plagues, was established during the colonial era. The festival has incorporated many pre-Hispanic elements, especially in its dances and music.",
+            "traditions": {
+                "tradition_1": "Procession of the patron saint through the main streets.",
+                "tradition_2": "Presentation of dance troupes, such as the 'Contradanza'.",
+                "tradition_3": "Gastronomic fairs with typical local dishes.",
+                "tradition_4": "Fireworks and popular celebrations."
+            },
+            "schedule": {
+                "day_1": "January 20",
+                "event_1_time": "All Day",
+                "event_1_desc": "Main day with mass, procession, and dance presentations."
+            }
+        },
+        "carnaval-de-mollomarka": {
+            "location_detail": "Mollomarka, Acomayo",
+            "description": "A high-altitude Andean carnival famous for its unique dances and music.",
+            "longDescription": "The Carnival of Mollomarka is an authentic expression of Andean carnival. At over 4,000 meters above sea level, communities gather to celebrate fertility and life with music and dance. The 'Sarge' or 'Tupay' is the characteristic dance of this region, a ritual courtship dance performed by couples.",
+            "history": "Like other Andean carnivals, it merges Catholic dates with pre-Hispanic rituals tied to the agricultural cycle and the worship of mountain deities.",
+            "traditions": {
+                "tradition_1": "The 'Sarge' dance, exclusive to this region.",
+                "tradition_2": "Ritual offerings to Pachamama.",
+                "tradition_3": "Playful games with 'pica pica' (confetti) and streamers.",
+                "tradition_4": "Communal meals and chicha drinking."
+            },
+            "schedule": {
+                "day_1": "Sunday of Carnival",
+                "event_1_time": "All Day",
+                "event_1_desc": "Main celebration in the community esplanade."
+            }
+        },
+        "aniversario-de-quillabamba": {
+            "location_detail": "Quillabamba, La Convención",
+            "description": "The anniversary of the 'City of Eternal Summer', known for its coffee, cocoa, and festive atmosphere.",
+            "longDescription": "The anniversary of Quillabamba is the main festival of the province of La Convención. It is a week-long celebration that includes agricultural fairs, a Miss Coffee beauty pageant, motorcycle racing competitions, and large concerts with national artists. It reflects the vibrant and modern culture of Cusco's high jungle.",
+            "history": "The festival celebrates the founding of the city of Quillabamba. Over the years, it has become a showcase for the region's main products, especially coffee and cocoa.",
+            "traditions": {
+                "tradition_1": "The 'Miss Coffee' beauty pageant.",
+                "tradition_2": "Tastings and sales of specialty coffees.",
+                "tradition_3": "Motorcycle and motocross competitions.",
+                "tradition_4": "Large popular concerts and parties."
+            },
+            "schedule": {
+                "day_1": "Last week of July",
+                "event_1_time": "All Week",
+                "event_1_desc": "Multiple activities in different parts of the city."
+            }
+
+        },
+        "uywa-chaka-y-chinu": {
+            "location_detail": "Communities of Espinar",
+            "description": "A festival for the marking and fertility ritual of alpacas and llamas.",
+            "longDescription": "Uywa Ch'aka y Ch'inu is an ancestral tradition in the high Andean communities of Espinar. It consists of marking the camelids (llamas and alpacas) with colorful tassels and performing rituals to ensure their fertility and health. It is a celebration of the deep bond between the Andean people and their animals.",
+            "history": "This practice has pre-Hispanic origins and is fundamental to the livestock economy and worldview of the high Andean communities. It is a way of managing the herd and thanking the Apus for their protection.",
+            "traditions": {
+                "tradition_1": "The 'ch'inu' or tying of colorful tassels on the animals' ears.",
+                "tradition_2": "Ritual offerings with coca leaves and chicha.",
+                "tradition_3": "Music and dance to celebrate the herd's fertility.",
+                "tradition_4": "The 't'inka', a ritual toast with chicha."
+            },
+            "schedule": {
+                "day_1": "August 24",
+                "event_1_time": "All Day",
+                "event_1_desc": "The ritual is performed within each family or community."
             }
         }
     }

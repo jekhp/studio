@@ -42,7 +42,8 @@
             "feria": "Feria", "conciertos": "Conciertos", "artesania": "Artesanía", "andino": "Andino",
             "historico": "Histórico", "danza": "Danza", "peregrinacion": "Peregrinación", "aventura": "Aventura",
             "carreras": "Carreras", "combate-ritual": "Combate Ritual", "agricola": "Agrícola", "taurino": "Taurino",
-            "carnaval": "Carnaval", "moderno": "Moderno", "popular": "Popular", "procesion": "Procesión"
+            "carnaval": "Carnaval", "moderno": "Moderno", "popular": "Popular", "procesion": "Procesión",
+            "espiritual": "Espiritual"
         },
         "recommendations": {
             "title": "Quiz de Festivales",
@@ -257,6 +258,176 @@
                 "day_1": "1 de Enero",
                 "event_1_time": "Tarde",
                 "event_1_desc": "Las comunidades se reúnen en los linderos para iniciar el ritual."
+            }
+        },
+        "carnaval-de-tinta": {
+            "location_detail": "Tinta, Canchis",
+            "description": "Un carnaval tradicional y colorido con danzas en competencia.",
+            "longDescription": "El Carnaval de Tinta es uno de los más reconocidos en la región de Cusco por su espíritu competitivo. Diferentes comunidades presentan a sus mejores danzantes y músicos en una 'qhaswa' (competencia festiva) que llena la plaza principal de energía y color. Es una celebración a la abundancia y la fertilidad, con profundas raíces en la cultura andina.",
+            "history": "Los carnavales en los Andes son un sincretismo de las celebraciones precuaresmales europeas y los rituales andinos de cosecha y alabanza a la Pachamama (Madre Tierra). Tinta ha conservado una versión muy tradicional de esta fiesta.",
+            "traditions": {
+                "tradition_1": "Competencias de danzas entre comunidades.",
+                "tradition_2": "La 'Yunza' o 'Cortamonte', donde se derriba un árbol cargado de regalos.",
+                "tradition_3": "Comida y bebida tradicional.",
+                "tradition_4": "Juegos lúdicos con agua y espuma."
+            },
+            "schedule": {
+                "day_1": "Domingo Principal de Carnaval",
+                "event_1_time": "Todo el día",
+                "event_1_desc": "Competencia principal de comparsas de danza en la Plaza de Armas de Tinta."
+            }
+        },
+        "ollantaytambo-reyes": {
+            "location_detail": "Ollantaytambo, Urubamba",
+            "description": "Procesión del Niño Jesús por el antiguo pueblo inca.",
+            "longDescription": "La Bajada de Reyes en Ollantaytambo es una fiesta encantadora y solemne. Celebra el recorrido del Niño Jesús desde la iglesia de San Blas en Cusco hasta su templo en Marcacocha, cerca de Ollantaytambo. La procesión está acompañada por danzas y música tradicional, serpenteando por las impresionantes calles incas del pueblo.",
+            "history": "Esta fiesta mezcla la celebración católica de la Epifanía con tradiciones locales andinas. La devoción al 'Niño de Marcacocha' es central para la identidad de Ollantaytambo y sus comunidades aledañas.",
+            "traditions": {
+                "tradition_1": "La procesión principal con la imagen del Niño Jesús.",
+                "tradition_2": "Danzas como los 'Huiloconas' y los 'Mollos'.",
+                "tradition_3": "Misas y servicios religiosos.",
+                "tradition_4": "Banquetes comunitarios para celebrar."
+            },
+            "schedule": {
+                "day_1": "6 de Enero",
+                "event_1_time": "Tarde",
+                "event_1_desc": "Procesión principal por las calles de Ollantaytambo."
+            }
+        },
+        "feria-huancaro": {
+            "location_detail": "Huancaro, Cusco",
+            "description": "La feria agropecuaria, artesanal y ganadera más grande de la región de Cusco.",
+            "longDescription": "La Feria de Huancaro es el gran escaparate de la vida económica y cultural de Cusco. Durante una semana, reúne a productores, artesanos y artistas de las 13 provincias. Es un evento masivo con exhibiciones de ganado, venta de productos agrícolas, ferias de artesanía, patios de comida y conciertos de música en vivo. Es una cita ineludible para conocer la cultura contemporánea de Cusco.",
+            "history": "La feria se instituyó como el evento oficial del mes jubilar de Cusco. Su propósito es fomentar la actividad económica regional y servir como punto de encuentro entre las comunidades urbanas y rurales.",
+            "traditions": {
+                "tradition_1": "Juzgamiento de ganado vacuno y camélidos sudamericanos.",
+                "tradition_2": "Exposición y venta de papas nativas y otros productos andinos.",
+                "tradition_3": "Zona gastronómica con platos típicos de todas las provincias.",
+                "tradition_4": "Conciertos nocturnos con artistas nacionales e internacionales."
+            },
+            "schedule": {
+                "day_1": "Tercera semana de Junio",
+                "event_1_time": "Todo el día, todos los días",
+                "event_1_desc": "El campo ferial está abierto desde la mañana hasta la noche con diversas actividades."
+            }
+        },
+        "wata-qallariy": {
+            "location_detail": "Diversas Comunidades Andinas",
+            "description": "Año Nuevo Andino e inicio de las ofrendas a la Pachamama (Madre Tierra).",
+            "longDescription": "El Wata Qallariy marca el inicio del año agrícola andino. El 1 de agosto es el día central, donde las comunidades realizan ceremonias de ofrenda a la Pachamama (Madre Tierra) para agradecerle por sus frutos y pedir un ciclo agrícola próspero. Es un momento de profunda conexión espiritual con la tierra.",
+            "history": "Esta es una práctica milenaria, anterior a los incas, basada en el calendario agrícola andino. Agosto es considerado un mes sagrado en el que la tierra 'se abre' para recibir las ofrendas.",
+            "traditions": {
+                "tradition_1": "Ceremonias de 'despacho' u ofrenda dirigidas por un 'altomisayoq' (sacerdote andino).",
+                "tradition_2": "Quema de la ofrenda para enviar la 'esencia' a los Apus y la Pachamama.",
+                "tradition_3": "Comidas comunitarias y consumo de chicha.",
+                "tradition_4": "Rituales de purificación y florecimiento."
+            },
+            "schedule": {
+                "day_1": "1 de Agosto",
+                "event_1_time": "Todo el día",
+                "event_1_desc": "Las ceremonias de ofrenda se realizan en los hogares y en las montañas sagradas (Apus)."
+            }
+        },
+        "senor-de-huanca": {
+            "location_detail": "Santuario de Huanca, San Salvador, Calca",
+            "description": "Una masiva peregrinación al santuario del Señor de Huanca.",
+            "longDescription": "La peregrinación al Señor de Huanca es uno de los actos de fe más importantes del sur peruano. Miles de devotos viajan, muchos a pie, hasta el santuario ubicado en una quebrada cerca de Cusco. Buscan sanación, milagros y bendiciones de la imagen de un Cristo martirizado pintada sobre una roca.",
+            "history": "Según la tradición, en 1675, Jesucristo se apareció a un minero en una cueva de Huanca. El obispo local ordenó pintar la escena en la roca, que se convirtió en lugar de culto. La devoción ha crecido exponencialmente desde entonces.",
+            "traditions": {
+                "tradition_1": "Peregrinaciones nocturnas desde Cusco y otros puntos.",
+                "tradition_2": "Misas y ceremonias de bendición para los peregrinos y sus vehículos.",
+                "tradition_3": "Baños rituales en el riachuelo que recorre el santuario.",
+                "tradition_4": "Compra de 'alasitas' (miniaturas) que representan los deseos del devoto."
+            },
+            "schedule": {
+                "day_1": "14 de Septiembre",
+                "event_1_time": "Todo el día y la noche",
+                "event_1_desc": "El santuario recibe peregrinos continuamente, con misas y ceremonias durante toda la jornada."
+            }
+        },
+        "takanakuy-chumbivilcas": {
+            "location_detail": "Santo Tomás, Chumbivilcas",
+            "description": "Un festival de lucha ritual para resolver conflictos y empezar el año nuevo.",
+            "longDescription": "Takanakuy (en quechua, 'golpearse mutuamente') es un festival navideño único en la provincia de Chumbivilcas. Los miembros de la comunidad, vestidos con trajes y máscaras elaborados, se enfrentan en peleas públicas a puñetazos para saldar disputas personales acumuladas durante el año. Es una forma socialmente sancionada de resolver conflictos y empezar el año nuevo sin rencores, seguida de bailes y celebración.",
+            "history": "Sus orígenes son inciertos, pero se cree que es una tradición que mezcla el combate ritual prehispánico con una representación colonial de la justicia. Es un mecanismo cultural de resolución de conflictos en una región históricamente alejada del control estatal.",
+            "traditions": {
+                "tradition_1": "Vestimenta de personajes como el 'majeño', 'qarawatana' o 'negro'.",
+                "tradition_2": "Peleas públicas arbitradas por las autoridades comunales.",
+                "tradition_3": "La 'wayliya', una música y danza festiva que acompaña la celebración.",
+                "tradition_4": "Un abrazo y acuerdo para finalizar la pelea."
+            },
+            "schedule": {
+                "day_1": "25 de Diciembre",
+                "event_1_time": "Todo el día",
+                "event_1_desc": "La comunidad se reúne en la plaza principal para las peleas y las celebraciones posteriores."
+            }
+        },
+        "fiesta-de-san-sebastian": {
+            "location_detail": "San Sebastián, Cusco",
+            "description": "Una fiesta patronal con danzas, procesiones y un fuerte sentido de identidad local.",
+            "longDescription": "La fiesta en honor a San Sebastián es la celebración más importante de este tradicional distrito cusqueño. Durante varios días, las calles se llenan de danzantes folclóricos, música y procesiones. El festival refuerza la identidad local y la histórica rivalidad con el distrito vecino de San Jerónimo.",
+            "history": "La devoción a San Sebastián, protector contra las pestes, se instauró durante la colonia. La fiesta ha incorporado muchos elementos prehispánicos, especialmente en sus danzas y música.",
+            "traditions": {
+                "tradition_1": "Procesión del santo patrón por las calles principales.",
+                "tradition_2": "Presentación de comparsas de danzas, como la 'Contradanza'.",
+                "tradition_3": "Ferias gastronómicas con platos típicos locales.",
+                "tradition_4": "Fuegos artificiales y celebraciones populares."
+            },
+            "schedule": {
+                "day_1": "20 de Enero",
+                "event_1_time": "Todo el día",
+                "event_1_desc": "Día principal con misa, procesión y presentaciones de danzas."
+            }
+        },
+        "carnaval-de-mollomarka": {
+            "location_detail": "Mollomarka, Acomayo",
+            "description": "Un carnaval andino de altura, famoso por sus danzas y música únicas.",
+            "longDescription": "El Carnaval de Mollomarka es una auténtica expresión del carnaval andino. A más de 4,000 msnm, las comunidades se reúnen para celebrar la fertilidad y la vida con música y danza. El 'Sarge' o 'Tupay' es la danza característica de esta región, un baile ritual de cortejo realizado por parejas.",
+            "history": "Al igual que otros carnavales andinos, fusiona las fechas católicas con rituales prehispánicos ligados al ciclo agrícola y la adoración a las deidades de la montaña.",
+            "traditions": {
+                "tradition_1": "La danza del 'Sarge', exclusiva de esta región.",
+                "tradition_2": "Ofrendas rituales a la Pachamama.",
+                "tradition_3": "Juegos con 'pica pica' y serpentinas.",
+                "tradition_4": "Comidas comunitarias y consumo de chicha."
+            },
+            "schedule": {
+                "day_1": "Domingo de Carnaval",
+                "event_1_time": "Todo el día",
+                "event_1_desc": "Celebración principal en la explanada de la comunidad."
+            }
+        },
+        "aniversario-de-quillabamba": {
+            "location_detail": "Quillabamba, La Convención",
+            "description": "El aniversario de la 'Ciudad del Eterno Verano', conocida por su café, cacao y ambiente festivo.",
+            "longDescription": "El aniversario de Quillabamba es la principal fiesta de la provincia de La Convención. Es una celebración de una semana que incluye ferias agrícolas, el certamen de belleza 'Miss Café', competencias de motociclismo y grandes conciertos con artistas nacionales. Refleja la cultura vibrante y moderna de la selva alta cusqueña.",
+            "history": "La fiesta celebra la fundación de la ciudad de Quillabamba. Con los años, se ha convertido en una vitrina para los principales productos de la región, especialmente el café y el cacao.",
+            "traditions": {
+                "tradition_1": "El certamen de belleza 'Miss Café'.",
+                "tradition_2": "Degustaciones y ventas de cafés de especialidad.",
+                "tradition_3": "Competencias de motociclismo y motocross.",
+                "tradition_4": "Grandes conciertos y fiestas populares."
+            },
+            "schedule": {
+                "day_1": "Última semana de Julio",
+                "event_1_time": "Toda la semana",
+                "event_1_desc": "Múltiples actividades en diferentes puntos de la ciudad."
+            }
+        },
+        "uywa-chaka-y-chinu": {
+            "location_detail": "Comunidades de Espinar",
+            "description": "Fiesta del marcado y ritual de fertilidad de las alpacas y llamas.",
+            "longDescription": "Uywa Ch'aka y Ch'inu es una tradición ancestral de las comunidades altoandinas de Espinar. Consiste en marcar a los camélidos (llamas y alpacas) con borlas de colores y realizar rituales para asegurar su fertilidad y salud. Es una celebración del profundo vínculo entre el hombre andino y sus animales.",
+            "history": "Esta práctica tiene orígenes prehispánicos y es fundamental en la economía ganadera y la cosmovisión de las comunidades altoandinas. Es una forma de manejar el rebaño y agradecer a los Apus por su protección.",
+            "traditions": {
+                "tradition_1": "El 'ch'inu' o atado de borlas de colores en las orejas de los animales.",
+                "tradition_2": "Ofrendas rituales con hojas de coca y chicha.",
+                "tradition_3": "Música y danza para celebrar la fertilidad del ganado.",
+                "tradition_4": "El 't'inka', un brindis ritual con chicha."
+            },
+            "schedule": {
+                "day_1": "24 de Agosto",
+                "event_1_time": "Todo el día",
+                "event_1_desc": "El ritual se realiza en el seno de cada familia o comunidad."
             }
         }
     }

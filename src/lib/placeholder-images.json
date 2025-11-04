@@ -43,10 +43,10 @@
       "imageHint": "agricultural fair"
     },
     {
-      "id": "combapata-festival",
-      "description": "People in historical costumes reenacting a battle in a town square.",
-      "imageUrl": "https://images.unsplash.com/photo-1599779101693-79a9f2b8effa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxiYXR0bGUlMjByZWVuYWN0bWVudHxlbnwwfHx8fDE3NjE5NDU1ODR8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "battle reenactment"
+      "id": "pachamama-ceremony",
+      "description": "An Andean shaman performing an offering to Pachamama (Mother Earth).",
+      "imageUrl": "https://images.unsplash.com/photo-1629851683432-132d73f1d48c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwYWNoYW1hbWElMjBjZXJlbW9ueXxlbnwwfHx8fDE3NjIyNzUxMDF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "pachamama ceremony"
     },
     {
       "id": "anta-festival",
@@ -61,15 +61,15 @@
       "imageHint": "coffee beans"
     },
     {
-      "id": "acomayo-carnival",
-      "description": "Young people in traditional Andean clothing dancing in a field.",
-      "imageUrl": "https://images.unsplash.com/photo-1718913955000-f72fd511f358?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxhbmRlYW4lMjBjYXJuaXZhbHxlbnwwfHx8fDE3NjE5NDU1ODR8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "andean carnival"
+      "id": "mollomarka-carnival",
+      "description": "A group of people in traditional Andean attire dancing in a circle in a rural, mountainous landscape.",
+      "imageUrl": "https://images.unsplash.com/photo-1595424307919-b8335ccd9630?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxhbmRlYW4lMjBkYW5jZXJzfGVufDB8fHx8fDE3NjIyNzUxMDF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "andean dancers"
     },
     {
       "id": "qeswachaka-bridge",
       "description": "A traditional Inca rope bridge spanning a deep river canyon.",
-      "imageUrl": "https://images.unsplash.com/photo-1495805442109-bf1cf975750b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyb3BlJTIwYnJpZGdlfGVufDB8fHx8MTc2MjI3NTEwMXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1495805442109-bf1cf975750b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyb3BlJTIwYnJpZGdlfGVufDB8fHx8fDE3NjIyNzUxMDF8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "rope bridge"
     },
     {
@@ -81,7 +81,7 @@
     {
       "id": "espinar-harvest",
       "description": "A display of many different varieties and colors of native potatoes.",
-      "imageUrl": "https://images.unsplash.com/photo-1741517922282-45b999eb9e49?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxwb3RhdG8lMjBoYXJ2ZXN0fGVufDB8fHx8MTc2MTkxNjY0NXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1741517922282-45b999eb9e49?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxwb3RhdG8lMjBoYXJ2ZXN0fGVufDB8fHx8fDE3NjE5MTY2NDV8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "potato harvest"
     },
     {
@@ -125,12 +125,6 @@
       "description": "A dancer in a 'Saqra' (devil) costume from the Paucartambo festival.",
       "imageUrl": "https://images.unsplash.com/photo-1758998427892-e579f09c9fa7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxmZXN0aXZhbCUyMGNoYXJhY3RlcnxlbnwwfHx8fDE3NjIxODgwMjF8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "festival character"
-    },
-    {
-      "id": "mollomarka-carnival",
-      "description": "A group of people in traditional Andean attire dancing in a circle in a rural, mountainous landscape.",
-      "imageUrl": "https://images.unsplash.com/photo-1595424307919-b8335ccd9630?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxhbmRlYW4lMjBkYW5jZXJzfGVufDB8fHx8MTc2MjI3NTEwMXww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "andean dancers"
     },
     {
       "id": "quillabamba-anniversary",
