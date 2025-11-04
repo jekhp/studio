@@ -29,7 +29,7 @@ export type Festival = {
 const festivalsByProvince: Record<string, Omit<Festival, 'province'>[]> = {
   Cusco: [
     {
-      id: '1',
+      id: 'inti-raymi',
       slug: 'inti-raymi',
       name: 'Inti Raymi',
       date: { start: new Date(new Date().getFullYear(), 5, 24), end: new Date(new Date().getFullYear(), 5, 24) },
@@ -62,7 +62,7 @@ const festivalsByProvince: Record<string, Omit<Festival, 'province'>[]> = {
       categories: ['andino', 'histórico', 'danza', 'espectáculo'],
     },
     {
-      id: '4',
+      id: 'corpus-christi',
       slug: 'corpus-christi',
       name: 'Corpus Christi',
       date: { start: new Date(new Date().getFullYear(), 4, 30), end: new Date(new Date().getFullYear(), 4, 30) },
@@ -100,7 +100,7 @@ const festivalsByProvince: Record<string, Omit<Festival, 'province'>[]> = {
       categories: ['religioso', 'gastronómico', 'tradicional', 'espectáculo'],
     },
     {
-      id: '6',
+      id: 'feria-de-huancaro',
       slug: 'feria-de-huancaro',
       name: 'Feria de Huancaro',
       date: { start: new Date(new Date().getFullYear(), 5, 1), end: new Date(new Date().getFullYear(), 5, 30) },
@@ -130,7 +130,7 @@ const festivalsByProvince: Record<string, Omit<Festival, 'province'>[]> = {
       categories: ['feria', 'gastronómico', 'conciertos', 'artesanía'],
     },
     {
-      id: '17',
+      id: 'san-sebastian-patron-feast',
       slug: 'san-sebastian-patron-feast',
       name: 'Fiesta Patronal de San Sebastián',
       date: { start: new Date(new Date().getFullYear(), 0, 18), end: new Date(new Date().getFullYear(), 0, 22) },
@@ -163,7 +163,7 @@ const festivalsByProvince: Record<string, Omit<Festival, 'province'>[]> = {
   ],
   Urubamba: [
     {
-      id: '5',
+      id: 'senor-de-choquekillka',
       slug: 'senor-de-choquekillka',
       name: 'Señor de Choquekillka',
       date: { start: new Date(new Date().getFullYear(), 5, 6), end: new Date(new Date().getFullYear(), 5, 9) },
@@ -196,7 +196,7 @@ const festivalsByProvince: Record<string, Omit<Festival, 'province'>[]> = {
   ],
   Quispicanchi: [
     {
-      id: '2',
+      id: 'qoyllur-riti',
       slug: 'qoyllur-riti',
       name: 'Qoyllur Rit\'i',
       date: { start: new Date(new Date().getFullYear(), 4, 29), end: new Date(new Date().getFullYear(), 5, 2) },
@@ -238,7 +238,7 @@ const festivalsByProvince: Record<string, Omit<Festival, 'province'>[]> = {
   ],
   Paucartambo: [
     {
-      id: '3',
+      id: 'paucartambo-virgen-del-carmen',
       slug: 'paucartambo-virgen-del-carmen',
       name: 'Paucartambo - Virgen del Carmen',
       date: { start: new Date(new Date().getFullYear(), 6, 15), end: new Date(new Date().getFullYear(), 6, 18) },
@@ -283,7 +283,7 @@ const festivalsByProvince: Record<string, Omit<Festival, 'province'>[]> = {
   ],
   Canchis: [
     {
-      id: '7',
+      id: 'fiesta-de-la-virgen-rosario-de-combapata',
       slug: 'fiesta-de-la-virgen-rosario-de-combapata',
       name: 'Virgen del Rosario de Combapata',
       date: { start: new Date(new Date().getFullYear(), 9, 7), end: new Date(new Date().getFullYear(), 9, 10) },
@@ -314,7 +314,7 @@ const festivalsByProvince: Record<string, Omit<Festival, 'province'>[]> = {
       categories: ['religioso', 'tradicional', 'histórico', 'danza'],
     },
     {
-      id: '16',
+      id: 'carnaval-tkapuy',
       slug: 'carnaval-tkapuy',
       name: 'Carnaval T\'ikapallana de Tinta',
       date: { start: new Date(new Date().getFullYear(), 1, 22), end: new Date(new Date().getFullYear(), 1, 24) },
@@ -346,7 +346,7 @@ const festivalsByProvince: Record<string, Omit<Festival, 'province'>[]> = {
   ],
   Anta: [
     {
-      id: '8',
+      id: 'semana-turistica-de-anta',
       slug: 'semana-turistica-de-anta',
       name: 'Semana Turística de Anta',
       date: { start: new Date(new Date().getFullYear(), 8, 20), end: new Date(new Date().getFullYear(), 8, 27) },
@@ -378,7 +378,7 @@ const festivalsByProvince: Record<string, Omit<Festival, 'province'>[]> = {
   ],
   'La Convención': [
     {
-      id: '9',
+      id: 'festival-del-cafe-quillabamba',
       slug: 'festival-del-cafe-quillabamba',
       name: 'Festival del Café de Quillabamba',
       date: { start: new Date(new Date().getFullYear(), 6, 25), end: new Date(new Date().getFullYear(), 6, 29) },
@@ -409,7 +409,7 @@ const festivalsByProvince: Record<string, Omit<Festival, 'province'>[]> = {
       categories: ['feria', 'gastronómico', 'conciertos'],
     },
     {
-      id: '20',
+      id: 'aniversario-de-la-convencion',
       slug: 'aniversario-de-la-convencion',
       name: 'Aniversario de La Convención',
       date: { start: new Date(new Date().getFullYear(), 6, 20), end: new Date(new Date().getFullYear(), 6, 25) },
@@ -442,7 +442,7 @@ const festivalsByProvince: Record<string, Omit<Festival, 'province'>[]> = {
   ],
   Acomayo: [
     {
-      id: '10',
+      id: 'wayllati-carnaval',
       slug: 'wayllati-carnaval',
       name: 'Carnaval de Wayllati',
       date: { start: new Date(new Date().getFullYear(), 1, 20), end: new Date(new Date().getFullYear(), 1, 25) },
@@ -474,7 +474,7 @@ const festivalsByProvince: Record<string, Omit<Festival, 'province'>[]> = {
   ],
   Canas: [
     {
-      id: '11',
+      id: 'qeswachaka-bridge-festival',
       slug: 'qeswachaka-bridge-festival',
       name: 'Q\'eswachaka Bridge Festival',
       date: { start: new Date(new Date().getFullYear(), 5, 8), end: new Date(new Date().getFullYear(), 5, 11) },
@@ -509,7 +509,7 @@ const festivalsByProvince: Record<string, Omit<Festival, 'province'>[]> = {
   ],
   Chumbivilcas: [
     {
-      id: '12',
+      id: 'wata-qallariy',
       slug: 'wata-qallariy',
       name: 'Wata Qallariy',
       date: { start: new Date(new Date().getFullYear(), 10, 1), end: new Date(new Date().getFullYear(), 10, 2) },
@@ -540,7 +540,7 @@ const festivalsByProvince: Record<string, Omit<Festival, 'province'>[]> = {
       categories: ['andino', 'tradicional', 'carreras'],
     },
     {
-      id: '18',
+      id: 'takanakuy-chumbivilcas',
       slug: 'takanakuy-chumbivilcas',
       name: 'Takanakuy',
       date: { start: new Date(new Date().getFullYear(), 11, 25), end: new Date(new Date().getFullYear(), 11, 25) },
@@ -572,7 +572,7 @@ const festivalsByProvince: Record<string, Omit<Festival, 'province'>[]> = {
       categories: ['andino', 'tradicional', 'combate ritual'],
     },
     {
-      id: '19',
+      id: 'carnaval-de-mollomarka',
       slug: 'carnaval-de-mollomarka',
       name: 'Carnaval de Mollomarka',
       date: { start: new Date(new Date().getFullYear(), 1, 25), end: new Date(new Date().getFullYear(), 1, 27) },
@@ -604,7 +604,7 @@ const festivalsByProvince: Record<string, Omit<Festival, 'province'>[]> = {
   ],
   Espinar: [
     {
-      id: '13',
+      id: 'k-ana-raymi',
       slug: 'k-ana-raymi',
       name: 'K\'ana Raymi',
       date: { start: new Date(new Date().getFullYear(), 5, 19), end: new Date(new Date().getFullYear(), 5, 21) },
@@ -637,7 +637,7 @@ const festivalsByProvince: Record<string, Omit<Festival, 'province'>[]> = {
   ],
   Paruro: [
     {
-      id: '14',
+      id: 'fiesta-de-san-juan-de-paruro',
       slug: 'fiesta-de-san-juan-de-paruro',
       name: 'Fiesta de San Juan de Paruro',
       date: { start: new Date(new Date().getFullYear(), 5, 23), end: new Date(new Date().getFullYear(), 5, 25) },
@@ -670,7 +670,7 @@ const festivalsByProvince: Record<string, Omit<Festival, 'province'>[]> = {
   ],
   Calca: [
     {
-      id: '15',
+      id: 'senor-de-huanca',
       slug: 'senor-de-huanca',
       name: 'Señor de Huanca',
       date: { start: new Date(new Date().getFullYear(), 8, 14), end: new Date(new Date().getFullYear(), 8, 14) },
