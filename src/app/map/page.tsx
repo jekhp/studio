@@ -52,7 +52,7 @@ export default function MapPage() {
             </div>
 
             {regionalChristmasFestival && (
-                 <div className="absolute top-4 right-4 md:right-8 lg:right-12 z-10 w-full max-w-xs sm:max-w-sm md:max-w-md lg:w-1/4 lg:max-w-xs">
+                 <div className="absolute top-4 right-4 z-10 w-full max-w-xs">
                     <RegionalFestivalBanner festival={regionalChristmasFestival} />
                 </div>
             )}

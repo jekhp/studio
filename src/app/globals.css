@@ -100,7 +100,7 @@ body {
 
   /* Golden Notification Banner Styles */
   .notification-banner {
-    @apply w-full max-w-xs bg-slate-900/80 rounded-xl overflow-hidden shadow-lg relative backdrop-blur-md border border-amber-300/20;
+    @apply w-full bg-slate-900/80 rounded-xl overflow-hidden shadow-lg relative backdrop-blur-md border border-amber-300/20;
   }
   
   .notification-banner::before {
