@@ -117,7 +117,7 @@
     {
       "id": "linderaje-chinchero",
       "description": "Two people in masks facing each other in a ritual fight.",
-      "imageUrl": "https://images.unsplash.com/photo-1707405432940-6124db71c729?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyaXR1YWwlMjBmaWdodHxlbnwwfHx8fDE3NjIxODQ4MzV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1663120957251-005c04ea7701?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxyaXR1YWwlMjBmaWdodHxlbnwwfHx8fDE3NjIxODQ4MzV8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "ritual fight"
     },
     {
@@ -125,6 +125,18 @@
       "description": "A dancer in a 'Saqra' (devil) costume from the Paucartambo festival.",
       "imageUrl": "https://images.unsplash.com/photo-1758998427892-e579f09c9fa7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxmZXN0aXZhbCUyMGNoYXJhY3RlcnxlbnwwfHx8fDE3NjIxODgwMjF8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "festival character"
+    },
+    {
+      "id": "mollomarka-carnival",
+      "description": "A group of people in traditional Andean attire dancing in a circle in a rural, mountainous landscape.",
+      "imageUrl": "https://images.unsplash.com/photo-1541423855-667790345098?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxhbmRlYW4lMjBkYW5jZXJzfGVufDB8fHx8MTc2MjE4OTc0M3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "andean dancers"
+    },
+    {
+      "id": "quillabamba-anniversary",
+      "description": "A vibrant night-time street parade with glowing floats and a large crowd.",
+      "imageUrl": "https://images.unsplash.com/photo-1517457373958-b7bdd4587205?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxuaWdodCUyMHBhcmFkZXxlbnwwfHx8fDE3NjIxODk4MDR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "night parade"
     },
     {
       "id": "quiz-character-2",
