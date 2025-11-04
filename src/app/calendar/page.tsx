@@ -2,17 +2,16 @@
 "use client";
 
 import * as React from 'react';
-import { Calendar as CalendarComponent, type DayProps } from 'react-day-picker';
+import { Calendar as CalendarComponent, type DayProps, type DayContentProps } from 'react-day-picker';
 import { festivals, type Festival } from '@/lib/festivals';
 import { Card, CardContent } from '@/components/ui/card';
 import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowRight, PartyPopper, Calendar as CalendarIcon, Info } from 'lucide-react';
-import { format, isSameDay, startOfDay, isWithinInterval, endOfDay } from 'date-fns';
+import { format, isWithinInterval, startOfDay, endOfDay, isSameDay } from 'date-fns';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/context/language-context';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { components } from 'react-select';
 import { cn } from '@/lib/utils';
 
 export default function CalendarPage() {
@@ -35,11 +34,11 @@ export default function CalendarPage() {
   const festivalDays = React.useMemo(() => {
     const dates = new Set<string>();
     festivals.forEach(f => {
-      let currentDate = startOfDay(new Date(f.date.start));
-      const endDate = startOfDay(new Date(f.date.end));
+      let currentDate = new Date(f.date.start);
+      const endDate = new Date(f.date.end);
       while (currentDate <= endDate) {
-        dates.add(currentDate.toDateString());
-        currentDate = new Date(currentDate.setDate(currentDate.getDate() + 1));
+        dates.add(startOfDay(currentDate).toDateString());
+        currentDate.setDate(currentDate.getDate() + 1);
       }
     });
     return dates;
@@ -51,18 +50,15 @@ export default function CalendarPage() {
   }, []);
 
   function DayWithFestival(props: DayProps) {
-    const { date: dayDate, displayMonth } = props;
+    const { date: dayDate, displayMonth, components } = props;
     const isOutsideMonth = dayDate.getMonth() !== displayMonth.getMonth();
     const isFestivalDay = festivalDays.has(startOfDay(dayDate).toDateString());
     
-    // The original Day component is passed via props
-    const { Day } = components;
-
     return (
       <div className="relative">
-        <Day {...props} />
+        <components.Day {...props} />
         {isFestivalDay && !isOutsideMonth && (
-          <PartyPopper className="absolute top-1 right-1 h-3 w-3 text-white/80 pointer-events-none" />
+          <PartyPopper className="absolute top-1 right-1 h-3 w-3 text-primary pointer-events-none" />
         )}
       </div>
     );
@@ -83,10 +79,7 @@ export default function CalendarPage() {
             <CalendarComponent
               mode="single"
               selected={date}
-              onSelect={(newDate) => {
-                console.log('Fecha seleccionada:', newDate);
-                setDate(newDate);
-              }}
+              onSelect={setDate}
               className="w-full max-w-md"
               classNames={{
                 caption_label: "text-2xl font-headline font-bold text-foreground",
@@ -107,18 +100,12 @@ export default function CalendarPage() {
                 day_range_middle: "aria-selected:bg-accent aria-selected:text-accent-foreground",
                 day_range_end: "aria-selected:bg-accent aria-selected:text-accent-foreground",
                 day_range_start: "aria-selected:bg-accent aria-selected:text-accent-foreground",
-                ...Object.fromEntries(
-                    Array.from(festivalDays).map(day => [
-                        `day_${new Date(day).toISOString().split('T')[0].replace(/-/g, '')}`, 
-                        'font-bold text-primary-foreground bg-primary shadow-md'
-                    ])
-                )
               }}
               modifiers={{
                 festival: (day) => festivalDays.has(startOfDay(day).toDateString()),
               }}
               modifiersClassNames={{
-                festival: 'bg-primary text-primary-foreground font-bold',
+                festival: 'bg-primary/80 text-primary-foreground',
               }}
               components={{
                 Day: DayWithFestival,
