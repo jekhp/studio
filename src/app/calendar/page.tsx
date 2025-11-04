@@ -55,6 +55,7 @@ export default function CalendarPage() {
 
     return (
       <span 
+        onClick={() => console.log("[DEBUG] Clic en el SPAN del día:", dayDate)}
         className={
           `h-12 w-12 flex items-center justify-center rounded-lg transition-all duration-200 cursor-pointer relative shadow-sm
           ${isOutsideMonth ? 'text-muted-foreground/30 bg-muted/20' : 'bg-card/80'}
