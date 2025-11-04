@@ -430,6 +430,23 @@
                 "event_1_time": "All Day",
                 "event_1_desc": "The ritual is performed within each family or community."
             }
+        },
+        "navidad-cusquena-santurantikuy": {
+            "location_detail": "The main fair is in the Plaza de Armas, but Christmas is celebrated throughout the city.",
+            "description": "The most important Christmas fair in Peru, where artisans sell traditional nativity figures.",
+            "longDescription": "Santurantikuy, which means 'Sale of Saints' in Quechua, is a magical Christmas fair that takes over Cusco's Plaza de Armas every December 24th. Hundreds of artisans from all over the region come to sell handcrafted images for nativity scenes, with the 'Niño Manuelito' (the baby Jesus) being the central figure. It's a vibrant expression of art, faith, and tradition that is essential to the Cusco Christmas.",
+            "history": "Its origins date back to the colonial era, when the Spanish introduced the tradition of nativity scenes. The Andean artisans adopted this custom, creating unique figures that blend Catholic iconography with local elements and worldview. Over the centuries, Santurantikuy has become the largest folk art fair in Peru.",
+            "traditions": {
+                "tradition_1": "The sale and exhibition of handcrafted 'Niño Manuelitos' in countless styles.",
+                "tradition_2": "Creation of complete nativity scenes with moss, plants, and miniature animals.",
+                "tradition_3": "Drinking 'ponche', a hot, sweet drink to combat the cold.",
+                "tradition_4": "The fair lasts until late at night on Christmas Eve."
+            },
+            "schedule": {
+                "day_1": "December 24",
+                "event_1_time": "All Day",
+                "event_1_desc": "Santurantikuy Fair in the Plaza de Armas. Artisans set up from the early morning hours."
+            }
         }
     }
 }

@@ -429,6 +429,23 @@
                 "event_1_time": "Todo el día",
                 "event_1_desc": "El ritual se realiza en el seno de cada familia o comunidad."
             }
+        },
+        "navidad-cusquena-santurantikuy": {
+            "location_detail": "La feria principal es en la Plaza de Armas, pero la Navidad se celebra en toda la ciudad.",
+            "description": "La feria navideña más importante de Perú, donde los artesanos venden figuras tradicionales para los nacimientos.",
+            "longDescription": "Santurantikuy, que significa 'Venta de Santos' en quechua, es una mágica feria navideña que toma la Plaza de Armas de Cusco cada 24 de diciembre. Cientos de artesanos de toda la región vienen a vender imágenes hechas a mano para los nacimientos, siendo el 'Niño Manuelito' (el niño Jesús) la figura central. Es una vibrante expresión de arte, fe y tradición, esencial para la Navidad cusqueña.",
+            "history": "Sus orígenes se remontan a la época colonial, cuando los españoles introdujeron la tradición de los belenes. Los artesanos andinos adoptaron esta costumbre, creando figuras únicas que mezclan la iconografía católica con elementos y cosmovisión locales. Con los siglos, Santurantikuy se ha convertido en la feria de arte popular más grande de Perú.",
+            "traditions": {
+                "tradition_1": "La venta y exhibición de 'Niños Manuelitos' artesanales en innumerables estilos.",
+                "tradition_2": "Creación de nacimientos completos con musgo, plantas y animales en miniatura.",
+                "tradition_3": "Tomar 'ponche', una bebida caliente y dulce para combatir el frío.",
+                "tradition_4": "La feria dura hasta altas horas de la noche en la víspera de Navidad."
+            },
+            "schedule": {
+                "day_1": "24 de Diciembre",
+                "event_1_time": "Todo el día",
+                "event_1_desc": "Feria de Santurantikuy en la Plaza de Armas. Los artesanos se instalan desde la madrugada."
+            }
         }
     }
 }

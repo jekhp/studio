@@ -137,6 +137,12 @@
       "description": "A dancer in an 'Ukuku' (bear-man) costume from the Qoyllur Rit'i festival.",
       "imageUrl": "https://picsum.photos/seed/qc2/300/500",
       "imageHint": "andean character"
+    },
+    {
+      "id": "santurantikuy-market",
+      "description": "A bustling Christmas market at night, filled with artisanal crafts and nativity figures.",
+      "imageUrl": "https://images.unsplash.com/photo-1576483500281-5d9331f4153a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxjaHJpc3RtYXMlMjBtYXJrZXR8ZW58MHx8fHwxNzYyMzY2MTcxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "christmas market"
     }
   ]
 }

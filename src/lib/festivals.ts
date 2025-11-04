@@ -301,5 +301,21 @@ export const festivals: Festival[] = [
       interest: 0.4,
       isFree: true,
       categories: ["andino", "agricola", "tradicional"]
+    },
+    {
+      id: "navidad-cusquena-santurantikuy",
+      slug: "navidad-cusquena-santurantikuy",
+      name: "Navidad Cusqueña (Santurantikuy)",
+      date: { start: new Date(currentYear, 11, 24), end: new Date(currentYear, 11, 25) },
+      location: "Plaza de Armas, Cusco",
+      province: "Cusco",
+      coords: [-13.5165, -71.979],
+      image: "santurantikuy-market",
+      rating: 4.9,
+      reviews: [],
+      interest: 2.5,
+      isFree: true,
+      categories: ["feria", "artesania", "religioso", "tradicional"],
+      isRegional: true,
     }
 ];
