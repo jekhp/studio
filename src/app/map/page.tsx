@@ -50,7 +50,7 @@ export default function MapPage() {
                     Explore the locations of upcoming and ongoing festivals in Cusco. Regional festivals are marked with a gold star.
                 </p>
             </div>
-            <div className="aspect-[16/9] w-full bg-muted rounded-lg shadow-lg overflow-hidden border">
+            <div className="aspect-[16/9] w-full bg-muted rounded-lg shadow-lg overflow-hidden border z-0">
                 <LeafletMap locations={locations} zoom={9} center={[-13.516, -71.979]} />
             </div>
         </div>

@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
@@ -85,7 +86,7 @@ const LeafletMap = ({ locations, center, zoom }: LeafletMapProps) => {
   useEffect(() => {
     if (mapContainerRef.current && !mapRef.current) {
       const map = L.map(mapContainerRef.current, {
-          scrollWheelZoom: false, // disable zoom on scroll
+          scrollWheelZoom: true,
       }).setView(mapCenter, zoom);
       mapRef.current = map;
 
