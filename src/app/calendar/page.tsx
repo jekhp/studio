@@ -9,7 +9,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowRight, PartyPopper, Calendar as CalendarIcon, Info } from 'lucide-react';
-import { format, isWithinInterval, startOfDay, endOfDay, isSameDay } from 'date-fns';
+import { format, isWithinInterval, startOfDay, isSameDay } from 'date-fns';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/context/language-context';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
@@ -23,10 +23,10 @@ export default function CalendarPage() {
     if (!date) return [];
     
     return festivals.filter(f => {
-      return isWithinInterval(startOfDay(date), {
-        start: startOfDay(new Date(f.date.start)),
-        end: startOfDay(new Date(f.date.end)),
-      });
+      const selectedDay = startOfDay(date);
+      const festivalStart = startOfDay(new Date(f.date.start));
+      const festivalEnd = startOfDay(new Date(f.date.end));
+      return isWithinInterval(selectedDay, { start: festivalStart, end: festivalEnd });
     });
   }, [date]);
 
@@ -54,8 +54,7 @@ export default function CalendarPage() {
     
     return (
       <div className="relative">
-        {/* We use DayPicker.Day provided by the library for default rendering and event handling */}
-        <DayPicker.Day {...props} />
+        <DayPicker.DateRange {...props} />
         {isFestivalDay && !props.selected && (
           <PartyPopper className="absolute top-1 right-1 h-3 w-3 text-primary pointer-events-none" />
         )}
