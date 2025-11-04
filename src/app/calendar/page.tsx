@@ -8,7 +8,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowRight, PartyPopper, Calendar as CalendarIcon, Info } from 'lucide-react';
-import { format, isWithinInterval, isSameDay, startOfDay, endOfDay } from 'date-fns';
+import { format, isSameDay, startOfDay } from 'date-fns';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/context/language-context';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
@@ -19,26 +19,19 @@ export default function CalendarPage() {
   
   const festivalsOnDate = React.useMemo(() => {
     if (!date) return [];
-    
-    const selectedDay = startOfDay(date);
 
     return festivals.filter(f => {
-      const festivalStart = startOfDay(new Date(f.date.start));
-      const festivalEnd = endOfDay(new Date(f.date.end));
-      const isWithin = isWithinInterval(selectedDay, { start: festivalStart, end: festivalEnd });
+      const festivalStart = new Date(f.date.start);
+      const festivalEnd = new Date(f.date.end);
+      let currentDate = startOfDay(festivalStart);
 
-      // Prueba de depuración para un festival específico
-      if (f.slug === 'navidad-cusquena-santurantikuy') {
-        alert(
-          `DEBUG: Navidad Cusqueña\n` +
-          `Fecha Seleccionada: ${selectedDay.toString()}\n` +
-          `Inicio Festival: ${festivalStart.toString()}\n` +
-          `Fin Festival: ${festivalEnd.toString()}\n` +
-          `¿Está dentro del rango?: ${isWithin}`
-        );
+      while (currentDate <= festivalEnd) {
+        if (isSameDay(date, currentDate)) {
+          return true;
+        }
+        currentDate.setDate(currentDate.getDate() + 1);
       }
-      
-      return isWithin;
+      return false;
     });
   }, [date]);
 
