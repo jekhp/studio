@@ -18,21 +18,40 @@ export default function CalendarPage() {
   const [date, setDate] = React.useState<Date | undefined>(new Date());
   
   const festivalsOnDate = React.useMemo(() => {
-    if (!date) return [];
+    console.log("--------- INICIO DE FILTRADO ---------");
+    if (!date) {
+      console.log("[DEBUG] No hay fecha seleccionada. Terminando.");
+      console.log("--------- FIN DE FILTRADO ---------");
+      return [];
+    }
+    
+    const selectedDay = startOfDay(date);
+    console.log(`[DEBUG] Fecha seleccionada: ${selectedDay.toISOString()}`);
 
-    return festivals.filter(f => {
-      const festivalStart = new Date(f.date.start);
-      const festivalEnd = new Date(f.date.end);
-      let currentDate = startOfDay(festivalStart);
-
+    const foundFestivals = festivals.filter(f => {
+      const festivalStart = startOfDay(new Date(f.date.start));
+      const festivalEnd = startOfDay(new Date(f.date.end));
+      
+      let match = false;
+      let currentDate = festivalStart;
       while (currentDate <= festivalEnd) {
-        if (isSameDay(date, currentDate)) {
-          return true;
+        if (isSameDay(selectedDay, currentDate)) {
+          match = true;
+          break;
         }
-        currentDate.setDate(currentDate.getDate() + 1);
+        currentDate = new Date(currentDate.setDate(currentDate.getDate() + 1));
+        // Reset date to avoid infinite loop on multi-day festivals
+        currentDate = startOfDay(currentDate);
       }
-      return false;
+      
+      console.log(`[DEBUG] Evaluando: ${f.name}. Resultado: ${match}`);
+      return match;
     });
+
+    console.log(`[DEBUG] Festivales encontrados:`, foundFestivals.map(f => f.name));
+    console.log("--------- FIN DE FILTRADO ---------");
+    
+    return foundFestivals;
   }, [date]);
 
   const festivalDays = React.useMemo(() => {
