@@ -2,7 +2,8 @@
 "use client";
 
 import * as React from 'react';
-import { Calendar as CalendarComponent, type DayProps, type DayContentProps } from 'react-day-picker';
+import { Calendar as CalendarComponent } from "@/components/ui/calendar";
+import { type DayProps } from 'react-day-picker';
 import { festivals, type Festival } from '@/lib/festivals';
 import { Card, CardContent } from '@/components/ui/card';
 import Link from 'next/link';
@@ -22,8 +23,6 @@ export default function CalendarPage() {
     if (!date) return [];
     
     return festivals.filter(f => {
-      // Comprueba si la fecha seleccionada está dentro del intervalo del festival.
-      // startOfDay normaliza todo a la medianoche, eliminando problemas de zona horaria.
       return isWithinInterval(startOfDay(date), {
         start: startOfDay(new Date(f.date.start)),
         end: endOfDay(new Date(f.date.end)),
@@ -34,10 +33,10 @@ export default function CalendarPage() {
   const festivalDays = React.useMemo(() => {
     const dates = new Set<string>();
     festivals.forEach(f => {
-      let currentDate = new Date(f.date.start);
-      const endDate = new Date(f.date.end);
+      let currentDate = startOfDay(new Date(f.date.start));
+      const endDate = startOfDay(new Date(f.date.end));
       while (currentDate <= endDate) {
-        dates.add(startOfDay(currentDate).toDateString());
+        dates.add(currentDate.toDateString());
         currentDate.setDate(currentDate.getDate() + 1);
       }
     });
@@ -45,19 +44,16 @@ export default function CalendarPage() {
   }, []);
 
   React.useEffect(() => {
-    // Select today's date on initial load
     setDate(new Date());
   }, []);
 
-  function DayWithFestival(props: DayProps) {
-    const { date: dayDate, displayMonth, components } = props;
-    const isOutsideMonth = dayDate.getMonth() !== displayMonth.getMonth();
+  function DayWithFestival({ date: dayDate, ...props }: DayProps) {
     const isFestivalDay = festivalDays.has(startOfDay(dayDate).toDateString());
     
     return (
       <div className="relative">
-        <components.Day {...props} />
-        {isFestivalDay && !isOutsideMonth && (
+        <div {...props.children?.props} />
+        {isFestivalDay && (
           <PartyPopper className="absolute top-1 right-1 h-3 w-3 text-primary pointer-events-none" />
         )}
       </div>
