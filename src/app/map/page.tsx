@@ -6,7 +6,7 @@ import { festivals } from '@/lib/festivals';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { format, endOfDay } from 'date-fns';
 import { useLanguage } from '@/context/language-context';
-import { UpcomingFestivalCard } from '@/components/UpcomingFestivalCard';
+import { RegionalFestivalBanner } from '@/components/RegionalFestivalBanner';
 
 const LeafletMap = dynamic(() => import('@/components/LeafletMap'), { ssr: false });
 
@@ -20,7 +20,7 @@ export default function MapPage() {
     });
 
     const regionalChristmasFestival = upcomingFestivals.find(f => f.slug === 'navidad-cusquena-santurantikuy' && f.isRegional);
-    const mapFestivals = upcomingFestivals.filter(f => !(f.slug === 'navidad-cusquena-santurantikuy' && f.isRegional));
+    const mapFestivals = upcomingFestivals.filter(f => !(f.isRegional));
 
 
     const locations = mapFestivals.map(f => {
@@ -46,24 +46,25 @@ export default function MapPage() {
     });
 
     return (
-        <div className="relative">
-            <div className="container mx-auto px-4 py-16">
-                <div className="text-center mb-12">
-                    <h1 className="text-4xl md:text-5xl font-headline text-foreground">Festival Map</h1>
-                    <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
-                        Explore the locations of upcoming and ongoing festivals in Cusco. Regional festivals are marked with a gold star.
-                    </p>
-                </div>
-                <div className="aspect-[16/9] w-full bg-muted rounded-lg shadow-lg overflow-hidden border z-0">
-                    <LeafletMap locations={mapFestivals} zoom={9} center={[-13.516, -71.979]} />
-                </div>
+        <div className="relative h-[calc(100vh-4rem)]">
+            <div className="absolute inset-0 z-0">
+                <LeafletMap locations={locations} zoom={9} center={[-13.516, -71.979]} />
             </div>
 
             {regionalChristmasFestival && (
-                 <div className="absolute top-20 right-4 md:right-8 lg:right-12 z-10 w-full max-w-xs md:max-w-sm">
-                    <UpcomingFestivalCard festival={regionalChristmasFestival} />
+                 <div className="absolute top-4 right-4 md:right-8 lg:right-12 z-10 w-full max-w-xs sm:max-w-sm md:max-w-md lg:w-1/4 lg:max-w-xs">
+                    <RegionalFestivalBanner festival={regionalChristmasFestival} />
                 </div>
             )}
+            
+            <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-background via-background/80 to-transparent z-10 text-center">
+                 <div className="max-w-3xl mx-auto">
+                    <h1 className="text-2xl md:text-3xl font-headline text-foreground">Festival Map</h1>
+                    <p className="mt-1 text-sm md:text-base text-muted-foreground">
+                        Explore the locations of upcoming and ongoing festivals in Cusco. Regional festivals are marked with a gold star.
+                    </p>
+                </div>
+            </div>
         </div>
     );
 }

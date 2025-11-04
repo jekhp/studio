@@ -11,69 +11,7 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-
-interface CountdownProps {
-  targetDate: Date;
-}
-
-const Countdown: React.FC<CountdownProps> = ({ targetDate }) => {
-  const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0 });
-
-  useEffect(() => {
-    const calculateTimeLeft = () => {
-      const now = new Date();
-      const difference = targetDate.getTime() - now.getTime();
-      
-      if (difference > 0) {
-        const totalHours = Math.floor(difference / (1000 * 60 * 60));
-        const days = Math.floor(totalHours / 24);
-        const hours = totalHours % 24;
-        setTimeLeft({ days, hours });
-      } else {
-        setTimeLeft({ days: 0, hours: 0 });
-      }
-    };
-
-    calculateTimeLeft();
-    const timer = setInterval(calculateTimeLeft, 1000 * 60 * 60); // Update every hour
-
-    return () => clearInterval(timer);
-  }, [targetDate]);
-
-  const totalHoursLeft = timeLeft.days * 24 + timeLeft.hours;
-
-  if (totalHoursLeft <= 0) {
-    return null;
-  }
-
-  return (
-    <div className="absolute bottom-2 left-1/2 -translate-x-1/2 w-auto bg-background/80 backdrop-blur-sm rounded-lg p-2 px-3 shadow-lg flex justify-around text-center items-baseline gap-3">
-      {totalHoursLeft > 48 ? (
-        <div className="flex flex-col">
-          <span className="text-xl font-bold text-primary">{timeLeft.days}</span>
-          <span className="text-xs text-muted-foreground">Días</span>
-        </div>
-      ) : totalHoursLeft > 24 ? (
-        <>
-          <div className="flex flex-col">
-            <span className="text-xl font-bold text-primary">{timeLeft.days}</span>
-            <span className="text-xs text-muted-foreground">Día</span>
-          </div>
-          <div className="flex flex-col">
-            <span className="text-xl font-bold text-primary">{timeLeft.hours}</span>
-            <span className="text-xs text-muted-foreground">Horas</span>
-          </div>
-        </>
-      ) : (
-        <div className="flex flex-col">
-          <span className="text-xl font-bold text-primary">{timeLeft.hours}</span>
-          <span className="text-xs text-muted-foreground">Horas</span>
-        </div>
-      )}
-    </div>
-  );
-};
-
+import { Countdown } from './Countdown';
 
 export const UpcomingFestivalCard = ({ festival }: { festival: Festival }) => {
   const [isInterested, setIsInterested] = useState(false);
@@ -132,7 +70,11 @@ export const UpcomingFestivalCard = ({ festival }: { festival: Festival }) => {
         {isImminent && <Badge variant="destructive" className="absolute top-2 right-2 animate-pulse">¡EMPIEZA PRONTO!</Badge>}
         {isFinished && <Badge className="absolute top-2 right-2">FINALIZADA</Badge>}
         
-        {!isFinished && <Countdown targetDate={festival.date.start} />}
+        {!isFinished && (
+            <div className="absolute bottom-2 left-1/2 -translate-x-1/2 w-auto bg-background/80 backdrop-blur-sm rounded-lg p-2 px-3 shadow-lg">
+                <Countdown targetDate={festival.date.start} />
+            </div>
+        )}
       </div>
       
       <div className="p-3">

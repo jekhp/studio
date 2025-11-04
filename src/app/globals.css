@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -95,5 +96,55 @@ body {
   @keyframes blink {
     0%, 100% { border-color: hsl(var(--destructive)); }
     50% { border-color: transparent; }
+  }
+
+  /* Golden Notification Banner Styles */
+  .notification-banner {
+    @apply w-full max-w-xs bg-slate-900/80 rounded-xl overflow-hidden shadow-lg relative backdrop-blur-md border border-amber-300/20;
+  }
+  
+  .notification-banner::before {
+      content: '';
+      @apply absolute inset-0 bg-gradient-to-br from-amber-400/10 via-amber-400/5 to-transparent z-[1] pointer-events-none;
+  }
+  
+  .notification-banner:hover::before {
+      @apply from-amber-400/20 via-amber-400/10;
+  }
+  
+  .notification-header {
+      @apply flex justify-between items-center p-3 border-b border-amber-300/10 relative z-[2];
+  }
+  
+  .notification-title {
+      @apply text-amber-300 text-sm font-semibold flex items-center;
+  }
+  
+  .notification-content {
+      @apply p-4 relative z-[2];
+  }
+  
+  .notification-message {
+      @apply text-white/90 text-sm leading-normal mb-3;
+  }
+  
+  .notification-time {
+      @apply text-amber-400/80 text-xs flex items-center;
+  }
+  
+  .notification-actions {
+      @apply flex gap-2 mt-4;
+  }
+  
+  .action-btn {
+      @apply flex-1 py-2 px-3 rounded-md text-sm font-medium cursor-pointer transition-all duration-300 ease-in-out border-none text-center;
+  }
+  
+  .btn-primary {
+      @apply bg-gradient-to-br from-amber-400 to-amber-300 text-slate-900 shadow-md shadow-amber-500/20;
+  }
+  
+  .btn-primary:hover {
+      @apply -translate-y-0.5 shadow-lg shadow-amber-500/30;
   }
 }
