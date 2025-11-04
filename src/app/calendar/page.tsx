@@ -3,7 +3,7 @@
 
 import * as React from 'react';
 import { Calendar as CalendarComponent } from "@/components/ui/calendar";
-import { type DayProps } from 'react-day-picker';
+import { type DayProps, DayPicker } from 'react-day-picker';
 import { festivals, type Festival } from '@/lib/festivals';
 import { Card, CardContent } from '@/components/ui/card';
 import Link from 'next/link';
@@ -44,16 +44,19 @@ export default function CalendarPage() {
   }, []);
 
   React.useEffect(() => {
-    setDate(new Date());
-  }, []);
+    if(!date) {
+        setDate(new Date());
+    }
+  }, [date]);
 
-  function DayWithFestival({ date: dayDate, ...props }: DayProps) {
+  function DayWithFestival(props: DayProps) {
+    const { date: dayDate } = props;
     const isFestivalDay = festivalDays.has(startOfDay(dayDate).toDateString());
     
     return (
       <div className="relative">
-        <div {...props.children?.props} />
-        {isFestivalDay && (
+        <DayPicker.Day {...props} />
+        {isFestivalDay && !props.selected && (
           <PartyPopper className="absolute top-1 right-1 h-3 w-3 text-primary pointer-events-none" />
         )}
       </div>
