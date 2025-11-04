@@ -22,6 +22,11 @@ export function FestivalCard({ festival }: FestivalCardProps) {
   const formattedDate = format(festival.date.start, 'MMMM do');
 
   const description = t(`festivals.${festival.slug}.description`);
+
+  const formatCategoryKey = (category: string) => {
+    // Converts "ritual combat" to "ritualCombat"
+    return category.replace(/ \w/g, m => m.toUpperCase().trim());
+  };
   
   return (
     <Link href={`/festivals/${festival.slug}`} className="group block h-full">
@@ -54,7 +59,7 @@ export function FestivalCard({ festival }: FestivalCardProps) {
             </div>
             <div className="flex flex-wrap gap-1">
                 {festival.categories.map(category => (
-                    <Badge key={category} variant="outline" className="text-xs">{t(`ui.categories.${category.replace(' ', 'Ritual')}`)}</Badge>
+                    <Badge key={category} variant="outline" className="text-xs">{t(`ui.categories.${formatCategoryKey(category)}`)}</Badge>
                 ))}
             </div>
         </CardContent>
