@@ -147,7 +147,7 @@
             }
         },
         "corpus-christi": {
-            "location_detail": "Celebrado en la Plaza de Armas y varias parroquias de Cusco.",
+            "location_detail": "Plaza de Armas, Cusco",
             "description": "Una masiva procesión religiosa donde 15 santos y vírgenes desfilan por Cusco.",
             "longDescription": "El Corpus Christi en Cusco es una vibrante y singular fiesta sincrética, que fusiona la fe católica con antiguas tradiciones andinas. Quince estatuas de santos y vírgenes de diferentes parroquias son llevadas en una gran procesión a la Catedral de Cusco, donde 'visitan' el cuerpo de Cristo por ocho días. La fiesta es famosa por sus elaboradas decoraciones, la música y el plato tradicional llamado Chiriuchu.",
             "history": "Introducida por los españoles en el siglo XVI, la fiesta fue utilizada para reemplazar la práctica inca de pasear las momias de los ancestros. El pueblo andino adaptó la tradición católica, asignando sus propios significados sagrados a los santos, creando así un poderoso símbolo de resistencia y fusión cultural.",
@@ -242,91 +242,21 @@
                 "event_3_desc": "Ceremonia de inauguración y festival de celebración."
             }
         },
-        "dia-de-compadres": {
-            "location_detail": "Celebrado en varios pueblos y mercados de Cusco.",
-            "description": "La antesala festiva al carnaval donde se celebra y satiriza a los hombres.",
-            "longDescription": "El Día de los Compadres es una tradición cusqueña única que da inicio a las festividades del carnaval. Es un día de crítica social lúdica donde muñecos que representan a figuras masculinas prominentes (políticos, autoridades locales, etc.) son colgados en postes en lugares públicos, a menudo en situaciones humorísticas o críticas. Es un día de amistad, sátira y unión comunitaria, liderado por las mujeres.",
-            "history": "Originada en las tradiciones carnavaleras españolas, esta celebración fue adaptada en Cusco con un giro único y satírico. Sirve como una catarsis social, permitiendo el comentario público y la burla antes de que comiencen los eventos principales del carnaval.",
+        "linderaje-chinchero": {
+            "location_detail": "Chinchero, Urubamba",
+            "description": "Combate ritual para definir los límites comunales.",
+            "longDescription": "El Linderaje es una práctica de combate ritual que se lleva a cabo en Chinchero para zanjar disputas de tierras entre comunidades. Lejos de ser una pelea violenta, es un enfrentamiento regulado y simbólico que fortalece los lazos sociales y reafirma la identidad territorial. Es una muestra de fuerza y organización comunal que finaliza con celebración, sin importar el resultado.",
+            "history": "De origen prehispánico, estas batallas rituales eran una forma en que las comunidades gestionaban conflictos y demostraban su vitalidad. Los colonos españoles intentaron suprimirlas, pero la tradición ha perdurado, adaptándose con el tiempo y convirtiéndose en una parte fundamental del calendario cultural local.",
             "traditions": {
-                "tradition_1": "Creación de muñecos satíricos (compadres) por parte de las mujeres.",
-                "tradition_2": "Colgado de los muñecos en plazas y mercados públicos a la medianoche.",
-                "tradition_3": "Reuniones de celebración entre amigos y compadres."
+                "tradition_1": "Enfrentamientos por representantes de las comunidades.",
+                "tradition_2": "Uso de vestimenta tradicional y látigos (warakas).",
+                "tradition_3": "Presencia de música y danzas para alentar a los luchadores.",
+                "tradition_4": "La contienda finaliza con un acuerdo y celebración comunal."
             },
             "schedule": {
-                "day_1": "Día Principal",
-                "event_1_time": "Todo el día",
-                "event_1_desc": "Los muñecos se exhiben en plazas y mercados. Las festividades ocurren durante todo el día."
-            }
-        },
-        "dia-de-comadres": {
-            "location_detail": "Celebrado en varios pueblos y mercados de Cusco.",
-            "description": "La respuesta festiva a Compadres, donde se celebra y honra a las mujeres.",
-            "longDescription": "El Día de las Comadres sigue al Día de los Compadres, cambiando el foco hacia las mujeres. En esta celebración, los hombres preparan homenajes a sus 'comadres' (amigas, madrinas). A diferencia del tono satírico de Compadres, este día es más un homenaje, con regalos de canastas decoradas llenas de frutas, dulces y serpentinas. Es un día de amistad femenina y respeto mutuo.",
-            "history": "Como contraparte a Compadres, este día equilibra la sátira del carnaval. Destaca la importancia de las mujeres en la comunidad y fortalece los lazos de comadrazgo.",
-            "traditions": {
-                "tradition_1": "Preparación de canastas decoradas por parte de los hombres.",
-                "tradition_2": "Regalo de canastas a las comadres como señal de afecto.",
-                "tradition_3": "Celebraciones en mercados y hogares con música y baile."
-            },
-            "schedule": {
-                "day_1": "Día Principal",
-                "event_1_time": "Todo el día",
-                "event_1_desc": "Los mercados se llenan de color y actividad. Las celebraciones y entrega de regalos ocurren durante todo el día."
-            }
-        },
-        "semana-santa": {
-            "location_detail": "Celebrado en iglesias por toda la región de Cusco.",
-            "description": "Una celebración religiosa solemne y ferviente marcada por procesiones únicas.",
-            "longDescription": "La Semana Santa en Cusco es una manifestación profunda de sincretismo religioso. La figura central es el Señor de los Temblores, un Cristo de piel oscura que sale en procesión el Lunes Santo en un recorrido masivo que paraliza la ciudad. La semana también está marcada por tradiciones gastronómicas únicas, como los 'doce platos' que se sirven el Jueves Santo.",
-            "history": "La devoción al Señor de los Temblores comenzó después del terremoto de 1650, cuando los locales afirmaron que la estatua detuvo los temblores. Desde entonces, se ha convertido en el patrón jurado de Cusco. La celebración mezcla ritos católicos con un profundo sentido andino de devoción y reciprocidad.",
-            "traditions": {
-                "tradition_1": "Procesión del Señor de los Temblores el Lunes Santo.",
-                "tradition_2": "Se arroja la flor de ñucchu, una flor roja, a la estatua, simbolizando la sangre de Cristo.",
-                "tradition_3": "La tradición de los 'doce platos' el Jueves Santo, representando a los doce apóstoles.",
-                "tradition_4": "Procesiones y vigilias en las iglesias de toda la ciudad."
-            },
-            "schedule": {
-                "day_1": "Lunes Santo",
+                "day_1": "1 de Enero",
                 "event_1_time": "Tarde",
-                "event_1_desc": "Procesión principal del Señor de los Temblores por la Plaza de Armas.",
-                "day_2": "Jueves/Viernes Santo",
-                "event_1_time": "Todo el día",
-                "event_1_desc": "Visitas a las iglesias y comidas familiares con los 'doce platos'."
-            }
-        },
-        "navidad-cusquena": {
-            "location_detail": "Celebración principal en la Plaza de Armas, Cusco.",
-            "description": "Una celebración navideña única que presenta la feria de arte popular más grande de Perú: Santurantikuy.",
-            "longDescription": "La Navidad en Cusco es sinónimo de Santurantikuy ('Venta de Santos' en quechua). El 24 de diciembre, la Plaza de Armas se transforma en un enorme mercado al aire libre donde cientos de artesanos de comunidades remotas vienen a vender figuras de nacimiento talladas, íconos religiosos y arte popular tradicional. Es un día mágico de arte, tradición y espíritu navideño.",
-            "history": "El Santurantikuy se remonta a la época colonial, cuando era una forma de la iglesia para promover el catolicismo a través de la imaginería religiosa. Con el tiempo, evolucionó hasta convertirse en una vibrante expresión de arte popular andino, donde los artesanos muestran su creatividad y habilidad.",
-            "traditions": {
-                "tradition_1": "La masiva feria de Santurantikuy en la Plaza de Armas.",
-                "tradition_2": "La figura principal es el 'Niño Manuelito', una representación del niño Jesús con rasgos andinos únicos.",
-                "tradition_3": "Las familias compran nuevas figuras y ropa para sus nacimientos caseros."
-            },
-            "schedule": {
-                "day_1": "24 de Diciembre",
-                "event_1_time": "Todo el día",
-                "event_1_desc": "La feria de Santurantikuy toma la Plaza de Armas desde temprano en la mañana hasta tarde en la noche."
-            }
-        },
-        "ano-nuevo": {
-            "location_detail": "Celebración principal en la Plaza de Armas, Cusco.",
-            "description": "Una vibrante celebración de Año Nuevo con cábalas y vueltas a la Plaza de Armas.",
-            "longDescription": "La víspera de Año Nuevo en Cusco es un asunto animado y supersticioso. La Plaza de Armas se convierte en el epicentro de las celebraciones, donde se reúnen miles de locales y turistas. A medianoche, es tradición correr alrededor de la plaza, a menudo varias veces, para asegurar buenos viajes en el próximo año. La noche está llena de fuegos artificiales, música y una palpable sensación de alegría colectiva.",
-            "history": "Si bien el Año Nuevo es una celebración global, Cusco la ha impregnado de sus propios rituales y creencias únicos, conocidos como 'cábalas', que mezclan supersticiones populares con un ambiente festivo.",
-            "traditions": {
-                "tradition_1": "Correr en el sentido de las agujas del reloj alrededor de la Plaza de Armas a medianoche.",
-                "tradition_2": "Usar ropa amarilla para la buena suerte.",
-                "tradition_3": "Espectáculo de fuegos artificiales sobre la ciudad.",
-                "tradition_4": ""
-            },
-            "schedule": {
-                "day_1": "31 de Diciembre",
-                "event_1_time": "10:00 PM en adelante",
-                "event_1_desc": "Las multitudes se reúnen en la Plaza de Armas.",
-                "event_2_time": "12:00 AM",
-                "event_2_desc": "Corrida de medianoche alrededor de la plaza y principal espectáculo de fuegos artificiales."
+                "event_1_desc": "Las comunidades se reúnen en los linderos para iniciar el ritual."
             }
         }
     }

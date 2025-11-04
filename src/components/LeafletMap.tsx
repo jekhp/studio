@@ -50,23 +50,8 @@ interface LeafletMapProps {
 const LeafletMap = ({ locations, center, zoom }: LeafletMapProps) => {
   const mapContainerRef = useRef<HTMLDivElement>(null);
   const mapRef = useRef<L.Map | null>(null);
-  const omsRef = useRef<any>(null);
   const [userLocation, setUserLocation] = useState<[number, number] | null>(null);
   const mapCenter = center ?? locations[0]?.coords;
-  const [omsLoaded, setOmsLoaded] = useState(false);
-
-  useEffect(() => {
-    // Dynamically load the OverlappingMarkerSpiderfier script
-    const script = document.createElement('script');
-    script.src = 'https://cdnjs.cloudflare.com/ajax/libs/OverlappingMarkerSpiderfier-Leaflet/0.2.6/oms.min.js';
-    script.async = true;
-    script.onload = () => setOmsLoaded(true);
-    document.body.appendChild(script);
-
-    return () => {
-      document.body.removeChild(script);
-    };
-  }, []);
 
   useEffect(() => {
     if (navigator.geolocation) {
@@ -98,25 +83,19 @@ const LeafletMap = ({ locations, center, zoom }: LeafletMapProps) => {
   }, []);
 
   useEffect(() => {
-    // Wait for the map container and the OMS script to be ready
-    if (mapContainerRef.current && !mapRef.current && omsLoaded) { 
+    if (mapContainerRef.current && !mapRef.current) {
       const map = L.map(mapContainerRef.current, {
           scrollWheelZoom: false, // disable zoom on scroll
       }).setView(mapCenter, zoom);
       mapRef.current = map;
-
-      // @ts-ignore - L.OverlappingMarkerSpiderfier is loaded from script
-      omsRef.current = new (window as any).OverlappingMarkerSpiderfier(map);
 
       L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
       }).addTo(map);
 
       locations.forEach(loc => {
-        const icon = loc.isRegional ? regionalIcon : defaultIcon;
-        const marker = L.marker(loc.coords, { icon });
-        marker.bindPopup(loc.popup);
-        omsRef.current.addMarker(marker);
+        const marker = L.marker(loc.coords);
+        marker.bindPopup(loc.popup).addTo(map);
       });
     }
 
@@ -126,7 +105,7 @@ const LeafletMap = ({ locations, center, zoom }: LeafletMapProps) => {
         marker.bindPopup("Estás aquí");
     }
 
-  }, [locations, mapCenter, zoom, userLocation, omsLoaded]);
+  }, [locations, mapCenter, zoom, userLocation]);
   
   if (!mapCenter) return <div>Loading map...</div>;
 

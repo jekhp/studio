@@ -117,7 +117,7 @@
     {
       "id": "linderaje-chinchero",
       "description": "A ritual fight to define communal boundaries in Chinchero, Cusco.",
-      "imageUrl": "https://images.unsplash.com/photo-1756694915643-515cf2eaa2a0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxyaXR1YWwlMjBmaWdodCUyMGNoaW5jaGVyb3xlbnwwfHx8fDE3NjIyNzUxMDF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1710906944947-29aca0e5295e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxyaXR1YWwlMjBmaWdodCUyMGNoaW5jaGVyb3xlbnwwfHx8fDE3NjIyNzUxMDF8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "ritual fight chinchero"
     },
     {
@@ -143,36 +143,6 @@
       "description": "A dancer in an 'Ukuku' (bear-man) costume from the Qoyllur Rit'i festival.",
       "imageUrl": "https://picsum.photos/seed/qc2/300/500",
       "imageHint": "andean character"
-    },
-    {
-      "id": "compadres",
-      "description": "A satirical doll representing a 'compadre' decorated for the carnival celebration.",
-      "imageUrl": "https://images.unsplash.com/photo-1762091489969-0315e5cd76d6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxjYXJuaXZhbCUyMGRvbGx8ZW58MHx8fHwxNzYyMjc1MTAxfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "carnival doll"
-    },
-    {
-      "id": "comadres",
-      "description": "A satirical doll representing a 'comadre' decorated for the carnival celebration.",
-      "imageUrl": "https://images.unsplash.com/photo-1619718876506-6deaf7b6a1a4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjYXJuaXZhbCUyMGRvbGx8ZW58MHx8fHwxNzYyMjc1MTAxfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "carnival doll"
-    },
-    {
-      "id": "semana-santa",
-      "description": "The procession of the 'Señor de los Temblores' in Cusco's Plaza de Armas.",
-      "imageUrl": "https://images.unsplash.com/photo-1744662512255-3e52e3884417?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxyZWxpZ2lvdXMlMjBwcm9jZXNzaW9ufGVufDB8fHx8MTc2MjI3NTEwMXww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "religious procession"
-    },
-    {
-      "id": "santurantikuy",
-      "description": "A bustling artisan market in Cusco's Plaza de Armas at night during Christmas.",
-      "imageUrl": "https://images.unsplash.com/photo-1560166444-217f42fb54f5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxhcnRpc2FuJTIwbWFya2V0fGVufDB8fHx8MTc2MjI3NTEwMXww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "artisan market"
-    },
-    {
-      "id": "ano-nuevo",
-      "description": "Crowds celebrating New Year's Eve in Cusco's Plaza de Armas with fireworks.",
-      "imageUrl": "https://images.unsplash.com/photo-1500212802521-de7d7426f496?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxuZXclMjB5ZWFyJTIwZmlyZXdvcmtzfGVufDB8fHx8MTc2MjI3NTEwMXww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "new year fireworks"
     }
   ]
 }

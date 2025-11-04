@@ -147,7 +147,7 @@
             }
         },
         "corpus-christi": {
-            "location_detail": "Celebrated in the Plaza de Armas and various parishes of Cusco.",
+            "location_detail": "Plaza de Armas, Cusco",
             "description": "A massive religious procession where 15 saints and virgins parade through Cusco.",
             "longDescription": "Corpus Christi in Cusco is a vibrant and unique syncretic festival, blending Catholic faith with ancient Andean traditions. Fifteen statues of saints and virgins from different parishes are carried in a grand procession to the Cusco Cathedral, where they 'visit' the body of Christ for eight days. The festival is famous for its elaborate decorations, music, and the traditional dish called Chiriuchu.",
             "history": "Introduced by the Spanish in the 16th century, the festival was used to replace the Inca practice of parading ancestral mummies. The Andean people adapted the Catholic tradition, assigning their own sacred meanings to the saints, thus creating a powerful symbol of cultural resistance and fusion.",
@@ -242,91 +242,21 @@
                 "event_3_desc": "Inauguration ceremony and celebratory festival."
             }
         },
-        "dia-de-compadres": {
-            "location_detail": "Celebrated in various towns and markets in Cusco.",
-            "description": "The festive prelude to carnival where men are celebrated and satirized.",
-            "longDescription": "The Day of Compadres is a unique Cusquenian tradition that kicks off the carnival festivities. It is a day of playful social critique where dolls representing prominent male figures (politicians, local authorities, etc.) are hung on poles in public places, often in humorous or critical situations. It's a day of friendship, satire, and community bonding, led by women.",
-            "history": "Originating from Spanish carnival traditions, this celebration was adapted in Cusco with a unique, satirical twist. It serves as a social catharsis, allowing for public commentary and jest before the main carnival events begin.",
+        "linderaje-chinchero": {
+            "location_detail": "Chinchero, Urubamba",
+            "description": "Ritual combat to define communal boundaries.",
+            "longDescription": "Linderaje is a ritual combat practice that takes place in Chinchero to settle land disputes between communities. Far from being a violent brawl, it is a regulated and symbolic confrontation that strengthens social ties and reaffirms territorial identity. It is a display of strength and community organization that ends with celebration, regardless of the outcome.",
+            "history": "Of pre-Hispanic origin, these ritual battles were a way for communities to manage conflicts and demonstrate their vitality. The Spanish colonists tried to suppress them, but the tradition has endured, adapting over time and becoming a fundamental part of the local cultural calendar.",
             "traditions": {
-                "tradition_1": "Creation of satirical dolls (compadres) by women.",
-                "tradition_2": "Hanging of the dolls in public squares and markets at midnight.",
-                "tradition_3": "Celebratory gatherings among friends and compadres."
+                "tradition_1": "Confrontations by community representatives.",
+                "tradition_2": "Use of traditional clothing and whips (warakas).",
+                "tradition_3": "Presence of music and dance to encourage the fighters.",
+                "tradition_4": "The fight ends with a communal agreement and celebration."
             },
             "schedule": {
-                "day_1": "Main Day",
-                "event_1_time": "All Day",
-                "event_1_desc": "Dolls are displayed in public squares and markets. Festivities occur throughout the day."
-            }
-        },
-        "dia-de-comadres": {
-            "location_detail": "Celebrated in various towns and markets in Cusco.",
-            "description": "The festive response to Compadres, where women are celebrated and honored.",
-            "longDescription": "The Day of Comadres follows the Day of Compadres, shifting the focus to women. In this celebration, men prepare tributes to their 'comadres' (female friends, godmothers). Unlike the satirical tone of Compadres, this day is more of a homage, with gifts of decorated baskets filled with fruits, sweets, and streamers. It's a day of female friendship and mutual respect.",
-            "history": "As a counterpart to Compadres, this day balances the carnival satire. It highlights the importance of women in the community and strengthens the bonds of 'comadrazgo' (the relationship between comadres).",
-            "traditions": {
-                "tradition_1": "Preparation of decorated baskets ('canastas') by men.",
-                "tradition_2": "Gifting of baskets to comadres as a sign of affection.",
-                "tradition_3": "Celebrations in markets and homes with music and dance."
-            },
-            "schedule": {
-                "day_1": "Main Day",
-                "event_1_time": "All Day",
-                "event_1_desc": "Markets are filled with color and activity. Celebrations and gift-giving occur throughout the day."
-            }
-        },
-        "semana-santa": {
-            "location_detail": "Celebrated in churches throughout the Cusco region.",
-            "description": "A solemn and fervent religious celebration marked by unique processions.",
-            "longDescription": "Holy Week in Cusco is a profound manifestation of religious syncretism. The central figure is the Lord of the Earthquakes (Señor de los Temblores), a dark-skinned Christ statue paraded on Holy Monday in a massive procession that paralyzes the city. The week is also marked by unique gastronomic traditions, like the 'twelve dishes' served on Holy Thursday.",
-            "history": "The devotion to the Lord of the Earthquakes began after the 1650 earthquake, when locals claimed the statue stopped the tremors. Since then, it has become the sworn patron of Cusco. The celebration blends Catholic rites with a deep Andean sense of devotion and reciprocity.",
-            "traditions": {
-                "tradition_1": "Procession of the Lord of the Earthquakes on Holy Monday.",
-                "tradition_2": "The ñucchu flower, a red flower, is thrown at the statue, symbolizing Christ's blood.",
-                "tradition_3": "The tradition of the 'twelve dishes' on Holy Thursday, representing the twelve apostles.",
-                "tradition_4": "Processions and vigils in churches throughout the city."
-            },
-            "schedule": {
-                "day_1": "Holy Monday",
+                "day_1": "January 1",
                 "event_1_time": "Afternoon",
-                "event_1_desc": "Main procession of the Lord of the Earthquakes through the Plaza de Armas.",
-                "day_2": "Holy Thursday/Friday",
-                "event_1_time": "All Day",
-                "event_1_desc": "Visits to churches and family meals featuring the 'twelve dishes'."
-            }
-        },
-        "navidad-cusquena": {
-            "location_detail": "Main celebration in the Plaza de Armas, Cusco.",
-            "description": "A unique Christmas celebration featuring Peru's largest folk art fair: Santurantikuy.",
-            "longDescription": "Christmas in Cusco is synonymous with Santurantikuy ('Sale of Saints' in Quechua). On December 24th, the Plaza de Armas transforms into a massive open-air market where hundreds of artisans from remote communities come to sell carved Nativity figures, religious icons, and traditional folk art. It's a magical day of art, tradition, and Christmas spirit.",
-            "history": "Santurantikuy dates back to the colonial era, when it was a way for the church to promote Catholicism through religious imagery. Over time, it evolved into a vibrant expression of Andean folk art, where artisans showcase their creativity and skill.",
-            "traditions": {
-                "tradition_1": "The massive Santurantikuy fair in the Plaza de Armas.",
-                "tradition_2": "The main figure is the 'Niño Manuelito', a representation of the baby Jesus with unique Andean features.",
-                "tradition_3": "Families buy new figures and clothing for their home nativity scenes."
-            },
-            "schedule": {
-                "day_1": "December 24",
-                "event_1_time": "All Day",
-                "event_1_desc": "The Santurantikuy fair takes over the Plaza de Armas from early morning until late at night."
-            }
-        },
-        "ano-nuevo": {
-            "location_detail": "Main celebration in the Plaza de Armas, Cusco.",
-            "description": "A vibrant New Year's Eve celebration with cabalas and laps around the Plaza de Armas.",
-            "longDescription": "New Year's Eve in Cusco is a lively and superstitious affair. The Plaza de Armas becomes the epicenter of celebrations, where thousands of locals and tourists gather. At midnight, it's tradition to run around the plaza, often multiple times, to ensure good travels in the coming year. The night is filled with fireworks, music, and a palpable sense of collective joy.",
-            "history": "While New Year's is a global celebration, Cusco has imbued it with its own unique rituals and beliefs, known as 'cábalas', which blend popular superstitions with a festive atmosphere.",
-            "traditions": {
-                "tradition_1": "Running clockwise around the Plaza de Armas at midnight.",
-                "tradition_2": "Wearing yellow clothing for good luck.",
-                "tradition_3": "Fireworks display over the city.",
-                "tradition_4": ""
-            },
-            "schedule": {
-                "day_1": "December 31",
-                "event_1_time": "10:00 PM onwards",
-                "event_1_desc": "Crowds gather in the Plaza de Armas.",
-                "event_2_time": "12:00 AM",
-                "event_2_desc": "Midnight run around the plaza and main fireworks display."
+                "event_1_desc": "The communities gather at the boundary lines to begin the ritual."
             }
         }
     }
