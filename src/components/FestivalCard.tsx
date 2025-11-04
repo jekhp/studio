@@ -19,14 +19,17 @@ interface FestivalCardProps {
 export function FestivalCard({ festival }: FestivalCardProps) {
   const { t } = useLanguage();
   const placeholder = PlaceHolderImages.find((p) => p.id === festival.image);
-  const formattedDate = format(festival.date.start, 'MMMM do');
+  const formattedDate = format(new Date(festival.date.start), 'MMMM do');
 
   const description = t(`festivals.${festival.slug}.description`);
+  
+  const locationText = festival.locations && festival.locations.length > 1 
+    ? "Various Locations" 
+    : festival.locations?.[0]?.name || festival.location || "Cusco";
+
 
   const formatCategoryKey = (category: string) => {
-    // Converts "ritual combat" to "ritual-combat"
-    // and "taurino" to "taurino"
-    return category.replace(/ /g, '-').replace(/ñ/g, 'n');
+    return category.replace(/ /g, '-');
   };
   
   return (
@@ -55,7 +58,7 @@ export function FestivalCard({ festival }: FestivalCardProps) {
               </Badge>
               <Badge variant="secondary" className="flex items-center gap-1">
                 <MapPin className="h-3 w-3" />
-                <span>{festival.location}</span>
+                <span>{locationText}</span>
               </Badge>
             </div>
             <div className="flex flex-wrap gap-1">

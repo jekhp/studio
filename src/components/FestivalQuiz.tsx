@@ -52,10 +52,10 @@ const quizSteps = [
 
 const scoringProfile = {
     vibe: {
-        espiritual: ['religioso', 'peregrinación', 'andino'],
-        fiesta: ['conciertos', 'carnaval', 'espectáculo'],
-        cultural: ['histórico', 'tradicional', 'danza', 'artesanía'],
-        aventura: ['aventura', 'carreras', 'combate ritual'],
+        espiritual: ['religioso', 'peregrinacion', 'andino'],
+        fiesta: ['conciertos', 'carnaval', 'espectaculo'],
+        cultural: ['historico', 'tradicional', 'danza', 'artesania'],
+        aventura: ['aventura', 'carreras', 'combate-ritual'],
     },
     season: {
         summer: [11, 0, 1], // Dec, Jan, Feb
@@ -64,10 +64,10 @@ const scoringProfile = {
         spring: [9, 10], // Oct, Nov
     },
     company: {
-        solo: ['aventura', 'peregrinación'],
-        couple: ['tradicional', 'gastronómico'],
+        solo: ['aventura', 'peregrinacion'],
+        couple: ['tradicional', 'gastronomico'],
         friends: ['fiesta', 'conciertos', 'carnaval'],
-        family: ['espectáculo', 'feria'],
+        family: ['espectaculo', 'feria'],
     }
 }
 
@@ -115,7 +115,7 @@ export function FestivalQuiz() {
             });
             
             // Season scoring
-            const festivalMonth = festival.date.start.getMonth();
+            const festivalMonth = new Date(festival.date.start).getMonth();
             if(seasonProfile.includes(festivalMonth)) {
                 scores[festival.id] += 3;
             }

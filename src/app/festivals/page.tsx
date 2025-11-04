@@ -10,7 +10,7 @@ import { Search, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useLanguage } from '@/context/language-context';
 
-const allMonths = Array.from(new Set(festivals.map(f => f.date.start.getMonth())));
+const allMonths = Array.from(new Set(festivals.map(f => new Date(f.date.start).getMonth())));
 const allCategories = Array.from(new Set(festivals.flatMap(f => f.categories)));
 
 export default function FestivalsPage() {
@@ -36,11 +36,11 @@ export default function FestivalsPage() {
       .filter(festival => {
         const festivalName = festival.name; // Keep original name
         const matchesSearch = festivalName.toLowerCase().includes(searchTerm.toLowerCase());
-        const matchesMonth = selectedMonth === 'all' || festival.date.start.getMonth() === parseInt(selectedMonth, 10);
+        const matchesMonth = selectedMonth === 'all' || new Date(festival.date.start).getMonth() === parseInt(selectedMonth, 10);
         const matchesCategory = selectedCategory === 'all' || festival.categories.includes(selectedCategory);
         return matchesSearch && matchesMonth && matchesCategory;
       })
-      .sort((a, b) => a.date.start.getTime() - b.date.start.getTime());
+      .sort((a, b) => new Date(a.date.start).getTime() - new Date(b.date.start).getTime());
   }, [searchTerm, selectedMonth, selectedCategory]);
 
   const festivalsToShow = filteredFestivals.slice(0, visibleCount);

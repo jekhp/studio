@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation';
 import { Calendar, Clock, MapPin, Sparkles, Star } from 'lucide-react';
 import { format } from 'date-fns';
 
-import { festivals, type Review } from '@/lib/festivals';
+import { festivals, type Review, type Festival } from '@/lib/festivals';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -69,6 +69,17 @@ function ReviewForm() {
     )
 }
 
+function getFestivalLocation(festival: Festival): string {
+  if (festival.locations && festival.locations.length > 1) {
+    return 'Various locations in Cusco';
+  }
+  if (festival.locations && festival.locations.length === 1) {
+    return festival.locations[0].name;
+  }
+  return festival.location || 'Cusco';
+}
+
+
 export default function FestivalDetailPage({ params }: { params: { slug: string } }) {
   const festival = festivals.find((f) => f.slug === params.slug);
 
@@ -77,10 +88,18 @@ export default function FestivalDetailPage({ params }: { params: { slug: string 
   }
 
   const placeholder = PlaceHolderImages.find((p) => p.id === festival.image);
-  const formattedDateRange = `${format(festival.date.start, 'MMMM do')} - ${format(festival.date.end, 'MMMM do, yyyy')}`;
+  const formattedDateRange = `${format(new Date(festival.date.start), 'MMMM do')} - ${format(new Date(festival.date.end), 'MMMM do, yyyy')}`;
 
   const scheduleKeys = festival.scheduleKeys || [];
   const traditionKeys = festival.traditionKeys || [];
+
+  const mapLocations = festival.locations?.map(loc => ({
+    coords: loc.coords,
+    popup: `<div class="w-48"><h3 class="font-bold text-base">${festival.name}</h3><p class="text-xs">${loc.name}</p></div>`
+  })) || (festival.coords ? [{
+    coords: festival.coords,
+    popup: `<div class="w-48"><h3 class="font-bold text-base">${festival.name}</h3><p class="text-xs">${festival.location}</p></div>`
+  }] : []);
 
   return (
     <div className="bg-background">
@@ -110,7 +129,7 @@ export default function FestivalDetailPage({ params }: { params: { slug: string 
                 </div>
                 <div className="flex items-center gap-2 text-muted-foreground">
                   <MapPin className="h-4 w-4" />
-                  <span>{festival.location}</span>
+                  <span>{getFestivalLocation(festival)}</span>
                 </div>
               </div>
             </div>
@@ -195,7 +214,7 @@ export default function FestivalDetailPage({ params }: { params: { slug: string 
                 <Card>
                   <CardContent className="pt-6">
                     <div className="aspect-video w-full rounded-lg overflow-hidden">
-                       <FestivalMap locations={[{ coords: festival.coords, popup: `<div class="w-48"><h3 class="font-bold text-base">${festival.name}</h3><p class="text-xs">${festival.location}</p></div>` }]} zoom={13} />
+                       <FestivalMap locations={mapLocations} zoom={13} />
                     </div>
                   </CardContent>
                 </Card>

@@ -42,7 +42,7 @@
             "feria": "Feria", "conciertos": "Conciertos", "artesania": "Artesanía", "andino": "Andino",
             "historico": "Histórico", "danza": "Danza", "peregrinacion": "Peregrinación", "aventura": "Aventura",
             "carreras": "Carreras", "combate-ritual": "Combate Ritual", "agricola": "Agrícola", "taurino": "Taurino",
-            "carnaval": "Carnaval", "moderno": "Moderno"
+            "carnaval": "Carnaval", "moderno": "Moderno", "popular": "Popular", "procesion": "Procesión"
         },
         "recommendations": {
             "title": "Quiz de Festivales",
@@ -166,76 +166,6 @@
                 "event_1_desc": "Segunda procesión de retorno de los santos a sus parroquias de origen."
             }
         },
-        "feria-de-huancaro": {
-            "description": "La feria regional más grande de Cusco, con productos agropecuarios, comida y conciertos.",
-            "longDescription": "La Feria de Huancaro es el evento comercial y cultural más importante de Cusco durante su mes jubilar. Durante todo un mes, congrega a productores, artesanos y empresarios de toda la región. Los visitantes pueden disfrutar de exposiciones agrícolas, concursos de ganado, ferias gastronómicas, venta de artesanías y masivos conciertos musicales con artistas nacionales.",
-            "history": "Lo que comenzó como un mercado agrícola local ha crecido a lo largo de las décadas hasta convertirse en la gran feria que marca las celebraciones del Cusco. Es una vitrina de la vitalidad económica y cultural de la región, conectando el campo con la ciudad.",
-            "traditions": {
-                "tradition_1": "Exposición y venta de productos agropecuarios de todas las provincias.",
-                "tradition_2": "Concursos de camélidos andinos y ganado vacuno.",
-                "tradition_3": "Degustación de platos típicos en la zona gastronómica.",
-                "tradition_4": "Conciertos de música en vivo todos los fines de semana."
-            },
-            "schedule": {
-                "day_1": "Durante todo Junio",
-                "event_1_time": "10:00 AM - 10:00 PM",
-                "event_1_desc": "El campo ferial está abierto todos los días con diversas actividades, exposiciones y ventas. Los conciertos suelen ser los fines de semana."
-            }
-        },
-        "san-sebastian-patron-feast": {
-            "description": "Una tradicional fiesta patronal con danzas, procesiones y un ambiente festivo.",
-            "longDescription": "La Fiesta Patronal de San Sebastián es una de las celebraciones tradicionales más importantes del Valle de Cusco. Durante varios días, el distrito de San Sebastián se llena de color y música, con decenas de comparsas de danzas que bailan en honor al santo patrón. La celebración combina la devoción religiosa con una gran fiesta popular.",
-            "history": "La devoción a San Sebastián, un mártir romano, se estableció durante la época colonial. La fiesta es un claro ejemplo del sincretismo entre la religión católica y las costumbres locales, donde la danza se convierte en una forma de oración y tributo.",
-            "traditions": {
-                "tradition_1": "Procesión del santo patrón por las calles principales.",
-                "tradition_2": "Pasacalle y concurso de comparsas de danzas folclóricas.",
-                "tradition_3": "Degustación de platos típicos de la celebración.",
-                "tradition_4": "Quema de fuegos artificiales y fiestas populares."
-            },
-            "schedule": {
-                "day_1": "20 de Enero (Día Central)",
-                "event_1_time": "Mañana",
-                "event_1_desc": "Misa central en honor a San Sebastián.",
-                "event_2_time": "Tarde",
-                "event_2_desc": "Procesión principal y pasacalle de danzas."
-            }
-        },
-        "linderaje-chinchero": {
-            "description": "Una lucha y danza ritual para definir los límites comunales en Chinchero.",
-            "longDescription": "El Linderaje, que proviene de 'lindero', es una tradición ritual donde las comunidades reafirman simbólicamente sus límites territoriales. En Chinchero, este evento se acompaña de música, danza y una batalla simulada, representando las tensiones y acuerdos históricos entre comunidades vecinas. Es una muestra vibrante de identidad y organización local.",
-            "history": "Esta práctica tiene raíces prehispánicas y era una forma de resolver ritualmente los conflictos territoriales. Aunque hoy es en gran parte simbólica, conserva una profunda significación cultural para las comunidades participantes, fortaleciendo sus lazos y memoria colectiva.",
-            "traditions": {
-                "tradition_1": "Procesión hacia las 'apachetas' o hitos sagrados.",
-                "tradition_2": "Ofrendas rituales a los Apus (espíritus de las montañas).",
-                "tradition_3": "Enfrentamiento simbólico entre los representantes de las comunidades.",
-                "tradition_4": "Celebración con música y danza tras el ritual."
-            },
-            "schedule": {
-                "day_1": "Día Principal",
-                "event_1_time": "Mañana",
-                "event_1_desc": "Las comunidades se reúnen e inician la procesión hacia los linderos.",
-                "event_2_time": "Tarde",
-                "event_2_desc": "Ritual del Linderaje y celebración posterior."
-            }
-        },
-        "senor-de-choquekillka": {
-            "description": "La fiesta religiosa más importante de Ollantaytambo, llena de danzas y color.",
-            "longDescription": "La festividad del Señor de Choquekillka es la fiesta patronal de Ollantaytambo. Durante la semana de Pentecostés, el pueblo cobra vida con procesiones, música y más de 30 comparsas de danzas folclóricas. La imagen del Señor de Choquekillka es llevada por las antiguas calles incas, creando un contraste espectacular entre la devoción colonial y la arquitectura prehispánica.",
-            "history": "El origen de la veneración está ligado a una cruz encontrada en una cueva, que se convirtió en objeto de peregrinación. La fiesta creció en importancia, integrando muchas tradiciones locales y convirtiéndose en el evento cultural y religioso más significativo del pueblo del Valle Sagrado.",
-            "traditions": {
-                "tradition_1": "Procesión de la imagen del Señor de Choquekillka.",
-                "tradition_2": "Pasacalles de numerosas comparsas de danza, como los 'Ccapac Qolla', 'Ccapac Chunchu' y 'Waka Waka'.",
-                "tradition_3": "Corridas de toros tradicionales en una plaza temporal.",
-                "tradition_4": "Ferias gastronómicas con platos típicos."
-            },
-            "schedule": {
-                "day_1": "Día Principal (Domingo de Pentecostés)",
-                "event_1_time": "Mañana",
-                "event_1_desc": "Misa principal e inicio de los desfiles de danzas.",
-                "event_2_time": "Tarde",
-                "event_2_desc": "Procesión central del Señor de Choquekillka."
-            }
-        },
         "qoyllur-riti": {
             "description": "Una peregrinación espiritual al Valle de Sinakara, que mezcla creencias católicas y andinas.",
             "longDescription": "Qoyllur Rit'i, o el \"Festival de la Estrella de Nieve\", es una peregrinación religiosa centenaria que tiene lugar en el remoto Valle de Sinakara, al pie del nevado Ausangate. Decenas de miles de peregrinos de los pueblos de los alrededores viajan durante días, llevando grandes cruces al santuario. El festival es un sincretismo único de creencias católicas y andinas, que celebra las estrellas, los espíritus de las montañas (Apus) y el Señor de Qoyllur Rit'i.",
@@ -286,108 +216,6 @@
                 "event_1_desc": "La batalla entre los ángeles y los demonios tiene lugar, con los demonios realizando acrobacias en los tejados."
             }
         },
-        "fiesta-de-la-virgen-rosario-de-combapata": {
-            "description": "Un festival tradicional conocido por sus escenificaciones de batallas históricas.",
-            "longDescription": "La Fiesta de la Virgen del Rosario en Combapata es una celebración religiosa y cultural de gran importancia. Es particularmente conocida por sus escenificaciones históricas, que rememoran batallas y eventos importantes de la historia local. La fiesta incluye procesiones, danzas y una gran feria popular.",
-            "history": "Esta fiesta conmemora un hecho histórico de la época de las luchas por la independencia, donde los pobladores de Combapata tuvieron un rol crucial. La devoción a la Virgen del Rosario se une con el orgullo cívico y la memoria histórica.",
-            "traditions": {
-                "tradition_1": "Escenificación histórica de la Batalla de Combapata.",
-                "tradition_2": "Procesión de la Virgen del Rosario.",
-                "tradition_3": "Pasacalles de danzas folclóricas.",
-                "tradition_4": "Feria gastronómica tradicional."
-            },
-            "schedule": {
-                "day_1": "7 de Octubre (Día Central)",
-                "event_1_time": "Mañana",
-                "event_1_desc": "Misa principal y acto cívico.",
-                "event_2_time": "Tarde",
-                "event_2_desc": "Escenificación histórica y desfile de danzas."
-            }
-        },
-        "carnaval-tkapuy": {
-            "description": "El carnaval T'ikapallana en Tinta, una celebración de las flores y la juventud.",
-            "longDescription": "El Carnaval de T'ikapallana (que significa 'recoger flores' en quechua) en Tinta es una celebración de la juventud, la fertilidad y el florecimiento de los campos. Los jóvenes se visten con coloridos trajes típicos y realizan danzas rituales. Es un carnaval vibrante, menos conocido que otros pero con una profunda conexión con el ciclo agrícola.",
-            "history": "De origen prehispánico, este carnaval celebra el 'Pukllay' (juego) y la primera cosecha del año. Las flores son un elemento central, simbolizando la abundancia y la alegría. Es un ritual de cortejo y de afirmación comunitaria.",
-            "traditions": {
-                "tradition_1": "El ritual de la 'T'ikapallana', donde los jóvenes se adornan con flores.",
-                "tradition_2": "Danzas de carnaval tradicionales en parejas y grupos.",
-                "tradition_3": "Juegos rituales con agua y harina.",
-                "tradition_4": "Comida comunitaria con productos de la primera cosecha."
-            },
-            "schedule": {
-                "day_1": "Domingo de Carnaval",
-                "event_1_time": "Todo el día",
-                "event_1_desc": "Día principal de celebración con danzas, música y juegos rituales en la plaza principal y alrededores."
-            }
-        },
-        "semana-turistica-de-anta": {
-            "description": "Una semana de actividades para mostrar los atractivos turísticos y culturales de Anta.",
-            "longDescription": "La Semana Turística de Anta es una iniciativa moderna para promover la riqueza cultural, natural y gastronómica de la provincia. Durante esta semana se organizan actividades de deportes de aventura, ferias artesanales, festivales de comida y presentaciones de danzas folclóricas, invitando a locales y visitantes a descubrir los atractivos de Anta.",
-            "history": "Creada para impulsar el turismo local, esta semana se ha convertido en una fecha importante del calendario provincial, destacando lugares como el sitio arqueológico de Killarumiyoq y los paisajes naturales de la zona.",
-            "traditions": {
-                "tradition_1": "Competencias de deportes de aventura (ciclismo, canotaje).",
-                "tradition_2": "Festival gastronómico con productos de la zona.",
-                "tradition_3": "Concursos de danzas folclóricas.",
-                "tradition_4": "Visitas guiadas a los principales atractivos turísticos."
-            },
-            "schedule": {
-                "day_1": "Toda la semana",
-                "event_1_time": "Horarios diversos",
-                "event_1_desc": "Las actividades se programan a lo largo de la semana. Consultar el programa oficial para detalles de cada evento."
-            }
-        },
-        "festival-del-cafe-quillabamba": {
-            "description": "Una fiesta dedicada al producto estrella de La Convención: el café.",
-            "longDescription": "El Festival del Café de Quillabamba celebra el café de alta calidad que se produce en la provincia selvática de La Convención. El evento incluye concursos de cata, competencias de baristas, presentaciones culturales y una gran feria donde los productores ofrecen sus mejores granos. Es una cita obligada para los amantes del café.",
-            "history": "Este festival nació para promover la industria cafetalera de la región, que ha ganado reconocimiento internacional. Es una plataforma para los productores locales y una celebración de la identidad de Quillabamba, la 'Ciudad del Eterno Verano'.",
-            "traditions": {
-                "tradition_1": "Concurso del café de mejor calidad.",
-                "tradition_2": "Demostraciones de métodos de tostado y preparación de café.",
-                "tradition_3": "Espectáculos de música en vivo con bandas tropicales.",
-                "tradition_4": "Elección de la Reina del Café."
-            },
-            "schedule": {
-                "day_1": "Días Principales",
-                "event_1_time": "Todo el día",
-                "event_1_desc": "Exposiciones de café, catas y competencias.",
-                "event_2_time": "Noche",
-                "event_2_desc": "Conciertos musicales y presentaciones culturales."
-            }
-        },
-        "aniversario-de-la-convencion": {
-            "description": "La celebración de aniversario de la provincia de La Convención con un toque tropical.",
-            "longDescription": "El aniversario de la provincia de La Convención se celebra con gran pompa en su capital, Quillabamba. A diferencia de las fiestas andinas, esta tiene un aire marcadamente tropical y moderno, con grandes conciertos de cumbia y salsa, certámenes de belleza y desfiles cívicos. Es una semana de fiesta que refleja el espíritu vibrante y festivo de la selva cusqueña.",
-            "history": "Esta fecha cívica conmemora la creación política de la provincia. Con el tiempo, se ha convertido en la fiesta popular más importante de la zona, atrayendo a visitantes de toda la región.",
-            "traditions": {
-                "tradition_1": "Conciertos masivos con artistas nacionales e internacionales.",
-                "tradition_2": "Desfile cívico-militar.",
-                "tradition_3": "Competencias de motocross y otros deportes.",
-                "tradition_4": "Certamen de belleza para elegir a 'Miss La Convención'."
-            },
-            "schedule": {
-                "day_1": "Semana de Aniversario",
-                "event_1_time": "Todo el día",
-                "event_1_desc": "Actividades cívicas y culturales durante el día.",
-                "event_2_time": "Noche",
-                "event_2_desc": "Conciertos principales y fiestas populares."
-            }
-        },
-        "wayllati-carnaval": {
-            "description": "Un auténtico y tradicional carnaval andino en las zonas altas de Acomayo.",
-            "longDescription": "El Carnaval de Wayllati en Sangarará es uno de los carnavales más auténticos de la región de Cusco. Aquí se celebra el 'Pukllay' (juego) con música tradicional, danza y rituales que agradecen a la Pachamama por los primeros frutos de la cosecha. Es una celebración no turística y muy arraigada en la cultura de la comunidad.",
-            "history": "Este carnaval mantiene muchos elementos prehispánicos de celebración de la fertilidad y el ciclo agrícola. Es un momento de cohesión social, donde las comunidades se reúnen para jugar, cantar y bailar.",
-            "traditions": {
-                "tradition_1": "Juegos rituales con agua y flores.",
-                "tradition_2": "Cantos tradicionales de 'Huaylias' y de carnaval.",
-                "tradition_3": "Comidas comunitarias preparadas con productos locales.",
-                "tradition_4": "Danzas con trajes típicos propios de la zona."
-            },
-            "schedule": {
-                "day_1": "Semana de Carnaval",
-                "event_1_time": "Todo el día",
-                "event_1_desc": "Las celebraciones principales se dan en torno al domingo de carnaval, con danzas y rituales en la comunidad."
-            }
-        },
         "qeswachaka-bridge-festival": {
             "description": "La reconstrucción anual del último puente de cuerda inca.",
             "longDescription": "El Festival del Puente Q'eswachaka es una extraordinaria muestra de patrimonio inca viviente. Cada año, cuatro comunidades se unen para reconstruir este puente de cuerda utilizando técnicas tradicionales transmitidas durante siglos. El proceso de cuatro días es un ritual comunitario que involucra ceremonias, trabajo y celebración, culminando con el cruce del nuevo puente.",
@@ -409,114 +237,87 @@
                 "event_3_desc": "Ceremonia de inauguración y festival de celebración."
             }
         },
-        "wata-qallariy": {
-            "description": "El Año Nuevo andino en Chumbivilcas, celebrado con carreras de caballos.",
-            "longDescription": "Wata Qallariy, que significa 'inicio del año' en quechua, es la celebración del Año Nuevo andino en Chumbivilcas. A diferencia del Año Nuevo oficial, esta fiesta está marcada por tradiciones muy arraigadas en la cultura ganadera y ecuestre local. El evento principal son emocionantes carreras de caballos y demostraciones de destreza.",
-            "history": "Este festival marca el inicio de un nuevo ciclo agrícola y vital según la cosmovisión andina de la región. El caballo, introducido en la colonia, se convirtió en un elemento central de la identidad de Chumbivilcas, y esta fiesta es una clara expresión de ello.",
+        "dia-de-compadres": {
+            "description": "La antesala festiva al carnaval donde se celebra y satiriza a los hombres.",
+            "longDescription": "El Día de los Compadres es una tradición cusqueña única que da inicio a las festividades del carnaval. Es un día de crítica social lúdica donde muñecos que representan a figuras masculinas prominentes (políticos, autoridades locales, etc.) son colgados en postes en lugares públicos, a menudo en situaciones humorísticas o críticas. Es un día de amistad, sátira y unión comunitaria, liderado por las mujeres.",
+            "history": "Originada en las tradiciones carnavaleras españolas, esta celebración fue adaptada en Cusco con un giro único y satírico. Sirve como una catarsis social, permitiendo el comentario público y la burla antes de que comiencen los eventos principales del carnaval.",
             "traditions": {
-                "tradition_1": "Carreras de caballos en distintas categorías.",
-                "tradition_2": "Demostraciones de destreza ecuestre ('gala').",
-                "tradition_3": "Rituales de ofrenda a los Apus para un buen año.",
-                "tradition_4": "Celebración con música y danza tradicional."
-            },
-            "schedule": {
-                "day_1": "1 de Noviembre",
-                "event_1_time": "Mañana",
-                "event_1_desc": "Rituales de ofrenda y preparativos de la comunidad.",
-                "event_2_time": "Tarde",
-                "event_2_desc": "Carreras de caballos principales y competencias de destreza."
-            }
-        },
-        "takanakuy-chumbivilcas": {
-            "description": "Un singular ritual navideño donde los conflictos se resuelven con peleas públicas.",
-            "longDescription": "El Takanakuy es una de las expresiones culturales más singulares y polémicas del Perú. En Navidad, en Santo Tomás y otras comunidades de Chumbivilcas, los comuneros resuelven sus conflictos personales acumulados durante el año a través de peleas rituales públicas. Es una forma de violencia controlada que busca 'empezar de cero' para el nuevo año, seguida de bailes y celebración.",
-            "history": "Su origen es incierto, pero se cree que es un sincretismo entre tradiciones de combate ritual prehispánicas y sistemas de justicia coloniales. Es un complejo mecanismo social de resolución de conflictos en zonas donde el estado oficial tiene una presencia limitada.",
-            "traditions": {
-                "tradition_1": "Danzantes con trajes elaborados ('majtas') desfilan por las calles.",
-                "tradition_2": "Las peleas se realizan en un círculo de gente, supervisadas por autoridades.",
-                "tradition_3": "Los luchadores deben abrazarse antes y después de la pelea.",
-                "tradition_4": "Tras las peleas, toda la comunidad baila y celebra unida."
-            },
-            "schedule": {
-                "day_1": "25 de Diciembre",
-                "event_1_time": "Mañana",
-                "event_1_desc": "Procesiones y danzas de los distintos personajes.",
-                "event_2_time": "Mediodía",
-                "event_2_desc": "Comienzan las peleas principales (Takanakuy).",
-                "event_3_time": "Tarde",
-                "event_3_desc": "Celebración general con música y baile."
-            }
-        },
-        "carnaval-de-mollomarka": {
-            "description": "Un carnaval remoto y auténtico, con profundas raíces en la cultura andina.",
-            "longDescription": "El Carnaval de Mollomarka en Chumbivilcas es una celebración alejada de los circuitos turísticos, que conserva una gran pureza cultural. Las comunidades se reúnen para celebrar la fertilidad y la cosecha con música de instrumentos tradicionales, cantos en quechua y danzas que se han mantenido por generaciones.",
-            "history": "Al igual que otros carnavales andinos, su origen está en el 'Pukllay' (juego) prehispánico, una fiesta ligada al calendario agrícola. Es un tiempo de alegría e interacción social, donde se reafirman antiguos rituales de cortejo y lazos comunitarios.",
-            "traditions": {
-                "tradition_1": "Música con flautas 'pinkuyllo' y tambores.",
-                "tradition_2": "Competencias de canto ('takipayanakuy') entre hombres y mujeres.",
-                "tradition_3": "Danzas tradicionales de carnaval.",
-                "tradition_4": "Juegos rituales que simulan la captura y adorno de vicuñas."
-            },
-            "schedule": {
-                "day_1": "Semana de Carnaval",
-                "event_1_time": "Todo el día",
-                "event_1_desc": "Las celebraciones principales tienen lugar en la explanada de la comunidad, con música y danza durante todo el día."
-            }
-        },
-        "k-ana-raymi": {
-            "description": "La fiesta de la identidad K'ana en Espinar, celebrando su historia y costumbres.",
-            "longDescription": "K'ana Raymi es la 'Fiesta de la Nación K'ana', un evento que busca reivindicar y celebrar la identidad cultural de la provincia de Espinar. Incluye escenificaciones históricas, desfiles de danzas folclóricas, ferias artesanales y degustaciones gastronómicas, poniendo en alto el orgullo del pueblo K'ana, descendiente de una cultura preinca.",
-            "history": "Este festival fue creado para fortalecer la identidad local y promover el acervo cultural de Espinar. El evento central es la escenificación de la Batalla de Toqto, un conflicto entre los incas y los k'anas.",
-            "traditions": {
-                "tradition_1": "Escenificación de la Batalla de Toqto en el complejo arqueológico de Mauk'allaqta.",
-                "tradition_2": "Desfile de danzas folclóricas de todos los distritos de la provincia.",
-                "tradition_3": "Exhibición y concurso de platos típicos a base de productos nativos.",
-                "tradition_4": "Concurso de variedades de papa nativa."
+                "tradition_1": "Creación de muñecos satíricos (compadres) por parte de las mujeres.",
+                "tradition_2": "Colgado de los muñecos en plazas y mercados públicos a la medianoche.",
+                "tradition_3": "Reuniones de celebración entre amigos y compadres."
             },
             "schedule": {
                 "day_1": "Día Principal",
-                "event_1_time": "Mañana",
-                "event_1_desc": "Acto cívico y desfile de danzas en Yauri.",
-                "event_2_time": "Tarde",
-                "event_2_desc": "Escenificación principal en Mauk'allaqta."
-            }
-        },
-        "fiesta-de-san-juan-de-paruro": {
-            "description": "Una fiesta patronal tradicional que incluye procesiones religiosas y corridas de toros.",
-            "longDescription": "La Fiesta de San Juan Bautista en Paruro es una celebración patronal clásica de la sierra cusqueña. La devoción religiosa se mezcla con la celebración popular, donde los atractivos principales son las procesiones y, especialmente, las corridas de toros, que atraen a aficionados de toda la región.",
-            "history": "La devoción a San Juan Bautista se instauró durante la colonia. La fiesta incorpora elementos de la cultura española, como la tauromaquia, que fueron adaptados y adquirieron características propias en los Andes.",
-            "traditions": {
-                "tradition_1": "Procesión de la imagen de San Juan Bautista.",
-                "tradition_2": "Corridas de toros tradicionales con toreros locales y regionales.",
-                "tradition_3": "Presentaciones de danzas folclóricas.",
-                "tradition_4": "Fiestas populares con bandas de músicos."
-            },
-            "schedule": {
-                "day_1": "24 de Junio (Día Central)",
-                "event_1_time": "Mañana",
-                "event_1_desc": "Misa principal y procesión.",
-                "event_2_time": "Tarde",
-                "event_2_desc": "Primer día de corridas de toros."
-            }
-        },
-        "senor-de-huanca": {
-            "description": "Una de las peregrinaciones católicas más importantes del sur del Perú.",
-            "longDescription": "El Santuario del Señor de Huanca atrae a miles de fieles peregrinos cada año, especialmente en septiembre. Los creyentes llegan de todo el Perú y países vecinos para pedir milagros y agradecer los favores recibidos a la imagen de un Cristo martirizado pintada sobre una roca. Es una manifestación impresionante de fe popular.",
-            "history": "Según la tradición, en 1675, la imagen de Cristo se le apareció a un indígena que huía de su amo. El lugar se convirtió en un sitio de peregrinación y allí se construyó un santuario. La veneración creció y hoy es una de las más importantes del país.",
-            "traditions": {
-                "tradition_1": "Peregrinaciones nocturnas a pie desde Cusco y otros puntos hasta el santuario.",
-                "tradition_2": "Servicios religiosos y misas durante todo el día.",
-                "tradition_3": "Bendición de vehículos y objetos.",
-                "tradition_4": "Compra de 'alasitas' (miniaturas) que representan los deseos de los fieles."
-            },
-            "schedule": {
-                "day_1": "14 de Septiembre (Día Central)",
                 "event_1_time": "Todo el día",
-                "event_1_desc": "Llegada de peregrinos y misas continuas.",
-                "event_2_time": "Noche",
-                "event_2_desc": "Vigilia con velas."
+                "event_1_desc": "Los muñecos se exhiben en plazas y mercados. Las festividades ocurren durante todo el día."
+            }
+        },
+        "dia-de-comadres": {
+            "description": "La respuesta festiva a Compadres, donde se celebra y honra a las mujeres.",
+            "longDescription": "El Día de las Comadres sigue al Día de los Compadres, cambiando el foco hacia las mujeres. En esta celebración, los hombres preparan homenajes a sus 'comadres' (amigas, madrinas). A diferencia del tono satírico de Compadres, este día es más un homenaje, con regalos de canastas decoradas llenas de frutas, dulces y serpentinas. Es un día de amistad femenina y respeto mutuo.",
+            "history": "Como contraparte a Compadres, este día equilibra la sátira del carnaval. Destaca la importancia de las mujeres en la comunidad y fortalece los lazos de comadrazgo.",
+            "traditions": {
+                "tradition_1": "Preparación de canastas decoradas por parte de los hombres.",
+                "tradition_2": "Regalo de canastas a las comadres como señal de afecto.",
+                "tradition_3": "Celebraciones en mercados y hogares con música y baile."
+            },
+            "schedule": {
+                "day_1": "Día Principal",
+                "event_1_time": "Todo el día",
+                "event_1_desc": "Los mercados se llenan de color y actividad. Las celebraciones y entrega de regalos ocurren durante todo el día."
+            }
+        },
+        "semana-santa": {
+            "description": "Una celebración religiosa solemne y ferviente marcada por procesiones únicas.",
+            "longDescription": "La Semana Santa en Cusco es una manifestación profunda de sincretismo religioso. La figura central es el Señor de los Temblores, un Cristo de piel oscura que sale en procesión el Lunes Santo en un recorrido masivo que paraliza la ciudad. La semana también está marcada por tradiciones gastronómicas únicas, como los 'doce platos' que se sirven el Jueves Santo.",
+            "history": "La devoción al Señor de los Temblores comenzó después del terremoto de 1650, cuando los locales afirmaron que la estatua detuvo los temblores. Desde entonces, se ha convertido en el patrón jurado de Cusco. La celebración mezcla ritos católicos con un profundo sentido andino de devoción y reciprocidad.",
+            "traditions": {
+                "tradition_1": "Procesión del Señor de los Temblores el Lunes Santo.",
+                "tradition_2": "Se arroja la flor de ñucchu, una flor roja, a la estatua, simbolizando la sangre de Cristo.",
+                "tradition_3": "La tradición de los 'doce platos' el Jueves Santo, representando a los doce apóstoles.",
+                "tradition_4": "Procesiones y vigilias en las iglesias de toda la ciudad."
+            },
+            "schedule": {
+                "day_1": "Lunes Santo",
+                "event_1_time": "Tarde",
+                "event_1_desc": "Procesión principal del Señor de los Temblores por la Plaza de Armas.",
+                "day_2": "Jueves/Viernes Santo",
+                "event_1_time": "Todo el día",
+                "event_1_desc": "Visitas a las iglesias y comidas familiares con los 'doce platos'."
+            }
+        },
+        "navidad-cusquena": {
+            "description": "Una celebración navideña única que presenta la feria de arte popular más grande de Perú: Santurantikuy.",
+            "longDescription": "La Navidad en Cusco es sinónimo de Santurantikuy ('Venta de Santos' en quechua). El 24 de diciembre, la Plaza de Armas se transforma en un enorme mercado al aire libre donde cientos de artesanos de comunidades remotas vienen a vender figuras de nacimiento talladas, íconos religiosos y arte popular tradicional. Es un día mágico de arte, tradición y espíritu navideño.",
+            "history": "El Santurantikuy se remonta a la época colonial, cuando era una forma de la iglesia para promover el catolicismo a través de la imaginería religiosa. Con el tiempo, evolucionó hasta convertirse en una vibrante expresión de arte popular andino, donde los artesanos muestran su creatividad y habilidad.",
+            "traditions": {
+                "tradition_1": "La masiva feria de Santurantikuy en la Plaza de Armas.",
+                "tradition_2": "La figura principal es el 'Niño Manuelito', una representación del niño Jesús con rasgos andinos únicos.",
+                "tradition_3": "Las familias compran nuevas figuras y ropa para sus nacimientos caseros."
+            },
+            "schedule": {
+                "day_1": "24 de Diciembre",
+                "event_1_time": "Todo el día",
+                "event_1_desc": "La feria de Santurantikuy toma la Plaza de Armas desde temprano en la mañana hasta tarde en la noche."
+            }
+        },
+        "ano-nuevo": {
+            "description": "Una vibrante celebración de Año Nuevo con cábalas y vueltas a la Plaza de Armas.",
+            "longDescription": "La víspera de Año Nuevo en Cusco es un asunto animado y supersticioso. La Plaza de Armas se convierte en el epicentro de las celebraciones, donde se reúnen miles de locales y turistas. A medianoche, es tradición correr alrededor de la plaza, a menudo varias veces, para asegurar buenos viajes en el próximo año. La noche está llena de fuegos artificiales, música y una palpable sensación de alegría colectiva.",
+            "history": "Si bien el Año Nuevo es una celebración global, Cusco la ha impregnado de sus propios rituales y creencias únicos, conocidos como 'cábalas', que mezclan supersticiones populares con un ambiente festivo.",
+            "traditions": {
+                "tradition_1": "Correr en el sentido de las agujas del reloj alrededor de la Plaza de Armas a medianoche.",
+                "tradition_2": "Usar ropa amarilla para la buena suerte.",
+                "tradition_3": "Espectáculo de fuegos artificiales sobre la ciudad.",
+                "tradition_4": ""
+            },
+            "schedule": {
+                "day_1": "31 de Diciembre",
+                "event_1_time": "10:00 PM en adelante",
+                "event_1_desc": "Las multitudes se reúnen en la Plaza de Armas.",
+                "event_2_time": "12:00 AM",
+                "event_2_desc": "Corrida de medianoche alrededor de la plaza y principal espectáculo de fuegos artificiales."
             }
         }
     }
 }
-

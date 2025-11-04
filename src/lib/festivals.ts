@@ -5,51 +5,47 @@ export type Review = {
   comment: string;
 };
 
+export type FestivalLocation = {
+  name: string;
+  province: string;
+  coords: [number, number];
+};
+
 export type Festival = {
   id: string;
   slug: string;
   name: string;
   date: { start: Date; end: Date };
-  location: string;
-  province: string;
-  coords: [number, number];
+  location?: string; // Kept for simplicity with single-location festivals, but locations array is preferred
+  province?: string; // Kept for simplicity
+  coords?: [number, number]; // Kept for simplicity
+  locations?: FestivalLocation[]; // New array for multiple locations
   image: string;
   rating: number;
   reviews: Review[];
   interest: number;
   isFree: boolean;
   categories: string[];
-  traditionKeys: string[];
-  scheduleKeys: { 
+  traditionKeys?: string[];
+  scheduleKeys?: { 
     dayKey: string; 
     eventKeys: { timeKey: string; descriptionKey: string }[] 
   }[];
 };
 
-const festivalsByProvince: Record<string, Omit<Festival, 'province'>[]> = {
-  Cusco: [
+
+const currentYear = new Date().getFullYear();
+
+const festivalsData: Festival[] = [
     {
       id: 'inti-raymi',
       slug: 'inti-raymi',
       name: 'Inti Raymi',
-      date: { start: new Date(new Date().getFullYear(), 5, 24), end: new Date(new Date().getFullYear(), 5, 24) },
-      location: 'Sacsayhuamán, Cusco',
-      coords: [-13.507, -71.982],
-      traditionKeys: [
-        "tradition_1",
-        "tradition_2",
-        "tradition_3",
-        "tradition_4"
-      ],
-      scheduleKeys: [
-        {
-          dayKey: 'day_1',
-          eventKeys: [
-            { timeKey: 'event_1_time', descriptionKey: 'event_1_desc' },
-            { timeKey: 'event_2_time', descriptionKey: 'event_2_desc' },
-            { timeKey: 'event_3_time', descriptionKey: 'event_3_desc' },
-          ],
-        },
+      date: { start: new Date(currentYear, 5, 24), end: new Date(currentYear, 5, 24) },
+      locations: [
+        { name: 'Qorikancha, Cusco', province: 'Cusco', coords: [-13.520, -71.976] },
+        { name: 'Plaza de Armas, Cusco', province: 'Cusco', coords: [-13.5165, -71.979] },
+        { name: 'Sacsayhuamán, Cusco', province: 'Cusco', coords: [-13.507, -71.982] },
       ],
       image: 'inti-raymi',
       rating: 4.9,
@@ -60,34 +56,18 @@ const festivalsByProvince: Record<string, Omit<Festival, 'province'>[]> = {
       interest: 2.1,
       isFree: false,
       categories: ['andino', 'historico', 'danza', 'espectaculo'],
+      traditionKeys: ["tradition_1", "tradition_2", "tradition_3", "tradition_4"],
+      scheduleKeys: [{ dayKey: 'day_1', eventKeys: [{ timeKey: 'event_1_time', descriptionKey: 'event_1_desc' }, { timeKey: 'event_2_time', descriptionKey: 'event_2_desc' }, { timeKey: 'event_3_time', descriptionKey: 'event_3_desc' }] }],
     },
     {
       id: 'corpus-christi',
       slug: 'corpus-christi',
       name: 'Corpus Christi',
-      date: { start: new Date(new Date().getFullYear(), 4, 30), end: new Date(new Date().getFullYear(), 4, 30) },
-      location: 'Plaza de Armas, Cusco',
-      coords: [-13.5165, -71.979],
-      traditionKeys: [
-        "tradition_1",
-        "tradition_2",
-        "tradition_3",
-        "tradition_4"
-      ],
-      scheduleKeys: [
-        {
-          dayKey: 'day_1',
-          eventKeys: [
-            { timeKey: 'event_1_time', descriptionKey: 'event_1_desc' },
-            { timeKey: 'event_2_time', descriptionKey: 'event_2_desc' },
-          ],
-        },
-        {
-            dayKey: 'day_2',
-            eventKeys: [
-              { timeKey: 'event_1_time', descriptionKey: 'event_1_desc' },
-            ],
-          },
+      date: { start: new Date(currentYear, 4, 30), end: new Date(currentYear, 5, 6) }, // Corpus is a movable feast, this is an approximation
+      locations: [
+        { name: 'Plaza de Armas, Cusco', province: 'Cusco', coords: [-13.5165, -71.979] },
+        { name: 'Parroquia de San Pedro', province: 'Cusco', coords: [-13.519, -71.984] },
+        { name: 'Parroquia de San Blas', province: 'Cusco', coords: [-13.514, -71.974] },
       ],
       image: 'corpus-christi',
       rating: 4.7,
@@ -98,165 +78,15 @@ const festivalsByProvince: Record<string, Omit<Festival, 'province'>[]> = {
       interest: 1.2,
       isFree: true,
       categories: ['religioso', 'gastronomico', 'tradicional', 'espectaculo'],
+      traditionKeys: ["tradition_1", "tradition_2", "tradition_3", "tradition_4"],
+      scheduleKeys: [{ dayKey: 'day_1', eventKeys: [{ timeKey: 'event_1_time', descriptionKey: 'event_1_desc' }, { timeKey: 'event_2_time', descriptionKey: 'event_2_desc' }] }, { dayKey: 'day_2', eventKeys: [{ timeKey: 'event_1_time', descriptionKey: 'event_1_desc' }] }],
     },
-    {
-      id: 'feria-de-huancaro',
-      slug: 'feria-de-huancaro',
-      name: 'Feria de Huancaro',
-      date: { start: new Date(new Date().getFullYear(), 5, 1), end: new Date(new Date().getFullYear(), 5, 30) },
-      location: 'Huancaro, Cusco',
-      coords: [-13.535, -71.964],
-      traditionKeys: [
-        "tradition_1",
-        "tradition_2",
-        "tradition_3",
-        "tradition_4"
-      ],
-      scheduleKeys: [
-        {
-          dayKey: 'day_1',
-          eventKeys: [
-            { timeKey: 'event_1_time', descriptionKey: 'event_1_desc' },
-          ],
-        },
-      ],
-      image: 'huancaro-fair',
-      rating: 4.5,
-      reviews: [
-        { id: '1', user: 'FoodCritic', rating: 5, comment: 'The food variety is insane! A must-visit for anyone who wants to taste authentic Andean cuisine.' },
-      ],
-      interest: 1.1,
-      isFree: false,
-      categories: ['feria', 'gastronomico', 'conciertos', 'artesania'],
-    },
-    {
-      id: 'san-sebastian-patron-feast',
-      slug: 'san-sebastian-patron-feast',
-      name: 'Fiesta Patronal de San Sebastián',
-      date: { start: new Date(new Date().getFullYear(), 0, 18), end: new Date(new Date().getFullYear(), 0, 22) },
-      location: 'San Sebastián, Cusco',
-      coords: [-13.535, -71.937],
-      traditionKeys: [
-        "tradition_1",
-        "tradition_2",
-        "tradition_3",
-        "tradition_4"
-      ],
-      scheduleKeys: [
-        {
-          dayKey: 'day_1',
-          eventKeys: [
-            { timeKey: 'event_1_time', descriptionKey: 'event_1_desc' },
-            { timeKey: 'event_2_time', descriptionKey: 'event_2_desc' },
-          ],
-        },
-      ],
-      image: 'san-sebastian-festival',
-      rating: 4.6,
-      reviews: [
-        { id: '1', user: 'CuscoLocal', rating: 5, comment: 'As a local, this is one of my favorite festivals. The dancing is non-stop and the atmosphere is electric.' },
-      ],
-      interest: 1.3,
-      isFree: true,
-      categories: ['religioso', 'danza', 'tradicional', 'gastronomico'],
-    },
-  ],
-  Urubamba: [
-    {
-      id: 'linderaje-chinchero',
-      slug: 'linderaje-chinchero',
-      name: 'Linderaje Chinchero',
-      date: { start: new Date(new Date().getFullYear(), 5, 6), end: new Date(new Date().getFullYear(), 5, 9) },
-      location: 'Chinchero, Urubamba',
-      coords: [-13.392770929895711, -72.049756263513],
-      traditionKeys: [
-        "tradition_1",
-        "tradition_2",
-        "tradition_3",
-        "tradition_4"
-      ],
-      scheduleKeys: [
-        {
-          dayKey: 'day_1',
-          eventKeys: [
-            { timeKey: 'event_1_time', descriptionKey: 'event_1_desc' },
-            { timeKey: 'event_2_time', descriptionKey: 'event_2_desc' },
-          ],
-        },
-      ],
-      image: 'linderaje-chinchero',
-      rating: 4.6,
-      reviews: [
-        { id: '1', user: 'HistoryLover', rating: 5, comment: 'Seeing the procession against the backdrop of the Inca ruins is unforgettable.' },
-      ],
-      interest: 0.9,
-      isFree: true,
-      categories: ['tradicional', 'danza'],
-    },
-
-    {
-      id: 'senor-de-choquekillka',
-      slug: 'senor-de-choquekillka',
-      name: 'Señor de Choquekillka',
-      date: { start: new Date(new Date().getFullYear(), 5, 6), end: new Date(new Date().getFullYear(), 5, 9) },
-      location: 'Ollantaytambo, Urubamba',
-      coords: [-13.259, -72.264],
-      traditionKeys: [
-        "tradition_1",
-        "tradition_2",
-        "tradition_3",
-        "tradition_4"
-      ],
-      scheduleKeys: [
-        {
-          dayKey: 'day_1',
-          eventKeys: [
-            { timeKey: 'event_1_time', descriptionKey: 'event_1_desc' },
-            { timeKey: 'event_2_time', descriptionKey: 'event_2_desc' },
-          ],
-        },
-      ],
-      image: 'ollantaytambo-festival',
-      rating: 4.6,
-      reviews: [
-        { id: '1', user: 'HistoryLover', rating: 5, comment: 'Seeing the procession against the backdrop of the Inca ruins is unforgettable.' },
-      ],
-      interest: 0.9,
-      isFree: true,
-      categories: ['religioso', 'tradicional', 'danza'],
-    },
-  ],
-  Quispicanchi: [
     {
       id: 'qoyllur-riti',
       slug: 'qoyllur-riti',
       name: 'Qoyllur Rit\'i',
-      date: { start: new Date(new Date().getFullYear(), 4, 29), end: new Date(new Date().getFullYear(), 5, 2) },
-      location: 'Sinakara Valley, Ocongate',
-      coords: [-13.63, -71.23],
-      traditionKeys: [
-        "tradition_1",
-        "tradition_2",
-        "tradition_3",
-        "tradition_4"
-      ],
-      scheduleKeys: [
-        {
-          dayKey: 'day_1',
-          eventKeys: [{ timeKey: 'event_1_time', descriptionKey: 'event_1_desc' }],
-        },
-        {
-          dayKey: 'day_2',
-          eventKeys: [{ timeKey: 'event_1_time', descriptionKey: 'event_1_desc' }],
-        },
-        {
-          dayKey: 'day_3',
-          eventKeys: [
-            { timeKey: 'event_1_time', descriptionKey: 'event_1_desc' },
-            { timeKey: 'event_2_time', descriptionKey: 'event_2_desc' },
-          ],
-        },
-      ],
+      date: { start: new Date(currentYear, 4, 29), end: new Date(currentYear, 5, 2) },
+      locations: [{ name: 'Sinakara Valley, Ocongate', province: 'Quispicanchi', coords: [-13.63, -71.23] }],
       image: 'qoyllur-riti',
       rating: 4.8,
       reviews: [
@@ -266,42 +96,15 @@ const festivalsByProvince: Record<string, Omit<Festival, 'province'>[]> = {
       interest: 1.8,
       isFree: true,
       categories: ['andino', 'religioso', 'peregrinacion', 'aventura'],
+      traditionKeys: ["tradition_1", "tradition_2", "tradition_3", "tradition_4"],
+      scheduleKeys: [{ dayKey: 'day_1', eventKeys: [{ timeKey: 'event_1_time', descriptionKey: 'event_1_desc' }] }, { dayKey: 'day_2', eventKeys: [{ timeKey: 'event_1_time', descriptionKey: 'event_1_desc' }] }, { dayKey: 'day_3', eventKeys: [{ timeKey: 'event_1_time', descriptionKey: 'event_1_desc' }, { timeKey: 'event_2_time', descriptionKey: 'event_2_desc' }] }],
     },
-  ],
-  Paucartambo: [
     {
       id: 'paucartambo-virgen-del-carmen',
       slug: 'paucartambo-virgen-del-carmen',
       name: 'Paucartambo - Virgen del Carmen',
-      date: { start: new Date(new Date().getFullYear(), 6, 15), end: new Date(new Date().getFullYear(), 6, 18) },
-      location: 'Paucartambo',
-      coords: [-13.31, -71.59],
-      traditionKeys: [
-        "tradition_1",
-        "tradition_2",
-        "tradition_3",
-        "tradition_4"
-      ],
-      scheduleKeys: [
-        {
-          dayKey: 'day_1',
-          eventKeys: [
-            { timeKey: 'event_1_time', descriptionKey: 'event_1_desc' },
-            { timeKey: 'event_2_time', descriptionKey: 'event_2_desc' },
-          ],
-        },
-        {
-          dayKey: 'day_2',
-          eventKeys: [
-            { timeKey: 'event_1_time', descriptionKey: 'event_1_desc' },
-            { timeKey: 'event_2_time', descriptionKey: 'event_2_desc' },
-          ],
-        },
-        {
-          dayKey: 'day_3',
-          eventKeys: [{ timeKey: 'event_1_time', descriptionKey: 'event_1_desc' }],
-        },
-      ],
+      date: { start: new Date(currentYear, 6, 15), end: new Date(currentYear, 6, 18) },
+      locations: [{ name: 'Paucartambo', province: 'Paucartambo', coords: [-13.31, -71.59] }],
       image: 'paucartambo',
       rating: 4.9,
       reviews: [
@@ -311,224 +114,104 @@ const festivalsByProvince: Record<string, Omit<Festival, 'province'>[]> = {
       interest: 1.5,
       isFree: true,
       categories: ['religioso', 'danza', 'tradicional', 'espectaculo'],
-    },
-  ],
-  Canchis: [
-    {
-      id: 'fiesta-de-la-virgen-rosario-de-combapata',
-      slug: 'fiesta-de-la-virgen-rosario-de-combapata',
-      name: 'Virgen del Rosario de Combapata',
-      date: { start: new Date(new Date().getFullYear(), 9, 7), end: new Date(new Date().getFullYear(), 9, 10) },
-      location: 'Combapata, Canchis',
-      coords: [-14.110, -71.493],
-      traditionKeys: [
-        "tradition_1",
-        "tradition_2",
-        "tradition_3",
-        "tradition_4"
-      ],
-      scheduleKeys: [
-        {
-          dayKey: 'day_1',
-          eventKeys: [
-            { timeKey: 'event_1_time', descriptionKey: 'event_1_desc' },
-            { timeKey: 'event_2_time', descriptionKey: 'event_2_desc' },
-          ],
-        },
-      ],
-      image: 'combapata-festival',
-      rating: 4.4,
-      reviews: [
-        { id: '1', user: 'AdventureSeeker', rating: 4, comment: 'The battle reenactment is wild and chaotic! Very impressive.' },
-      ],
-      interest: 0.5,
-      isFree: true,
-      categories: ['religioso', 'tradicional', 'historico', 'danza'],
+      traditionKeys: ["tradition_1", "tradition_2", "tradition_3", "tradition_4"],
+      scheduleKeys: [{ dayKey: 'day_1', eventKeys: [{ timeKey: 'event_1_time', descriptionKey: 'event_1_desc' }, { timeKey: 'event_2_time', descriptionKey: 'event_2_desc' }] }, { dayKey: 'day_2', eventKeys: [{ timeKey: 'event_1_time', descriptionKey: 'event_1_desc' }, { timeKey: 'event_2_time', descriptionKey: 'event_2_desc' }] }, { dayKey: 'day_3', eventKeys: [{ timeKey: 'event_1_time', descriptionKey: 'event_1_desc' }] }],
     },
     {
-      id: 'carnaval-tkapuy',
-      slug: 'carnaval-tkapuy',
-      name: 'Carnaval T\'ikapallana de Tinta',
-      date: { start: new Date(new Date().getFullYear(), 1, 22), end: new Date(new Date().getFullYear(), 1, 24) },
-      location: 'Tinta, Canchis',
-      coords: [-14.144, -71.408],
-      traditionKeys: [
-        "tradition_1",
-        "tradition_2",
-        "tradition_3",
-        "tradition_4"
+      id: 'dia-de-compadres',
+      slug: 'dia-de-compadres',
+      name: 'Día de los Compadres',
+      date: { start: new Date(currentYear, 1, 1), end: new Date(currentYear, 1, 1) }, // Example date, Thursday 2 weeks before Carnival
+      locations: [
+        { name: 'Mercado de San Pedro, Cusco', province: 'Cusco', coords: [-13.518, -71.983] },
+        { name: 'Mercado de San Blas, Cusco', province: 'Cusco', coords: [-13.515, -71.973] },
+        { name: 'Various towns', province: 'Cusco', coords: [-13.517, -71.978] },
       ],
-      scheduleKeys: [
-        {
-          dayKey: 'day_1',
-          eventKeys: [
-            { timeKey: 'event_1_time', descriptionKey: 'event_1_desc' },
-          ],
-        },
-      ],
-      image: 'tinta-carnival',
+      image: 'compadres',
       rating: 4.5,
-      reviews: [
-        { id: '1', user: 'AnthroStudent', rating: 5, comment: 'A beautiful and very authentic ritual. The flower symbolism is fascinating.' },
-      ],
+      reviews: [],
       interest: 0.8,
       isFree: true,
-      categories: ['carnaval', 'andino', 'tradicional', 'danza'],
+      categories: ['carnaval', 'tradicional', 'popular'],
+      traditionKeys: ["tradition_1", "tradition_2", "tradition_3"],
+      scheduleKeys: [{ dayKey: 'day_1', eventKeys: [{ timeKey: 'event_1_time', descriptionKey: 'event_1_desc' }] }],
     },
-  ],
-  Anta: [
     {
-      id: 'semana-turistica-de-anta',
-      slug: 'semana-turistica-de-anta',
-      name: 'Semana Turística de Anta',
-      date: { start: new Date(new Date().getFullYear(), 8, 20), end: new Date(new Date().getFullYear(), 8, 27) },
-      location: 'Izcuchaca, Anta',
-      coords: [-13.483, -72.183],
-      traditionKeys: [
-        "tradition_1",
-        "tradition_2",
-        "tradition_3",
-        "tradition_4"
+      id: 'dia-de-comadres',
+      slug: 'dia-de-comadres',
+      name: 'Día de las Comadres',
+      date: { start: new Date(currentYear, 1, 8), end: new Date(currentYear, 1, 8) }, // Example date, Thursday 1 week before Carnival
+      locations: [
+        { name: 'Mercado de San Pedro, Cusco', province: 'Cusco', coords: [-13.518, -71.983] },
+        { name: 'Mercado de San Blas, Cusco', province: 'Cusco', coords: [-13.515, -71.973] },
+        { name: 'Various towns', province: 'Cusco', coords: [-13.517, -71.978] },
       ],
-      scheduleKeys: [
-        {
-          dayKey: 'day_1',
-          eventKeys: [
-            { timeKey: 'event_1_time', descriptionKey: 'event_1_desc' },
-          ],
-        },
-      ],
-      image: 'anta-festival',
-      rating: 4.3,
-      reviews: [
-        { id: '1', user: 'LocalExplorer', rating: 4, comment: 'A great way to discover what Anta has to offer. Very well organized and friendly atmosphere.' },
-      ],
-      interest: 0.4,
+      image: 'comadres',
+      rating: 4.5,
+      reviews: [],
+      interest: 0.8,
       isFree: true,
-      categories: ['feria', 'gastronomico', 'danza', 'aventura'],
+      categories: ['carnaval', 'tradicional', 'popular'],
+      traditionKeys: ["tradition_1", "tradition_2", "tradition_3"],
+      scheduleKeys: [{ dayKey: 'day_1', eventKeys: [{ timeKey: 'event_1_time', descriptionKey: 'event_1_desc' }] }],
     },
-  ],
-  'La Convención': [
     {
-      id: 'festival-del-cafe-quillabamba',
-      slug: 'festival-del-cafe-quillabamba',
-      name: 'Festival del Café de Quillabamba',
-      date: { start: new Date(new Date().getFullYear(), 6, 25), end: new Date(new Date().getFullYear(), 6, 29) },
-      location: 'Quillabamba, La Convención',
-      coords: [-12.865, -72.693],
-      traditionKeys: [
-        "tradition_1",
-        "tradition_2",
-        "tradition_3",
-        "tradition_4"
+      id: 'semana-santa',
+      slug: 'semana-santa',
+      name: 'Semana Santa',
+      date: { start: new Date(currentYear, 3, 24), end: new Date(currentYear, 3, 31) }, // Example date for Easter week
+      locations: [
+        { name: 'Cusco Cathedral', province: 'Cusco', coords: [-13.516, -71.978] },
+        { name: 'Plaza de Armas, Cusco', province: 'Cusco', coords: [-13.5165, -71.979] },
+        { name: 'Churches across the region', province: 'Cusco', coords: [-13.52, -71.98] },
       ],
-      scheduleKeys: [
-        {
-          dayKey: 'day_1',
-          eventKeys: [
-            { timeKey: 'event_1_time', descriptionKey: 'event_1_desc' },
-            { timeKey: 'event_2_time', descriptionKey: 'event_2_desc' },
-          ],
-        },
+      image: 'semana-santa',
+      rating: 4.8,
+      reviews: [],
+      interest: 1.5,
+      isFree: true,
+      categories: ['religioso', 'procesion', 'tradicional', 'gastronomico'],
+      traditionKeys: ["tradition_1", "tradition_2", "tradition_3", "tradition_4"],
+      scheduleKeys: [{ dayKey: 'day_1', eventKeys: [{ timeKey: 'event_1_time', descriptionKey: 'event_1_desc' }] }, { dayKey: 'day_2', eventKeys: [{ timeKey: 'event_1_time', descriptionKey: 'event_1_desc' }] }],
+    },
+    {
+      id: 'navidad-cusquena',
+      slug: 'navidad-cusquena',
+      name: 'Navidad Cusqueña (Santurantikuy)',
+      date: { start: new Date(currentYear, 11, 24), end: new Date(currentYear, 11, 24) },
+      locations: [{ name: 'Plaza de Armas, Cusco', province: 'Cusco', coords: [-13.5165, -71.979] }],
+      image: 'santurantikuy',
+      rating: 4.9,
+      reviews: [],
+      interest: 1.9,
+      isFree: true,
+      categories: ['feria', 'artesania', 'religioso', 'tradicional'],
+      traditionKeys: ["tradition_1", "tradition_2", "tradition_3"],
+      scheduleKeys: [{ dayKey: 'day_1', eventKeys: [{ timeKey: 'event_1_time', descriptionKey: 'event_1_desc' }] }],
+    },
+    {
+      id: 'ano-nuevo',
+      slug: 'ano-nuevo',
+      name: 'Año Nuevo en Cusco',
+      date: { start: new Date(currentYear, 11, 31), end: new Date(currentYear, 11, 31) },
+      locations: [
+        { name: 'Plaza de Armas, Cusco', province: 'Cusco', coords: [-13.5165, -71.979] },
       ],
-      image: 'quillabamba-coffee',
+      image: 'ano-nuevo',
       rating: 4.7,
-      reviews: [
-        { id: '1', user: 'CoffeeLover', rating: 5, comment: 'Heaven for a coffee addict like me! The quality is outstanding.' },
-      ],
-      interest: 0.8,
-      isFree: false,
-      categories: ['feria', 'gastronomico', 'conciertos'],
-    },
-    {
-      id: 'aniversario-de-la-convencion',
-      slug: 'aniversario-de-la-convencion',
-      name: 'Aniversario de La Convención',
-      date: { start: new Date(new Date().getFullYear(), 6, 20), end: new Date(new Date().getFullYear(), 6, 25) },
-      location: 'Quillabamba, La Convención',
-      coords: [-12.865, -72.693],
-      traditionKeys: [
-        "tradition_1",
-        "tradition_2",
-        "tradition_3",
-        "tradition_4"
-      ],
-      scheduleKeys: [
-        {
-          dayKey: 'day_1',
-          eventKeys: [
-            { timeKey: 'event_1_time', descriptionKey: 'event_1_desc' },
-            { timeKey: 'event_2_time', descriptionKey: 'event_2_desc' },
-          ],
-        },
-      ],
-      image: 'quillabamba-anniversary',
-      rating: 4.5,
-      reviews: [
-        { id: '1', user: 'TropicalVibes', rating: 4, comment: 'A fun party with a very different feel from the rest of Cusco. Lots of dancing!' },
-      ],
-      interest: 0.7,
-      isFree: false,
-      categories: ['feria', 'conciertos', 'moderno'],
-    },
-  ],
-  Acomayo: [
-    {
-      id: 'wayllati-carnaval',
-      slug: 'wayllati-carnaval',
-      name: 'Carnaval de Wayllati',
-      date: { start: new Date(new Date().getFullYear(), 1, 20), end: new Date(new Date().getFullYear(), 1, 25) },
-      location: 'Sangarará, Acomayo',
-      coords: [-13.963, -71.603],
-      traditionKeys: [
-        "tradition_1",
-        "tradition_2",
-        "tradition_3",
-        "tradition_4"
-      ],
-      scheduleKeys: [
-        {
-          dayKey: 'day_1',
-          eventKeys: [
-            { timeKey: 'event_1_time', descriptionKey: 'event_1_desc' },
-          ],
-        },
-      ],
-      image: 'acomayo-carnival',
-      rating: 4.5,
-      reviews: [
-        { id: '1', user: 'CultureSeeker', rating: 5, comment: 'So authentic and full of life. It felt like stepping back in time.' },
-      ],
-      interest: 0.6,
+      reviews: [],
+      interest: 1.7,
       isFree: true,
-      categories: ['carnaval', 'andino', 'danza', 'tradicional'],
+      categories: ['fiesta', 'popular', 'espectaculo'],
+      traditionKeys: ["tradition_1", "tradition_2", "tradition_3"],
+      scheduleKeys: [{ dayKey: 'day_1', eventKeys: [{ timeKey: 'event_1_time', descriptionKey: 'event_1_desc' }, { timeKey: 'event_2_time', descriptionKey: 'event_2_desc' }] }],
     },
-  ],
-  Canas: [
     {
       id: 'qeswachaka-bridge-festival',
       slug: 'qeswachaka-bridge-festival',
       name: 'Q\'eswachaka Bridge Festival',
-      date: { start: new Date(new Date().getFullYear(), 5, 8), end: new Date(new Date().getFullYear(), 5, 11) },
-      location: 'Quehue, Canas',
-      coords: [-14.364, -71.503],
-      traditionKeys: [
-        "tradition_1",
-        "tradition_2",
-        "tradition_3",
-        "tradition_4",
-        "tradition_5"
-      ],
-      scheduleKeys: [
-        {
-          dayKey: 'day_1',
-          eventKeys: [
-            { timeKey: 'event_1_time', descriptionKey: 'event_1_desc' },
-            { timeKey: 'event_2_time', descriptionKey: 'event_2_desc' },
-            { timeKey: 'event_3_time', descriptionKey: 'event_3_desc' },
-          ],
-        },
-      ],
+      date: { start: new Date(currentYear, 5, 8), end: new Date(currentYear, 5, 11) },
+      locations: [{ name: 'Quehue, Canas', province: 'Canas', coords: [-14.364, -71.503] }],
       image: 'qeswachaka-bridge',
       rating: 4.9,
       reviews: [
@@ -537,210 +220,22 @@ const festivalsByProvince: Record<string, Omit<Festival, 'province'>[]> = {
       interest: 1.9,
       isFree: false,
       categories: ['andino', 'tradicional', 'historico', 'espectaculo'],
+      traditionKeys: ["tradition_1", "tradition_2", "tradition_3", "tradition_4", "tradition_5"],
+      scheduleKeys: [{ dayKey: 'day_1', eventKeys: [{ timeKey: 'event_1_time', descriptionKey: 'event_1_desc' }, { timeKey: 'event_2_time', descriptionKey: 'event_2_desc' }, { timeKey: 'event_3_time', descriptionKey: 'event_3_desc' }] }],
     },
-  ],
-  Chumbivilcas: [
-    {
-      id: 'wata-qallariy',
-      slug: 'wata-qallariy',
-      name: 'Wata Qallariy',
-      date: { start: new Date(new Date().getFullYear(), 10, 1), end: new Date(new Date().getFullYear(), 10, 2) },
-      location: 'Santo Tomás, Chumbivilcas',
-      coords: [-14.444, -72.083],
-      traditionKeys: [
-        "tradition_1",
-        "tradition_2",
-        "tradition_3",
-        "tradition_4"
-      ],
-      scheduleKeys: [
-        {
-          dayKey: 'day_1',
-          eventKeys: [
-            { timeKey: 'event_1_time', descriptionKey: 'event_1_desc' },
-            { timeKey: 'event_2_time', descriptionKey: 'event_2_desc' },
-          ],
-        },
-      ],
-      image: 'chumbivilcas-horses',
-      rating: 4.6,
-      reviews: [
-        { id: '1', user: 'Cowboy_Fan', rating: 5, comment: 'The horsemanship is absolutely stunning. Very raw and exciting festival.' },
-      ],
-      interest: 0.7,
-      isFree: true,
-      categories: ['andino', 'tradicional', 'carreras'],
-    },
-    {
-      id: 'takanakuy-chumbivilcas',
-      slug: 'takanakuy-chumbivilcas',
-      name: 'Takanakuy',
-      date: { start: new Date(new Date().getFullYear(), 11, 25), end: new Date(new Date().getFullYear(), 11, 25) },
-      location: 'Santo Tomás, Chumbivilcas',
-      coords: [-14.444, -72.083],
-      traditionKeys: [
-        "tradition_1",
-        "tradition_2",
-        "tradition_3",
-        "tradition_4"
-      ],
-      scheduleKeys: [
-        {
-          dayKey: 'day_1',
-          eventKeys: [
-            { timeKey: 'event_1_time', descriptionKey: 'event_1_desc' },
-            { timeKey: 'event_2_time', descriptionKey: 'event_2_desc' },
-            { timeKey: 'event_3_time', descriptionKey: 'event_3_desc' },
-          ],
-        },
-      ],
-      image: 'takanakuy-fight',
-      rating: 4.7,
-      reviews: [
-        { id: '1', user: 'ExtremeTravel', rating: 5, comment: 'Like nothing I have ever seen. Intense, raw, and absolutely fascinating. A true cultural immersion.' },
-      ],
-      interest: 1.6,
-      isFree: true,
-      categories: ['andino', 'tradicional', 'combate ritual'],
-    },
-    {
-      id: 'carnaval-de-mollomarka',
-      slug: 'carnaval-de-mollomarka',
-      name: 'Carnaval de Mollomarka',
-      date: { start: new Date(new Date().getFullYear(), 1, 25), end: new Date(new Date().getFullYear(), 1, 27) },
-      location: 'Mollomarka, Chumbivilcas',
-      coords: [-14.331, -71.933],
-      traditionKeys: [
-        "tradition_1",
-        "tradition_2",
-        "tradition_3",
-        "tradition_4"
-      ],
-      scheduleKeys: [
-        {
-          dayKey: 'day_1',
-          eventKeys: [
-            { timeKey: 'event_1_time', descriptionKey: 'event_1_desc' },
-          ],
-        },
-      ],
-      image: 'mollomarka-carnival',
-      rating: 4.6,
-      reviews: [
-        { id: '1', user: 'OffTheBeatenPath', rating: 5, comment: 'A truly authentic experience. No tourists, just pure local culture. The scenery is also spectacular.' },
-      ],
-      interest: 0.4,
-      isFree: true,
-      categories: ['carnaval', 'andino', 'tradicional', 'danza'],
-    },
-  ],
-  Espinar: [
-    {
-      id: 'k-ana-raymi',
-      slug: 'k-ana-raymi',
-      name: 'K\'ana Raymi',
-      date: { start: new Date(new Date().getFullYear(), 5, 19), end: new Date(new Date().getFullYear(), 5, 21) },
-      location: 'Yauri, Espinar',
-      coords: [-14.791, -71.414],
-      traditionKeys: [
-        "tradition_1",
-        "tradition_2",
-        "tradition_3",
-        "tradition_4"
-      ],
-      scheduleKeys: [
-        {
-          dayKey: 'day_1',
-          eventKeys: [
-            { timeKey: 'event_1_time', descriptionKey: 'event_1_desc' },
-            { timeKey: 'event_2_time', descriptionKey: 'event_2_desc' },
-          ],
-        },
-      ],
-      image: 'espinar-harvest',
-      rating: 4.4,
-      reviews: [
-        { id: '1', user: 'EcoTraveler', rating: 4, comment: 'Fascinating to see so many types of potatoes! A great celebration of biodiversity.' },
-      ],
-      interest: 0.3,
-      isFree: true,
-      categories: ['andino', 'agricola', 'gastronomico', 'danza'],
-    },
-  ],
-  Paruro: [
-    {
-      id: 'fiesta-de-san-juan-de-paruro',
-      slug: 'fiesta-de-san-juan-de-paruro',
-      name: 'Fiesta de San Juan de Paruro',
-      date: { start: new Date(new Date().getFullYear(), 5, 23), end: new Date(new Date().getFullYear(), 5, 25) },
-      location: 'Paruro',
-      coords: [-13.762, -71.854],
-      traditionKeys: [
-        "tradition_1",
-        "tradition_2",
-        "tradition_3",
-        "tradition_4"
-      ],
-      scheduleKeys: [
-        {
-          dayKey: 'day_1',
-          eventKeys: [
-            { timeKey: 'event_1_time', descriptionKey: 'event_1_desc' },
-            { timeKey: 'event_2_time', descriptionKey: 'event_2_desc' },
-          ],
-        },
-      ],
-      image: 'paruro-bullfight',
-      rating: 4.2,
-      reviews: [
-        { id: '1', user: 'TraditionLover', rating: 4, comment: 'A very classic and lively Andean festival. The bullfights are the main event.' },
-      ],
-      interest: 0.2,
-      isFree: true,
-      categories: ['religioso', 'tradicional', 'taurino'],
-    },
-  ],
-  Calca: [
-    {
-      id: 'senor-de-huanca',
-      slug: 'senor-de-huanca',
-      name: 'Señor de Huanca',
-      date: { start: new Date(new Date().getFullYear(), 8, 14), end: new Date(new Date().getFullYear(), 8, 14) },
-      location: 'San Salvador, Calca',
-      coords: [-13.491, -71.748],
-      traditionKeys: [
-        "tradition_1",
-        "tradition_2",
-        "tradition_3",
-        "tradition_4"
-      ],
-      scheduleKeys: [
-        {
-          dayKey: 'day_1',
-          eventKeys: [
-            { timeKey: 'event_1_time', descriptionKey: 'event_1_desc' },
-            { timeKey: 'event_2_time', descriptionKey: 'event_2_desc' },
-          ],
-        },
-      ],
-      image: 'senor-de-huanca',
-      rating: 4.8,
-      reviews: [
-        { id: '1', user: 'FaithfulPilgrim', rating: 5, comment: 'The amount of faith you can feel here is overwhelming. A deeply moving experience.' },
-      ],
-      interest: 1.7,
-      isFree: true,
-      categories: ['religioso', 'peregrinacion', 'tradicional'],
-    },
-  ],
+];
+
+
+const festivalsByProvince: Record<string, Omit<Festival, 'province'>[]> = {
+    // This structure can be deprecated or adapted if we move fully to the flat list with locations array
 };
 
 // This flattens the grouped data into a single array, which is what the components currently expect.
 // The new `province` property is added to each festival object.
-export const festivals: Festival[] = Object.entries(festivalsByProvince)
-  .flatMap(([province, provinceFestivals]) =>
-    provinceFestivals.map(festival => ({
-      ...festival,
-      province,
-    }))
-  );
+export const festivals: Festival[] = festivalsData.map(f => {
+    // To ensure backward compatibility with old data structure if needed
+    if (!f.locations && f.location && f.province && f.coords) {
+        f.locations = [{ name: f.location, province: f.province, coords: f.coords }];
+    }
+    return f;
+});

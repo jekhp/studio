@@ -29,7 +29,7 @@ export default function CalendarPage() {
     setDate(selectedDate);
     if (selectedDate) {
       const activeFestivals = festivals.filter(f =>
-        isWithinInterval(selectedDate, { start: f.date.start, end: f.date.end })
+        isWithinInterval(selectedDate, { start: new Date(f.date.start), end: new Date(f.date.end) })
       );
       setFestivalsOnDate(activeFestivals);
     } else {
@@ -69,7 +69,7 @@ export default function CalendarPage() {
                         <p className="font-semibold text-sm text-center">Festivals on {format(date, 'MMMM do')}:</p>
                         <ul className="space-y-2">
                           {festivalsOnThisDay.map(f => (
-                              <li key={f.id}>
+                              <li key={f.slug}>
                                   <Link href={`/festivals/${f.slug}`} className="block text-sm font-medium hover:text-primary p-2 rounded-md hover:bg-accent">
                                     {f.name}
                                   </Link>
@@ -148,7 +148,7 @@ export default function CalendarPage() {
                     className="group block p-4 rounded-lg border hover:bg-accent transition-colors"
                   >
                     <h3 className="font-semibold group-hover:text-primary">{festival.name}</h3>
-                    <p className="text-sm text-muted-foreground line-clamp-2">{festival.description}</p>
+                    <p className="text-sm text-muted-foreground line-clamp-2">{festival.locations && festival.locations.length > 1 ? 'Multiple locations' : festival.locations?.[0]?.name}</p>
                     <div className="flex items-center justify-end text-sm font-medium text-primary mt-2">
                       View Details
                       <ArrowRight className="h-4 w-4 ml-1 transition-transform group-hover:translate-x-1" />
