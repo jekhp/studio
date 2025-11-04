@@ -4,7 +4,7 @@
 import * as React from 'react';
 import { Calendar } from '@/components/ui/calendar';
 import { festivals, type Festival } from '@/lib/festivals';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent } from '@/components/ui/card';
 import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowRight, PartyPopper, Calendar as CalendarIcon, Info } from 'lucide-react';
@@ -44,10 +44,10 @@ export default function CalendarPage() {
     setDate(new Date());
   }, []);
 
-  const DayWithFestival = ({ date, displayMonth }: { date: Date, displayMonth: Date }) => {
-    const isOutsideMonth = date.getMonth() !== displayMonth.getMonth();
-    const isFestivalDay = festivalDays.has(date.toDateString());
-    const isSelected = date && isSameDay(date, date ?? new Date());
+  const DayWithFestival = ({ date: dayDate, displayMonth }: { date: Date, displayMonth: Date }) => {
+    const isOutsideMonth = dayDate.getMonth() !== displayMonth.getMonth();
+    const isFestivalDay = festivalDays.has(dayDate.toDateString());
+    const isSelected = date && isSameDay(dayDate, date);
 
     return (
       <span 
@@ -59,7 +59,7 @@ export default function CalendarPage() {
           hover:scale-105 hover:shadow-md`
         }
       >
-        <span>{format(date, 'd')}</span>
+        <span>{format(dayDate, 'd')}</span>
         {isFestivalDay && !isOutsideMonth && (
           <PartyPopper className="absolute top-1 right-1 h-3 w-3 text-white/80" />
         )}
