@@ -158,7 +158,7 @@ const festivalsByProvince: Record<string, Omit<Festival, 'province'>[]> = {
       ],
       interest: 1.3,
       isFree: true,
-      categories: ['religioso', 'danza', 'tradicional', 'gastronómico'],
+      categories: ['religioso', 'danza', 'tradicional', 'gastronomico'],
     },
   ],
   Urubamba: [
@@ -184,14 +184,14 @@ const festivalsByProvince: Record<string, Omit<Festival, 'province'>[]> = {
           ],
         },
       ],
-      image: 'ollantaytambo-festival',
+      image: 'linderaje-chinchero',
       rating: 4.6,
       reviews: [
         { id: 1, user: 'HistoryLover', rating: 5, comment: 'Seeing the procession against the backdrop of the Inca ruins is unforgettable.' },
       ],
       interest: 0.9,
       isFree: true,
-      categories: ['religioso', 'tradicional', 'danza'],
+      categories: ['tradicional', 'danza'],
     },
 
     {

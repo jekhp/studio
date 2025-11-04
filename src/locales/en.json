@@ -1,3 +1,4 @@
+
 {
     "ui": {
         "nav": {
@@ -52,10 +53,10 @@
             "vibe": {
                 "question": "What kind of vibe are you looking for?",
                 "options": {
-                    "spiritual": { "label": "Spiritual", "description": "Connection, tradition, and pilgrimage." },
-                    "party": { "label": "Party", "description": "Music, dancing, and vibrant celebrations." },
+                    "espiritual": { "label": "Spiritual", "description": "Connection, tradition, and pilgrimage." },
+                    "fiesta": { "label": "Party", "description": "Music, dancing, and vibrant celebrations." },
                     "cultural": { "label": "Cultural", "description": "History, art, and unique performances." },
-                    "adventure": { "label": "Adventure", "description": "Exploration, nature, and challenges." }
+                    "aventura": { "label": "Adventure", "description": "Exploration, nature, and challenges." }
                 }
             },
             "season": {
@@ -144,6 +145,97 @@
                 "event_3_desc": "Main ceremony at the esplanade of Sacsayhuamán."
             }
         },
+        "corpus-christi": {
+            "description": "A massive religious procession where 15 saints and virgins parade through Cusco.",
+            "longDescription": "Corpus Christi in Cusco is a vibrant and unique syncretic festival, blending Catholic faith with ancient Andean traditions. Fifteen statues of saints and virgins from different parishes are carried in a grand procession to the Cusco Cathedral, where they 'visit' the body of Christ for eight days. The festival is famous for its elaborate decorations, music, and the traditional dish called Chiriuchu.",
+            "history": "Introduced by the Spanish in the 16th century, the festival was used to replace the Inca practice of parading ancestral mummies. The Andean people adapted the Catholic tradition, assigning their own sacred meanings to the saints, thus creating a powerful symbol of cultural resistance and fusion.",
+            "traditions": {
+                "tradition_1": "The entry of the 15 saints into the Plaza de Armas.",
+                "tradition_2": "The consumption of 'Chiriuchu', a cold dish with various meats and ingredients.",
+                "tradition_3": "Musical bands accompanying each saint.",
+                "tradition_4": "The 'Octave of Corpus', where the saints return to their parishes a week later."
+            },
+            "schedule": {
+                "day_1": "Main Day (May 30)",
+                "event_1_time": "11:00 AM",
+                "event_1_desc": "Main procession of all saints and virgins around the Plaza de Armas.",
+                "event_2_time": "All Day",
+                "event_2_desc": "Gastronomic fairs in Plaza San Francisco to try Chiriuchu.",
+                "day_2": "Octave of Corpus (June 6)",
+                "event_1_time": "Afternoon",
+                "event_1_desc": "Second procession as the saints return to their home parishes."
+            }
+        },
+        "feria-de-huancaro": {
+            "description": "Cusco's largest regional fair, with agricultural products, food, and concerts.",
+            "longDescription": "The Huancaro Fair is the most important commercial and cultural event in Cusco during its jubilee month. For a whole month, it brings together producers, artisans, and entrepreneurs from across the region. Visitors can enjoy agricultural exhibitions, livestock contests, gastronomic fairs, craft sales, and massive musical concerts with national artists.",
+            "history": "What began as a local agricultural market has grown over the decades to become the grand fair that marks the celebrations of Cusco. It is a showcase of the region's economic and cultural vitality, connecting the countryside with the city.",
+            "traditions": {
+                "tradition_1": "Exhibition and sale of agricultural products from all provinces.",
+                "tradition_2": "Contests of Andean camelids and cattle.",
+                "tradition_3": "Tasting of typical dishes in the gastronomic area.",
+                "tradition_4": "Live music concerts every weekend."
+            },
+            "schedule": {
+                "day_1": "Throughout June",
+                "event_1_time": "10:00 AM - 10:00 PM",
+                "event_1_desc": "The fairgrounds are open daily with various activities, exhibitions, and sales. Concerts are usually on weekends."
+            }
+        },
+        "san-sebastian-patron-feast": {
+            "description": "A traditional patronal feast with dances, processions, and a festive atmosphere.",
+            "longDescription": "The Patronal Feast of San Sebastián is one of the most important traditional celebrations in the Cusco Valley. For several days, the district of San Sebastián is filled with color and music, with dozens of dance groups performing in honor of the patron saint. The celebration combines religious devotion with a large popular festival.",
+            "history": "The devotion to San Sebastián, a Roman martyr, was established during the colonial period. The festival is a clear example of the syncretism between Catholic religion and local customs, where dance becomes a form of prayer and tribute.",
+            "traditions": {
+                "tradition_1": "Procession of the patron saint through the main streets.",
+                "tradition_2": "Parade and contest of folkloric dance groups.",
+                "tradition_3": "Tasting of typical dishes of the celebration.",
+                "tradition_4": "Fireworks and popular festivals."
+            },
+            "schedule": {
+                "day_1": "January 20 (Central Day)",
+                "event_1_time": "Morning",
+                "event_1_desc": "Central Mass in honor of San Sebastián.",
+                "event_2_time": "Afternoon",
+                "event_2_desc": "Main procession and parade of dance groups."
+            }
+        },
+        "linderaje-chinchero": {
+            "description": "A ritual fight and dance to define community boundaries in Chinchero.",
+            "longDescription": "Linderaje, which comes from 'lindero' (boundary), is a ritual tradition where communities symbolically reaffirm their territorial limits. In Chinchero, this event is accompanied by music, dance, and a simulated battle, representing the historical tensions and agreements between neighboring communities. It is a vibrant display of local identity and organization.",
+            "history": "This practice has pre-Hispanic roots and was a way to ritually resolve territorial conflicts. Although today it is largely symbolic, it retains a deep cultural significance for the participating communities, strengthening their bonds and collective memory.",
+            "traditions": {
+                "tradition_1": "Procession to the 'apachetas' or sacred boundary markers.",
+                "tradition_2": "Ritual offerings to the Apus (mountain spirits).",
+                "tradition_3": "Symbolic confrontation between community representatives.",
+                "tradition_4": "Celebration with music and dance after the ritual."
+            },
+            "schedule": {
+                "day_1": "Main Day",
+                "event_1_time": "Morning",
+                "event_1_desc": "Communities gather and begin the procession to the boundaries.",
+                "event_2_time": "Afternoon",
+                "event_2_desc": "Ritual of Linderaje and subsequent celebration."
+            }
+        },
+        "senor-de-choquekillka": {
+            "description": "The most important religious festival in Ollantaytambo, full of dance and color.",
+            "longDescription": "The festival of the Lord of Choquekillka is the patronal feast of Ollantaytambo. During Pentecost week, the town comes alive with processions, music, and more than 30 folkloric dance groups. The image of the Lord of Choquekillka is carried through the ancient Inca streets, creating a spectacular contrast between colonial devotion and pre-Hispanic architecture.",
+            "history": "The origin of the veneration is linked to a cross found in a cave, which became an object of pilgrimage. The festival grew in importance, integrating many local traditions and becoming the most significant cultural and religious event in the Sacred Valley town.",
+            "traditions": {
+                "tradition_1": "Procession of the image of the Lord of Choquekillka.",
+                "tradition_2": "Parades of numerous dance groups, such as the 'Ccapac Qolla', 'Ccapac Chunchu', and 'Waka Waka'.",
+                "tradition_3": "Traditional bullfights in a temporary arena.",
+                "tradition_4": "Gastronomic fairs with typical dishes."
+            },
+            "schedule": {
+                "day_1": "Main Day (Pentecost Sunday)",
+                "event_1_time": "Morning",
+                "event_1_desc": "Main mass and start of the dance parades.",
+                "event_2_time": "Afternoon",
+                "event_2_desc": "Central procession of the Lord of Choquekillka."
+            }
+        },
         "qoyllur-riti": {
             "description": "A spiritual pilgrimage to the Sinakara Valley, blending Catholic and Andean beliefs.",
             "longDescription": "Qoyllur Rit'i, or the \"Snow Star Festival,\" is a centuries-old religious pilgrimage that takes place in the remote Sinakara Valley at the foot of Mount Ausangate. Tens of thousands of pilgrims from surrounding villages travel for days, bringing large crosses to the sanctuary. The festival is a unique syncretism of Catholic and Andean beliefs, celebrating the stars, the mountain spirits (Apus), and the Lord of Qoyllur Rit'i.",
@@ -159,6 +251,7 @@
                 "event_1_time": "All Day",
                 "event_1_desc": "Pilgrims arrive at Mahuayani, beginning the 8km walk to the sanctuary.",
                 "day_2": "Day 2",
+                "event_1_time": "All Day",
                 "event_1_desc": "Main day of celebration with continuous music, dancing, and religious services.",
                 "day_3": "Day 3",
                 "event_1_time": "4:00 AM",
@@ -192,6 +285,238 @@
                 "event_1_time": "All Day",
                 "event_1_desc": "The battle between the angels and demons takes place, with demons performing acrobatics on the rooftops."
             }
+        },
+        "fiesta-de-la-virgen-rosario-de-combapata": {
+            "description": "A traditional festival known for its historical battle reenactments.",
+            "longDescription": "The Feast of the Virgin of the Rosary in Combapata is a significant religious and cultural celebration. It is particularly known for its historical reenactments, which recall battles and important events from local history. The festival includes processions, dances, and a large popular fair.",
+            "history": "This festival commemorates a historical event from the time of the struggles for independence, where the inhabitants of Combapata played a crucial role. The devotion to the Virgin of the Rosary is combined with civic pride and historical memory.",
+            "traditions": {
+                "tradition_1": "Historical reenactment of the Battle of Combapata.",
+                "tradition_2": "Procession of the Virgin of the Rosary.",
+                "tradition_3": "Folkloric dance parades.",
+                "tradition_4": "Traditional gastronomic fair."
+            },
+            "schedule": {
+                "day_1": "October 7 (Central Day)",
+                "event_1_time": "Morning",
+                "event_1_desc": "Main mass and civic ceremony.",
+                "event_2_time": "Afternoon",
+                "event_2_desc": "Historical reenactment and dance parade."
+            }
+        },
+        "carnaval-tkapuy": {
+            "description": "The T'ikapallana carnival in Tinta, a celebration of flowers and youth.",
+            "longDescription": "The T'ikapallana Carnival (meaning 'flower gathering' in Quechua) in Tinta is a celebration of youth, fertility, and the flourishing of the fields. Young people dress in colorful traditional costumes and perform ritual dances. It is a vibrant carnival, less known than others but with a deep connection to the agricultural cycle.",
+            "history": "Of pre-Hispanic origin, this carnival celebrates the 'Pukllay' (game) and the first harvest of the year. The flowers are a central element, symbolizing abundance and joy. It is a ritual of courtship and community affirmation.",
+            "traditions": {
+                "tradition_1": "The 'T'ikapallana' ritual, where young people adorn themselves with flowers.",
+                "tradition_2": "Traditional carnival dances in pairs and groups.",
+                "tradition_3": "Ritual games with water and flour.",
+                "tradition_4": "Community meal with products from the first harvest."
+            },
+            "schedule": {
+                "day_1": "Carnival Sunday",
+                "event_1_time": "All Day",
+                "event_1_desc": "Main day of celebration with dances, music, and ritual games in the main square and surrounding areas."
+            }
+        },
+        "semana-turistica-de-anta": {
+            "description": "A week of activities to showcase the tourist and cultural attractions of Anta.",
+            "longDescription": "The Tourist Week of Anta is a modern initiative to promote the cultural, natural, and gastronomic richness of the province. During this week, adventure sports activities, craft fairs, food festivals, and folkloric dance presentations are organized, inviting both locals and visitors to discover the attractions of Anta.",
+            "history": "Created to boost local tourism, this week has become an important date on the provincial calendar, highlighting places like the Killarumiyoq archaeological site and the natural landscapes of the area.",
+            "traditions": {
+                "tradition_1": "Adventure sports competitions (cycling, canoeing).",
+                "tradition_2": "Gastronomic festival with local products.",
+                "tradition_3": "Folkloric dance contests.",
+                "tradition_4": "Guided tours to the main tourist attractions."
+            },
+            "schedule": {
+                "day_1": "Throughout the week",
+                "event_1_time": "Various Times",
+                "event_1_desc": "Activities are scheduled throughout the week. Check the official program for details on each event."
+            }
+        },
+        "festival-del-cafe-quillabamba": {
+            "description": "A festival dedicated to the star product of La Convención: coffee.",
+            "longDescription": "The Quillabamba Coffee Festival celebrates the high-quality coffee produced in the jungle province of La Convención. The event includes coffee tasting contests, barista competitions, cultural presentations, and a large fair where producers offer their best beans. It is a must-see event for coffee lovers.",
+            "history": "This festival was born to promote the coffee industry in the region, which has gained international recognition. It is a platform for local producers and a celebration of the identity of Quillabamba, the 'City of Eternal Summer'.",
+            "traditions": {
+                "tradition_1": "Contest for the best quality coffee.",
+                "tradition_2": "Demonstrations of roasting and coffee preparation methods.",
+                "tradition_3": "Live music shows with tropical bands.",
+                "tradition_4": "Election of the Coffee Queen."
+            },
+            "schedule": {
+                "day_1": "Main Days",
+                "event_1_time": "All Day",
+                "event_1_desc": "Coffee exhibitions, tastings, and competitions.",
+                "event_2_time": "Evening",
+                "event_2_desc": "Musical concerts and cultural presentations."
+            }
+        },
+        "aniversario-de-la-convencion": {
+            "description": "The anniversary celebration of the province of La Convención with a tropical flair.",
+            "longDescription": "The anniversary of the province of La Convención is celebrated with great fanfare in its capital, Quillabamba. Unlike the Andean festivals, this one has a distinctly tropical and modern feel, with large concerts of cumbia and salsa, beauty pageants, and civic parades. It is a week of celebration that reflects the vibrant and festive spirit of the Cusco jungle.",
+            "history": "This civic date commemorates the political creation of the province. Over time, it has become the most important popular festival in the area, attracting visitors from all over the region.",
+            "traditions": {
+                "tradition_1": "Large-scale concerts with national and international artists.",
+                "tradition_2": "Civic-military parade.",
+                "tradition_3": "Motocross and other sports competitions.",
+                "tradition_4": "Beauty pageant to elect 'Miss La Convención'."
+            },
+            "schedule": {
+                "day_1": "Anniversary Week",
+                "event_1_time": "All Day",
+                "event_1_desc": "Civic and cultural activities during the day.",
+                "event_2_time": "Evening",
+                "event_2_desc": "Main concerts and popular festivals."
+            }
+        },
+        "wayllati-carnaval": {
+            "description": "An authentic and traditional Andean carnival in the high areas of Acomayo.",
+            "longDescription": "The Wayllati Carnival in Sangarará is one of the most authentic carnivals in the Cusco region. Here, the 'Pukllay' (game) is celebrated with traditional music, dance, and rituals that thank Pachamama (Mother Earth) for the first fruits of the harvest. It is a non-touristy celebration, deeply rooted in the community's culture.",
+            "history": "This carnival maintains many pre-Hispanic elements of celebrating fertility and the agricultural cycle. It is a time for social cohesion, where communities come together to play, sing, and dance.",
+            "traditions": {
+                "tradition_1": "Ritual games with water and flowers.",
+                "tradition_2": "Traditional 'Huaylias' and carnival songs.",
+                "tradition_3": "Community meals prepared with local products.",
+                "tradition_4": "Dances in traditional costumes, unique to the area."
+            },
+            "schedule": {
+                "day_1": "Carnival Week",
+                "event_1_time": "All Day",
+                "event_1_desc": "The main celebrations take place around Carnival Sunday, with dances and rituals in the community."
+            }
+        },
+        "qeswachaka-bridge-festival": {
+            "description": "The annual reconstruction of the last Inca rope bridge.",
+            "longDescription": "The Q'eswachaka Bridge Festival is an extraordinary example of living Inca heritage. Every year, four communities come together to rebuild this rope bridge using traditional techniques passed down for centuries. The four-day process is a communal ritual that involves ceremonies, work, and celebration, culminating in the crossing of the new bridge.",
+            "history": "This tradition has been maintained for over 500 years, being a vital link for communication between communities. In 2013, the knowledge, techniques, and rituals associated with the reconstruction of the Q'eswachaka bridge were recognized by UNESCO as Intangible Cultural Heritage of Humanity.",
+            "traditions": {
+                "tradition_1": "Offering ceremony to the Apus.",
+                "tradition_2": "Collection and braiding of 'q'oya' (vegetable fiber).",
+                "tradition_3": "Dismantling of the old bridge.",
+                "tradition_4": "Weaving and assembly of the new bridge by specialists.",
+                "tradition_5": "Inaugural crossing with music and dance."
+            },
+            "schedule": {
+                "day_1": "Second Sunday of June",
+                "event_1_time": "All Day",
+                "event_1_desc": "Dismantling of the old ropes and weaving of the new ones.",
+                "event_2_time": "Day 2-3",
+                "event_2_desc": "Assembly and installation of the new bridge.",
+                "event_3_time": "Day 4",
+                "event_3_desc": "Inauguration ceremony and celebratory festival."
+            }
+        },
+        "wata-qallariy": {
+            "description": "The Andean New Year in Chumbivilcas, celebrated with horse racing.",
+            "longDescription": "Wata Qallariy, which means 'start of the year' in Quechua, is the Andean New Year celebration in Chumbivilcas. Unlike the official New Year, this festival is marked by traditions deeply rooted in the local livestock and equestrian culture. The main event is exciting horse races and demonstrations of riding skill.",
+            "history": "This festival marks the beginning of a new agricultural and life cycle according to the Andean cosmovision of the region. The horse, introduced in the colony, became a central element of the identity of Chumbivilcas, and this festival is a clear expression of it.",
+            "traditions": {
+                "tradition_1": "Horse races in different categories.",
+                "tradition_2": "Demonstrations of equestrian skill ('gala').",
+                "tradition_3": "Rituals of offering to the Apus for a good year.",
+                "tradition_4": "Celebration with traditional music and dance."
+            },
+            "schedule": {
+                "day_1": "November 1",
+                "event_1_time": "Morning",
+                "event_1_desc": "Offering rituals and community preparations.",
+                "event_2_time": "Afternoon",
+                "event_2_desc": "Main horse races and skill competitions."
+            }
+        },
+        "takanakuy-chumbivilcas": {
+            "description": "A unique Christmas ritual where conflicts are resolved through public fights.",
+            "longDescription": "Takanakuy is one of the most unique and controversial cultural expressions in Peru. On Christmas Day, in Santo Tomás and other communities in Chumbivilcas, community members resolve personal conflicts accumulated throughout the year through public ritual fights. It is a controlled form of violence that seeks to 'start from scratch' for the new year, followed by dances and celebrations.",
+            "history": "Its origin is uncertain, but it is believed to be a syncretism between pre-Hispanic ritual combat traditions and colonial justice systems. It is a complex social mechanism for conflict resolution in areas where the official state has a limited presence.",
+            "traditions": {
+                "tradition_1": "Dancers in elaborate costumes ('majtas') parade through the streets.",
+                "tradition_2": "The fights take place in a circle of people, supervised by authorities.",
+                "tradition_3": "Fighters must hug before and after the fight.",
+                "tradition_4": "After the fights, the whole community dances and celebrates together."
+            },
+            "schedule": {
+                "day_1": "December 25",
+                "event_1_time": "Morning",
+                "event_1_desc": "Processions and dances of the different characters.",
+                "event_2_time": "Midday",
+                "event_2_desc": "The main fights (Takanakuy) begin.",
+                "event_3_time": "Afternoon",
+                "event_3_desc": "General celebration with music and dancing."
+            }
+        },
+        "carnaval-de-mollomarka": {
+            "description": "A remote and authentic carnival, with deep roots in Andean culture.",
+            "longDescription": "The Mollomarka Carnival in Chumbivilcas is a celebration far from the tourist circuits, which preserves a great cultural purity. The communities gather to celebrate fertility and the harvest with music played on traditional instruments, songs in Quechua, and dances that have been maintained for generations.",
+            "history": "Like other Andean carnivals, its origin lies in the pre-Hispanic 'Pukllay' (game), a festival linked to the agricultural calendar. It is a time of joy and social interaction, where ancient courtship rituals and community ties are reaffirmed.",
+            "traditions": {
+                "tradition_1": "Music played with 'pinkuyllo' flutes and drums.",
+                "tradition_2": "Singing competitions ('takipayanakuy') between men and women.",
+                "tradition_3": "Traditional carnival dances.",
+                "tradition_4": "Ritual games that simulate the capture and adornment of vicuñas."
+            },
+            "schedule": {
+                "day_1": "Carnival Week",
+                "event_1_time": "All Day",
+                "event_1_desc": "The main celebrations take place in the community esplanade, with music and dance throughout the day."
+            }
+        },
+        "k-ana-raymi": {
+            "description": "The festival of K'ana identity in Espinar, celebrating its history and customs.",
+            "longDescription": "K'ana Raymi is the 'Festival of the K'ana Nation', an event that seeks to vindicate and celebrate the cultural identity of the province of Espinar. It includes historical reenactments, folkloric dance parades, craft fairs, and gastronomic tastings, highlighting the pride of the K'ana people, descendants of a pre-Inca culture.",
+            "history": "This festival was created to strengthen the local identity and promote the cultural heritage of Espinar. The main event is the reenactment of the Battle of Toqto, a conflict between the Incas and the K'anas.",
+            "traditions": {
+                "tradition_1": "Reenactment of the Battle of Toqto in the Mauk'allaqta archaeological complex.",
+                "tradition_2": "Parade of folkloric dances from all districts of the province.",
+                "tradition_3": "Exhibition and contest of typical dishes based on native products.",
+                "tradition_4": "Contest of native potato varieties."
+            },
+            "schedule": {
+                "day_1": "Main Day",
+                "event_1_time": "Morning",
+                "event_1_desc": "Civic ceremony and dance parade in Yauri.",
+                "event_2_time": "Afternoon",
+                "event_2_desc": "Main reenactment at Mauk'allaqta."
+            }
+        },
+        "fiesta-de-san-juan-de-paruro": {
+            "description": "A traditional patronal feast that includes religious processions and bullfights.",
+            "longDescription": "The Feast of Saint John the Baptist in Paruro is a classic patronal celebration of the Cusco highlands. Religious devotion is mixed with popular celebration, where the main attractions are the processions and, especially, the bullfights, which attract fans from all over the region.",
+            "history": "The devotion to Saint John the Baptist was established during the colonial period. The festival incorporates elements of Spanish culture, such as bullfighting, which were adapted and acquired their own characteristics in the Andes.",
+            "traditions": {
+                "tradition_1": "Procession of the image of Saint John the Baptist.",
+                "tradition_2": "Traditional bullfights with local and regional bullfighters.",
+                "tradition_3": "Folkloric dance presentations.",
+                "tradition_4": "Popular festivals with musical bands."
+            },
+            "schedule": {
+                "day_1": "June 24 (Central Day)",
+                "event_1_time": "Morning",
+                "event_1_desc": "Main Mass and procession.",
+                "event_2_time": "Afternoon",
+                "event_2_desc": "First day of bullfights."
+            }
+        },
+        "senor-de-huanca": {
+            "description": "One of the most important Catholic pilgrimages in southern Peru.",
+            "longDescription": "The Sanctuary of the Lord of Huanca attracts thousands of faithful pilgrims each year, especially in September. Believers come from all over Peru and neighboring countries to ask for miracles and thank the favors received from the image of a martyred Christ painted on a rock. It is an impressive manifestation of popular faith.",
+            "history": "According to tradition, in 1675, the image of Christ appeared to a native man fleeing his master. The place became a site of pilgrimage, and a sanctuary was built there. The veneration grew and today is one of the most important in the country.",
+            "traditions": {
+                "tradition_1": "Night pilgrimages from Cusco and other points to the sanctuary.",
+                "tradition_2": "Religious services and masses throughout the day.",
+                "tradition_3": "Blessing of vehicles and objects.",
+                "tradition_4": "Purchase of 'alasitas' (miniatures) representing the wishes of the faithful."
+            },
+            "schedule": {
+                "day_1": "September 14 (Central Day)",
+                "event_1_time": "All Day",
+                "event_1_desc": "Arrival of pilgrims and continuous masses.",
+                "event_2_time": "Night",
+                "event_2_desc": "Candlelight vigil."
+            }
         }
     }
 }
+
