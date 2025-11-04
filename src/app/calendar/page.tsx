@@ -8,7 +8,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowRight, PartyPopper, Calendar as CalendarIcon, Info } from 'lucide-react';
-import { format, isWithinInterval, isSameDay } from 'date-fns';
+import { format, isWithinInterval, isSameDay, startOfDay, endOfDay } from 'date-fns';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/context/language-context';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
@@ -19,10 +19,11 @@ export default function CalendarPage() {
   
   const festivalsOnDate = React.useMemo(() => {
     if (!date) return [];
-    return festivals.filter(f =>
-      isSameDay(new Date(f.date.start), date) || 
-      isSameDay(new Date(f.date.end), date) ||
-      isWithinInterval(date, { start: new Date(f.date.start), end: new Date(f.date.end) })
+    return festivals.filter(f => 
+      isWithinInterval(date, { 
+        start: startOfDay(new Date(f.date.start)), 
+        end: endOfDay(new Date(f.date.end)) 
+      })
     );
   }, [date]);
 
@@ -32,7 +33,7 @@ export default function CalendarPage() {
       let currentDate = new Date(f.date.start);
       const endDate = new Date(f.date.end);
       while (currentDate <= endDate) {
-        dates.add(currentDate.toDateString());
+        dates.add(startOfDay(currentDate).toDateString());
         currentDate.setDate(currentDate.getDate() + 1);
       }
     });
@@ -46,7 +47,7 @@ export default function CalendarPage() {
 
   const DayWithFestival = ({ date: dayDate, displayMonth }: { date: Date, displayMonth: Date }) => {
     const isOutsideMonth = dayDate.getMonth() !== displayMonth.getMonth();
-    const isFestivalDay = festivalDays.has(dayDate.toDateString());
+    const isFestivalDay = festivalDays.has(startOfDay(dayDate).toDateString());
     const isSelected = date && isSameDay(dayDate, date);
 
     return (
@@ -89,7 +90,7 @@ export default function CalendarPage() {
                 nav_button: "h-10 w-10 bg-primary/20 text-primary rounded-full hover:bg-primary/30",
                 head_cell: "text-muted-foreground rounded-md w-full font-bold text-sm pb-2 border-b-2 border-primary/50",
                 row: "flex w-full mt-4 gap-1",
-                cell: "w-14 h-14 text-center text-sm flex items-center justify-center",
+                cell: "w-14 h-14 text-center text-sm flex items-center justify-center p-0",
                 day: "h-12 w-12 p-0"
               }}
               components={{
@@ -131,7 +132,7 @@ export default function CalendarPage() {
                           )}
                           <CardContent className="p-4 flex flex-col justify-between">
                             <div>
-                              <h3 className="font-headline text-lg font-semibold text-foreground group-hover:text-destructive transition-colors">
+                              <h3 className="font-headline text-lg font-semibold text-foreground group-hover:text-primary transition-colors">
                                 {festival.name}
                               </h3>
                               <p className="text-sm text-muted-foreground mt-1 line-clamp-2">{description}</p>
