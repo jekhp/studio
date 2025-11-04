@@ -6,9 +6,7 @@ import { festivals } from '@/lib/festivals';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { format, endOfDay } from 'date-fns';
 import { useLanguage } from '@/context/language-context';
-import { Star } from 'lucide-react';
 import { UpcomingFestivalCard } from '@/components/UpcomingFestivalCard';
-import Link from 'next/link';
 
 const LeafletMap = dynamic(() => import('@/components/LeafletMap'), { ssr: false });
 
