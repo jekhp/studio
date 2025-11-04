@@ -25,7 +25,7 @@ export default function CalendarPage() {
     return festivals.filter(f => {
       return isWithinInterval(startOfDay(date), {
         start: startOfDay(new Date(f.date.start)),
-        end: endOfDay(new Date(f.date.end)),
+        end: startOfDay(new Date(f.date.end)),
       });
     });
   }, [date]);
@@ -33,10 +33,10 @@ export default function CalendarPage() {
   const festivalDays = React.useMemo(() => {
     const dates = new Set<string>();
     festivals.forEach(f => {
-      let currentDate = startOfDay(new Date(f.date.start));
-      const endDate = startOfDay(new Date(f.date.end));
-      while (currentDate <= endDate) {
-        dates.add(currentDate.toDateString());
+      let currentDate = new Date(f.date.start);
+      const endDate = new Date(f.date.end);
+      while (startOfDay(currentDate) <= startOfDay(endDate)) {
+        dates.add(startOfDay(currentDate).toDateString());
         currentDate.setDate(currentDate.getDate() + 1);
       }
     });
@@ -50,11 +50,11 @@ export default function CalendarPage() {
   }, [date]);
 
   function DayWithFestival(props: DayProps) {
-    const { date: dayDate } = props;
-    const isFestivalDay = festivalDays.has(startOfDay(dayDate).toDateString());
+    const isFestivalDay = festivalDays.has(startOfDay(props.date).toDateString());
     
     return (
       <div className="relative">
+        {/* We use DayPicker.Day provided by the library for default rendering and event handling */}
         <DayPicker.Day {...props} />
         {isFestivalDay && !props.selected && (
           <PartyPopper className="absolute top-1 right-1 h-3 w-3 text-primary pointer-events-none" />
@@ -99,12 +99,6 @@ export default function CalendarPage() {
                 day_range_middle: "aria-selected:bg-accent aria-selected:text-accent-foreground",
                 day_range_end: "aria-selected:bg-accent aria-selected:text-accent-foreground",
                 day_range_start: "aria-selected:bg-accent aria-selected:text-accent-foreground",
-              }}
-              modifiers={{
-                festival: (day) => festivalDays.has(startOfDay(day).toDateString()),
-              }}
-              modifiersClassNames={{
-                festival: 'bg-primary/80 text-primary-foreground',
               }}
               components={{
                 Day: DayWithFestival,
