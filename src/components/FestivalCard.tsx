@@ -24,8 +24,9 @@ export function FestivalCard({ festival }: FestivalCardProps) {
   const description = t(`festivals.${festival.slug}.description`);
 
   const formatCategoryKey = (category: string) => {
-    // Converts "ritual combat" to "ritualCombat"
-    return category.replace(/ \w/g, m => m.toUpperCase().trim());
+    // Converts "ritual combat" to "ritual-combat"
+    // and "taurino" to "taurino"
+    return category.replace(/ /g, '-').replace(/ñ/g, 'n');
   };
   
   return (

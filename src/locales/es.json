@@ -37,11 +37,11 @@
             "july": "Julio", "august": "Agosto", "september": "Septiembre", "october": "Octubre", "november": "Noviembre", "december": "Diciembre"
         },
         "categories": {
-            "religious": "Religioso", "gastronomic": "Gastronómico", "traditional": "Tradicional", "show": "Espectáculo",
-            "fair": "Feria", "concerts": "Conciertos", "handicrafts": "Artesanía", "andean": "Andino",
-            "historic": "Histórico", "dance": "Danza", "pilgrimage": "Peregrinación", "adventure": "Aventura",
-            "races": "Carreras", "ritualCombat": "Combate Ritual", "agricultural": "Agrícola", "bullfighting": "Taurino",
-            "carnival": "Carnaval", "modern": "Moderno"
+            "religioso": "Religioso", "gastronomico": "Gastronómico", "tradicional": "Tradicional", "espectaculo": "Espectáculo",
+            "feria": "Feria", "conciertos": "Conciertos", "artesania": "Artesanía", "andino": "Andino",
+            "historico": "Histórico", "danza": "Danza", "peregrinacion": "Peregrinación", "aventura": "Aventura",
+            "carreras": "Carreras", "combate-ritual": "Combate Ritual", "agricola": "Agrícola", "taurino": "Taurino",
+            "carnaval": "Carnaval", "moderno": "Moderno"
         },
         "recommendations": {
             "title": "Quiz de Festivales",
@@ -159,13 +159,12 @@
                 "event_1_time": "Todo el día",
                 "event_1_desc": "Los peregrinos llegan a Mahuayani, comenzando la caminata de 8 km hasta el santuario.",
                 "day_2": "Día 2",
-                "day_2_event_1_time": "Todo el día",
-                "day_2_event_1_desc": "Día principal de celebración con música, bailes y servicios religiosos continuos.",
+                "event_1_desc": "Día principal de celebración con música, bailes y servicios religiosos continuos.",
                 "day_3": "Día 3",
-                "day_3_event_1_time": "4:00 AM",
-                "day_3_event_1_desc": "Concierto de \"Serenata\" para el Cristo de Qoyllur Rit'i.",
-                "day_3_event_2_time": "12:00 PM",
-                "day_3_event_2_desc": "Procesiones y danzas de despedida mientras los peregrinos comienzan su viaje a casa."
+                "event_1_time": "4:00 AM",
+                "event_1_desc": "Concierto de \"Serenata\" para el Cristo de Qoyllur Rit'i.",
+                "event_2_time": "12:00 PM",
+                "event_2_desc": "Procesiones y danzas de despedida mientras los peregrinos comienzan su viaje a casa."
             }
         },
         "paucartambo-virgen-del-carmen": {
@@ -185,13 +184,13 @@
                 "event_2_time": "Tarde",
                 "event_2_desc": "Primera aparición de las comparsas de danza en la plaza principal.",
                 "day_2": "16 de Julio (Día Principal)",
-                "day_2_event_1_time": "10:00 AM",
-                "day_2_event_1_desc": "Misa principal en honor a la Virgen del Carmen.",
-                "day_2_event_2_time": "3:00 PM",
-                "day_2_event_2_desc": "Gran procesión por las calles del pueblo con la estatua de la Virgen.",
+                "event_1_time": "10:00 AM",
+                "event_1_desc": "Misa principal en honor a la Virgen del Carmen.",
+                "event_2_time": "3:00 PM",
+                "event_2_desc": "Gran procesión por las calles del pueblo con la estatua de la Virgen.",
                 "day_3": "17 de Julio",
-                "day_3_event_1_time": "Todo el día",
-                "day_3_event_1_desc": "La batalla entre los ángeles y los demonios tiene lugar, con los demonios realizando acrobacias en los tejados."
+                "event_1_time": "Todo el día",
+                "event_1_desc": "La batalla entre los ángeles y los demonios tiene lugar, con los demonios realizando acrobacias en los tejados."
             }
         }
     }

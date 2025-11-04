@@ -51,6 +51,10 @@ export default function FestivalsPage() {
     setSelectedCategory('all');
     setVisibleCount(9);
   };
+  
+  const formatCategoryKey = (category: string) => {
+    return category.replace(/ /g, '-').replace(/ñ/g, 'n');
+  };
 
   return (
     <div className="container mx-auto px-4 py-16">
@@ -94,7 +98,7 @@ export default function FestivalsPage() {
                   <SelectContent>
                     <SelectItem value="all">{t('ui.festivalsPage.allCategories')}</SelectItem>
                     {allCategories.map(c => (
-                        <SelectItem key={c} value={c}>{t(`ui.categories.${c.replace(' ', 'Ritual')}`)}</SelectItem>
+                        <SelectItem key={c} value={c}>{t(`ui.categories.${formatCategoryKey(c)}`)}</SelectItem>
                     ))}
                   </SelectContent>
                 </Select>
