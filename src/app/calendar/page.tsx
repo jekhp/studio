@@ -19,6 +19,8 @@ export default function CalendarPage() {
   const festivalsOnDate = React.useMemo(() => {
     if (!date) return [];
     return festivals.filter(f =>
+      isSameDay(new Date(f.date.start), date) || 
+      isSameDay(new Date(f.date.end), date) ||
       isWithinInterval(date, { start: new Date(f.date.start), end: new Date(f.date.end) })
     );
   }, [date]);
@@ -51,7 +53,7 @@ export default function CalendarPage() {
         className={
           `h-12 w-full flex items-center justify-center rounded-lg transition-all duration-200 cursor-pointer relative
           ${isOutsideMonth ? 'text-muted-foreground/30 bg-muted/20' : 'bg-card/80'}
-          ${isFestivalDay && !isOutsideMonth ? 'font-bold text-destructive-foreground bg-gradient-to-br from-primary to-destructive shadow-md hover:shadow-lg' : ''}
+          ${isFestivalDay && !isOutsideMonth ? 'font-bold text-primary-foreground bg-primary shadow-md hover:shadow-lg' : ''}
           ${isSelected ? 'ring-2 ring-destructive ring-offset-2 ring-offset-background' : ''}
           hover:scale-105 hover:shadow-md`
         }
@@ -67,7 +69,7 @@ export default function CalendarPage() {
   return (
     <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto bg-background/80 backdrop-blur-sm rounded-2xl shadow-2xl overflow-hidden">
-        <div className="bg-gradient-to-r from-destructive to-primary text-primary-foreground p-8 text-center">
+        <div className="bg-gradient-to-r from-primary/80 via-primary to-destructive/80 text-primary-foreground p-8 text-center">
           <h1 className="text-4xl md:text-5xl font-headline">{t('ui.calendar.title', {defaultValue: "Festival Calendar"})}</h1>
           <p className="mt-4 text-lg max-w-3xl mx-auto opacity-90">
             {t('ui.calendar.subtitle')}
@@ -75,7 +77,7 @@ export default function CalendarPage() {
         </div>
 
         <div className="flex flex-col lg:flex-row">
-          <div className="lg:w-1/2 p-6 border-b lg:border-b-0 lg:border-r border-border flex justify-center">
+          <div className="lg:w-1/2 p-6 border-b lg:border-b-0 lg:border-r border-border flex justify-center items-center">
             <Calendar
               mode="single"
               selected={date}
