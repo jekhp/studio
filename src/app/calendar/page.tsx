@@ -8,7 +8,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowRight, PartyPopper, Calendar as CalendarIcon, Info } from 'lucide-react';
-import { format, isSameDay, startOfDay } from 'date-fns';
+import { format, isSameDay, startOfDay, isWithinInterval } from 'date-fns';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/context/language-context';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
@@ -18,49 +18,25 @@ export default function CalendarPage() {
   const [date, setDate] = React.useState<Date | undefined>(new Date());
   
   const festivalsOnDate = React.useMemo(() => {
-    console.log("--------- INICIO DE FILTRADO ---------");
-    if (!date) {
-      console.log("[DEBUG] No hay fecha seleccionada. Terminando.");
-      console.log("--------- FIN DE FILTRADO ---------");
-      return [];
-    }
+    if (!date) return [];
     
-    const selectedDay = startOfDay(date);
-    console.log(`[DEBUG] Fecha seleccionada: ${selectedDay.toISOString()}`);
-
-    const foundFestivals = festivals.filter(f => {
-      const festivalStart = startOfDay(new Date(f.date.start));
-      const festivalEnd = startOfDay(new Date(f.date.end));
-      
-      let match = false;
-      let currentDate = festivalStart;
-      while (currentDate <= festivalEnd) {
-        if (isSameDay(selectedDay, currentDate)) {
-          match = true;
-          break;
-        }
-        currentDate = new Date(currentDate.setDate(currentDate.getDate() + 1));
-        // Reset date to avoid infinite loop on multi-day festivals
-        currentDate = startOfDay(currentDate);
-      }
-      
-      console.log(`[DEBUG] Evaluando: ${f.name}. Resultado: ${match}`);
-      return match;
+    return festivals.filter(f => {
+      // Comprueba si la fecha seleccionada está dentro del intervalo del festival.
+      // startOfDay normaliza todo a la medianoche, eliminando problemas de zona horaria.
+      return isWithinInterval(startOfDay(date), {
+        start: startOfDay(new Date(f.date.start)),
+        end: startOfDay(new Date(f.date.end)),
+      });
     });
-
-    console.log(`[DEBUG] Festivales encontrados:`, foundFestivals.map(f => f.name));
-    console.log("--------- FIN DE FILTRADO ---------");
-    
-    return foundFestivals;
   }, [date]);
 
   const festivalDays = React.useMemo(() => {
     const dates = new Set<string>();
     festivals.forEach(f => {
-      let currentDate = new Date(f.date.start);
-      const endDate = new Date(f.date.end);
-      while (startOfDay(currentDate) <= startOfDay(endDate)) {
-        dates.add(startOfDay(currentDate).toDateString());
+      let currentDate = startOfDay(new Date(f.date.start));
+      const endDate = startOfDay(new Date(f.date.end));
+      while (currentDate <= endDate) {
+        dates.add(currentDate.toDateString());
         currentDate.setDate(currentDate.getDate() + 1);
       }
     });
@@ -97,7 +73,7 @@ export default function CalendarPage() {
 
   return (
     <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-6xl mx-auto rounded-2xl shadow-2xl overflow-hidden">
+      <div className="max-w-6xl mx-auto rounded-2xl shadow-2xl overflow-hidden bg-card">
         <div className="p-8 text-center">
           <h1 className="text-4xl md:text-5xl font-headline">{t('ui.calendar.title', {defaultValue: "Festival Calendar"})}</h1>
           <p className="mt-4 text-lg max-w-3xl mx-auto text-muted-foreground">
@@ -117,7 +93,7 @@ export default function CalendarPage() {
                 nav_button: "h-10 w-10 bg-primary/20 text-primary rounded-full hover:bg-primary/30",
                 head_cell: "text-muted-foreground rounded-md w-full font-bold text-sm pb-2 border-b-2 border-primary/50",
                 row: "flex w-full mt-4 gap-1",
-                cell: "w-14 h-14 text-center text-sm flex items-center justify-center p-0",
+                cell: "w-14 h-14 text-center text-sm p-0 flex items-center justify-center",
                 day: "h-12 w-12 p-0"
               }}
               components={{
