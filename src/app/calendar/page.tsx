@@ -18,6 +18,13 @@ export default function CalendarPage() {
   const [date, setDate] = React.useState<Date | undefined>(new Date());
   
   const festivalsOnDate = React.useMemo(() => {
+    // --- DEBUGGING STEP ---
+    // Forcing an event to display to locate the error.
+    // This will always show Inti Raymi regardless of the selected date.
+    return festivals.filter(f => f.id === 'inti-raymi');
+    
+    // Original logic (commented out for test):
+    /*
     if (!date) return [];
     const selectedDayStart = startOfDay(date);
     return festivals.filter(f => {
@@ -25,6 +32,7 @@ export default function CalendarPage() {
         const festivalEnd = endOfDay(new Date(f.date.end));
         return isWithinInterval(selectedDayStart, { start: festivalStart, end: festivalEnd });
     });
+    */
   }, [date]);
 
   const festivalDays = React.useMemo(() => {
