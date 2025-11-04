@@ -1,3 +1,4 @@
+
 "use client";
 
 import * as React from 'react';
@@ -69,9 +70,9 @@ export default function CalendarPage() {
   return (
     <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto bg-background/80 backdrop-blur-sm rounded-2xl shadow-2xl overflow-hidden">
-        <div className="bg-gradient-to-r from-primary/80 via-primary to-destructive/80 text-primary-foreground p-8 text-center">
+        <div className="p-8 text-center">
           <h1 className="text-4xl md:text-5xl font-headline">{t('ui.calendar.title', {defaultValue: "Festival Calendar"})}</h1>
-          <p className="mt-4 text-lg max-w-3xl mx-auto opacity-90">
+          <p className="mt-4 text-lg max-w-3xl mx-auto text-muted-foreground">
             {t('ui.calendar.subtitle')}
           </p>
         </div>
