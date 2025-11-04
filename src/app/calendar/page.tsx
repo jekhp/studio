@@ -19,12 +19,12 @@ export default function CalendarPage() {
   
   const festivalsOnDate = React.useMemo(() => {
     if (!date) return [];
-    return festivals.filter(f => 
-      isWithinInterval(date, { 
-        start: startOfDay(new Date(f.date.start)), 
-        end: endOfDay(new Date(f.date.end)) 
-      })
-    );
+    const selectedDayStart = startOfDay(date);
+    return festivals.filter(f => {
+        const festivalStart = startOfDay(new Date(f.date.start));
+        const festivalEnd = endOfDay(new Date(f.date.end));
+        return isWithinInterval(selectedDayStart, { start: festivalStart, end: festivalEnd });
+    });
   }, [date]);
 
   const festivalDays = React.useMemo(() => {
@@ -32,7 +32,7 @@ export default function CalendarPage() {
     festivals.forEach(f => {
       let currentDate = new Date(f.date.start);
       const endDate = new Date(f.date.end);
-      while (currentDate <= endDate) {
+      while (startOfDay(currentDate) <= startOfDay(endDate)) {
         dates.add(startOfDay(currentDate).toDateString());
         currentDate.setDate(currentDate.getDate() + 1);
       }
