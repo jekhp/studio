@@ -9,8 +9,10 @@ import { ArrowRight, PartyPopper } from 'lucide-react';
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
 import { format, isWithinInterval } from 'date-fns';
 import { Button } from '@/components/ui/button';
+import { useLanguage } from '@/context/language-context';
 
 export default function CalendarPage() {
+  const { t } = useLanguage();
   const [date, setDate] = React.useState<Date | undefined>(new Date());
   const [festivalsOnDate, setFestivalsOnDate] = React.useState<Festival[]>([]);
 
@@ -141,21 +143,23 @@ export default function CalendarPage() {
           <CardContent>
             {festivalsOnDate.length > 0 ? (
               <div className="space-y-4">
-                {festivalsOnDate.map(festival => (
-                  <Link
-                    key={festival.id}
-                    href={`/festivals/${festival.slug}`}
-                    className="group block p-4 rounded-lg border hover:bg-accent transition-colors"
-                  >
-                    <h3 className="font-semibold group-hover:text-primary">{festival.name}</h3>
-                    <p className="text-sm text-muted-foreground line-clamp-2">{festival.locations && festival.locations.length > 1 ? 'Multiple locations' : festival.locations?.[0]?.name}</p>
-                    <div className="flex items-center justify-end text-sm font-medium text-primary mt-2">
-                      View Details
-                      <ArrowRight className="h-4 w-4 ml-1 transition-transform group-hover:translate-x-1" />
-                    </div>
-
-                  </Link>
-                ))}
+                {festivalsOnDate.map(festival => {
+                   const locationText = t(`festivals:${festival.slug}:location_detail`, { defaultValue: festival.location });
+                  return (
+                    <Link
+                      key={festival.id}
+                      href={`/festivals/${festival.slug}`}
+                      className="group block p-4 rounded-lg border hover:bg-accent transition-colors"
+                    >
+                      <h3 className="font-semibold group-hover:text-primary">{festival.name}</h3>
+                      <p className="text-sm text-muted-foreground line-clamp-2">{locationText}</p>
+                      <div className="flex items-center justify-end text-sm font-medium text-primary mt-2">
+                        View Details
+                        <ArrowRight className="h-4 w-4 ml-1 transition-transform group-hover:translate-x-1" />
+                      </div>
+                    </Link>
+                  )
+                })}
               </div>
             ) : (
               <p className="text-muted-foreground">No festivals scheduled on this day.</p>

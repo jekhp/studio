@@ -69,17 +69,6 @@ function ReviewForm() {
     )
 }
 
-function getFestivalLocation(festival: Festival): string {
-  if (festival.locations && festival.locations.length > 1) {
-    return 'Various locations in Cusco';
-  }
-  if (festival.locations && festival.locations.length === 1) {
-    return festival.locations[0].name;
-  }
-  return festival.location || 'Cusco';
-}
-
-
 export default function FestivalDetailPage({ params }: { params: { slug: string } }) {
   const festival = festivals.find((f) => f.slug === params.slug);
 
@@ -93,13 +82,10 @@ export default function FestivalDetailPage({ params }: { params: { slug: string 
   const scheduleKeys = festival.scheduleKeys || [];
   const traditionKeys = festival.traditionKeys || [];
 
-  const mapLocations = festival.locations?.map(loc => ({
-    coords: loc.coords,
-    popup: `<div class="w-48"><h3 class="font-bold text-base">${festival.name}</h3><p class="text-xs">${loc.name}</p></div>`
-  })) || (festival.coords ? [{
+  const mapLocations = [{
     coords: festival.coords,
     popup: `<div class="w-48"><h3 class="font-bold text-base">${festival.name}</h3><p class="text-xs">${festival.location}</p></div>`
-  }] : []);
+  }];
 
   return (
     <div className="bg-background">
@@ -129,7 +115,7 @@ export default function FestivalDetailPage({ params }: { params: { slug: string 
                 </div>
                 <div className="flex items-center gap-2 text-muted-foreground">
                   <MapPin className="h-4 w-4" />
-                  <span>{getFestivalLocation(festival)}</span>
+                  <TranslationWrapper translationKey={`festivals:${festival.slug}:location_detail`} as="span" />
                 </div>
               </div>
             </div>
@@ -146,7 +132,7 @@ export default function FestivalDetailPage({ params }: { params: { slug: string 
                 <CardTitle className="font-headline text-2xl">About {festival.name}</CardTitle>
               </CardHeader>
               <CardContent className="prose prose-sm max-w-none text-muted-foreground">
-                <TranslationWrapper translationKey={`festivals.${festival.slug}.longDescription`} as="p" />
+                <TranslationWrapper translationKey={`festivals:${festival.slug}:longDescription`} as="p" />
               </CardContent>
             </Card>
 
@@ -170,14 +156,14 @@ export default function FestivalDetailPage({ params }: { params: { slug: string 
                   <CardContent className="pt-6 space-y-6">
                     {scheduleKeys.map((day, i) => (
                       <div key={i}>
-                        <h3 className="font-semibold mb-2"><TranslationWrapper translationKey={`festivals.${festival.slug}.schedule.${day.dayKey}`} /></h3>
+                        <h3 className="font-semibold mb-2"><TranslationWrapper translationKey={`festivals:${festival.slug}:schedule:${day.dayKey}`} /></h3>
                         <div className="space-y-4">
                           {day.eventKeys.map((event, j) => (
                             <div key={j} className="flex items-start gap-3 pl-4 border-l-2 border-primary/50">
                               <Clock className="h-4 w-4 mt-1 text-primary flex-shrink-0" />
                               <div>
-                                <p className="font-medium"><TranslationWrapper translationKey={`festivals.${festival.slug}.schedule.${event.timeKey}`} /></p>
-                                <p className="text-sm text-muted-foreground"><TranslationWrapper translationKey={`festivals.${festival.slug}.schedule.${event.descriptionKey}`} /></p>
+                                <p className="font-medium"><TranslationWrapper translationKey={`festivals:${festival.slug}:schedule:${event.timeKey}`} /></p>
+                                <p className="text-sm text-muted-foreground"><TranslationWrapper translationKey={`festivals:${festival.slug}:schedule:${event.descriptionKey}`} /></p>
                               </div>
                             </div>
                           ))}
@@ -190,7 +176,7 @@ export default function FestivalDetailPage({ params }: { params: { slug: string 
               <TabsContent value="history">
                 <Card>
                     <CardContent className="pt-6 prose prose-sm max-w-none text-muted-foreground">
-                        <TranslationWrapper translationKey={`festivals.${festival.slug}.history`} as="p" />
+                        <TranslationWrapper translationKey={`festivals:${festival.slug}:history`} as="p" />
                     </CardContent>
                 </Card>
               </TabsContent>
@@ -202,7 +188,7 @@ export default function FestivalDetailPage({ params }: { params: { slug: string 
                                 <li key={i} className="flex items-start gap-3">
                                     <Sparkles className="h-4 w-4 mt-1 text-primary flex-shrink-0"/>
                                     <span className="text-muted-foreground">
-                                        <TranslationWrapper translationKey={`festivals.${festival.slug}.traditions.${traditionKey}`} />
+                                        <TranslationWrapper translationKey={`festivals:${festival.slug}:traditions:${traditionKey}`} />
                                     </span>
                                 </li>
                             ))}

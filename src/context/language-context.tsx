@@ -13,14 +13,15 @@ const translations: { [key in Language]: Translations } = { en, es };
 interface LanguageContextType {
   language: Language;
   setLanguage: (language: Language) => void;
-  t: (key: string, replacements?: { [key: string]: string | number }) => string;
+  t: (key: string, options?: { replacements?: { [key: string]: string | number }, defaultValue?: string }) => string;
 }
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
-// Helper function to get nested values from an object using a dot-notation string
 const getNestedValue = (obj: any, path: string): string | undefined => {
-    return path.split('.').reduce((acc, part) => acc && acc[part], obj);
+    // Handle ':' as a delimiter
+    const keys = path.includes(':') ? path.split(':') : path.split('.');
+    return keys.reduce((acc, part) => acc && acc[part], obj);
 };
 
 
@@ -34,8 +35,9 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
     }
   }, []);
 
-  const t = useCallback((key: string, replacements?: { [key: string]: string | number }): string => {
-    let translation = getNestedValue(translations[language], key) || key;
+  const t = useCallback((key: string, options?: { replacements?: { [key: string]: string | number }, defaultValue?: string }): string => {
+    const { replacements, defaultValue } = options || {};
+    let translation = getNestedValue(translations[language], key) || defaultValue || key;
     
     if (replacements) {
         Object.keys(replacements).forEach(placeholder => {

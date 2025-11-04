@@ -21,15 +21,11 @@ export function FestivalCard({ festival }: FestivalCardProps) {
   const placeholder = PlaceHolderImages.find((p) => p.id === festival.image);
   const formattedDate = format(new Date(festival.date.start), 'MMMM do');
 
-  const description = t(`festivals.${festival.slug}.description`);
-  
-  const locationText = festival.locations && festival.locations.length > 1 
-    ? "Various Locations" 
-    : festival.locations?.[0]?.name || festival.location || "Cusco";
-
+  const description = t(`festivals:${festival.slug}:description`);
+  const locationText = t(`festivals:${festival.slug}:location_detail`, { defaultValue: festival.location });
 
   const formatCategoryKey = (category: string) => {
-    return category.replace(/ /g, '-');
+    return category.replace(/ /g, '-').replace(/ñ/g, 'n').toLowerCase();
   };
   
   return (

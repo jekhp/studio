@@ -16,10 +16,9 @@ export type Festival = {
   slug: string;
   name: string;
   date: { start: Date; end: Date };
-  location?: string; // Kept for simplicity with single-location festivals, but locations array is preferred
-  province?: string; // Kept for simplicity
-  coords?: [number, number]; // Kept for simplicity
-  locations?: FestivalLocation[]; // New array for multiple locations
+  location: string;
+  province: string;
+  coords: [number, number];
   image: string;
   rating: number;
   reviews: Review[];
@@ -36,17 +35,15 @@ export type Festival = {
 
 const currentYear = new Date().getFullYear();
 
-const festivalsData: Festival[] = [
+export const festivals: Festival[] = [
     {
       id: 'inti-raymi',
       slug: 'inti-raymi',
       name: 'Inti Raymi',
       date: { start: new Date(currentYear, 5, 24), end: new Date(currentYear, 5, 24) },
-      locations: [
-        { name: 'Qorikancha, Cusco', province: 'Cusco', coords: [-13.520, -71.976] },
-        { name: 'Plaza de Armas, Cusco', province: 'Cusco', coords: [-13.5165, -71.979] },
-        { name: 'Sacsayhuamán, Cusco', province: 'Cusco', coords: [-13.507, -71.982] },
-      ],
+      location: 'Sacsayhuamán, Cusco',
+      province: 'Cusco',
+      coords: [-13.507, -71.982],
       image: 'inti-raymi',
       rating: 4.9,
       reviews: [
@@ -64,11 +61,9 @@ const festivalsData: Festival[] = [
       slug: 'corpus-christi',
       name: 'Corpus Christi',
       date: { start: new Date(currentYear, 4, 30), end: new Date(currentYear, 5, 6) }, // Corpus is a movable feast, this is an approximation
-      locations: [
-        { name: 'Plaza de Armas, Cusco', province: 'Cusco', coords: [-13.5165, -71.979] },
-        { name: 'Parroquia de San Pedro', province: 'Cusco', coords: [-13.519, -71.984] },
-        { name: 'Parroquia de San Blas', province: 'Cusco', coords: [-13.514, -71.974] },
-      ],
+      location: 'Plaza de Armas, Cusco',
+      province: 'Cusco',
+      coords: [-13.5165, -71.979],
       image: 'corpus-christi',
       rating: 4.7,
       reviews: [
@@ -86,7 +81,9 @@ const festivalsData: Festival[] = [
       slug: 'qoyllur-riti',
       name: 'Qoyllur Rit\'i',
       date: { start: new Date(currentYear, 4, 29), end: new Date(currentYear, 5, 2) },
-      locations: [{ name: 'Sinakara Valley, Ocongate', province: 'Quispicanchi', coords: [-13.63, -71.23] }],
+      location: 'Sinakara Valley, Ocongate',
+      province: 'Quispicanchi',
+      coords: [-13.63, -71.23],
       image: 'qoyllur-riti',
       rating: 4.8,
       reviews: [
@@ -104,7 +101,9 @@ const festivalsData: Festival[] = [
       slug: 'paucartambo-virgen-del-carmen',
       name: 'Paucartambo - Virgen del Carmen',
       date: { start: new Date(currentYear, 6, 15), end: new Date(currentYear, 6, 18) },
-      locations: [{ name: 'Paucartambo', province: 'Paucartambo', coords: [-13.31, -71.59] }],
+      location: 'Paucartambo',
+      province: 'Paucartambo',
+      coords: [-13.31, -71.59],
       image: 'paucartambo',
       rating: 4.9,
       reviews: [
@@ -122,11 +121,9 @@ const festivalsData: Festival[] = [
       slug: 'dia-de-compadres',
       name: 'Día de los Compadres',
       date: { start: new Date(currentYear, 1, 1), end: new Date(currentYear, 1, 1) }, // Example date, Thursday 2 weeks before Carnival
-      locations: [
-        { name: 'Mercado de San Pedro, Cusco', province: 'Cusco', coords: [-13.518, -71.983] },
-        { name: 'Mercado de San Blas, Cusco', province: 'Cusco', coords: [-13.515, -71.973] },
-        { name: 'Various towns', province: 'Cusco', coords: [-13.517, -71.978] },
-      ],
+      location: 'Mercado de San Pedro, Cusco',
+      province: 'Cusco',
+      coords: [-13.518, -71.983],
       image: 'compadres',
       rating: 4.5,
       reviews: [],
@@ -141,11 +138,9 @@ const festivalsData: Festival[] = [
       slug: 'dia-de-comadres',
       name: 'Día de las Comadres',
       date: { start: new Date(currentYear, 1, 8), end: new Date(currentYear, 1, 8) }, // Example date, Thursday 1 week before Carnival
-      locations: [
-        { name: 'Mercado de San Pedro, Cusco', province: 'Cusco', coords: [-13.518, -71.983] },
-        { name: 'Mercado de San Blas, Cusco', province: 'Cusco', coords: [-13.515, -71.973] },
-        { name: 'Various towns', province: 'Cusco', coords: [-13.517, -71.978] },
-      ],
+      location: 'Mercado de San Pedro, Cusco',
+      province: 'Cusco',
+      coords: [-13.518, -71.983],
       image: 'comadres',
       rating: 4.5,
       reviews: [],
@@ -160,11 +155,9 @@ const festivalsData: Festival[] = [
       slug: 'semana-santa',
       name: 'Semana Santa',
       date: { start: new Date(currentYear, 3, 24), end: new Date(currentYear, 3, 31) }, // Example date for Easter week
-      locations: [
-        { name: 'Cusco Cathedral', province: 'Cusco', coords: [-13.516, -71.978] },
-        { name: 'Plaza de Armas, Cusco', province: 'Cusco', coords: [-13.5165, -71.979] },
-        { name: 'Churches across the region', province: 'Cusco', coords: [-13.52, -71.98] },
-      ],
+      location: 'Cusco Cathedral',
+      province: 'Cusco',
+      coords: [-13.516, -71.978],
       image: 'semana-santa',
       rating: 4.8,
       reviews: [],
@@ -179,7 +172,9 @@ const festivalsData: Festival[] = [
       slug: 'navidad-cusquena',
       name: 'Navidad Cusqueña (Santurantikuy)',
       date: { start: new Date(currentYear, 11, 24), end: new Date(currentYear, 11, 24) },
-      locations: [{ name: 'Plaza de Armas, Cusco', province: 'Cusco', coords: [-13.5165, -71.979] }],
+      location: 'Plaza de Armas, Cusco',
+      province: 'Cusco',
+      coords: [-13.5165, -71.979],
       image: 'santurantikuy',
       rating: 4.9,
       reviews: [],
@@ -194,9 +189,9 @@ const festivalsData: Festival[] = [
       slug: 'ano-nuevo',
       name: 'Año Nuevo en Cusco',
       date: { start: new Date(currentYear, 11, 31), end: new Date(currentYear, 11, 31) },
-      locations: [
-        { name: 'Plaza de Armas, Cusco', province: 'Cusco', coords: [-13.5165, -71.979] },
-      ],
+      location: 'Plaza de Armas, Cusco',
+      province: 'Cusco',
+      coords: [-13.5165, -71.979],
       image: 'ano-nuevo',
       rating: 4.7,
       reviews: [],
@@ -211,7 +206,9 @@ const festivalsData: Festival[] = [
       slug: 'qeswachaka-bridge-festival',
       name: 'Q\'eswachaka Bridge Festival',
       date: { start: new Date(currentYear, 5, 8), end: new Date(currentYear, 5, 11) },
-      locations: [{ name: 'Quehue, Canas', province: 'Canas', coords: [-14.364, -71.503] }],
+      location: 'Quehue, Canas',
+      province: 'Canas',
+      coords: [-14.364, -71.503],
       image: 'qeswachaka-bridge',
       rating: 4.9,
       reviews: [
@@ -224,18 +221,3 @@ const festivalsData: Festival[] = [
       scheduleKeys: [{ dayKey: 'day_1', eventKeys: [{ timeKey: 'event_1_time', descriptionKey: 'event_1_desc' }, { timeKey: 'event_2_time', descriptionKey: 'event_2_desc' }, { timeKey: 'event_3_time', descriptionKey: 'event_3_desc' }] }],
     },
 ];
-
-
-const festivalsByProvince: Record<string, Omit<Festival, 'province'>[]> = {
-    // This structure can be deprecated or adapted if we move fully to the flat list with locations array
-};
-
-// This flattens the grouped data into a single array, which is what the components currently expect.
-// The new `province` property is added to each festival object.
-export const festivals: Festival[] = festivalsData.map(f => {
-    // To ensure backward compatibility with old data structure if needed
-    if (!f.locations && f.location && f.province && f.coords) {
-        f.locations = [{ name: f.location, province: f.province, coords: f.coords }];
-    }
-    return f;
-});

@@ -4,48 +4,32 @@ import dynamic from 'next/dynamic';
 import { festivals } from '@/lib/festivals';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { format } from 'date-fns';
+import { useLanguage } from '@/context/language-context';
 
 const LeafletMap = dynamic(() => import('@/components/LeafletMap'), { ssr: false });
 
 export default function MapPage() {
-    const locations = festivals.flatMap(f => {
+    const { t } = useLanguage();
+
+    const locations = festivals.map(f => {
         const placeholder = PlaceHolderImages.find(p => p.id === f.image);
         const imageUrl = placeholder ? placeholder.imageUrl : 'https://picsum.photos/seed/default/200/100';
+        const locationDetail = t(`festivals:${f.slug}:location_detail`, { defaultValue: f.location });
 
-        if (f.locations) {
-            return f.locations.map(loc => ({
-                coords: loc.coords,
-                popup: `
-                    <a href="/festivals/${f.slug}" class="block w-48 no-underline text-current">
-                      <img src="${imageUrl}" alt="${f.name}" class="w-full h-24 object-cover rounded-t-lg" />
-                      <div class="p-2">
-                        <h3 class="font-bold text-sm mb-1">${f.name}</h3>
-                        <p class="text-xs text-muted-foreground mb-2">${loc.name}</p>
-                        <p class="text-xs text-muted-foreground">${format(new Date(f.date.start), 'MMMM do')}</p>
-                      </div>
-                    </a>
-                `,
-            }));
-        }
-        
-        // Fallback for old structure (should not happen with new data)
-        if (f.coords) {
-            return [{
-                coords: f.coords,
-                popup: `
-                    <a href="/festivals/${f.slug}" class="block w-48 no-underline text-current">
-                      <img src="${imageUrl}" alt="${f.name}" class="w-full h-24 object-cover rounded-t-lg" />
-                      <div class="p-2">
-                        <h3 class="font-bold text-sm mb-1">${f.name}</h3>
-                        <p class="text-xs text-muted-foreground mb-2">${f.location}</p>
-                        <p class="text-xs text-muted-foreground">${format(new Date(f.date.start), 'MMMM do')}</p>
-                      </div>
-                    </a>
-                `,
-            }];
-        }
 
-        return [];
+        return {
+            coords: f.coords,
+            popup: `
+                <a href="/festivals/${f.slug}" class="block w-48 no-underline text-current">
+                  <img src="${imageUrl}" alt="${f.name}" class="w-full h-24 object-cover rounded-t-lg" />
+                  <div class="p-2">
+                    <h3 class="font-bold text-sm mb-1">${f.name}</h3>
+                    <p class="text-xs text-muted-foreground mb-2">${locationDetail}</p>
+                    <p class="text-xs text-muted-foreground">${format(new Date(f.date.start), 'MMMM do')}</p>
+                  </div>
+                </a>
+            `,
+        };
     });
 
     return (

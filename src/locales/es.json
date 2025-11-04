@@ -126,6 +126,7 @@
     },
     "festivals": {
         "inti-raymi": {
+            "location_detail": "Eventos principales en Qorikancha, Plaza de Armas y Sacsayhuamán.",
             "description": "El antiguo festival inca del sol, una espectacular recreación teatral.",
             "longDescription": "Inti Raymi, el \"Festival del Sol\", fue la ceremonia religiosa más importante del Imperio Inca en honor al dios Inti. Hoy en día, es una representación teatral masiva que se celebra cada 24 de junio en Cusco. Involucra a cientos de actores con trajes vibrantes, con rituales históricos, danzas y procesiones que tienen lugar en Qorikancha, la Plaza de Armas y la fortaleza de Sacsayhuamán.",
             "history": "Establecido originalmente por el Inca Pachacuti en el siglo XV, el festival marcaba el solsticio de invierno y el comienzo del nuevo año. Fue prohibido por los españoles en el siglo XVI pero fue revivido en el siglo XX como un evento teatral para honrar la herencia de Cusco.",
@@ -146,6 +147,7 @@
             }
         },
         "corpus-christi": {
+            "location_detail": "Celebrado en la Plaza de Armas y varias parroquias de Cusco.",
             "description": "Una masiva procesión religiosa donde 15 santos y vírgenes desfilan por Cusco.",
             "longDescription": "El Corpus Christi en Cusco es una vibrante y singular fiesta sincrética, que fusiona la fe católica con antiguas tradiciones andinas. Quince estatuas de santos y vírgenes de diferentes parroquias son llevadas en una gran procesión a la Catedral de Cusco, donde 'visitan' el cuerpo de Cristo por ocho días. La fiesta es famosa por sus elaboradas decoraciones, la música y el plato tradicional llamado Chiriuchu.",
             "history": "Introducida por los españoles en el siglo XVI, la fiesta fue utilizada para reemplazar la práctica inca de pasear las momias de los ancestros. El pueblo andino adaptó la tradición católica, asignando sus propios significados sagrados a los santos, creando así un poderoso símbolo de resistencia y fusión cultural.",
@@ -167,6 +169,7 @@
             }
         },
         "qoyllur-riti": {
+            "location_detail": "Valle de Sinakara, Ocongate, Quispicanchi",
             "description": "Una peregrinación espiritual al Valle de Sinakara, que mezcla creencias católicas y andinas.",
             "longDescription": "Qoyllur Rit'i, o el \"Festival de la Estrella de Nieve\", es una peregrinación religiosa centenaria que tiene lugar en el remoto Valle de Sinakara, al pie del nevado Ausangate. Decenas de miles de peregrinos de los pueblos de los alrededores viajan durante días, llevando grandes cruces al santuario. El festival es un sincretismo único de creencias católicas y andinas, que celebra las estrellas, los espíritus de las montañas (Apus) y el Señor de Qoyllur Rit'i.",
             "history": "Los orígenes del festival son una mezcla de una historia de milagro católico del siglo XVIII y la antigua adoración a las montañas andinas. Se centra en la aparición del niño Cristo a un joven pastor. Ha sido reconocido por la UNESCO como parte del Patrimonio Cultural Inmaterial de la Humanidad.",
@@ -191,6 +194,7 @@
             }
         },
         "paucartambo-virgen-del-carmen": {
+            "location_detail": "Paucartambo, Paucartambo",
             "description": "Un festival vibrante y caótico en el pueblo colonial de Paucartambo con danzantes enmascarados.",
             "longDescription": "La fiesta en honor a la Virgen del Carmen es una de las fiestas más celebradas y salvajes de Perú. Durante varios días, el tranquilo pueblo colonial de Paucartambo estalla en un derroche de color, música y danza. Comparsas de danzantes enmascarados con trajes espectaculares toman las calles, cada uno representando diferentes personajes e historias de la historia y el folclore peruano. El festival culmina con una procesión donde la estatua de la Virgen bendice al pueblo y lucha contra demonios disfrazados en los tejados.",
             "history": "La devoción a la Virgen del Carmen (también conocida como Mamacha Carmen) se remonta a la época colonial. La leyenda dice que su rostro apareció milagrosamente en una roca, y el festival creció en torno a esta veneración. Las danzas en sí son una mezcla sincrética de influencias católicas, andinas e incluso amazónicas.",
@@ -217,6 +221,7 @@
             }
         },
         "qeswachaka-bridge-festival": {
+            "location_detail": "Quehue, Canas",
             "description": "La reconstrucción anual del último puente de cuerda inca.",
             "longDescription": "El Festival del Puente Q'eswachaka es una extraordinaria muestra de patrimonio inca viviente. Cada año, cuatro comunidades se unen para reconstruir este puente de cuerda utilizando técnicas tradicionales transmitidas durante siglos. El proceso de cuatro días es un ritual comunitario que involucra ceremonias, trabajo y celebración, culminando con el cruce del nuevo puente.",
             "history": "Esta tradición se ha mantenido por más de 500 años, siendo un nexo vital de comunicación entre comunidades. En 2013, los conocimientos, técnicas y rituales asociados a la reconstrucción del puente Q'eswachaka fueron reconocidos por la UNESCO como Patrimonio Cultural Inmaterial de la Humanidad.",
@@ -238,6 +243,7 @@
             }
         },
         "dia-de-compadres": {
+            "location_detail": "Celebrado en varios pueblos y mercados de Cusco.",
             "description": "La antesala festiva al carnaval donde se celebra y satiriza a los hombres.",
             "longDescription": "El Día de los Compadres es una tradición cusqueña única que da inicio a las festividades del carnaval. Es un día de crítica social lúdica donde muñecos que representan a figuras masculinas prominentes (políticos, autoridades locales, etc.) son colgados en postes en lugares públicos, a menudo en situaciones humorísticas o críticas. Es un día de amistad, sátira y unión comunitaria, liderado por las mujeres.",
             "history": "Originada en las tradiciones carnavaleras españolas, esta celebración fue adaptada en Cusco con un giro único y satírico. Sirve como una catarsis social, permitiendo el comentario público y la burla antes de que comiencen los eventos principales del carnaval.",
@@ -253,6 +259,7 @@
             }
         },
         "dia-de-comadres": {
+            "location_detail": "Celebrado en varios pueblos y mercados de Cusco.",
             "description": "La respuesta festiva a Compadres, donde se celebra y honra a las mujeres.",
             "longDescription": "El Día de las Comadres sigue al Día de los Compadres, cambiando el foco hacia las mujeres. En esta celebración, los hombres preparan homenajes a sus 'comadres' (amigas, madrinas). A diferencia del tono satírico de Compadres, este día es más un homenaje, con regalos de canastas decoradas llenas de frutas, dulces y serpentinas. Es un día de amistad femenina y respeto mutuo.",
             "history": "Como contraparte a Compadres, este día equilibra la sátira del carnaval. Destaca la importancia de las mujeres en la comunidad y fortalece los lazos de comadrazgo.",
@@ -268,6 +275,7 @@
             }
         },
         "semana-santa": {
+            "location_detail": "Celebrado en iglesias por toda la región de Cusco.",
             "description": "Una celebración religiosa solemne y ferviente marcada por procesiones únicas.",
             "longDescription": "La Semana Santa en Cusco es una manifestación profunda de sincretismo religioso. La figura central es el Señor de los Temblores, un Cristo de piel oscura que sale en procesión el Lunes Santo en un recorrido masivo que paraliza la ciudad. La semana también está marcada por tradiciones gastronómicas únicas, como los 'doce platos' que se sirven el Jueves Santo.",
             "history": "La devoción al Señor de los Temblores comenzó después del terremoto de 1650, cuando los locales afirmaron que la estatua detuvo los temblores. Desde entonces, se ha convertido en el patrón jurado de Cusco. La celebración mezcla ritos católicos con un profundo sentido andino de devoción y reciprocidad.",
@@ -287,6 +295,7 @@
             }
         },
         "navidad-cusquena": {
+            "location_detail": "Celebración principal en la Plaza de Armas, Cusco.",
             "description": "Una celebración navideña única que presenta la feria de arte popular más grande de Perú: Santurantikuy.",
             "longDescription": "La Navidad en Cusco es sinónimo de Santurantikuy ('Venta de Santos' en quechua). El 24 de diciembre, la Plaza de Armas se transforma en un enorme mercado al aire libre donde cientos de artesanos de comunidades remotas vienen a vender figuras de nacimiento talladas, íconos religiosos y arte popular tradicional. Es un día mágico de arte, tradición y espíritu navideño.",
             "history": "El Santurantikuy se remonta a la época colonial, cuando era una forma de la iglesia para promover el catolicismo a través de la imaginería religiosa. Con el tiempo, evolucionó hasta convertirse en una vibrante expresión de arte popular andino, donde los artesanos muestran su creatividad y habilidad.",
@@ -302,6 +311,7 @@
             }
         },
         "ano-nuevo": {
+            "location_detail": "Celebración principal en la Plaza de Armas, Cusco.",
             "description": "Una vibrante celebración de Año Nuevo con cábalas y vueltas a la Plaza de Armas.",
             "longDescription": "La víspera de Año Nuevo en Cusco es un asunto animado y supersticioso. La Plaza de Armas se convierte en el epicentro de las celebraciones, donde se reúnen miles de locales y turistas. A medianoche, es tradición correr alrededor de la plaza, a menudo varias veces, para asegurar buenos viajes en el próximo año. La noche está llena de fuegos artificiales, música y una palpable sensación de alegría colectiva.",
             "history": "Si bien el Año Nuevo es una celebración global, Cusco la ha impregnado de sus propios rituales y creencias únicos, conocidos como 'cábalas', que mezclan supersticiones populares con un ambiente festivo.",

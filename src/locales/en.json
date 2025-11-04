@@ -126,6 +126,7 @@
     },
     "festivals": {
         "inti-raymi": {
+            "location_detail": "Main events at Qorikancha, Plaza de Armas and Sacsayhuamán.",
             "description": "The ancient Inca festival of the sun, a spectacular theatrical reenactment.",
             "longDescription": "Inti Raymi, the \"Festival of the Sun,\" was the most important religious ceremony of the Inca Empire in honor of the god Inti. Today, it is a massive theatrical representation held every year on June 24 in Cusco. It involves hundreds of actors in vibrant costumes, with historical rituals, dances, and processions that take place at Qorikancha, the Plaza de Armas, and the fortress of Sacsayhuamán.",
             "history": "Originally established by the Inca Pachacuti in the 15th century, the festival marked the winter solstice and the start of the new year. It was banned by the Spanish in the 16th century but was revived in the 20th century as a theatrical event to honor Cusco's heritage.",
@@ -146,6 +147,7 @@
             }
         },
         "corpus-christi": {
+            "location_detail": "Celebrated in the Plaza de Armas and various parishes of Cusco.",
             "description": "A massive religious procession where 15 saints and virgins parade through Cusco.",
             "longDescription": "Corpus Christi in Cusco is a vibrant and unique syncretic festival, blending Catholic faith with ancient Andean traditions. Fifteen statues of saints and virgins from different parishes are carried in a grand procession to the Cusco Cathedral, where they 'visit' the body of Christ for eight days. The festival is famous for its elaborate decorations, music, and the traditional dish called Chiriuchu.",
             "history": "Introduced by the Spanish in the 16th century, the festival was used to replace the Inca practice of parading ancestral mummies. The Andean people adapted the Catholic tradition, assigning their own sacred meanings to the saints, thus creating a powerful symbol of cultural resistance and fusion.",
@@ -167,6 +169,7 @@
             }
         },
         "qoyllur-riti": {
+            "location_detail": "Sinakara Valley, Ocongate, Quispicanchi",
             "description": "A spiritual pilgrimage to the Sinakara Valley, blending Catholic and Andean beliefs.",
             "longDescription": "Qoyllur Rit'i, or the \"Snow Star Festival,\" is a centuries-old religious pilgrimage that takes place in the remote Sinakara Valley at the foot of Mount Ausangate. Tens of thousands of pilgrims from surrounding villages travel for days, bringing large crosses to the sanctuary. The festival is a unique syncretism of Catholic and Andean beliefs, celebrating the stars, the mountain spirits (Apus), and the Lord of Qoyllur Rit'i.",
             "history": "The festival's origins are a blend of an 18th-century Catholic miracle story and ancient Andean mountain worship. It centers on the appearance of the Christ child to a young shepherd boy. It has been recognized by UNESCO as part of the Intangible Cultural Heritage of Humanity.",
@@ -191,6 +194,7 @@
             }
         },
         "paucartambo-virgen-del-carmen": {
+            "location_detail": "Paucartambo, Paucartambo",
             "description": "A vibrant and chaotic festival in the colonial town of Paucartambo with masked dancers.",
             "longDescription": "The festival in honor of the Virgen del Carmen is one of Peru's most celebrated and wild parties. For several days, the quiet colonial town of Paucartambo erupts in a riot of color, music, and dance. Troupes of masked dancers in spectacular costumes take over the streets, each representing different characters and stories from Peruvian history and folklore. The festival culminates in a procession where the statue of the Virgin blesses the town and battles costumed demons on the rooftops.",
             "history": "The devotion to the Virgen del Carmen (also known as Mamacha Carmen) dates back to the colonial era. Legend says her face miraculously appeared on a rock, and the festival grew around this veneration. The dances themselves are a syncretic mix of Catholic, Andean, and even Amazonian influences.",
@@ -217,6 +221,7 @@
             }
         },
         "qeswachaka-bridge-festival": {
+            "location_detail": "Quehue, Canas",
             "description": "The annual reconstruction of the last Inca rope bridge.",
             "longDescription": "The Q'eswachaka Bridge Festival is an extraordinary example of living Inca heritage. Every year, four communities come together to rebuild this rope bridge using traditional techniques passed down for centuries. The four-day process is a communal ritual that involves ceremonies, work, and celebration, culminating in the crossing of the new bridge.",
             "history": "This tradition has been maintained for over 500 years, being a vital link for communication between communities. In 2013, the knowledge, techniques, and rituals associated with the reconstruction of the Q'eswachaka bridge were recognized by UNESCO as Intangible Cultural Heritage of Humanity.",
@@ -238,6 +243,7 @@
             }
         },
         "dia-de-compadres": {
+            "location_detail": "Celebrated in various towns and markets in Cusco.",
             "description": "The festive prelude to carnival where men are celebrated and satirized.",
             "longDescription": "The Day of Compadres is a unique Cusquenian tradition that kicks off the carnival festivities. It is a day of playful social critique where dolls representing prominent male figures (politicians, local authorities, etc.) are hung on poles in public places, often in humorous or critical situations. It's a day of friendship, satire, and community bonding, led by women.",
             "history": "Originating from Spanish carnival traditions, this celebration was adapted in Cusco with a unique, satirical twist. It serves as a social catharsis, allowing for public commentary and jest before the main carnival events begin.",
@@ -253,6 +259,7 @@
             }
         },
         "dia-de-comadres": {
+            "location_detail": "Celebrated in various towns and markets in Cusco.",
             "description": "The festive response to Compadres, where women are celebrated and honored.",
             "longDescription": "The Day of Comadres follows the Day of Compadres, shifting the focus to women. In this celebration, men prepare tributes to their 'comadres' (female friends, godmothers). Unlike the satirical tone of Compadres, this day is more of a homage, with gifts of decorated baskets filled with fruits, sweets, and streamers. It's a day of female friendship and mutual respect.",
             "history": "As a counterpart to Compadres, this day balances the carnival satire. It highlights the importance of women in the community and strengthens the bonds of 'comadrazgo' (the relationship between comadres).",
@@ -268,6 +275,7 @@
             }
         },
         "semana-santa": {
+            "location_detail": "Celebrated in churches throughout the Cusco region.",
             "description": "A solemn and fervent religious celebration marked by unique processions.",
             "longDescription": "Holy Week in Cusco is a profound manifestation of religious syncretism. The central figure is the Lord of the Earthquakes (Señor de los Temblores), a dark-skinned Christ statue paraded on Holy Monday in a massive procession that paralyzes the city. The week is also marked by unique gastronomic traditions, like the 'twelve dishes' served on Holy Thursday.",
             "history": "The devotion to the Lord of the Earthquakes began after the 1650 earthquake, when locals claimed the statue stopped the tremors. Since then, it has become the sworn patron of Cusco. The celebration blends Catholic rites with a deep Andean sense of devotion and reciprocity.",
@@ -287,6 +295,7 @@
             }
         },
         "navidad-cusquena": {
+            "location_detail": "Main celebration in the Plaza de Armas, Cusco.",
             "description": "A unique Christmas celebration featuring Peru's largest folk art fair: Santurantikuy.",
             "longDescription": "Christmas in Cusco is synonymous with Santurantikuy ('Sale of Saints' in Quechua). On December 24th, the Plaza de Armas transforms into a massive open-air market where hundreds of artisans from remote communities come to sell carved Nativity figures, religious icons, and traditional folk art. It's a magical day of art, tradition, and Christmas spirit.",
             "history": "Santurantikuy dates back to the colonial era, when it was a way for the church to promote Catholicism through religious imagery. Over time, it evolved into a vibrant expression of Andean folk art, where artisans showcase their creativity and skill.",
@@ -302,6 +311,7 @@
             }
         },
         "ano-nuevo": {
+            "location_detail": "Main celebration in the Plaza de Armas, Cusco.",
             "description": "A vibrant New Year's Eve celebration with cabalas and laps around the Plaza de Armas.",
             "longDescription": "New Year's Eve in Cusco is a lively and superstitious affair. The Plaza de Armas becomes the epicenter of celebrations, where thousands of locals and tourists gather. At midnight, it's tradition to run around the plaza, often multiple times, to ensure good travels in the coming year. The night is filled with fireworks, music, and a palpable sense of collective joy.",
             "history": "While New Year's is a global celebration, Cusco has imbued it with its own unique rituals and beliefs, known as 'cábalas', which blend popular superstitions with a festive atmosphere.",
