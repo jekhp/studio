@@ -163,6 +163,38 @@ const festivalsByProvince: Record<string, Omit<Festival, 'province'>[]> = {
   ],
   Urubamba: [
     {
+      id: 'linderaje-chinchero',
+      slug: 'linderaje-chinchero',
+      name: 'Linderaje Chinchero',
+      date: { start: new Date(new Date().getFullYear(), 5, 6), end: new Date(new Date().getFullYear(), 5, 9) },
+      location: 'Chinchero, Urubamba',
+      coords: [-13.392770929895711, -72.049756263513],
+      traditionKeys: [
+        "tradition_1",
+        "tradition_2",
+        "tradition_3",
+        "tradition_4"
+      ],
+      scheduleKeys: [
+        {
+          dayKey: 'day_1',
+          eventKeys: [
+            { timeKey: 'event_1_time', descriptionKey: 'event_1_desc' },
+            { timeKey: 'event_2_time', descriptionKey: 'event_2_desc' },
+          ],
+        },
+      ],
+      image: 'ollantaytambo-festival',
+      rating: 4.6,
+      reviews: [
+        { id: 1, user: 'HistoryLover', rating: 5, comment: 'Seeing the procession against the backdrop of the Inca ruins is unforgettable.' },
+      ],
+      interest: 0.9,
+      isFree: true,
+      categories: ['religioso', 'tradicional', 'danza'],
+    },
+
+    {
       id: 'senor-de-choquekillka',
       slug: 'senor-de-choquekillka',
       name: 'Señor de Choquekillka',
