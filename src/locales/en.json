@@ -1,4 +1,3 @@
-
 {
     "ui": {
         "nav": {
@@ -20,6 +19,16 @@
         "upcoming": {
             "title": "Upcoming Festivals",
             "subtitle": "Don't miss out! These festivals are just around the corner."
+        },
+        "common": {
+            "viewDetails": "View Details"
+        },
+        "calendar": {
+            "subtitle": "Plan your visit to Cusco with our interactive festival calendar. Hover over a date to see what's happening or click to view details.",
+            "eventsOn": "Events on {date}",
+            "festivalsOn": "Festivals on {date}",
+            "noFestivals": "No Festivals Scheduled",
+            "tryAnotherDate": "Try selecting another date to see what's on."
         },
         "festivalsPage": {
             "title": "Cusco's Festivals",
