@@ -30,15 +30,13 @@ export default function CalendarPage() {
   }, [date]);
 
   const festivalDays = React.useMemo(() => {
-    const dates = new Set<string>();
+    const dates: Date[] = [];
     festivals.forEach(f => {
       let currentDate = startOfDay(new Date(f.date.start));
       const endDate = startOfDay(new Date(f.date.end));
       while (currentDate <= endDate) {
-        dates.add(currentDate.toDateString());
-        const nextDate = new Date(currentDate);
-        nextDate.setDate(nextDate.getDate() + 1);
-        currentDate = startOfDay(nextDate);
+        dates.push(new Date(currentDate));
+        currentDate.setDate(currentDate.getDate() + 1);
       }
     });
     return dates;
@@ -51,7 +49,7 @@ export default function CalendarPage() {
   }, [date]);
 
   function DayWithFestival(props: DayProps) {
-    const isFestivalDay = festivalDays.has(startOfDay(props.date).toDateString());
+    const isFestivalDay = festivalDays.some(festivalDate => isSameDay(props.date, festivalDate));
     
     return (
       <div className="relative">
@@ -80,6 +78,16 @@ export default function CalendarPage() {
               selected={date}
               onSelect={setDate}
               className="w-full max-w-md"
+              modifiers={{ isFestival: festivalDays }}
+              modifierStyles={{
+                isFestival: { 
+                  // Using a background image to add an icon without breaking the component
+                  backgroundImage: `url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='hsl(0 65% 45%)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-party-popper'%3e%3cpath d='M5.8 11.3 2 15l3.8 3.8'%3e%3c/path%3e%3cpath d='M18.2 12.7 22 9l-3.8-3.8'%3e%3c/path%3e%3cpath d='M8 11.5c.4.4.8.8.9 1.3s.1 1-.3 1.4c-.4.4-.8.8-1.3.9s-1 .1-1.4-.3'%3e%3c/path%3e%3cpath d='M16 12.5c-.4-.4-.8-.8-.9-1.3s-.1-1 .3-1.4c.4-.4.8-.8 1.3-.9s1 .1 1.4.3'%3e%3c/path%3e%3cpath d='m12 16 1-1'%3e%3c/path%3e%3cpath d='m11 7 1-1'%3e%3c/path%3e%3cpath d='m15 6 1-1'%3e%3c/path%3e%3cpath d='m9 18 1-1'%3e%3c/path%3e%3c/svg%3e")`,
+                  backgroundRepeat: 'no-repeat',
+                  backgroundPosition: 'top 3px right 3px',
+                  backgroundSize: '12px 12px',
+                 }
+              }}
               classNames={{
                 caption_label: "text-2xl font-headline font-bold text-foreground",
                 nav_button: "h-10 w-10 bg-primary/20 text-primary rounded-full hover:bg-primary/30",
@@ -99,9 +107,6 @@ export default function CalendarPage() {
                 day_range_middle: "aria-selected:bg-accent aria-selected:text-accent-foreground",
                 day_range_end: "aria-selected:bg-accent aria-selected:text-accent-foreground",
                 day_range_start: "aria-selected:bg-accent aria-selected:text-accent-foreground",
-              }}
-              components={{
-                Day: DayWithFestival,
               }}
             />
           </div>
