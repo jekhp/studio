@@ -38,25 +38,15 @@ export const Countdown: React.FC<CountdownProps> = ({ targetDate }) => {
   }
 
   return (
-    <div className="flex justify-around text-center items-baseline gap-4">
-      {totalHoursLeft > 48 ? (
-        <div className="flex flex-col">
-          <span className="text-2xl font-bold text-white">{timeLeft.days}</span>
-          <span className="text-xs text-amber-300/70">Días</span>
+    <div className="flex items-baseline gap-2 text-sm">
+        <div className="flex items-baseline">
+          <span className="font-bold text-white">{timeLeft.days}</span>
+          <span className="text-xs text-amber-300/70">d</span>
         </div>
-      ) : (
-        <>
-          <div className="flex flex-col">
-            <span className="text-2xl font-bold text-white">{timeLeft.days}</span>
-            <span className="text-xs text-amber-300/70">Días</span>
-          </div>
-          <div className="text-2xl font-light text-amber-300/50">:</div>
-          <div className="flex flex-col">
-            <span className="text-2xl font-bold text-white">{timeLeft.hours}</span>
-            <span className="text-xs text-amber-300/70">Horas</span>
-          </div>
-        </>
-      )}
+        <div className="flex items-baseline">
+            <span className="font-bold text-white">{timeLeft.hours}</span>
+            <span className="text-xs text-amber-300/70">h</span>
+        </div>
     </div>
   );
 };

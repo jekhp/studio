@@ -27,8 +27,7 @@ export default function MapPage() {
         const placeholder = PlaceHolderImages.find(p => p.id === f.image);
         const imageUrl = placeholder ? placeholder.imageUrl : 'https://picsum.photos/seed/default/200/100';
         const locationDetail = t(`festivals:${f.slug}:location_detail`, { defaultValue: f.location });
-        const regionalIndicator = f.isRegional ? `<div class="flex items-center gap-1 text-xs font-semibold text-amber-600"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>Fiesta Regional</div>` : '';
-
+        
         return {
             ...f,
             popup: `
@@ -38,7 +37,6 @@ export default function MapPage() {
                     <h3 class="font-bold text-sm mb-1">${f.name}</h3>
                     <p class="text-xs text-muted-foreground mb-2">${locationDetail}</p>
                     <p class="text-xs text-muted-foreground">${format(new Date(f.date.start), 'MMMM do')}</p>
-                    ${regionalIndicator}
                   </div>
                 </a>
             `,
@@ -52,12 +50,12 @@ export default function MapPage() {
             </div>
 
             {regionalChristmasFestival && (
-                 <div className="absolute top-4 right-4 z-10 w-full max-w-xs">
+                 <div className="absolute top-4 right-4 z-10 w-[90%] max-w-sm md:max-w-xs">
                     <RegionalFestivalBanner festival={regionalChristmasFestival} />
                 </div>
             )}
             
-            <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-background via-background/80 to-transparent z-10 text-center">
+            <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-background via-background/80 to-transparent z-10 text-center pointer-events-none">
                  <div className="max-w-3xl mx-auto">
                     <h1 className="text-2xl md:text-3xl font-headline text-foreground">Festival Map</h1>
                     <p className="mt-1 text-sm md:text-base text-muted-foreground">
