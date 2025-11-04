@@ -8,7 +8,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowRight, PartyPopper, Calendar as CalendarIcon, Info } from 'lucide-react';
-import { format, isSameDay, startOfDay, isWithinInterval } from 'date-fns';
+import { format, isSameDay, startOfDay, isWithinInterval, endOfDay } from 'date-fns';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/context/language-context';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
@@ -86,7 +86,10 @@ export default function CalendarPage() {
             <Calendar
               mode="single"
               selected={date}
-              onSelect={setDate}
+              onSelect={(newDate) => {
+                console.log('Fecha seleccionada:', newDate);
+                setDate(newDate);
+              }}
               className="w-full max-w-md"
               classNames={{
                 caption_label: "text-2xl font-headline font-bold text-foreground",
