@@ -86,7 +86,10 @@ export default function CalendarPage() {
             <Calendar
               mode="single"
               selected={date}
-              onSelect={setDate}
+              onSelect={(selectedDate) => {
+                console.log("Hiciste clic en la fecha:", selectedDate);
+                setDate(selectedDate);
+              }}
               className="w-full max-w-md"
               classNames={{
                 caption_label: "text-2xl font-headline font-bold text-foreground",
