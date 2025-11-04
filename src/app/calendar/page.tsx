@@ -76,12 +76,12 @@ export default function CalendarPage() {
         </div>
 
         <div className="flex flex-col lg:flex-row">
-          <div className="lg:w-1/2 p-6 border-b lg:border-b-0 lg:border-r border-border">
+          <div className="lg:w-1/2 p-6 border-b lg:border-b-0 lg:border-r border-border flex justify-center">
             <Calendar
               mode="single"
               selected={date}
               onSelect={setDate}
-              className="w-full"
+              className="w-full max-w-md"
               classNames={{
                 caption_label: "text-2xl font-headline font-bold text-foreground",
                 nav_button: "h-10 w-10 bg-primary/20 text-primary rounded-full hover:bg-primary/30",
