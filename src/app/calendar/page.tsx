@@ -16,8 +16,12 @@ import { cn } from '@/lib/utils';
 
 export default function CalendarPage() {
   const { t } = useLanguage();
-  const [date, setDate] = React.useState<Date | undefined>(new Date());
+  const [date, setDate] = React.useState<Date | undefined>(undefined);
   
+  React.useEffect(() => {
+    setDate(new Date());
+  }, []);
+
   const festivalsOnDate = React.useMemo(() => {
     if (!date) return [];
     return festivals.filter(f => {
