@@ -13,13 +13,16 @@ import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/context/language-context';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { cn } from '@/lib/utils';
+import { Skeleton } from '@/components/ui/skeleton';
 
 export default function CalendarPage() {
   const { t } = useLanguage();
   const [date, setDate] = React.useState<Date | undefined>(undefined);
+  const [isClient, setIsClient] = React.useState(false);
   
   React.useEffect(() => {
-    // Set date only on the client-side after hydration to prevent mismatch
+    // This runs only on the client, after the initial render.
+    setIsClient(true);
     setDate(new Date());
   }, []);
 
@@ -63,34 +66,56 @@ export default function CalendarPage() {
 
         <div className="flex flex-col lg:flex-row">
           <div className="lg:w-1/2 p-6 border-b lg:border-b-0 lg:border-r border-border flex justify-center items-center">
-            <CalendarComponent
-              mode="single"
-              selected={date}
-              onSelect={setDate}
-              className="w-full max-w-md"
-              modifiers={{ isFestival: festivalDays }}
-              classNames={{
-                caption_label: "text-2xl font-headline font-bold text-foreground",
-                nav_button: "h-10 w-10 bg-primary/20 text-primary rounded-full hover:bg-primary/30",
-                head_cell: "text-muted-foreground rounded-md w-full font-bold text-sm pb-2 border-b-2 border-primary/50",
-                row: "flex w-full mt-2",
-                cell: "text-center text-sm p-0 relative [&:has([aria-selected])]:bg-accent first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md focus-within:relative focus-within:z-20",
-                day: cn(
-                  "h-12 w-12 p-0 font-normal transition-all duration-200",
-                  "hover:bg-accent/50 rounded-lg",
-                  "aria-selected:opacity-100"
-                ),
-                day_selected: "bg-primary text-primary-foreground hover:bg-primary hover:text-primary-foreground focus:bg-primary focus:text-primary-foreground",
-                day_today: "bg-accent text-accent-foreground",
-                day_outside: "text-muted-foreground opacity-30",
-                day_disabled: "text-muted-foreground opacity-50",
-                day_hidden: "invisible",
-                day_range_middle: "aria-selected:bg-accent aria-selected:text-accent-foreground",
-                day_range_end: "aria-selected:bg-accent aria-selected:text-accent-foreground",
-                day_range_start: "aria-selected:bg-accent aria-selected:text-accent-foreground",
-                day_isFestival: "relative after:content-[''] after:absolute after:top-1.5 after:right-1.5 after:w-1.5 after:h-1.5 after:rounded-full after:bg-primary",
-              }}
-            />
+            {isClient ? (
+              <CalendarComponent
+                mode="single"
+                selected={date}
+                onSelect={setDate}
+                className="w-full max-w-md"
+                modifiers={{ isFestival: festivalDays }}
+                classNames={{
+                  caption_label: "text-2xl font-headline font-bold text-foreground",
+                  nav_button: "h-10 w-10 bg-primary/20 text-primary rounded-full hover:bg-primary/30",
+                  head_cell: "text-muted-foreground rounded-md w-full font-bold text-sm pb-2 border-b-2 border-primary/50",
+                  row: "flex w-full mt-2",
+                  cell: "text-center text-sm p-0 relative [&:has([aria-selected])]:bg-accent first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md focus-within:relative focus-within:z-20",
+                  day: cn(
+                    "h-12 w-12 p-0 font-normal transition-all duration-200",
+                    "hover:bg-accent/50 rounded-lg",
+                    "aria-selected:opacity-100"
+                  ),
+                  day_selected: "bg-primary text-primary-foreground hover:bg-primary hover:text-primary-foreground focus:bg-primary focus:text-primary-foreground",
+                  day_today: "bg-accent text-accent-foreground",
+                  day_outside: "text-muted-foreground opacity-30",
+                  day_disabled: "text-muted-foreground opacity-50",
+                  day_hidden: "invisible",
+                  day_range_middle: "aria-selected:bg-accent aria-selected:text-accent-foreground",
+                  day_range_end: "aria-selected:bg-accent aria-selected:text-accent-foreground",
+                  day_range_start: "aria-selected:bg-accent aria-selected:text-accent-foreground",
+                  day_isFestival: "relative after:content-[''] after:absolute after:top-1.5 after:right-1.5 after:w-1.5 after:h-1.5 after:rounded-full after:bg-primary",
+                }}
+              />
+            ) : (
+              <div className="w-full max-w-md p-3">
+                <div className="flex justify-between items-center mb-4">
+                  <Skeleton className="h-8 w-32" />
+                  <div className="flex gap-2">
+                    <Skeleton className="h-10 w-10 rounded-full" />
+                    <Skeleton className="h-10 w-10 rounded-full" />
+                  </div>
+                </div>
+                <div className="space-y-2">
+                  <div className="grid grid-cols-7 gap-2">
+                    {Array.from({ length: 7 }).map((_, i) => <Skeleton key={i} className="h-8 w-full" />)}
+                  </div>
+                  {Array.from({ length: 5 }).map((_, weekIndex) => (
+                    <div key={weekIndex} className="grid grid-cols-7 gap-2">
+                      {Array.from({ length: 7 }).map((_, dayIndex) => <Skeleton key={dayIndex} className="h-12 w-full rounded-lg" />)}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
 
           <div className="lg:w-1/2 p-6 flex flex-col min-h-[500px]">
