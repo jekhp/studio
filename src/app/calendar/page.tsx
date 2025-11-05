@@ -3,13 +3,12 @@
 
 import * as React from 'react';
 import { Calendar as CalendarComponent } from "@/components/ui/calendar";
-import { type DayProps, DayPicker } from 'react-day-picker';
 import { festivals, type Festival } from '@/lib/festivals';
 import { Card, CardContent } from '@/components/ui/card';
 import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowRight, PartyPopper, Calendar as CalendarIcon, Info } from 'lucide-react';
-import { format, isWithinInterval, startOfDay, isSameDay } from 'date-fns';
+import { format, isWithinInterval, startOfDay, isSameDay, addDays } from 'date-fns';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/context/language-context';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
@@ -22,9 +21,11 @@ export default function CalendarPage() {
   const festivalsOnDate = React.useMemo(() => {
     if (!date) return [];
     return festivals.filter(f => {
+      const festivalStart = startOfDay(new Date(f.date.start));
+      const festivalEnd = startOfDay(new Date(f.date.end));
       return isWithinInterval(startOfDay(date), {
-        start: startOfDay(new Date(f.date.start)),
-        end: startOfDay(new Date(f.date.end)),
+        start: festivalStart,
+        end: festivalEnd,
       });
     });
   }, [date]);
@@ -36,30 +37,14 @@ export default function CalendarPage() {
       const endDate = startOfDay(new Date(f.date.end));
       while (currentDate <= endDate) {
         dates.push(new Date(currentDate));
-        currentDate.setDate(currentDate.getDate() + 1);
+        currentDate = addDays(currentDate, 1);
       }
     });
-    return dates;
-  }, []);
-
-  React.useEffect(() => {
-    if(!date) {
-        setDate(new Date());
-    }
-  }, [date]);
-
-  function DayWithFestival(props: DayProps) {
-    const isFestivalDay = festivalDays.some(festivalDate => isSameDay(props.date, festivalDate));
-    
-    return (
-      <div className="relative">
-        <DayPicker.DateRange {...props} />
-        {isFestivalDay && !props.selected && (
-          <PartyPopper className="absolute top-1 right-1 h-3 w-3 text-primary pointer-events-none" />
-        )}
-      </div>
+    // Filter for unique dates
+    return dates.filter((d, index, self) =>
+      index === self.findIndex((t) => isSameDay(t, d))
     );
-  };
+  }, []);
 
   return (
     <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8">
@@ -79,15 +64,6 @@ export default function CalendarPage() {
               onSelect={setDate}
               className="w-full max-w-md"
               modifiers={{ isFestival: festivalDays }}
-              modifierStyles={{
-                isFestival: { 
-                  // Using a background image to add an icon without breaking the component
-                  backgroundImage: `url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='hsl(0 65% 45%)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-party-popper'%3e%3cpath d='M5.8 11.3 2 15l3.8 3.8'%3e%3c/path%3e%3cpath d='M18.2 12.7 22 9l-3.8-3.8'%3e%3c/path%3e%3cpath d='M8 11.5c.4.4.8.8.9 1.3s.1 1-.3 1.4c-.4.4-.8.8-1.3.9s-1 .1-1.4-.3'%3e%3c/path%3e%3cpath d='M16 12.5c-.4-.4-.8-.8-.9-1.3s-.1-1 .3-1.4c.4-.4.8-.8 1.3-.9s1 .1 1.4.3'%3e%3c/path%3e%3cpath d='m12 16 1-1'%3e%3c/path%3e%3cpath d='m11 7 1-1'%3e%3c/path%3e%3cpath d='m15 6 1-1'%3e%3c/path%3e%3cpath d='m9 18 1-1'%3e%3c/path%3e%3c/svg%3e")`,
-                  backgroundRepeat: 'no-repeat',
-                  backgroundPosition: 'top 3px right 3px',
-                  backgroundSize: '12px 12px',
-                 }
-              }}
               classNames={{
                 caption_label: "text-2xl font-headline font-bold text-foreground",
                 nav_button: "h-10 w-10 bg-primary/20 text-primary rounded-full hover:bg-primary/30",
@@ -107,6 +83,7 @@ export default function CalendarPage() {
                 day_range_middle: "aria-selected:bg-accent aria-selected:text-accent-foreground",
                 day_range_end: "aria-selected:bg-accent aria-selected:text-accent-foreground",
                 day_range_start: "aria-selected:bg-accent aria-selected:text-accent-foreground",
+                day_isFestival: "relative after:content-[''] after:absolute after:top-1.5 after:right-1.5 after:w-1.5 after:h-1.5 after:rounded-full after:bg-primary",
               }}
             />
           </div>
