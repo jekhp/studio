@@ -19,6 +19,7 @@ export default function CalendarPage() {
   const [date, setDate] = React.useState<Date | undefined>(undefined);
   
   React.useEffect(() => {
+    // Set date only on the client-side after hydration to prevent mismatch
     setDate(new Date());
   }, []);
 
