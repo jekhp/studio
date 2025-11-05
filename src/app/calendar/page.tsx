@@ -7,7 +7,7 @@ import { festivals, type Festival } from '@/lib/festivals';
 import { Card, CardContent } from '@/components/ui/card';
 import Link from 'next/link';
 import Image from 'next/image';
-import { ArrowRight, PartyPopper, Calendar as CalendarIcon, Info } from 'lucide-react';
+import { ArrowRight, Calendar as CalendarIcon, Info } from 'lucide-react';
 import { format, isWithinInterval, startOfDay, isSameDay, addDays } from 'date-fns';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/context/language-context';
@@ -92,7 +92,7 @@ export default function CalendarPage() {
                   day_range_middle: "aria-selected:bg-accent aria-selected:text-accent-foreground",
                   day_range_end: "aria-selected:bg-accent aria-selected:text-accent-foreground",
                   day_range_start: "aria-selected:bg-accent aria-selected:text-accent-foreground",
-                  day_isFestival: "relative after:content-[''] after:absolute after:top-1.5 after:right-1.5 after:w-1.5 after:h-1.5 after:rounded-full after:bg-primary",
+                  day_isFestival: "border-2 border-accent/80",
                 }}
               />
             ) : (
