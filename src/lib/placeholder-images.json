@@ -9,43 +9,43 @@
     {
       "id": "inti-raymi",
       "description": "A depiction of the Inti Raymi festival with actors in traditional Inca costumes.",
-      "imageUrl": "https://images.unsplash.com/photo-1606239763507-f44d0c248629?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxpbmNhJTIwY2VyZW1vbnl8ZW58MHx8fHwxNzYxOTI4ODI5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/festivals/intiRaymi.jpg",
       "imageHint": "inca ceremony"
     },
     {
       "id": "qoyllur-riti",
       "description": "Pilgrims trekking in the mountains during the Qoyllur Rit'i festival.",
-      "imageUrl": "https://images.unsplash.com/photo-1761498083589-da83219c9735?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxtb3VudGFpbiUyMHBpbGdyaW1hZ2V8ZW58MHx8fHwxNzYxOTMwODUyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/festivals/señorQoylloriti.jpg",
       "imageHint": "mountain pilgrimage"
     },
     {
       "id": "paucartambo",
       "description": "Dancers in colorful masks and costumes at the Paucartambo festival.",
-      "imageUrl": "https://images.unsplash.com/photo-1760521615544-46237556ff48?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxjb2xvcmZ1bCUyMG1hc2tzfGVufDB8fHx8MTc2MTkzMDg1Mnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/festivals/virgendelcarmenpaucartambo.jpg",
       "imageHint": "colorful masks"
     },
     {
       "id": "corpus-christi",
       "description": "Saints on litters during the Corpus Christi procession in Cusco's main square.",
-      "imageUrl": "https://images.unsplash.com/photo-1744662513800-3db37682a948?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8cmVsaWdpb3VzJTIwcHJvY2Vzc2lvbnxlbnwwfHx8fDE3NjE5Mjg4Mjl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/festivals/corpusChristiCusco.jpg",
       "imageHint": "religious procession"
     },
     {
-      "id": "ollantaytambo-festival",
+      "id": "ollantaytambo-bajadaReyes",
       "description": "A festival procession in the ancient streets of Ollantaytambo.",
-      "imageUrl": "https://images.unsplash.com/photo-1739249429917-b58172e8a79e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHx0b3duJTIwcHJvY2Vzc2lvbnxlbnwwfHx8fDE3NjE5NDU1ODR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/festivals/bajadaReyesOllantaytambo.jpg",
       "imageHint": "town procession"
     },
     {
       "id": "huancaro-fair",
       "description": "An aerial view of a bustling agricultural fair with tents and crowds.",
-      "imageUrl": "https://images.unsplash.com/photo-1632341198257-bf5b859a56bd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxhZ3JpY3VsdHVyYWwlMjBmYWlyfGVufDB8fHx8MTc2MTk0NTU4NHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/festivals/feriaHuancaro.jpg",
       "imageHint": "agricultural fair"
     },
     {
-      "id": "pachamama-ceremony",
+      "id": "wata-qallary",
       "description": "An Andean shaman performing an offering to Pachamama (Mother Earth).",
-      "imageUrl": "https://images.unsplash.com/photo-1629851683432-132d73f1d48c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwYWNoYW1hbWElMjBjZXJlbW9ueXxlbnwwfHx8fDE3NjIyNzUxMDF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/festivals/wataQallary.jpg",
       "imageHint": "pachamama ceremony"
     },
     {
@@ -69,19 +69,19 @@
     {
       "id": "qeswachaka-bridge",
       "description": "A traditional Inca rope bridge spanning a deep river canyon.",
-      "imageUrl": "https://images.unsplash.com/photo-1495805442109-bf1cf975750b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyb3BlJTIwYnJpZGdlfGVufDB8fHx8fDE3NjIyNzUxMDF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/festivals/Qeswachaka.jpg",
       "imageHint": "rope bridge"
     },
     {
       "id": "chumbivilcas-horses",
       "description": "A group of skilled riders on horseback racing across a high-altitude plain.",
-      "imageUrl": "https://images.unsplash.com/flagged/photo-1569319388901-605a6d2d1299?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxob3JzZSUyMHJhY2V8ZW58MHx8fHwxNzYxOTQ1NTg0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/festivals/señor_huanca.jpg",
       "imageHint": "horse race"
     },
     {
       "id": "espinar-harvest",
       "description": "A display of many different varieties and colors of native potatoes.",
-      "imageUrl": "https://images.unsplash.com/photo-1741517922282-45b999eb9e49?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxwb3RhdG8lMjBoYXJ2ZXN0fGVufDB8fHx8fDE3NjE5MTY2NDV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/festivals/uywaChuwa.jpg",
       "imageHint": "potato harvest"
     },
     {
@@ -93,25 +93,25 @@
     {
       "id": "senor-de-huanca",
       "description": "Thousands of candles lighting up a sanctuary at night during a religious pilgrimage.",
-      "imageUrl": "https://images.unsplash.com/photo-1522186742692-f2379705939e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8cmVsaWdpb3VzJTIwcGlsZ3JpbWFnZXxlbnwwfHx8fDE3NjE5NDU1ODR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/festivals/señor_huanca.jpg",
       "imageHint": "religious pilgrimage"
     },
     {
       "id": "tinta-carnival",
       "description": "People celebrating carnival with colorful flowers and traditional clothes.",
-      "imageUrl": "https://images.unsplash.com/photo-1634820491179-03ae219ff58b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8Zmxvd2VyJTIwY2Fybml2YWx8ZW58MHx8fHwxNzYyMTg0ODM1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/festivals/carnavalTinta.jpg",
       "imageHint": "flower carnival"
     },
     {
       "id": "san-sebastian-festival",
       "description": "A religious procession with a saint's statue decorated with flowers.",
-      "imageUrl": "https://images.unsplash.com/photo-1572290187599-39198d3dd438?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxzYWludCUyMHByb2Nlc3Npb258ZW58MHx8fHwxNzYyMTg0ODM1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/festivals/fiestaSanSebastian.webp",
       "imageHint": "saint procession"
     },
     {
       "id": "takanakuy-fight",
       "description": "Two people in masks facing each other in a ritual fight.",
-      "imageUrl": "https://images.unsplash.com/photo-1707405432940-6124db71c729?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyaXR1YWwlMjBmaWdodHxlbnwwfHx8fDE3NjIxODQ4MzV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/festivals/takanakuy.jpg",
       "imageHint": "ritual fight"
     },
     {
@@ -129,7 +129,7 @@
     {
       "id": "quillabamba-anniversary",
       "description": "A vibrant night-time street parade with glowing floats and a large crowd.",
-      "imageUrl": "https://images.unsplash.com/photo-1517457373958-b7bdd4587205?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxuaWdodCUyMHBhcmFkZXxlbnwwfHx8fDE3NjIxODk4MDR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/festivals/aniversarioQuillabamba.webp",
       "imageHint": "night parade"
     },
     {

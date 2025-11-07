@@ -1,4 +1,5 @@
-import { Sun } from 'lucide-react';
+
+import Image from 'next/image';
 import Link from 'next/link';
 
 export function Footer() {
@@ -7,7 +8,7 @@ export function Footer() {
       <div className="container mx-auto px-4 py-8">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="flex items-center space-x-2 mb-4 md:mb-0">
-            <Sun className="h-6 w-6 text-primary" />
+            <Image src="/logo.webp" alt="CuscoFest Logo" width={24} height={24} className="h-6 w-6" />
             <span className="font-bold font-headline text-lg">CuscoFest</span>
           </div>
           <p className="text-sm text-muted-foreground">

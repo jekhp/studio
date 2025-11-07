@@ -1,8 +1,10 @@
+
 "use client";
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Sun, Menu } from 'lucide-react';
+import { Menu } from 'lucide-react';
+import Image from 'next/image';
 
 import { cn } from '@/lib/utils';
 import {
@@ -50,7 +52,7 @@ export function Header() {
     <header className="sticky top-0 z-40 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between">
         <Link href="/" className="flex items-center space-x-2">
-          <Sun className="h-6 w-6 text-primary" />
+          <Image src="/logo.webp" alt="CuscoFest Logo" width={24} height={24} className="h-6 w-6" />
           <span className="font-bold font-headline text-xl">CuscoFest</span>
         </Link>
 
