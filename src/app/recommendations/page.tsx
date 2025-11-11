@@ -26,7 +26,7 @@ export default function RecommendationsPage() {
                 src="/images/cuyperfil.webp"
                 alt="CuscoFest Cuy"
                 fill
-                className="object-contain"
+                className="object-contain scale-x-[-1]"
                 data-ai-hint="guinea pig character"
             />
         </div>
@@ -40,7 +40,7 @@ export default function RecommendationsPage() {
                 src="/images/cuyperfil.webp"
                 alt="CuscoFest Cuy"
                 fill
-                className="object-contain scale-x-[-1]"
+                className="object-contain"
                 data-ai-hint="guinea pig character"
             />
         </div>
