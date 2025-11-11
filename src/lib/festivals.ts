@@ -28,8 +28,7 @@ export type Festival = {
   province: string;
   coords: [number, number];
   image: string;
-  rating: number; // Keep for now for sorting/display elsewhere, but remove from detail page
-  reviews: Review[]; // Keep for now for sorting/display elsewhere
+  rating: number; 
   interest: number;
   isFree: boolean;
   categories: string[];
@@ -61,10 +60,6 @@ const cuscoFestivals: Festival[] = [
       coords: [-13.507, -71.982],
       image: 'inti-raymi',
       rating: 4.9,
-      reviews: [
-        { id: '1', user: 'TravelerJane', rating: 5, comment: 'Absolutely breathtaking! The scale and colors are something you have to see to believe.' },
-        { id: '2', user: 'HistoryBuff_88', rating: 5, comment: 'A fantastic representation of Inca culture. Very well organized.' },
-      ],
       interest: 2.1,
       isFree: false,
       categories: ['andino', 'historico', 'danza', 'espectaculo'],
@@ -87,10 +82,6 @@ const cuscoFestivals: Festival[] = [
       coords: [-13.5165, -71.979],
       image: 'corpus-christi',
       rating: 4.7,
-      reviews: [
-        { id: '1', user: 'CultureVulture', rating: 5, comment: 'The pageantry is incredible. Seeing all the saints together in the plaza is a powerful sight.' },
-        { id: '2', user: 'FoodieGavin', rating: 4, comment: 'Came for the parade, stayed for the Chiriuchu. It\'s a wild combination of flavors but you have to try it!' },
-      ],
       interest: 1.2,
       isFree: true,
       categories: ['religioso', 'gastronomico', 'tradicional', 'espectaculo'],
@@ -107,7 +98,6 @@ const cuscoFestivals: Festival[] = [
       coords: [-13.530, -71.993],
       image: "huancaro-fair",
       rating: 4.4,
-      reviews: [],
       interest: 1.1,
       isFree: false,
       categories: ["feria", "agricola", "gastronomico", "artesania", "conciertos"]
@@ -122,7 +112,6 @@ const cuscoFestivals: Festival[] = [
       coords: [-13.535, -71.937],
       image: "san-sebastian-festival",
       rating: 4.5,
-      reviews: [],
       interest: 0.8,
       isFree: true,
       categories: ["religioso", "procesion", "danza"]
@@ -137,7 +126,6 @@ const cuscoFestivals: Festival[] = [
       coords: [-13.5165, -71.979],
       image: "santurantikuy-market",
       rating: 4.9,
-      reviews: [],
       interest: 2.5,
       isFree: true,
       categories: ["feria", "artesania", "religioso", "tradicional"],
@@ -157,7 +145,6 @@ const acomayoFestivals: Festival[] = [
       coords: [-13.91, -71.68],
       image: "mollomarka-carnival",
       rating: 4.7,
-      reviews: [],
       interest: 0.5,
       isFree: true,
       categories: ["carnaval", "andino", "danza"]
@@ -176,7 +163,6 @@ const calcaFestivals: Festival[] = [
       coords: [-13.504, -71.745],
       image: "senor-de-huanca",
       rating: 4.9,
-      reviews: [],
       interest: 1.4,
       isFree: true,
       categories: ["religioso", "peregrinacion", "andino"]
@@ -195,9 +181,6 @@ const canasFestivals: Festival[] = [
       coords: [-14.364, -71.503],
       image: 'qeswachaka-bridge',
       rating: 4.9,
-      reviews: [
-        { id: '1', user: 'Engineer_Mike', rating: 5, comment: 'An incredible feat of engineering and community spirit. Truly one of a kind.' },
-      ],
       interest: 1.9,
       isFree: false,
       categories: ['andino', 'tradicional', 'historico', 'espectaculo'],
@@ -218,7 +201,6 @@ const canchisFestivals: Festival[] = [
       coords: [-14.148, -71.408],
       image: "tinta-carnival",
       rating: 4.5,
-      reviews: [],
       interest: 0.6,
       isFree: true,
       categories: ["carnaval", "danza", "tradicional"]
@@ -237,7 +219,6 @@ const chumbivilcasFestivals: Festival[] = [
       coords: [-14.45, -72.08],
       image: "takanakuy-fight",
       rating: 4.6,
-      reviews: [],
       interest: 1.0,
       isFree: true,
       categories: ["combate-ritual", "tradicional", "danza"]
@@ -256,7 +237,6 @@ const espinarFestivals: Festival[] = [
       coords: [-14.79, -71.41],
       image: "espinar-harvest",
       rating: 4.5,
-      reviews: [],
       interest: 0.4,
       isFree: true,
       categories: ["andino", "agricola", "tradicional"]
@@ -275,7 +255,6 @@ const laConvencionFestivals: Festival[] = [
       coords: [-12.864, -72.693],
       image: "quillabamba-anniversary",
       rating: 4.6,
-      reviews: [],
       interest: 0.9,
       isFree: true,
       categories: ["feria", "conciertos", "popular"]
@@ -294,10 +273,6 @@ const paucartamboFestivals: Festival[] = [
       coords: [-13.31, -71.59],
       image: 'paucartambo',
       rating: 4.9,
-      reviews: [
-        { id: '1', user: 'FiestaFinder', rating: 5, comment: 'Incredible party! The costumes of the Saqra dancers are amazing and a little terrifying. Loved every minute.' },
-        { id: '2', user: 'PhotoNomad', rating: 5, comment: 'A photographer\'s dream. So much color and action. The town has a magical atmosphere during the festival.' },
-      ],
       interest: 1.5,
       isFree: true,
       categories: ['religioso', 'danza', 'tradicional', 'espectaculo'],
@@ -323,10 +298,6 @@ const quispicanchiFestivals: Festival[] = [
       coords: [-13.63, -71.23],
       image: 'qoyllur-riti',
       rating: 4.8,
-      reviews: [
-        { id: '1', user: 'AdventurousSoul', rating: 5, comment: 'A truly profound and spiritual experience. The energy is incredible, but be prepared for the cold and altitude.' },
-        { id: '2', user: 'CulturalExplorer', rating: 4, comment: 'Fascinating to see the blend of beliefs. It\'s not for the faint of heart, but it\'s very authentic.' },
-      ],
       interest: 1.8,
       isFree: true,
       categories: ['andino', 'religioso', 'peregrinacion', 'aventura'],
@@ -347,13 +318,12 @@ const urubambaFestivals: Festival[] = [
       coords: [-13.391, -72.046],
       image: "linderaje-chinchero",
       rating: 4.6,
-      reviews: [],
       interest: 0.7,
       isFree: true,
       categories: ["combate-ritual", "tradicional", "andino"],
       media: [
         { type: 'image', url: '/festivals/linderaje-chinchero.jpg', alt: 'Combate ritual en Chinchero' },
-        { type: 'video', url: 'https://www.youtube.com/embed/F0k9iWp0m-E', alt: 'Documental sobre el Linderaje en Chinchero' }
+        { type: 'video', url: 'https://www.youtube.com/embed/hnubCYi37kw', alt: 'Documental sobre el Linderaje en Chinchero' }
       ]
     },
     {
@@ -366,7 +336,6 @@ const urubambaFestivals: Festival[] = [
       coords: [-13.257, -72.263],
       image: "ollantaytambo-bajadaReyes",
       rating: 4.7,
-      reviews: [],
       interest: 0.9,
       isFree: true,
       categories: ["religioso", "procesion", "danza"]
@@ -385,7 +354,6 @@ const regionalFestivals: Festival[] = [
       coords: [-13.5, -72.0],
       image: "wata-qallary",
       rating: 4.8,
-      reviews: [],
       interest: 1.3,
       isFree: true,
       categories: ["andino", "tradicional", "espiritual"]

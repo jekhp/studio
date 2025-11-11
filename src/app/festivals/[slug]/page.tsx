@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation';
 import { Calendar, Clock, MapPin, Sparkles, Star, Film, Image as ImageIcon } from 'lucide-react';
 import { format } from 'date-fns';
 
-import { festivals, type Festival } from '@/lib/festivals';
+import { festivals } from '@/lib/festivals';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
