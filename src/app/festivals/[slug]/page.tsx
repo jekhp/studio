@@ -1,19 +1,13 @@
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
-import { Calendar, Clock, MapPin, Sparkles, Star } from 'lucide-react';
+import { Calendar, Clock, MapPin, Sparkles, Star, Film, Image as ImageIcon } from 'lucide-react';
 import { format } from 'date-fns';
 
-import { festivals, type Review, type Festival } from '@/lib/festivals';
+import { festivals, type Festival } from '@/lib/festivals';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Separator } from '@/components/ui/separator';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Rating } from '@/components/Rating';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { Button } from '@/components/ui/button';
-import { Textarea } from '@/components/ui/textarea';
-import { Input } from '@/components/ui/input';
 import { FestivalMap } from '@/components/FestivalMap';
 import { TranslationWrapper } from '@/components/TranslationWrapper';
 
@@ -35,40 +29,6 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   };
 }
 
-function ReviewCard({ review }: { review: Review }) {
-  return (
-    <div className="flex items-start space-x-4">
-      <Avatar>
-        <AvatarFallback>{review.user.charAt(0).toUpperCase()}</AvatarFallback>
-      </Avatar>
-      <div className="flex-1">
-        <div className="flex items-center justify-between">
-          <p className="font-semibold">{review.user}</p>
-          <Rating rating={review.rating} size={16} showText={false} />
-        </div>
-        <p className="text-muted-foreground text-sm mt-1">{review.comment}</p>
-      </div>
-    </div>
-  );
-}
-
-function ReviewForm() {
-    return (
-        <form className="space-y-4">
-            <Input placeholder="Your Name" />
-            <div className="flex items-center gap-2">
-                <span className="text-sm font-medium">Your Rating:</span>
-                {/* Basic rating input for demonstration */}
-                <div className="flex">
-                    {[1,2,3,4,5].map(i => <Star key={i} className="h-5 w-5 text-gray-300 hover:text-primary cursor-pointer"/>)}
-                </div>
-            </div>
-            <Textarea placeholder="Write your review..." />
-            <Button className="bg-primary text-primary-foreground">Submit Review</Button>
-        </form>
-    )
-}
-
 export default function FestivalDetailPage({ params }: { params: { slug: string } }) {
   const festival = festivals.find((f) => f.slug === params.slug);
 
@@ -81,6 +41,7 @@ export default function FestivalDetailPage({ params }: { params: { slug: string 
 
   const scheduleKeys = festival.scheduleKeys || [];
   const traditionKeys = festival.traditionKeys || [];
+  const media = festival.media || [];
 
   const mapLocations = [{
     coords: festival.coords,
@@ -125,113 +86,131 @@ export default function FestivalDetailPage({ params }: { params: { slug: string 
           </div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 mt-12">
-          <div className="lg:col-span-2 space-y-8">
-            <Card>
-              <CardHeader>
-                <CardTitle className="font-headline text-2xl">About {festival.name}</CardTitle>
-              </CardHeader>
-              <CardContent className="prose prose-sm max-w-none text-muted-foreground">
-                <TranslationWrapper translationKey={`festivals:${festival.slug}:longDescription`} as="p" />
-              </CardContent>
-            </Card>
+        <div className="mt-12">
+            <div className="space-y-8">
+                <Card>
+                <CardHeader>
+                    <CardTitle className="font-headline text-2xl">About {festival.name}</CardTitle>
+                </CardHeader>
+                <CardContent className="prose prose-sm max-w-none text-muted-foreground">
+                    <TranslationWrapper translationKey={`festivals:${festival.slug}:longDescription`} as="p" />
+                </CardContent>
+                </Card>
 
-            <Tabs defaultValue="schedule" className="w-full">
-              <TabsList className="grid w-full grid-cols-4">
-                <TabsTrigger value="schedule">
-                    <TranslationWrapper translationKey="ui.tabs.schedule" />
-                </TabsTrigger>
-                <TabsTrigger value="history">
-                    <TranslationWrapper translationKey="ui.tabs.history" />
-                </TabsTrigger>
-                <TabsTrigger value="traditions">
-                    <TranslationWrapper translationKey="ui.tabs.traditions" />
-                </TabsTrigger>
-                <TabsTrigger value="location">
-                    <TranslationWrapper translationKey="ui.tabs.location" />
-                </TabsTrigger>
-              </TabsList>
-              <TabsContent value="schedule">
-                <Card>
-                  <CardContent className="pt-6 space-y-6">
-                    {scheduleKeys.map((day, i) => (
-                      <div key={i}>
-                        <h3 className="font-semibold mb-2"><TranslationWrapper translationKey={`festivals:${festival.slug}:schedule:${day.dayKey}`} /></h3>
-                        <div className="space-y-4">
-                          {day.eventKeys.map((event, j) => (
-                            <div key={j} className="flex items-start gap-3 pl-4 border-l-2 border-primary/50">
-                              <Clock className="h-4 w-4 mt-1 text-primary flex-shrink-0" />
-                              <div>
-                                <p className="font-medium"><TranslationWrapper translationKey={`festivals:${festival.slug}:schedule:${event.timeKey}`} /></p>
-                                <p className="text-sm text-muted-foreground"><TranslationWrapper translationKey={`festivals:${festival.slug}:schedule:${event.descriptionKey}`} /></p>
-                              </div>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-                    ))}
-                  </CardContent>
-                </Card>
-              </TabsContent>
-              <TabsContent value="history">
-                <Card>
-                    <CardContent className="pt-6 prose prose-sm max-w-none text-muted-foreground">
-                        <TranslationWrapper translationKey={`festivals:${festival.slug}:history`} as="p" />
-                    </CardContent>
-                </Card>
-              </TabsContent>
-              <TabsContent value="traditions">
-                <Card>
-                    <CardContent className="pt-6">
-                        <ul className="space-y-3">
-                            {traditionKeys.map((traditionKey, i) => (
-                                <li key={i} className="flex items-start gap-3">
-                                    <Sparkles className="h-4 w-4 mt-1 text-primary flex-shrink-0"/>
-                                    <span className="text-muted-foreground">
-                                        <TranslationWrapper translationKey={`festivals:${festival.slug}:traditions:${traditionKey}`} />
-                                    </span>
-                                </li>
+                <Tabs defaultValue="schedule" className="w-full">
+                <TabsList className="grid w-full grid-cols-4">
+                    <TabsTrigger value="schedule">
+                        <TranslationWrapper translationKey="ui.tabs.schedule" />
+                    </TabsTrigger>
+                    <TabsTrigger value="history">
+                        <TranslationWrapper translationKey="ui.tabs.history" />
+                    </TabsTrigger>
+                    <TabsTrigger value="traditions">
+                        <TranslationWrapper translationKey="ui.tabs.traditions" />
+                    </TabsTrigger>
+                    <TabsTrigger value="location">
+                        <TranslationWrapper translationKey="ui.tabs.location" />
+                    </TabsTrigger>
+                </TabsList>
+                <TabsContent value="schedule">
+                    <Card>
+                    <CardContent className="pt-6 space-y-6">
+                        {scheduleKeys.map((day, i) => (
+                        <div key={i}>
+                            <h3 className="font-semibold mb-2"><TranslationWrapper translationKey={`festivals:${festival.slug}:schedule:${day.dayKey}`} /></h3>
+                            <div className="space-y-4">
+                            {day.eventKeys.map((event, j) => (
+                                <div key={j} className="flex items-start gap-3 pl-4 border-l-2 border-primary/50">
+                                <Clock className="h-4 w-4 mt-1 text-primary flex-shrink-0" />
+                                <div>
+                                    <p className="font-medium"><TranslationWrapper translationKey={`festivals:${festival.slug}:schedule:${event.timeKey}`} /></p>
+                                    <p className="text-sm text-muted-foreground"><TranslationWrapper translationKey={`festivals:${festival.slug}:schedule:${event.descriptionKey}`} /></p>
+                                </div>
+                                </div>
                             ))}
-                        </ul>
+                            </div>
+                        </div>
+                        ))}
                     </CardContent>
-                </Card>
-              </TabsContent>
-               <TabsContent value="location">
-                <Card>
-                  <CardContent className="pt-6">
-                    <div className="aspect-video w-full rounded-lg overflow-hidden">
-                       <FestivalMap locations={mapLocations} zoom={13} />
+                    </Card>
+                </TabsContent>
+                <TabsContent value="history">
+                    <Card>
+                        <CardContent className="pt-6 prose prose-sm max-w-none text-muted-foreground">
+                            <TranslationWrapper translationKey={`festivals:${festival.slug}:history`} as="p" />
+                        </CardContent>
+                    </Card>
+                </TabsContent>
+                <TabsContent value="traditions">
+                    <Card>
+                        <CardContent className="pt-6">
+                            <ul className="space-y-3">
+                                {traditionKeys.map((traditionKey, i) => (
+                                    <li key={i} className="flex items-start gap-3">
+                                        <Sparkles className="h-4 w-4 mt-1 text-primary flex-shrink-0"/>
+                                        <span className="text-muted-foreground">
+                                            <TranslationWrapper translationKey={`festivals:${festival.slug}:traditions:${traditionKey}`} />
+                                        </span>
+                                    </li>
+                                ))}
+                            </ul>
+                        </CardContent>
+                    </Card>
+                </TabsContent>
+                <TabsContent value="location">
+                    <Card>
+                    <CardContent className="pt-6">
+                        <div className="aspect-video w-full rounded-lg overflow-hidden">
+                        <FestivalMap locations={mapLocations} zoom={13} />
+                        </div>
+                    </CardContent>
+                    </Card>
+                </TabsContent>
+                </Tabs>
+            </div>
+        </div>
+
+        {media.length > 0 && (
+          <div className="mt-12">
+            <h2 className="font-headline text-3xl mb-6">Galería Multimedia</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {media.map((item, index) => (
+                <Card key={index} className="overflow-hidden group">
+                  {item.type === 'image' ? (
+                    <div className="relative aspect-video">
+                      <Image
+                        src={item.url}
+                        alt={item.alt}
+                        fill
+                        className="object-cover transition-transform duration-300 group-hover:scale-105"
+                      />
+                       <div className="absolute top-2 right-2 bg-black/50 text-white p-1 rounded-full">
+                          <ImageIcon className="h-5 w-5" />
+                        </div>
                     </div>
+                  ) : (
+                    <div className="relative aspect-video bg-black">
+                      <iframe
+                        src={item.url}
+                        title={item.alt}
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                        className="w-full h-full"
+                      ></iframe>
+                       <div className="absolute top-2 right-2 bg-black/50 text-white p-1 rounded-full">
+                          <Film className="h-5 w-5" />
+                        </div>
+                    </div>
+                  )}
+                  <CardContent className="p-3">
+                    <p className="text-sm text-muted-foreground truncate">{item.alt}</p>
                   </CardContent>
                 </Card>
-              </TabsContent>
-            </Tabs>
+              ))}
+            </div>
           </div>
-          
-          <div className="space-y-8">
-             <Card>
-                <CardHeader>
-                    <CardTitle className="font-headline text-2xl">Reviews & Ratings</CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-6">
-                    {festival.reviews.map(review => (
-                        <div key={review.id}>
-                            <ReviewCard review={review} />
-                            <Separator className="mt-4" />
-                        </div>
-                    ))}
-                </CardContent>
-             </Card>
-             <Card>
-                <CardHeader>
-                    <CardTitle className="font-headline text-2xl">Leave a Review</CardTitle>
-                </CardHeader>
-                <CardContent>
-                    <ReviewForm />
-                </CardContent>
-             </Card>
-          </div>
-        </div>
+        )}
       </div>
       <div className="h-16"></div>
     </div>

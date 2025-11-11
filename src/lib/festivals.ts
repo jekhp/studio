@@ -12,6 +12,13 @@ export type FestivalLocation = {
   coords: [number, number];
 };
 
+export type FestivalMedia = {
+  type: 'image' | 'video';
+  url: string;
+  thumbnail?: string;
+  alt: string;
+}
+
 export type Festival = {
   id: string;
   slug: string;
@@ -21,8 +28,8 @@ export type Festival = {
   province: string;
   coords: [number, number];
   image: string;
-  rating: number;
-  reviews: Review[];
+  rating: number; // Keep for now for sorting/display elsewhere, but remove from detail page
+  reviews: Review[]; // Keep for now for sorting/display elsewhere
   interest: number;
   isFree: boolean;
   categories: string[];
@@ -32,6 +39,7 @@ export type Festival = {
     dayKey: string; 
     eventKeys: { timeKey: string; descriptionKey: string }[] 
   }[];
+  media?: FestivalMedia[];
 };
 
 
@@ -62,6 +70,12 @@ const cuscoFestivals: Festival[] = [
       categories: ['andino', 'historico', 'danza', 'espectaculo'],
       traditionKeys: ["tradition_1", "tradition_2", "tradition_3", "tradition_4"],
       scheduleKeys: [{ dayKey: 'day_1', eventKeys: [{ timeKey: 'event_1_time', descriptionKey: 'event_1_desc' }, { timeKey: 'event_2_time', descriptionKey: 'event_2_desc' }, { timeKey: 'event_3_time', descriptionKey: 'event_3_desc' }] }],
+      media: [
+        { type: 'video', url: 'https://www.youtube.com/embed/5gP82hB1a9I', alt: 'Official broadcast of Inti Raymi 2023' },
+        { type: 'image', url: '/festivals/intiRaymi.jpg', alt: 'Actor representing the Sapa Inca during Inti Raymi' },
+        { type: 'image', url: 'https://picsum.photos/seed/ir2/800/600', alt: 'Dancers in traditional costumes' },
+        { type: 'video', url: 'https://www.youtube.com/embed/S_T0w1aAnv8', alt: 'Short documentary about Inti Raymi' }
+      ]
     },
     {
       id: 'corpus-christi',
@@ -289,6 +303,11 @@ const paucartamboFestivals: Festival[] = [
       categories: ['religioso', 'danza', 'tradicional', 'espectaculo'],
       traditionKeys: ["tradition_1", "tradition_2", "tradition_3", "tradition_4"],
       scheduleKeys: [{ dayKey: 'day_1', eventKeys: [{ timeKey: 'event_1_time', descriptionKey: 'event_1_desc' }, { timeKey: 'event_2_time', descriptionKey: 'event_2_desc' }] }, { dayKey: 'day_2', eventKeys: [{ timeKey: 'event_1_time', descriptionKey: 'event_1_desc' }, { timeKey: 'event_2_time', descriptionKey: 'event_2_desc' }] }, { dayKey: 'day_3', eventKeys: [{ timeKey: 'event_1_time', descriptionKey: 'event_1_desc' }] }],
+      media: [
+        { type: 'image', url: '/festivals/virgendelcarmenpaucartambo.jpg', alt: 'Virgen del Carmen procession' },
+        { type: 'video', url: 'https://www.youtube.com/embed/e_T-s3t4csM', alt: 'Report on the Virgen del Carmen festival' },
+        { type: 'image', url: 'https://picsum.photos/seed/paucartambo2/800/600', alt: 'Saqra devil dancers on a balcony' }
+      ]
     },
 ];
 
