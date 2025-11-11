@@ -1,9 +1,9 @@
 
 "use client";
 
-import React, { useState, useMemo, useEffect, useCallback } from 'react';
+import React, { useState, useMemo, useEffect, useRef, useCallback } from 'react';
 import { FestivalCard } from '@/components/FestivalCard';
-import { festivals } from '@/lib/festivals';
+import { festivals, Festival } from '@/lib/festivals';
 import { Input } from '@/components/ui/input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Button } from '@/components/ui/button';
@@ -14,12 +14,32 @@ const allMonths = Array.from(new Set(festivals.map(f => new Date(f.date.start).g
 const allCategories = Array.from(new Set(festivals.flatMap(f => f.categories)));
 const BATCH_SIZE = 9;
 
+const getColumnCount = () => {
+  if (typeof window === 'undefined') return 4;
+  if (window.innerWidth >= 1280) return 4;
+  if (window.innerWidth >= 1024) return 3;
+  if (window.innerWidth >= 768) return 2;
+  return 1;
+};
+
 export default function FestivalsPage() {
   const { t } = useLanguage();
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedMonth, setSelectedMonth] = useState('all');
   const [selectedCategory, setSelectedCategory] = useState('all');
-  const [visibleCount, setVisibleCount] = useState(BATCH_SIZE);
+  const [numColumns, setNumColumns] = useState(getColumnCount());
+  const [columns, setColumns] = useState<Festival[][]>(() => Array.from({ length: numColumns }, () => []));
+  const [visibleCount, setVisibleCount] = useState(0);
+
+  const columnRefs = useRef<(HTMLDivElement | null)[]>([]);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setNumColumns(getColumnCount());
+    };
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   const monthOptions = useMemo(() => {
     const monthKeys = [
@@ -44,19 +64,40 @@ export default function FestivalsPage() {
       .sort((a, b) => new Date(a.date.start).getTime() - new Date(b.date.start).getTime());
   }, [searchTerm, selectedMonth, selectedCategory]);
 
-  // Reset visible count only when filters change
+  // Reset columns and visible count when filters change or column count changes
   useEffect(() => {
+    setColumns(Array.from({ length: numColumns }, () => []));
     setVisibleCount(BATCH_SIZE);
-  }, [searchTerm, selectedMonth, selectedCategory]);
+  }, [filteredFestivals, numColumns]);
+  
+  // Distribute items into columns when visibleCount changes
+  useEffect(() => {
+    if (visibleCount === 0) return;
 
-  const festivalsToShow = useMemo(() => {
-    return filteredFestivals.slice(0, visibleCount);
-  }, [filteredFestivals, visibleCount]);
+    const itemsToAdd = filteredFestivals.slice(0, visibleCount);
+
+    const newColumns = Array.from({ length: numColumns }, (): Festival[] => []);
+    const columnHeights = Array(numColumns).fill(0);
+
+    itemsToAdd.forEach(festival => {
+      // Find the shortest column
+      const shortestColumnIndex = columnHeights.indexOf(Math.min(...columnHeights));
+      
+      newColumns[shortestColumnIndex].push(festival);
+      // This is an approximation. A real implementation would use element heights.
+      // For this app, card heights are similar enough that this works well.
+      columnHeights[shortestColumnIndex] += 1; 
+    });
+
+    setColumns(newColumns);
+
+  }, [visibleCount, filteredFestivals, numColumns]);
+
 
   const handleScroll = useCallback(() => {
     if (window.innerHeight + document.documentElement.scrollTop + 200 >= document.documentElement.offsetHeight) {
       if (visibleCount < filteredFestivals.length) {
-        setVisibleCount(prevCount => prevCount + BATCH_SIZE);
+        setVisibleCount(prevCount => Math.min(prevCount + BATCH_SIZE, filteredFestivals.length));
       }
     }
   }, [visibleCount, filteredFestivals.length]);
@@ -75,6 +116,8 @@ export default function FestivalsPage() {
   const formatCategoryKey = (category: string) => {
     return category.replace(/ /g, '-').replace(/ñ/g, 'n');
   };
+
+  const hasFestivals = columns.some(col => col.length > 0);
 
   return (
     <div className="container mx-auto px-4 py-16">
@@ -130,14 +173,16 @@ export default function FestivalsPage() {
         </div>
       </div>
       
-      {festivalsToShow.length > 0 ? (
+      {hasFestivals ? (
          <>
-          <div className="columns-1 md:columns-2 lg:columns-3 xl:columns-4 gap-6 space-y-6">
-              {festivalsToShow.map((festival) => (
-                <div key={festival.id} className="break-inside-avoid">
-                  <FestivalCard festival={festival} />
-                </div>
-              ))}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            {columns.map((column, colIndex) => (
+              <div key={colIndex} className="flex flex-col gap-6">
+                {column.map((festival) => (
+                  <FestivalCard key={festival.id} festival={festival} />
+                ))}
+              </div>
+            ))}
           </div>
         </>
       ) : (
