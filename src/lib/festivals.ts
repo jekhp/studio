@@ -29,8 +29,6 @@ export type Festival = {
   province: string;
   coords: [number, number];
   image: string;
-  rating: number; 
-  interest: number;
   isFree: boolean;
   categories: string[];
   isRegional?: boolean;
@@ -60,8 +58,6 @@ const cuscoFestivals: Festival[] = [
       province: 'Cusco',
       coords: [-13.507, -71.982],
       image: 'inti-raymi',
-      rating: 4.9,
-      interest: 2.1,
       isFree: false,
       categories: ['andino', 'historico', 'danza', 'espectaculo'],
       traditionKeys: ["tradition_1", "tradition_2", "tradition_3", "tradition_4"],
@@ -82,8 +78,6 @@ const cuscoFestivals: Festival[] = [
       province: 'Cusco',
       coords: [-13.5165, -71.979],
       image: 'corpus-christi',
-      rating: 4.7,
-      interest: 1.2,
       isFree: true,
       categories: ['religioso', 'gastronomico', 'tradicional', 'espectaculo'],
       traditionKeys: ["tradition_1", "tradition_2", "tradition_3", "tradition_4"],
@@ -98,8 +92,6 @@ const cuscoFestivals: Festival[] = [
       province: "Cusco",
       coords: [-13.530, -71.993],
       image: "huancaro-fair",
-      rating: 4.4,
-      interest: 1.1,
       isFree: false,
       categories: ["feria", "agricola", "gastronomico", "artesania", "conciertos"]
     },
@@ -112,8 +104,6 @@ const cuscoFestivals: Festival[] = [
       province: "Cusco",
       coords: [-13.535, -71.937],
       image: "san-sebastian-festival",
-      rating: 4.5,
-      interest: 0.8,
       isFree: true,
       categories: ["religioso", "procesion", "danza"]
     },
@@ -126,8 +116,6 @@ const cuscoFestivals: Festival[] = [
       province: "Cusco",
       coords: [-13.5165, -71.979],
       image: "santurantikuy-market",
-      rating: 4.9,
-      interest: 2.5,
       isFree: true,
       categories: ["feria", "artesania", "religioso", "tradicional"],
       isRegional: true,
@@ -145,8 +133,6 @@ const acomayoFestivals: Festival[] = [
       province: "Acomayo",
       coords: [-13.91, -71.68],
       image: "mollomarka-carnival",
-      rating: 4.7,
-      interest: 0.5,
       isFree: true,
       categories: ["carnaval", "andino", "danza"]
     },
@@ -163,8 +149,6 @@ const calcaFestivals: Festival[] = [
       province: "Calca",
       coords: [-13.504, -71.745],
       image: "senor-de-huanca",
-      rating: 4.9,
-      interest: 1.4,
       isFree: true,
       categories: ["religioso", "peregrinacion", "andino"]
     },
@@ -181,8 +165,6 @@ const canasFestivals: Festival[] = [
       province: 'Canas',
       coords: [-14.364, -71.503],
       image: 'qeswachaka-bridge',
-      rating: 4.9,
-      interest: 1.9,
       isFree: false,
       categories: ['andino', 'tradicional', 'historico', 'espectaculo'],
       traditionKeys: ["tradition_1", "tradition_2", "tradition_3", "tradition_4", "tradition_5"],
@@ -201,8 +183,6 @@ const canchisFestivals: Festival[] = [
       province: "Canchis",
       coords: [-14.148, -71.408],
       image: "tinta-carnival",
-      rating: 4.5,
-      interest: 0.6,
       isFree: true,
       categories: ["carnaval", "danza", "tradicional"]
     },
@@ -219,8 +199,6 @@ const chumbivilcasFestivals: Festival[] = [
       province: "Chumbivilcas",
       coords: [-14.45, -72.08],
       image: "takanakuy-fight",
-      rating: 4.6,
-      interest: 1.0,
       isFree: true,
       categories: ["combate-ritual", "tradicional", "danza"]
     },
@@ -237,8 +215,6 @@ const espinarFestivals: Festival[] = [
       province: "Espinar",
       coords: [-14.79, -71.41],
       image: "espinar-harvest",
-      rating: 4.5,
-      interest: 0.4,
       isFree: true,
       categories: ["andino", "agricola", "tradicional"]
     },
@@ -255,8 +231,6 @@ const laConvencionFestivals: Festival[] = [
       province: "La Convención",
       coords: [-12.864, -72.693],
       image: "quillabamba-anniversary",
-      rating: 4.6,
-      interest: 0.9,
       isFree: true,
       categories: ["feria", "conciertos", "popular"]
     },
@@ -273,8 +247,6 @@ const paucartamboFestivals: Festival[] = [
       province: 'Paucartambo',
       coords: [-13.31, -71.59],
       image: 'paucartambo',
-      rating: 4.9,
-      interest: 1.5,
       isFree: true,
       categories: ['religioso', 'danza', 'tradicional', 'espectaculo'],
       traditionKeys: ["tradition_1", "tradition_2", "tradition_3", "tradition_4"],
@@ -298,8 +270,6 @@ const quispicanchiFestivals: Festival[] = [
       province: 'Quispicanchi',
       coords: [-13.63, -71.23],
       image: 'qoyllur-riti',
-      rating: 4.8,
-      interest: 1.8,
       isFree: true,
       categories: ['andino', 'religioso', 'peregrinacion', 'aventura'],
       traditionKeys: ["tradition_1", "tradition_2", "tradition_3", "tradition_4"],
@@ -318,8 +288,6 @@ const urubambaFestivals: Festival[] = [
       province: "Urubamba",
       coords: [-13.391, -72.046],
       image: "linderaje-chinchero",
-      rating: 4.6,
-      interest: 0.7,
       isFree: true,
       categories: ["combate-ritual", "tradicional", "andino"],
       media: [
@@ -336,8 +304,6 @@ const urubambaFestivals: Festival[] = [
       province: "Urubamba",
       coords: [-13.257, -72.263],
       image: "ollantaytambo-bajadaReyes",
-      rating: 4.7,
-      interest: 0.9,
       isFree: true,
       categories: ["religioso", "procesion", "danza"]
     },
@@ -354,8 +320,6 @@ const regionalFestivals: Festival[] = [
       province: "Varias",
       coords: [-13.5, -72.0],
       image: "wata-qallary",
-      rating: 4.8,
-      interest: 1.3,
       isFree: true,
       categories: ["andino", "tradicional", "espiritual"]
     },

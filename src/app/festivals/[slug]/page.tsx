@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
-import { Calendar, Clock, MapPin, Sparkles, Star, Film, Image as ImageIcon } from 'lucide-react';
+import { Calendar, Clock, MapPin, Sparkles, Film, Image as ImageIcon } from 'lucide-react';
 import { format } from 'date-fns';
 
 import { festivals } from '@/lib/festivals';
@@ -43,6 +43,7 @@ export default function FestivalDetailPage({ params }: { params: { slug: string 
   const media = festival.media || [];
 
   const mapLocations = [{
+    ...festival,
     coords: festival.coords,
     popup: `<div class="w-48"><h3 class="font-bold text-base">${festival.name}</h3><p class="text-xs">${festival.location}</p></div>`
   }];
@@ -80,8 +81,7 @@ export default function FestivalDetailPage({ params }: { params: { slug: string 
               </div>
             </div>
             <div className="mt-4 md:mt-0 flex items-center gap-1">
-                <Star className="h-6 w-6 text-amber-400 fill-amber-400" />
-                <span className="font-bold text-lg">{festival.rating.toFixed(1)}</span>
+                {/* Rating removed */}
             </div>
           </div>
         </div>

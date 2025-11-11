@@ -91,12 +91,7 @@ export const UpcomingFestivalCard = ({ festival }: { festival: Festival }) => {
             </div>
         </div>
 
-        <div className="mt-2 flex items-center justify-between">
-            <div className="flex items-center gap-1">
-                <Star className="h-4 w-4 text-amber-400 fill-amber-400" />
-                <span className="font-bold text-sm">{festival.rating.toFixed(1)}</span>
-                <span className="text-xs text-muted-foreground">({festival.interest}k)</span>
-            </div>
+        <div className="mt-2 flex items-center justify-end">
             <Button 
               variant={isInterested ? 'default' : 'outline'} 
               size="sm"
