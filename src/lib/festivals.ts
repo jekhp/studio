@@ -14,7 +14,8 @@ export type FestivalLocation = {
 
 export type FestivalMedia = {
   type: 'image' | 'video';
-  url: string;
+  url?: string; // Optional for videos if using embedCode
+  embedCode?: string; // For full iframe code
   thumbnail?: string;
   alt: string;
 }
@@ -66,10 +67,10 @@ const cuscoFestivals: Festival[] = [
       traditionKeys: ["tradition_1", "tradition_2", "tradition_3", "tradition_4"],
       scheduleKeys: [{ dayKey: 'day_1', eventKeys: [{ timeKey: 'event_1_time', descriptionKey: 'event_1_desc' }, { timeKey: 'event_2_time', descriptionKey: 'event_2_desc' }, { timeKey: 'event_3_time', descriptionKey: 'event_3_desc' }] }],
       media: [
-        { type: 'video', url: 'https://www.youtube.com/embed/5gP82hB1a9I', alt: 'Official broadcast of Inti Raymi 2023' },
+        { type: 'video', embedCode: '<iframe width="560" height="315" src="https://www.youtube.com/embed/5gP82hB1a9I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>', alt: 'Official broadcast of Inti Raymi 2023' },
         { type: 'image', url: '/festivals/intiRaymi.jpg', alt: 'Actor representing the Sapa Inca during Inti Raymi' },
         { type: 'image', url: 'https://picsum.photos/seed/ir2/800/600', alt: 'Dancers in traditional costumes' },
-        { type: 'video', url: 'https://www.youtube.com/embed/S_T0w1aAnv8', alt: 'Short documentary about Inti Raymi' }
+        { type: 'video', embedCode: '<iframe width="560" height="315" src="https://www.youtube.com/embed/S_T0w1aAnv8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>', alt: 'Short documentary about Inti Raymi' }
       ]
     },
     {
@@ -280,7 +281,7 @@ const paucartamboFestivals: Festival[] = [
       scheduleKeys: [{ dayKey: 'day_1', eventKeys: [{ timeKey: 'event_1_time', descriptionKey: 'event_1_desc' }, { timeKey: 'event_2_time', descriptionKey: 'event_2_desc' }] }, { dayKey: 'day_2', eventKeys: [{ timeKey: 'event_1_time', descriptionKey: 'event_1_desc' }, { timeKey: 'event_2_time', descriptionKey: 'event_2_desc' }] }, { dayKey: 'day_3', eventKeys: [{ timeKey: 'event_1_time', descriptionKey: 'event_1_desc' }] }],
       media: [
         { type: 'image', url: '/festivals/virgendelcarmenpaucartambo.jpg', alt: 'Virgen del Carmen procession' },
-        { type: 'video', url: 'https://www.youtube.com/embed/e_T-s3t4csM', alt: 'Report on the Virgen del Carmen festival' },
+        { type: 'video', embedCode: '<iframe width="560" height="315" src="https://www.youtube.com/embed/0tlv3hjVB9Q?si=GTa-eMn5ZKhrh33A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>', alt: 'Report on the Virgen del Carmen festival' },
         { type: 'image', url: 'https://picsum.photos/seed/paucartambo2/800/600', alt: 'Saqra devil dancers on a balcony' }
       ]
     },
@@ -323,7 +324,7 @@ const urubambaFestivals: Festival[] = [
       categories: ["combate-ritual", "tradicional", "andino"],
       media: [
         { type: 'image', url: '/festivals/linderaje-chinchero.jpg', alt: 'Combate ritual en Chinchero' },
-        { type: 'video', url: 'https://www.youtube.com/embed/hnubCYi37kw', alt: 'Documental sobre el Linderaje en Chinchero' }
+        { type: 'video', embedCode: '<iframe width="560" height="315" src="https://www.youtube.com/embed/hnubCYi37kw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>', alt: 'Documental sobre el Linderaje en Chinchero' }
       ]
     },
     {

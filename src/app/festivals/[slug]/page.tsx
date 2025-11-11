@@ -7,7 +7,6 @@ import { festivals } from '@/lib/festivals';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { Rating } from '@/components/Rating';
 import { FestivalMap } from '@/components/FestivalMap';
 import { TranslationWrapper } from '@/components/TranslationWrapper';
 
@@ -80,8 +79,9 @@ export default function FestivalDetailPage({ params }: { params: { slug: string 
                 </div>
               </div>
             </div>
-            <div className="mt-4 md:mt-0">
-              <Rating rating={festival.rating} size={24} />
+            <div className="mt-4 md:mt-0 flex items-center gap-1">
+                <Star className="h-6 w-6 text-amber-400 fill-amber-400" />
+                <span className="font-bold text-lg">{festival.rating.toFixed(1)}</span>
             </div>
           </div>
         </div>
@@ -176,7 +176,7 @@ export default function FestivalDetailPage({ params }: { params: { slug: string 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {media.map((item, index) => (
                 <Card key={index} className="overflow-hidden group">
-                  {item.type === 'image' ? (
+                  {item.type === 'image' && item.url ? (
                     <div className="relative aspect-video">
                       <Image
                         src={item.url}
@@ -188,21 +188,17 @@ export default function FestivalDetailPage({ params }: { params: { slug: string 
                           <ImageIcon className="h-5 w-5" />
                         </div>
                     </div>
-                  ) : (
+                  ) : item.type === 'video' && item.embedCode ? (
                     <div className="relative aspect-video bg-black">
-                      <iframe
-                        src={item.url}
-                        title={item.alt}
-                        frameBorder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowFullScreen
-                        className="w-full h-full"
-                      ></iframe>
-                       <div className="absolute top-2 right-2 bg-black/50 text-white p-1 rounded-full">
+                        <div className="absolute top-2 right-2 bg-black/50 text-white p-1 rounded-full z-10">
                           <Film className="h-5 w-5" />
                         </div>
+                        <div 
+                          className="w-full h-full [&>iframe]:w-full [&>iframe]:h-full"
+                          dangerouslySetInnerHTML={{ __html: item.embedCode }} 
+                        />
                     </div>
-                  )}
+                  ) : null}
                   <CardContent className="p-3">
                     <p className="text-sm text-muted-foreground truncate">{item.alt}</p>
                   </CardContent>
