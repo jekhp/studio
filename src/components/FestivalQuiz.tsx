@@ -1,3 +1,4 @@
+
 "use client";
 
 import React, { useState, useMemo } from 'react';
@@ -183,7 +184,9 @@ export function FestivalQuiz() {
                     >
                         <div className="p-6 md:p-8">
                             <Progress value={progress} className="mb-4" />
-                            <p className="text-sm font-medium text-primary mb-2">{t('ui.quiz.step', { step: step + 1, total: quizSteps.length })}</p>
+                            <p className="text-sm font-medium text-primary mb-2">
+                                {t('ui.quiz.step', { replacements: { step: step + 1, total: quizSteps.length } })}
+                            </p>
                             <h2 className="text-2xl md:text-3xl font-headline mb-8">{t(currentStep.question)}</h2>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 {currentStep.options.map(option => (
