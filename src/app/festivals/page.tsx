@@ -33,7 +33,7 @@ export default function FestivalsPage() {
   }, [t]);
 
   const filteredFestivals = useMemo(() => {
-    const filtered = festivals
+    return festivals
       .filter(festival => {
         const festivalName = festival.name; 
         const matchesSearch = festivalName.toLowerCase().includes(searchTerm.toLowerCase());
@@ -42,9 +42,11 @@ export default function FestivalsPage() {
         return matchesSearch && matchesMonth && matchesCategory;
       })
       .sort((a, b) => new Date(a.date.start).getTime() - new Date(b.date.start).getTime());
-      
-    setVisibleCount(BATCH_SIZE); // Reset visible count on filter change
-    return filtered;
+  }, [searchTerm, selectedMonth, selectedCategory]);
+
+  // Reset visible count only when filters change
+  useEffect(() => {
+    setVisibleCount(BATCH_SIZE);
   }, [searchTerm, selectedMonth, selectedCategory]);
 
   const festivalsToShow = useMemo(() => {
@@ -68,7 +70,6 @@ export default function FestivalsPage() {
     setSearchTerm('');
     setSelectedMonth('all');
     setSelectedCategory('all');
-    setVisibleCount(BATCH_SIZE);
   };
   
   const formatCategoryKey = (category: string) => {
