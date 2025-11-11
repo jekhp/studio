@@ -2,14 +2,11 @@
 
 import { Wand2 } from "lucide-react";
 import { FestivalQuiz } from "@/components/FestivalQuiz";
-import { PlaceHolderImages } from "@/lib/placeholder-images";
 import Image from "next/image";
 import { useLanguage } from "@/context/language-context";
 
 export default function RecommendationsPage() {
   const { t } = useLanguage();
-  const char1 = PlaceHolderImages.find(p => p.id === 'quiz-character-1');
-  const char2 = PlaceHolderImages.find(p => p.id === 'quiz-character-2');
 
   return (
     <div className="container mx-auto px-4 py-16 overflow-hidden">
@@ -24,33 +21,29 @@ export default function RecommendationsPage() {
       </div>
 
       <div className="relative">
-        {char1 && (
-            <div className="hidden lg:block absolute top-1/2 -translate-y-1/2 -left-24 2xl:-left-32 w-[250px] h-[400px] opacity-80">
-                 <Image 
-                    src={char1.imageUrl}
-                    alt={char1.description}
-                    fill
-                    className="object-contain"
-                    data-ai-hint={char1.imageHint}
-                 />
-            </div>
-        )}
+        <div className="hidden lg:block absolute top-1/2 -translate-y-1/2 -left-24 2xl:-left-32 w-[250px] h-[400px] opacity-80">
+            <Image 
+                src="/images/cuyperfil.webp"
+                alt="CuscoFest Cuy"
+                fill
+                className="object-contain"
+                data-ai-hint="guinea pig character"
+            />
+        </div>
         
         <div className="max-w-4xl mx-auto">
           <FestivalQuiz />
         </div>
 
-        {char2 && (
-             <div className="hidden lg:block absolute top-1/2 -translate-y-1/2 -right-24 2xl:-right-32 w-[250px] h-[400px] opacity-80">
-                 <Image 
-                    src={char2.imageUrl}
-                    alt={char2.description}
-                    fill
-                    className="object-contain"
-                    data-ai-hint={char2.imageHint}
-                 />
-            </div>
-        )}
+        <div className="hidden lg:block absolute top-1/2 -translate-y-1/2 -right-24 2xl:-right-32 w-[250px] h-[400px] opacity-80">
+            <Image 
+                src="/images/cuyperfil.webp"
+                alt="CuscoFest Cuy"
+                fill
+                className="object-contain scale-x-[-1]"
+                data-ai-hint="guinea pig character"
+            />
+        </div>
       </div>
     </div>
   );
