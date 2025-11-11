@@ -1,24 +1,25 @@
+
 "use client";
 
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect, useCallback } from 'react';
 import { FestivalCard } from '@/components/FestivalCard';
-import { festivals, type Festival } from '@/lib/festivals';
+import { festivals } from '@/lib/festivals';
 import { Input } from '@/components/ui/input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Button } from '@/components/ui/button';
 import { Search, X } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
 import { useLanguage } from '@/context/language-context';
 
 const allMonths = Array.from(new Set(festivals.map(f => new Date(f.date.start).getMonth())));
 const allCategories = Array.from(new Set(festivals.flatMap(f => f.categories)));
+const BATCH_SIZE = 9;
 
 export default function FestivalsPage() {
-  const { t, language } = useLanguage();
+  const { t } = useLanguage();
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedMonth, setSelectedMonth] = useState('all');
   const [selectedCategory, setSelectedCategory] = useState('all');
-  const [visibleCount, setVisibleCount] = useState(9);
+  const [visibleCount, setVisibleCount] = useState(BATCH_SIZE);
 
   const monthOptions = useMemo(() => {
     const monthKeys = [
@@ -32,24 +33,42 @@ export default function FestivalsPage() {
   }, [t]);
 
   const filteredFestivals = useMemo(() => {
-    return festivals
+    const filtered = festivals
       .filter(festival => {
-        const festivalName = festival.name; // Keep original name
+        const festivalName = festival.name; 
         const matchesSearch = festivalName.toLowerCase().includes(searchTerm.toLowerCase());
         const matchesMonth = selectedMonth === 'all' || new Date(festival.date.start).getMonth() === parseInt(selectedMonth, 10);
         const matchesCategory = selectedCategory === 'all' || festival.categories.includes(selectedCategory);
         return matchesSearch && matchesMonth && matchesCategory;
       })
       .sort((a, b) => new Date(a.date.start).getTime() - new Date(b.date.start).getTime());
+      
+    setVisibleCount(BATCH_SIZE); // Reset visible count on filter change
+    return filtered;
   }, [searchTerm, selectedMonth, selectedCategory]);
 
-  const festivalsToShow = filteredFestivals.slice(0, visibleCount);
+  const festivalsToShow = useMemo(() => {
+    return filteredFestivals.slice(0, visibleCount);
+  }, [filteredFestivals, visibleCount]);
+
+  const handleScroll = useCallback(() => {
+    if (window.innerHeight + document.documentElement.scrollTop + 200 >= document.documentElement.offsetHeight) {
+      if (visibleCount < filteredFestivals.length) {
+        setVisibleCount(prevCount => prevCount + BATCH_SIZE);
+      }
+    }
+  }, [visibleCount, filteredFestivals.length]);
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [handleScroll]);
 
   const clearFilters = () => {
     setSearchTerm('');
     setSelectedMonth('all');
     setSelectedCategory('all');
-    setVisibleCount(9);
+    setVisibleCount(BATCH_SIZE);
   };
   
   const formatCategoryKey = (category: string) => {
@@ -65,7 +84,6 @@ export default function FestivalsPage() {
         </p>
       </div>
 
-      {/* Filters Section */}
       <div className="sticky top-16 bg-background/95 backdrop-blur-sm z-30 py-4 mb-8 border-b">
         <div className="flex flex-col md:flex-row gap-4 items-center">
             <div className="relative w-full md:flex-grow">
@@ -114,29 +132,12 @@ export default function FestivalsPage() {
       {festivalsToShow.length > 0 ? (
          <>
           <div className="columns-1 md:columns-2 lg:columns-3 xl:columns-4 gap-6 space-y-6">
-              <AnimatePresence>
-                {festivalsToShow.map((festival) => (
-                  <motion.div
-                    key={festival.id}
-                    layout
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    exit={{ opacity: 0, scale: 0.9 }}
-                    transition={{ duration: 0.3 }}
-                    className="break-inside-avoid"
-                  >
-                    <FestivalCard festival={festival} />
-                  </motion.div>
-                ))}
-              </AnimatePresence>
+              {festivalsToShow.map((festival) => (
+                <div key={festival.id} className="break-inside-avoid">
+                  <FestivalCard festival={festival} />
+                </div>
+              ))}
           </div>
-          {visibleCount < filteredFestivals.length && (
-            <div className="text-center mt-12">
-              <Button onClick={() => setVisibleCount(prev => prev + 9)}>
-                {t('ui.festivalsPage.loadMore')}
-              </Button>
-            </div>
-          )}
         </>
       ) : (
         <div className="text-center py-16">
