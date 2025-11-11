@@ -23,10 +23,10 @@ const quizSteps = [
         id: 'vibe',
         question: 'ui.quiz.vibe.question',
         options: [
-            { value: 'espiritual', label: 'ui.quiz.vibe.options.spiritual.label', icon: Heart, description: 'ui.quiz.vibe.options.spiritual.description' },
-            { value: 'fiesta', label: 'ui.quiz.vibe.options.party.label', icon: Heart, description: 'ui.quiz.vibe.options.party.description' },
+            { value: 'espiritual', label: 'ui.quiz.vibe.options.espiritual.label', icon: Heart, description: 'ui.quiz.vibe.options.espiritual.description' },
+            { value: 'fiesta', label: 'ui.quiz.vibe.options.fiesta.label', icon: Heart, description: 'ui.quiz.vibe.options.fiesta.description' },
             { value: 'cultural', label: 'ui.quiz.vibe.options.cultural.label', icon: Heart, description: 'ui.quiz.vibe.options.cultural.description' },
-            { value: 'aventura', label: 'ui.quiz.vibe.options.adventure.label', icon: Mountain, description: 'ui.quiz.vibe.options.adventure.description' },
+            { value: 'aventura', label: 'ui.quiz.vibe.options.aventura.label', icon: Mountain, description: 'ui.quiz.vibe.options.aventura.description' },
         ],
     },
     {
