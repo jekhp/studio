@@ -351,6 +351,10 @@ const urubambaFestivals: Festival[] = [
       interest: 0.7,
       isFree: true,
       categories: ["combate-ritual", "tradicional", "andino"],
+      media: [
+        { type: 'image', url: '/festivals/linderaje-chinchero.jpg', alt: 'Combate ritual en Chinchero' },
+        { type: 'video', url: 'https://www.youtube.com/embed/F0k9iWp0m-E', alt: 'Documental sobre el Linderaje en Chinchero' }
+      ]
     },
     {
       id: "ollantaytambo-reyes",
