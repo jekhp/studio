@@ -271,6 +271,22 @@
                 "event_1_desc": "The communities gather at the boundary lines to begin the ritual."
             }
         },
+        "corpus_chinchero": {
+            "location_detail": "Chinchero, Urubamba",
+            "description": "Syncretic version of Corpus Christi with unique dances.",
+            "longDescription": "While Cusco city has its grand Corpus Christi, the version in Chinchero is more intimate and has its own personality. The saints are also paraded, but with a strong presence of local dances and music that give it a unique Andean character. It is a perfect example of how large religious festivals are adapted and reinterpreted in rural communities.",
+            "history": "Like the Corpus Christi of Cusco, it was established in colonial times, but in Chinchero it merged even more deeply with local agricultural and social celebrations. It became a space to reaffirm the identity of the Chinchero ayllus (kin groups).",
+            "traditions": {
+                "tradition_1": "Procession of the saints accompanied by traditional dances.",
+                "tradition_2": "Gastronomic fair with typical dishes of the area.",
+                "tradition_3": "Strong community participation."
+            },
+            "schedule": {
+                "day_1": "Corpus Christi Day",
+                "event_1_time": "Afternoon",
+                "event_1_desc": "Main procession and dance presentation in the main square of Chinchero."
+            }
+        },
         "carnaval-de-tinta": {
             "location_detail": "Tinta, Canchis",
             "description": "A traditional and colorful carnival with competitive dances.",
