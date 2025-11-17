@@ -4,12 +4,16 @@ import { notFound } from 'next/navigation';
 import { Calendar, Clock, MapPin, Sparkles, Film, Image as ImageIcon } from 'lucide-react';
 import { format } from 'date-fns';
 
-import { festivals } from '@/lib/festivals';
+import { festivals, Festival } from '@/lib/festivals';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { FestivalMap } from '@/components/FestivalMap';
 import { TranslationWrapper } from '@/components/TranslationWrapper';
+
+async function getFestivalData(slug: string): Promise<Festival | undefined> {
+  return festivals.find((f) => f.slug === slug);
+}
 
 export async function generateStaticParams() {
   return festivals.map((festival) => ({
@@ -18,7 +22,7 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: { params: { slug: string } }) {
-  const festival = festivals.find((f) => f.slug === params.slug);
+  const festival = await getFestivalData(params.slug);
   if (!festival) {
     return {
       title: 'Festival Not Found',
@@ -30,7 +34,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 }
 
 export default async function FestivalDetailPage({ params }: { params: { slug: string } }) {
-  const festival = festivals.find((f) => f.slug === params.slug);
+  const festival = await getFestivalData(params.slug);
 
   if (!festival) {
     notFound();
