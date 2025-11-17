@@ -1,3 +1,4 @@
+
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { Calendar, Clock, MapPin, Sparkles, Film, Image as ImageIcon } from 'lucide-react';
@@ -28,7 +29,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   };
 }
 
-export default function FestivalDetailPage({ params }: { params: { slug: string } }) {
+export default async function FestivalDetailPage({ params }: { params: { slug: string } }) {
   const festival = festivals.find((f) => f.slug === params.slug);
 
   if (!festival) {
