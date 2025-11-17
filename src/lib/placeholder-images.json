@@ -121,6 +121,12 @@
       "imageHint": "ritual fight chinchero"
     },
     {
+      "id": "corpus-chinchero",
+      "description": "A ritual fight to define communal boundaries in Chinchero, Cusco.",
+      "imageUrl": "/festivals/corpus_chinchero.jpg",
+      "imageHint": "ritual fight chinchero"
+    },
+    {
       "id": "quiz-character-1",
       "description": "A dancer in a 'Saqra' (devil) costume from the Paucartambo festival.",
       "imageUrl": "https://images.unsplash.com/photo-1758998427892-e579f09c9fa7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxmZXN0aXZhbCUyMGNoYXJhY3RlcnxlbnwwfHx8fDE3NjIxODgwMjF8MA&ixlib=rb-4.1.0&q=80&w=1080",
@@ -135,7 +141,7 @@
     {
       "id": "quiz-character-2",
       "description": "A dancer in an 'Ukuku' (bear-man) costume from the Qoyllur Rit'i festival.",
-      "imageUrl": "https://picsum.photos/seed/qc2/300/500",
+      "imageUrl": "https://images.unsplash.com/photo-1763013373583-376c6675a31a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8YW5kZWFuJTIwY2hhcmFjdGVyfGVufDB8fHx8MTc2MzM5MjY3OHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "andean character"
     },
     {
