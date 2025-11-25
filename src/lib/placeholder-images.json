@@ -49,22 +49,10 @@
       "imageHint": "pachamama ceremony"
     },
     {
-      "id": "anta-festival",
-      "description": "Folkloric dancers in colorful attire performing in a street parade.",
-      "imageUrl": "https://images.unsplash.com/photo-1652784644588-57432174bfc6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxmb2xrbG9yaWMlMjBkYW5jZXxlbnwwfHx8fDE3NjE5NDU1ODR8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "folkloric dance"
-    },
-    {
       "id": "quillabamba-coffee",
       "description": "Close-up of freshly roasted coffee beans in a sack at a market.",
       "imageUrl": "https://images.unsplash.com/photo-1690983326555-8b8e27843a32?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxjb2ZmZWUlMjBiZWFuc3xlbnwwfHx8fDE3NjE5NDQ1NTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "coffee beans"
-    },
-    {
-      "id": "mollomarka-carnival",
-      "description": "A group of people in traditional Andean attire dancing in a circle in a rural, mountainous landscape.",
-      "imageUrl": "https://images.unsplash.com/photo-1595424307919-b8335ccd9630?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxhbmRlYW4lMjBkYW5jZXJzfGVufDB8fHx8fDE3NjIyNzUxMDF8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "andean dancers"
     },
     {
       "id": "qeswachaka-bridge",
@@ -85,9 +73,9 @@
       "imageHint": "potato harvest"
     },
     {
-      "id": "paruro-bullfight",
+      "id": "Virgen-Natividad-Paruro-img",
       "description": "A horseman in traditional garb facing a bull in a rural arena.",
-      "imageUrl": "https://images.unsplash.com/photo-1759532078994-67f70adb2f4f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx0cmFkaXRpb25hbCUyMGJ1bGxmaWdodHxlbnwwfHx8fDE3NjE5NDU1ODR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/festivals/virgenNatividadParuro.jpg",
       "imageHint": "traditional bullfight"
     },
     {
@@ -148,6 +136,12 @@
       "id": "santurantikuy-market",
       "description": "A bustling Christmas market at night, filled with artisanal crafts and nativity figures.",
       "imageUrl": "/festivals/santuranticuy.jpg",
+      "imageHint": "christmas market"
+    },
+    {
+      "id": "santa-cecilia-musicos",
+      "description": "A bustling Christmas market at night, filled with artisanal crafts and nativity figures.",
+      "imageUrl": "/festivals/santa_cecilia.jpg",
       "imageHint": "christmas market"
     }
   ]

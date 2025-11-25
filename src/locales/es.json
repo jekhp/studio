@@ -406,23 +406,6 @@
                 "event_1_desc": "Día principal con misa, procesión y presentaciones de danzas."
             }
         },
-        "carnaval-de-mollomarka": {
-            "location_detail": "Mollomarka, Acomayo",
-            "description": "Un carnaval andino de altura, famoso por sus danzas y música únicas.",
-            "longDescription": "El Carnaval de Mollomarka es una auténtica expresión del carnaval andino. A más de 4,000 msnm, las comunidades se reúnen para celebrar la fertilidad y la vida con música y danza. El 'Sarge' o 'Tupay' es la danza característica de esta región, un baile ritual de cortejo realizado por parejas.",
-            "history": "Al igual que otros carnavales andinos, fusiona las fechas católicas con rituales prehispánicos ligados al ciclo agrícola y la adoración a las deidades de la montaña.",
-            "traditions": {
-                "tradition_1": "La danza del 'Sarge', exclusiva de esta región.",
-                "tradition_2": "Ofrendas rituales a la Pachamama.",
-                "tradition_3": "Juegos con 'pica pica' y serpentinas.",
-                "tradition_4": "Comidas comunitarias y consumo de chicha."
-            },
-            "schedule": {
-                "day_1": "Domingo de Carnaval",
-                "event_1_time": "Todo el día",
-                "event_1_desc": "Celebración principal en la explanada de la comunidad."
-            }
-        },
         "aniversario-de-quillabamba": {
             "location_detail": "Quillabamba, La Convención",
             "description": "El aniversario de la 'Ciudad del Eterno Verano', conocida por su café, cacao y ambiente festivo.",
@@ -472,6 +455,51 @@
                 "day_1": "24 de Diciembre",
                 "event_1_time": "Todo el día",
                 "event_1_desc": "Feria de Santurantikuy en la Plaza de Armas. Los artesanos se instalan desde la madrugada."
+            }
+        },
+        "Virgen-Natividad-Paruro": {
+            "location_detail": "Provincia de Paruro, Región Cusco.",
+            "description": "Una fiesta religiosa de profundo arraigo que celebra el Nacimiento de la Virgen María, destacando por sus danzas tradicionales y devoción.",
+            "longDescription": "La Festividad de la Virgen de la Natividad en Paruro es una de las expresiones religiosas y culturales más importantes de la región Cusco. Se lleva a cabo cada 7, 8 y 9 de septiembre, siendo el día 8 el día central. La celebración fusiona el fervor católico con tradiciones ancestrales andinas, incluyendo misas, procesiones e impresionantes presentaciones de danzas folklóricas que llenan de color y música las calles.",
+            "history": "La devoción a la Natividad de María en Paruro data de la época colonial. La imagen de la Virgen es considerada sumamente milagrosa, atrayendo a miles de fieles. Las festividades han evolucionado a lo largo de los siglos, incorporando danzas tradicionales como los 'Siqllas' y 'Qapaq Negro', convirtiéndose en un símbolo de la identidad cultural local.",
+            "traditions": {
+                "tradition_1": "La procesión principal de la imagen de la Virgen de la Natividad por las calles de Paruro.",
+                "tradition_2": "La ejecución de diversas danzas tradicionales ('Danzas Autóctonas'), cada una con su propio vestuario y significado.",
+                "tradition_3": "La 'Víspera' el 7 de septiembre, marcada por la quema de fuegos artificiales y música, que anuncia el inicio de la fiesta central.",
+                "tradition_4": "Misas y ceremonias religiosas realizadas en el Templo de la Natividad."
+            },
+            "schedule": {
+                "day_1": "7 de septiembre",
+                "event_1_time": "Tarde/Noche",
+                "event_1_desc": "Víspera de la Fiesta con música tradicional, juegos pirotécnicos y la 'entrada' de los conjuntos de danzas.",
+                "day_2": "8 de septiembre",
+                "event_2_time": "Todo el Día",
+                "event_2_desc": "Día Central de la Fiesta. Misa de fiesta y la procesión principal de la Virgen de la Natividad.",
+                "day_3": "9 de septiembre",
+                "event_3_time": "Mañana/Tarde",
+                "event_3_desc": "El 'Och' (despedida) de la Virgen y ceremonias finales, incluyendo la culminación de las presentaciones de danzas."
+            }
+        },
+        "festividad-santaCecilia": {
+            "location_detail": "Templo y Parroquia de Nuestra Señora de la Almudena, ubicado en el distrito de Santiago, Cusco. También se realizan actos en otros templos con hermandades musicales.",
+            "description": "Celebración en honor a la patrona de los músicos, marcada por misas especiales y homenajes musicales.",
+            "longDescription": "La Festividad de Santa Cecilia, virgen y mártir, se conmemora en Cusco el 22 de noviembre, aunque los actos litúrgicos y homenajes suelen iniciar en la víspera (21 de noviembre). Es un día en el que los músicos de la ciudad —de orquestas, bandas, coros y asociaciones folklóricas— se congregan para rendir homenaje a su patrona. En el Templo de la Almudena, que alberga una comunidad parroquial muy activa, esta celebración incluye una misa especial para los músicos, donde se bendicen sus instrumentos y se agradece por el arte de la música que acompaña la fe.",
+            "history": "Santa Cecilia de Roma es una mártir de los primeros siglos del cristianismo, cuya tradición cuenta que mientras los músicos tocaban en su boda, ella cantaba a Dios en su corazón, razón por la cual se le atribuye el patronazgo de la música. Su culto se extendió desde Europa. En Cusco, la celebración se integró a las festividades religiosas, siendo un punto de encuentro para los gremios y academias musicales que buscan su protección e inspiración para su arte.",
+            "traditions": {
+                "tradition_1": "Misa de Acción de Gracias o de Homenaje, dedicada a los músicos y sus familias.",
+                "tradition_2": "Bendición de instrumentos musicales (órganos, quenas, charangos, violines, etc.) en la Misa.",
+                "tradition_3": "Presentaciones y serenatas musicales por parte de las bandas y orquestas frente al templo o en el atrio.",
+                "tradition_4": "Reuniones de confraternidad y almuerzos especiales organizados por los gremios de músicos."
+            },
+            "schedule": {
+                "day_1": "21 de noviembre",
+                "event_1_time": "Noche",
+                "event_1_desc": "Víspera de Santa Cecilia. Es posible que haya serenatas y primeras demostraciones musicales en honor a la Santa.",
+                "day_2": "22 de noviembre",
+                "event_2_time": "Mañana",
+                "event_2_desc": "Misa central y solemne en honor a Santa Cecilia, con la participación activa de músicos y coros.",
+                "event_3_time": "Tarde",
+                "event_3_desc": "Actos de homenaje, presentaciones musicales y procesión de la imagen de la Santa (si la hubiere en ese templo)."
             }
         }
     }

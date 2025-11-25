@@ -42,7 +42,7 @@ export default function Home() {
 
   return (
     <div className="flex flex-col">
-      <section className="relative w-full h-[60vh] md:h-[70vh] text-primary-foreground">
+      <section className="relative w-full h-[calc(100vh-4rem)] text-primary-foreground">
         <div className="absolute inset-0 bg-black/50 z-10" />
         {heroImage && (
           <Image

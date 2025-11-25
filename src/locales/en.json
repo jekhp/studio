@@ -405,24 +405,7 @@
                 "event_1_time": "All Day",
                 "event_1_desc": "Main day with mass, procession, and dance presentations."
             }
-        },
-        "carnaval-de-mollomarka": {
-            "location_detail": "Mollomarka, Acomayo",
-            "description": "A high-altitude Andean carnival famous for its unique dances and music.",
-            "longDescription": "The Carnival of Mollomarka is an authentic expression of Andean carnival. At over 4,000 meters above sea level, communities gather to celebrate fertility and life with music and dance. The 'Sarge' or 'Tupay' is the characteristic dance of this region, a ritual courtship dance performed by couples.",
-            "history": "Like other Andean carnivals, it merges Catholic dates with pre-Hispanic rituals tied to the agricultural cycle and the worship of mountain deities.",
-            "traditions": {
-                "tradition_1": "The 'Sarge' dance, exclusive to this region.",
-                "tradition_2": "Ritual offerings to Pachamama.",
-                "tradition_3": "Playful games with 'pica pica' (confetti) and streamers.",
-                "tradition_4": "Communal meals and chicha drinking."
-            },
-            "schedule": {
-                "day_1": "Sunday of Carnival",
-                "event_1_time": "All Day",
-                "event_1_desc": "Main celebration in the community esplanade."
-            }
-        },
+        }, 
         "aniversario-de-quillabamba": {
             "location_detail": "Quillabamba, La Convención",
             "description": "The anniversary of the 'City of Eternal Summer', known for its coffee, cocoa, and festive atmosphere.",
@@ -473,6 +456,51 @@
                 "day_1": "December 24",
                 "event_1_time": "All Day",
                 "event_1_desc": "Santurantikuy Fair in the Plaza de Armas. Artisans set up from the early morning hours."
+            }
+        },
+        "Virgen-Natividad-Paruro": {
+            "location_detail": "Paruro Province, Cusco Region.",
+            "description": "A deeply rooted religious festival celebrating the Nativity of the Virgin Mary, known for its traditional dances and devotion.",
+            "longDescription": "The Feast of the Virgen de la Natividad in Paruro is one of the most significant religious and cultural expressions in the Cusco region. It takes place every September 7th, 8th, and 9th, with the 8th being the central day. The celebration combines Catholic fervor with Andean ancestral traditions, featuring masses, processions, and impressive folk dance performances that fill the streets with color and music.",
+            "history": "The devotion to the Nativity of Mary in Paruro dates back to the colonial era. The image of the Virgin is considered highly miraculous, attracting thousands of faithful. The festivities have evolved over the centuries, incorporating traditional dances like the 'Siqllas' and 'Qapaq Negro', becoming a symbol of the local cultural identity.",
+            "traditions": {
+                "tradition_1": "The main procession of the image of the Virgen de la Natividad through the streets of Paruro.",
+                "tradition_2": "The execution of various traditional dances ('Danzas Autóctonas'), each with its own costume and meaning.",
+                "tradition_3": "The 'Víspera' (Eve) on September 7th, marked by firecrackers and music, signaling the start of the central celebration.",
+                "tradition_4": "Masses and religious ceremonies held in the Temple of the Nativity."
+            },
+            "schedule": {
+                "day_1": "September 7",
+                "event_1_time": "Evening",
+                "event_1_desc": "Víspera (Eve) of the Feast with traditional music, fireworks, and the 'entrada' (entry) of the dance groups.",
+                "day_2": "September 8",
+                "event_2_time": "All Day",
+                "event_2_desc": "Central Day of the Feast. Solemn Mass and the main procession of the Virgen de la Natividad.",
+                "day_3": "September 9",
+                "event_3_time": "Morning/Afternoon",
+                "event_3_desc": "The 'Och' (farewell) of the Virgin and final ceremonies, including the culmination of the dance presentations."
+            }
+        },
+        "festividad-santaCecilia": {
+            "location_detail": "Temple and Parish of Nuestra Señora de la Almudena, located in the Santiago district, Cusco. Events are also held in other temples with musical brotherhoods.",
+            "description": "A celebration in honor of the patron saint of musicians, marked by special masses and musical tributes.",
+            "longDescription": "The Feast of Santa Cecilia, virgin and martyr, is commemorated in Cusco on November 22, although the liturgical acts and tributes usually begin on the eve (November 21). This is a day when the city's musicians—from orchestras, bands, choirs, and folkloric associations—gather to pay tribute to their patron saint. In the Temple of Almudena, which houses a very active parish community, this celebration includes a special mass for musicians, where their instruments are blessed, and thanks are given for the art of music that accompanies the faith.",
+            "history": "Saint Cecilia of Rome is a martyr from the early centuries of Christianity. Tradition holds that while musicians played at her wedding, she sang to God in her heart, which is why she is attributed the patronage of music. Her cult spread from Europe. In Cusco, the celebration integrated into the religious festivities, becoming a meeting point for musical guilds and academies seeking her protection and inspiration for their art.",
+            "traditions": {
+                "tradition_1": "Thanksgiving or Tribute Mass, dedicated to the musicians and their families.",
+                "tradition_2": "Blessing of musical instruments (organs, quenas, charangos, violins, etc.) during the Mass.",
+                "tradition_3": "Musical performances and serenades by bands and orchestras in front of the temple or in the atrium.",
+                "tradition_4": "Confraternity gatherings and special lunches organized by the musicians' guilds."
+            },
+            "schedule": {
+                "day_1": "November 21",
+                "event_1_time": "Evening",
+                "event_1_desc": "Vigil (Víspera) of Saint Cecilia. There may be serenades and initial musical demonstrations in honor of the Saint.",
+                "day_2": "November 22",
+                "event_2_time": "Morning",
+                "event_2_desc": "Central and solemn Mass in honor of Saint Cecilia, with the active participation of musicians and choirs.",
+                "event_3_time": "Afternoon",
+                "event_3_desc": "Tribute acts, musical presentations, and procession of the Saint's image (if there is one in that temple)."
             }
         }
     }
