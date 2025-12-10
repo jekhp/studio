@@ -73,26 +73,27 @@ export default function CalendarPage() {
                 onSelect={setDate}
                 className="w-full max-w-md"
                 modifiers={{ isFestival: festivalDays }}
+                modifiersClassNames={{
+                  isFestival: "border-2 border-accent/80 bg-accent/10"
+                }}
                 classNames={{
                   caption_label: "text-2xl font-headline font-bold text-foreground",
                   nav_button: "h-10 w-10 bg-primary/20 text-primary rounded-full hover:bg-primary/30",
                   head_cell: "text-muted-foreground rounded-md w-full font-bold text-sm pb-2 border-b-2 border-primary/50",
                   row: "flex w-full mt-2",
-                  cell: "text-center text-sm p-0 relative [&:has([aria-selected])]:bg-accent first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md focus-within:relative focus-within:z-20",
+                  cell: "text-center text-sm p-0 relative first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md focus-within:relative focus-within:z-20",
                   day: cn(
                     "h-12 w-12 p-0 font-normal transition-all duration-200",
                     "hover:bg-accent/50 rounded-lg",
                     "aria-selected:opacity-100"
                   ),
-                  day_selected: "bg-primary text-primary-foreground hover:bg-primary hover:text-primary-foreground focus:bg-primary focus:text-primary-foreground",
-                  day_today: "bg-accent text-accent-foreground",
+                  day_today: "bg-red-500 text-white font-bold ring-2 ring-red-300",
                   day_outside: "text-muted-foreground opacity-30",
                   day_disabled: "text-muted-foreground opacity-50",
                   day_hidden: "invisible",
                   day_range_middle: "aria-selected:bg-accent aria-selected:text-accent-foreground",
                   day_range_end: "aria-selected:bg-accent aria-selected:text-accent-foreground",
                   day_range_start: "aria-selected:bg-accent aria-selected:text-accent-foreground",
-                  day_isFestival: "border-2 border-accent/80",
                 }}
               />
             ) : (
@@ -121,7 +122,12 @@ export default function CalendarPage() {
           <div className="lg:w-1/2 p-6 flex flex-col min-h-[500px]">
             <h2 className="font-headline text-2xl mb-4 flex items-center gap-2">
               <Info className="h-6 w-6 text-primary" />
-              {t('ui.calendar.eventsOn', { date: date ? format(date, 'MMMM do, yyyy') : '...' })}
+              {t('ui.calendar.eventsOn', { 
+                replacements: { 
+                  date: date ? format(date, 'MMMM do, yyyy') : '...' 
+                },
+                defaultValue: `Events on ${date ? format(date, 'MMMM do, yyyy') : '...'}`
+              })}
             </h2>
 
             {festivalsOnDate.length > 0 ? (

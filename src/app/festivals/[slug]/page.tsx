@@ -1,8 +1,11 @@
 
+"use client";
+
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
-import { Calendar, Clock, MapPin, Sparkles, Film, Image as ImageIcon } from 'lucide-react';
+import { Calendar, Clock, MapPin, Sparkles, Film, Image as ImageIcon, PlayCircle, X } from 'lucide-react';
 import { format } from 'date-fns';
+import React, { useState, useEffect } from 'react';
 
 import { festivals, Festival } from '@/lib/festivals';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
@@ -10,31 +13,38 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { FestivalMap } from '@/components/FestivalMap';
 import { TranslationWrapper } from '@/components/TranslationWrapper';
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
+import { Skeleton } from '@/components/ui/skeleton';
 
-async function getFestivalData(slug: string): Promise<Festival | undefined> {
-  return festivals.find((f) => f.slug === slug);
-}
+export default function FestivalDetailPage({ params }: { params: { slug: string } }) {
+  const [festival, setFestival] = useState<Festival | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [selectedVideo, setSelectedVideo] = useState<{ embedCode: string; alt: string } | null>(null);
 
-export async function generateStaticParams() {
-  return festivals.map((festival) => ({
-    slug: festival.slug,
-  }));
-}
+  useEffect(() => {
+    async function getFestivalData() {
+      const foundFestival = festivals.find((f) => f.slug === params.slug);
+      if (foundFestival) {
+        setFestival(foundFestival);
+      }
+      setLoading(false);
+    }
+    getFestivalData();
+  }, [params.slug]);
 
-export async function generateMetadata({ params }: { params: { slug: string } }) {
-  const festival = await getFestivalData(params.slug);
-  if (!festival) {
-    return {
-      title: 'Festival Not Found',
-    };
+
+  if (loading) {
+    return (
+        <div className="container mx-auto px-4 py-12">
+            <Skeleton className="h-12 w-3/4 mb-4" />
+            <Skeleton className="h-6 w-1/2" />
+            <div className="mt-12 space-y-8">
+                <Skeleton className="h-48 w-full" />
+                <Skeleton className="h-64 w-full" />
+            </div>
+        </div>
+    );
   }
-  return {
-    title: `${festival.name} | CuscoFest`,
-  };
-}
-
-export default async function FestivalDetailPage({ params }: { params: { slug: string } }) {
-  const festival = await getFestivalData(params.slug);
 
   if (!festival) {
     notFound();
@@ -84,9 +94,6 @@ export default async function FestivalDetailPage({ params }: { params: { slug: s
                   <TranslationWrapper translationKey={`festivals:${festival.slug}:location_detail`} as="span" />
                 </div>
               </div>
-            </div>
-            <div className="mt-4 md:mt-0 flex items-center gap-1">
-                {/* Rating removed */}
             </div>
           </div>
         </div>
@@ -194,15 +201,22 @@ export default async function FestivalDetailPage({ params }: { params: { slug: s
                         </div>
                     </div>
                   ) : item.type === 'video' && item.embedCode ? (
-                    <div className="relative aspect-video bg-black">
-                        <div className="absolute top-2 right-2 bg-black/50 text-white p-1 rounded-full z-10">
-                          <Film className="h-5 w-5" />
-                        </div>
-                        <div 
-                          className="w-full h-full [&>iframe]:w-full [&>iframe]:h-full"
-                          dangerouslySetInnerHTML={{ __html: item.embedCode }} 
-                        />
-                    </div>
+                    <button
+                      onClick={() => setSelectedVideo({ embedCode: item.embedCode!, alt: item.alt })}
+                      className="relative aspect-video w-full bg-black cursor-pointer"
+                    >
+                      {item.thumbnail ? (
+                        <Image src={item.thumbnail} alt={item.alt} fill className="object-cover opacity-70 group-hover:opacity-50 transition-opacity"/>
+                      ) : (
+                        <div className="w-full h-full bg-slate-900"/>
+                      )}
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <PlayCircle className="h-16 w-16 text-white/80 group-hover:text-white group-hover:scale-110 transition-all" />
+                      </div>
+                      <div className="absolute top-2 right-2 bg-black/50 text-white p-1 rounded-full z-10">
+                        <Film className="h-5 w-5" />
+                      </div>
+                    </button>
                   ) : null}
                   <CardContent className="p-3">
                     <p className="text-sm text-muted-foreground truncate">{item.alt}</p>
@@ -213,6 +227,23 @@ export default async function FestivalDetailPage({ params }: { params: { slug: s
           </div>
         )}
       </div>
+
+       <Dialog open={!!selectedVideo} onOpenChange={(isOpen) => !isOpen && setSelectedVideo(null)}>
+        <DialogContent className="max-w-4xl p-0">
+            <DialogHeader className="p-4">
+                <DialogTitle>{selectedVideo?.alt}</DialogTitle>
+            </DialogHeader>
+            {selectedVideo && (
+                <div className="aspect-video">
+                    <div 
+                        className="w-full h-full [&>iframe]:w-full [&>iframe]:h-full"
+                        dangerouslySetInnerHTML={{ __html: selectedVideo.embedCode }} 
+                    />
+                </div>
+            )}
+        </DialogContent>
+      </Dialog>
+      
       <div className="h-16"></div>
     </div>
   );

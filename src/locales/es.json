@@ -481,7 +481,7 @@
             }
         },
         "festividad-santaCecilia": {
-            "location_detail": "Templo y Parroquia de Nuestra Señora de la Almudena, ubicado en el distrito de Santiago, Cusco. También se realizan actos en otros templos con hermandades musicales.",
+            "location_detail": "Templo y Parroquia de Nuestra Señora de la Almudena, Santiago, Cusco.",
             "description": "Celebración en honor a la patrona de los músicos, marcada por misas especiales y homenajes musicales.",
             "longDescription": "La Festividad de Santa Cecilia, virgen y mártir, se conmemora en Cusco el 22 de noviembre, aunque los actos litúrgicos y homenajes suelen iniciar en la víspera (21 de noviembre). Es un día en el que los músicos de la ciudad —de orquestas, bandas, coros y asociaciones folklóricas— se congregan para rendir homenaje a su patrona. En el Templo de la Almudena, que alberga una comunidad parroquial muy activa, esta celebración incluye una misa especial para los músicos, donde se bendicen sus instrumentos y se agradece por el arte de la música que acompaña la fe.",
             "history": "Santa Cecilia de Roma es una mártir de los primeros siglos del cristianismo, cuya tradición cuenta que mientras los músicos tocaban en su boda, ella cantaba a Dios en su corazón, razón por la cual se le atribuye el patronazgo de la música. Su culto se extendió desde Europa. En Cusco, la celebración se integró a las festividades religiosas, siendo un punto de encuentro para los gremios y academias musicales que buscan su protección e inspiración para su arte.",
@@ -500,6 +500,27 @@
                 "event_2_desc": "Misa central y solemne en honor a Santa Cecilia, con la participación activa de músicos y coros.",
                 "event_3_time": "Tarde",
                 "event_3_desc": "Actos de homenaje, presentaciones musicales y procesión de la imagen de la Santa (si la hubiere en ese templo)."
+            }
+        },
+        "chumbivilcas-horses": {
+            "location_detail": "Sector Chuñuhuiri de la Comunidad Campesina Hanansaya Orccoma, distrito de Santo Tomás.",
+            "description": "Certamen Hípico Nacional de Chumbivilcas, evento central realizado por el aniversario de la provincia.",
+            "longDescription": "El certamen es una actividad fundamental para revalorar la afición hípica, proteger la riqueza cultural y la identidad costumbrista de la 'Tierra de los Qorilazos'. Atrae la participación de criadores y studs locales, de las diversas provincias de Cusco, y de regiones hermanas del sur peruano como Puno, Arequipa, Apurímac y Ayacucho. Los caballos compiten en diversas categorías recorriendo distancias entre 400 metros a 1000 metros.",
+            "history": "La tradición hípica en Santo Tomás, como en toda Chumbivilcas, está intrínsecamente ligada al 'Qorilazo' (el vaquero andino), siendo una manifestación de coraje y destreza a caballo. El I Certamen Hípico Nacional se realizó en 2023 por el CXCVIII Aniversario de Creación Política de la Provincia. Adicionalmente, se realizan certámenes hípicos interregionales durante las Pascuas (abril) y se han anunciado eventos por el Bicentenario (2025).",
+            "traditions": {
+                "tradition_1": "Carreras de caballos en las categorías Alto Andino (caballos sin mejora genética), Mejorados y Libre.",
+                "tradition_2": "Competencia entre studs (caballos) provenientes de diversas provincias y regiones del sur del país.",
+                "tradition_3": "Dinamización de la economía local con la venta de gastronomía y productos de la zona por parte de los comuneros.",
+                "tradition_4": "Premiación a los propietarios ganadores por parte del Concejo Municipal."
+            },
+            "schedule": {
+                "day_1": "10 de junio",
+                "event_1_time": "Por confirmar",
+                "event_1_desc": "Inicio de la competencia hípica con eliminatorias y participación de los studs.",
+                "day_2": "11 de junio",
+                "event_2_time": "Por confirmar",
+                "event_2_desc": "Continuación y culminación del certamen hípico con las finales y la ceremonia de premiación en diversas categorías.",
+                "event_3_time": "Por confirmar"
             }
         }
     }

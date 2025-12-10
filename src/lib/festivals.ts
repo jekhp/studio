@@ -14,8 +14,8 @@ export type FestivalLocation = {
 
 export type FestivalMedia = {
   type: 'image' | 'video';
-  url?: string; // Optional for videos if using embedCode
-  embedCode?: string; // For full iframe code
+  url?: string;
+  embedCode?: string;
   thumbnail?: string;
   alt: string;
 }
@@ -63,7 +63,7 @@ const cuscoFestivals: Festival[] = [
     traditionKeys: ["tradition_1", "tradition_2", "tradition_3", "tradition_4"],
     scheduleKeys: [{ dayKey: 'day_1', eventKeys: [{ timeKey: 'event_1_time', descriptionKey: 'event_1_desc' }, { timeKey: 'event_2_time', descriptionKey: 'event_2_desc' }, { timeKey: 'event_3_time', descriptionKey: 'event_3_desc' }] }],
     media: [
-      { type: 'video', embedCode: '<iframe width="560" height="315" src="https://www.youtube.com/embed/5gP82hB1a9I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>', alt: 'Official broadcast of Inti Raymi 2023' },
+      { type: 'video', embedCode: '<iframe width="560" height="315" src="https://www.youtube.com/embed/5gP82hB1a9I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>', alt: 'Official broadcast of Inti Raymi 2023', thumbnail: 'https://i.ytimg.com/vi/5gP82hB1a9I/hqdefault.jpg' },
       { type: 'image', url: '/festivals/intiRaymi.jpg', alt: 'Actor representing the Sapa Inca during Inti Raymi' },
     ],
   },
@@ -233,20 +233,22 @@ const chumbivilcasFestivals: Festival[] = [
       traditionKeys: ["tradition_1", "tradition_2", "tradition_3", "tradition_4"],
       scheduleKeys: [{ dayKey: 'day_1', eventKeys: [{ timeKey: 'event_1_time', descriptionKey: 'event_1_desc' }] }],
       media: [
-        { type: 'video', embedCode: '<iframe width="560" height="315" src="https://www.youtube.com/embed/YI-3Rjpr-g4?si=M8F5eJ4eK0U4r1uR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>', alt: 'Takanakuy fighting festival in Chumbivilcas' },
+        { type: 'video', embedCode: '<iframe width="560" height="315" src="https://www.youtube.com/embed/zbArfBw2Pa8?si=duOBlSXun6_BMS5J" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>', alt: 'Takanakuy fighting festival in Chumbivilcas', thumbnail: 'https://i.ytimg.com/vi/zbArfBw2Pa8/hqdefault.jpg' },
       ],
     },
     {
       id: 'chumbivilcas-horses',
       slug: 'chumbivilcas-horses',
       name: 'Carreras de Caballos de Chumbivilcas',
-      date: { start: new Date(currentYear, 7, 15), end: new Date(currentYear, 7, 15) },
+      date: { start: new Date(currentYear, 5, 10), end: new Date(currentYear, 5, 11) },
       location: 'Santo Tomás, Chumbivilcas',
       province: 'Chumbivilcas',
       coords: [-14.452, -72.082],
       image: 'chumbivilcas-horses',
       isFree: true,
-      categories: ['carreras', 'popular', 'tradicional'],
+      categories: ['carreras', 'tradicional'],
+      traditionKeys: ["tradition_1", "tradition_2", "tradition_3", "tradition_4"],
+      scheduleKeys: [{ dayKey: 'day_1', eventKeys: [{ timeKey: 'event_1_time', descriptionKey: 'event_1_desc' }] },{ dayKey: 'day_2', eventKeys: [{ timeKey: 'event_2_time', descriptionKey: 'event_2_desc' }] }],
     }
 ];
 
@@ -322,7 +324,7 @@ const paucartamboFestivals: Festival[] = [
         { dayKey: 'day_3', eventKeys: [{ timeKey: 'event_1_time', descriptionKey: 'event_1_desc' }] }
       ],
       media: [
-        { type: 'video', embedCode: '<iframe width="560" height="315" src="https://www.youtube.com/embed/0tlv3hjVB9Q?si=GTa-eMn5ZKhrh33A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>', alt: 'Virgen del Carmen festival in Paucartambo' },
+        { type: 'video', embedCode: '<iframe width="560" height="315" src="https://www.youtube.com/embed/0tlv3hjVB9Q?si=GTa-eMn5ZKhrh33A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>', alt: 'Virgen del Carmen festival in Paucartambo', thumbnail: 'https://i.ytimg.com/vi/0tlv3hjVB9Q/hqdefault.jpg' },
         { type: 'image', url: '/festivals/virgendelcarmenpaucartambo.jpg', alt: 'Dancers in colorful masks at Paucartambo' },
       ],
     }
@@ -380,7 +382,7 @@ const urubambaFestivals: Festival[] = [
       traditionKeys: ["tradition_1", "tradition_2", "tradition_3", "tradition_4"],
       scheduleKeys: [{ dayKey: 'day_1', eventKeys: [{ timeKey: 'event_1_time', descriptionKey: 'event_1_desc' }] }],
       media: [
-        { type: 'video', embedCode: '<iframe width="560" height="315" src="https://www.youtube.com/embed/hnubCYi37kw?si=VkTb3DI0TNnYRX8N" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>', alt: 'Linderaje ritual fight in Chinchero' },
+        { type: 'video', embedCode: '<iframe width="560" height="315" src="https://www.youtube.com/embed/hnubCYi37kw?si=VkTb3DI0TNnYRX8N" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>', alt: 'Linderaje ritual fight in Chinchero', thumbnail: 'https://i.ytimg.com/vi/hnubCYi37kw/hqdefault.jpg' },
         { type: 'image', url: '/festivals/linderaje-chinchero.jpg', alt: 'Community members facing off during Linderaje' }
       ]
     },

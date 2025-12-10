@@ -12,7 +12,7 @@ export function Footer() {
             <span className="font-bold font-headline text-lg">CuscoFest</span>
           </div>
           <p className="text-sm text-muted-foreground">
-            &copy; {new Date().getFullYear()} CuscoFest. All rights reserved.
+            &copy; {new Date().getFullYear()} Tukuy Yanapaq. All rights reserved.
           </p>
           <div className="flex space-x-4 mt-4 md:mt-0">
              <Link href="#" className="text-muted-foreground hover:text-primary">Facebook</Link>

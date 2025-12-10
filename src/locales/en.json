@@ -482,7 +482,7 @@
             }
         },
         "festividad-santaCecilia": {
-            "location_detail": "Temple and Parish of Nuestra Señora de la Almudena, located in the Santiago district, Cusco. Events are also held in other temples with musical brotherhoods.",
+            "location_detail": "Temple and Parish of Nuestra Señora de la Almudena, Santiago district, Cusco.",
             "description": "A celebration in honor of the patron saint of musicians, marked by special masses and musical tributes.",
             "longDescription": "The Feast of Santa Cecilia, virgin and martyr, is commemorated in Cusco on November 22, although the liturgical acts and tributes usually begin on the eve (November 21). This is a day when the city's musicians—from orchestras, bands, choirs, and folkloric associations—gather to pay tribute to their patron saint. In the Temple of Almudena, which houses a very active parish community, this celebration includes a special mass for musicians, where their instruments are blessed, and thanks are given for the art of music that accompanies the faith.",
             "history": "Saint Cecilia of Rome is a martyr from the early centuries of Christianity. Tradition holds that while musicians played at her wedding, she sang to God in her heart, which is why she is attributed the patronage of music. Her cult spread from Europe. In Cusco, the celebration integrated into the religious festivities, becoming a meeting point for musical guilds and academies seeking her protection and inspiration for their art.",
@@ -501,6 +501,24 @@
                 "event_2_desc": "Central and solemn Mass in honor of Saint Cecilia, with the active participation of musicians and choirs.",
                 "event_3_time": "Afternoon",
                 "event_3_desc": "Tribute acts, musical presentations, and procession of the Saint's image (if there is one in that temple)."
+            }
+        },
+        "chumbivilcas-horses": {
+            "location_detail": "Chuñuhuiri Sector of the Hanansaya Orccoma Peasant Community, Santo Tomás district.",
+            "description": "Chumbivilcas National Horse Racing Contest, a central event held for the province's anniversary.",
+            "longDescription": "The contest is a fundamental activity to re-evaluate the equestrian hobby, protect the cultural richness, and the customary identity of the 'Land of the Qorilazos.' It attracts the participation of local breeders and studs, as well as those from various provinces in Cusco and neighboring southern Peruvian regions such as Puno, Arequipa, Apurímac, and Ayacucho. Horses compete in various categories, covering distances between 400 meters and 1000 meters.",
+            "history": "The equestrian tradition in Santo Tomás, as in all of Chumbivilcas, is intrinsically linked to the 'Qorilazo' (the Andean cowboy), being a manifestation of courage and skill on horseback. The 1st National Horse Racing Contest was held in 2023 for the 198th Anniversary of the Province's Political Creation. Additionally, interregional horse racing contests are held during Easter (April), and events have been announced for the Bicentennial (2025).",
+            "traditions": {
+                "tradition_1": "Horse races in the High Andean (horses without genetic improvement), Improved, and Open categories.",
+                "tradition_2": "Competition between studs (horses) coming from various provinces and regions of the southern part of the country.",
+                "tradition_3": "Revitalization of the local economy with the sale of gastronomy and local products by community members.",
+                "tradition_4": "Award ceremony for the winning owners by the Municipal Council."
+            },
+            "schedule": {
+                "day_1": "June 10 (2023 Reference)",
+                "event_1_desc": "Start of the equestrian competition with qualifying races and the participation of the studs.",
+                "day_2": "June 11 (2023 Reference)",
+                "event_2_desc": "Continuation and culmination of the equestrian contest with the finals and the award ceremony in various categories."
             }
         }
     }
