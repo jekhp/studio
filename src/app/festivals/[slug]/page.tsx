@@ -23,14 +23,16 @@ export default function FestivalDetailPage({ params }: { params: { slug: string 
 
   useEffect(() => {
     async function getFestivalData() {
-      const foundFestival = festivals.find((f) => f.slug === params.slug);
-      if (foundFestival) {
-        setFestival(foundFestival);
+      if (params.slug) {
+        const foundFestival = festivals.find((f) => f.slug === params.slug);
+        if (foundFestival) {
+          setFestival(foundFestival);
+        }
       }
       setLoading(false);
     }
     getFestivalData();
-  }, [params.slug]);
+  }, [params]);
 
 
   if (loading) {
