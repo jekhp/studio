@@ -301,6 +301,8 @@ const paruroFestivals: Festival[] = [
       image: 'Virgen-Natividad-Paruro-img',
       isFree: true,
       categories: ['taurino', 'religioso', 'popular'],
+      traditionKeys: ["tradition_1", "tradition_2", "tradition_3", "tradition_4"],
+      scheduleKeys: [{ dayKey: 'day_1', eventKeys: [{ timeKey: 'event_1_time', descriptionKey: 'event_1_desc' }] },{ dayKey: 'day_2', eventKeys: [{ timeKey: 'event_2_time', descriptionKey: 'event_2_desc' }] }, { dayKey: 'day_3', eventKeys: [{ timeKey: 'event_3_time', descriptionKey: 'event_3_desc' }] }],
     }
 ];
 
@@ -354,52 +356,66 @@ const quispicanchiFestivals: Festival[] = [
 
 // 13. Urubamba
 const urubambaFestivals: Festival[] = [
-    {
-      id: 'ollantaytambo-reyes',
-      slug: 'ollantaytambo-reyes',
-      name: 'Bajada de Reyes en Ollantaytambo',
-      date: { start: new Date(currentYear, 0, 6), end: new Date(currentYear, 0, 6) },
-      location: 'Ollantaytambo',
-      province: 'Urubamba',
-      coords: [-13.26, -72.26],
-      image: 'ollantaytambo-bajadaReyes',
-      isFree: true,
-      categories: ['religioso', 'procesion', 'tradicional'],
-      traditionKeys: ["tradition_1", "tradition_2", "tradition_3", "tradition_4"],
-      scheduleKeys: [{ dayKey: 'day_1', eventKeys: [{ timeKey: 'event_1_time', descriptionKey: 'event_1_desc' }] }],
-    },
-    {
-      id: 'linderaje-chinchero',
-      slug: 'linderaje-chinchero',
-      name: 'Linderaje en Chinchero',
-      date: { start: new Date(currentYear, 0, 1), end: new Date(currentYear, 0, 1) },
-      location: 'Chinchero',
-      province: 'Urubamba',
-      coords: [-13.39, -72.05],
-      image: 'linderaje-chinchero',
-      isFree: true,
-      categories: ['combate-ritual', 'tradicional', 'popular'],
-      traditionKeys: ["tradition_1", "tradition_2", "tradition_3", "tradition_4"],
-      scheduleKeys: [{ dayKey: 'day_1', eventKeys: [{ timeKey: 'event_1_time', descriptionKey: 'event_1_desc' }] }],
-      media: [
-        { type: 'video', embedCode: '<iframe width="560" height="315" src="https://www.youtube.com/embed/hnubCYi37kw?si=VkTb3DI0TNnYRX8N" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>', alt: 'Linderaje ritual fight in Chinchero', thumbnail: 'https://i.ytimg.com/vi/hnubCYi37kw/hqdefault.jpg' },
-        { type: 'image', url: '/festivals/linderaje-chinchero.jpg', alt: 'Community members facing off during Linderaje' }
-      ]
-    },
-    {
-      id: 'corpus-chinchero',
-      slug: 'corpus-chinchero',
-      name: 'Corpus Christi de Chinchero',
-      date: { start: new Date(currentYear, 4, 30), end: new Date(currentYear, 4, 30) },
-      location: 'Chinchero',
-      province: 'Urubamba',
-      coords: [-13.391, -72.049],
-      image: 'corpus-chinchero',
-      isFree: true,
-      categories: ['religioso', 'procesion', 'popular'],
-      traditionKeys: ["tradition_1", "tradition_2", "tradition_3"],
-      scheduleKeys: [{ dayKey: 'day_1', eventKeys: [{ timeKey: 'event_1_time', descriptionKey: 'event_1_desc' }] }],
-    }
+  {
+    id: 'juramentacion-varayoc-chinchero',
+    slug: 'juramentacion-varayoc-chinchero',
+    name: 'Juramentación de los Varayoc en Chinchero',
+    date: { start: new Date(currentYear, 0, 1), end: new Date(currentYear, 0, 2) },
+    location: 'Chinchero',
+    province: 'Urubamba',
+    coords: [-13.391, -72.049],
+    image: 'varayoc_chinchero',
+    isFree: true,
+    categories: ['andino', 'tradicional', 'popular'],
+    traditionKeys: ["tradition_1", "tradition_2", "tradition_3", "tradition_4"],
+    scheduleKeys: [{ dayKey: 'day_1', eventKeys: [{ timeKey: 'event_1_time', descriptionKey: 'event_1_desc' }, { timeKey: 'event_2_time', descriptionKey: 'event_2_desc' }] }],
+  },
+  {
+    id: 'ollantaytambo-reyes',
+    slug: 'ollantaytambo-reyes',
+    name: 'Bajada de Reyes en Ollantaytambo',
+    date: { start: new Date(currentYear, 0, 6), end: new Date(currentYear, 0, 6) },
+    location: 'Ollantaytambo',
+    province: 'Urubamba',
+    coords: [-13.26, -72.26],
+    image: 'ollantaytambo-bajadaReyes',
+    isFree: true,
+    categories: ['religioso', 'procesion', 'tradicional'],
+    traditionKeys: ["tradition_1", "tradition_2", "tradition_3", "tradition_4"],
+    scheduleKeys: [{ dayKey: 'day_1', eventKeys: [{ timeKey: 'event_1_time', descriptionKey: 'event_1_desc' }] }],
+  },
+  {
+    id: 'linderaje-chinchero',
+    slug: 'linderaje-chinchero',
+    name: 'Linderaje en Chinchero',
+    date: { start: new Date(currentYear, 0, 1), end: new Date(currentYear, 0, 1) },
+    location: 'Chinchero',
+    province: 'Urubamba',
+    coords: [-13.39, -72.05],
+    image: 'linderaje-chinchero',
+    isFree: true,
+    categories: ['combate-ritual', 'tradicional', 'popular'],
+    traditionKeys: ["tradition_1", "tradition_2", "tradition_3", "tradition_4"],
+    scheduleKeys: [{ dayKey: 'day_1', eventKeys: [{ timeKey: 'event_1_time', descriptionKey: 'event_1_desc' }] }],
+    media: [
+      { type: 'video', embedCode: '<iframe width="560" height="315" src="https://www.youtube.com/embed/hnubCYi37kw?si=VkTb3DI0TNnYRX8N" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>', alt: 'Linderaje ritual fight in Chinchero', thumbnail: 'https://i.ytimg.com/vi/hnubCYi37kw/hqdefault.jpg' },
+      { type: 'image', url: '/festivals/linderaje-chinchero.jpg', alt: 'Community members facing off during Linderaje' }
+    ]
+  },
+  {
+    id: 'corpus-chinchero',
+    slug: 'corpus-chinchero',
+    name: 'Corpus Christi de Chinchero',
+    date: { start: new Date(currentYear, 4, 30), end: new Date(currentYear, 4, 30) },
+    location: 'Chinchero',
+    province: 'Urubamba',
+    coords: [-13.391, -72.049],
+    image: 'corpus-chinchero',
+    isFree: true,
+    categories: ['religioso', 'procesion', 'popular'],
+    traditionKeys: ["tradition_1", "tradition_2", "tradition_3"],
+    scheduleKeys: [{ dayKey: 'day_1', eventKeys: [{ timeKey: 'event_1_time', descriptionKey: 'event_1_desc' }] }],
+  }
 ];
 
 export const festivals: Festival[] = [

@@ -516,9 +516,30 @@
             },
             "schedule": {
                 "day_1": "June 10 (2023 Reference)",
-                "event_1_desc": "Start of the equestrian competition with qualifying races and the participation of the studs.",
+                "event_1_time": "TBD",
+                "event_1_desc": "Start of the equestrian competition with qualifying races and participation of the studs.",
                 "day_2": "June 11 (2023 Reference)",
+                "event_2_time": "TBD",
                 "event_2_desc": "Continuation and culmination of the equestrian contest with the finals and the award ceremony in various categories."
+            }
+        },
+        "juramentacion-varayoc-chinchero": {
+            "location_detail": "Plaza de Armas, Chinchero",
+            "description": "Ancestral ceremony of the swearing-in of the new community authorities, the Varayocs.",
+            "longDescription": "The Swearing-in of the Varayocs is an ancestral ceremony that marks the beginning of the new year in Chinchero. During this event, the new community authorities (Varayocs or Alcaldes) receive the 'vara' or staff of office, a symbol of power and responsibility. It is a solemn act that combines Andean rituals with civic protocols, reflecting a unique system of local governance that has been preserved for centuries.",
+            "history": "The Varayoc system is a form of communal organization of pre-Hispanic origin that has survived through the colonial period to the present day. The 'vara' (staff) itself is a syncretic element, representing both the Christian cross and an Andean symbol of authority. This ceremony is a living testimony to the resilience and adaptability of Andean culture.",
+            "traditions": {
+                "tradition_1": "The solemn transfer of the 'vara' (staff of office) from the outgoing authorities to the new ones.",
+                "tradition_2": "Speeches in Quechua reaffirming commitment to the community.",
+                "tradition_3": "Accompaniment of traditional musicians playing 'pitos' (flutes) and 'tambores' (drums).",
+                "tradition_4": "A community celebration with typical food and dances to welcome the new authorities."
+            },
+            "schedule": {
+                "day_1": "January 1-2",
+                "event_1_time": "Morning",
+                "event_1_desc": "Main ceremony in the Plaza de Chinchero, with the transfer of the staffs of office.",
+                "event_2_time": "Afternoon",
+                "event_2_desc": "Community celebration with music and typical dances."
             }
         }
     }

@@ -514,13 +514,31 @@
                 "tradition_4": "Premiación a los propietarios ganadores por parte del Concejo Municipal."
             },
             "schedule": {
-                "day_1": "10 de junio",
+                "day_1": "10 de junio (Referencia 2023)",
                 "event_1_time": "Por confirmar",
                 "event_1_desc": "Inicio de la competencia hípica con eliminatorias y participación de los studs.",
-                "day_2": "11 de junio",
+                "day_2": "11 de junio (Referencia 2023)",
                 "event_2_time": "Por confirmar",
-                "event_2_desc": "Continuación y culminación del certamen hípico con las finales y la ceremonia de premiación en diversas categorías.",
-                "event_3_time": "Por confirmar"
+                "event_2_desc": "Continuación y culminación del certamen hípico con las finales y la ceremonia de premiación en diversas categorías."
+            }
+        },
+        "juramentacion-varayoc-chinchero": {
+            "location_detail": "Plaza de Armas, Chinchero",
+            "description": "Ceremonia ancestral de la juramentación de las nuevas autoridades comunales, los Varayocs.",
+            "longDescription": "La Juramentación de los Varayocs es una ceremonia ancestral que marca el inicio del año nuevo en Chinchero. Durante este evento, las nuevas autoridades comunales (Varayocs o Alcaldes) reciben la 'vara' o bastón de mando, un símbolo de poder y responsabilidad. Es un acto solemne que combina rituales andinos con protocolos cívicos, reflejando un sistema de gobierno local único que se ha conservado durante siglos.",
+            "history": "El sistema de Varayoc es una forma de organización comunal de origen prehispánico que ha sobrevivido a través de la colonia hasta nuestros días. La 'vara' en sí es un elemento sincrético, que representa tanto la cruz cristiana como un símbolo andino de autoridad. Esta ceremonia es un testimonio vivo de la resiliencia y adaptabilidad de la cultura andina.",
+            "traditions": {
+                "tradition_1": "El traspaso solemne de la 'vara' de mando de las autoridades salientes a las nuevas.",
+                "tradition_2": "Discursos en quechua reafirmando el compromiso con la comunidad.",
+                "tradition_3": "Acompañamiento de músicos tradicionales que tocan 'pitos' y 'tambores'.",
+                "tradition_4": "Una celebración comunal con comida típica y danzas para recibir a las nuevas autoridades."
+            },
+            "schedule": {
+                "day_1": "1-2 de Enero",
+                "event_1_time": "Mañana",
+                "event_1_desc": "Ceremonia principal en la Plaza de Chinchero, con el traspaso de los bastones de mando.",
+                "event_2_time": "Tarde",
+                "event_2_desc": "Celebración comunal con música y danzas típicas."
             }
         }
     }

@@ -109,6 +109,12 @@
       "imageHint": "ritual fight chinchero"
     },
     {
+      "id": "varayoc_chinchero",
+      "description": "Varayocs, traditional Andean authorities, holding their staffs of office.",
+      "imageUrl": "/festivals/varayoc_chinchero.jpg",
+      "imageHint": "andean authority"
+    },
+    {
       "id": "corpus-chinchero",
       "description": "A ritual fight to define communal boundaries in Chinchero, Cusco.",
       "imageUrl": "/festivals/corpus_chinchero.jpg",
