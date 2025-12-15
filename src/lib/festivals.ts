@@ -42,6 +42,24 @@ export type Festival = {
 
 
 const currentYear = new Date().getFullYear();
+const now = new Date();
+
+// Helper function to adjust dates for upcoming year
+const getFestivalDate = (startMonth: number, startDay: number, endMonth: number, endDay: number) => {
+  let festivalYear = currentYear;
+  const festivalEndDate = new Date(festivalYear, endMonth, endDay);
+
+  // If the festival's end date for the current year has already passed,
+  // set the festival for the next year.
+  if (festivalEndDate < now) {
+    festivalYear++;
+  }
+
+  return {
+    start: new Date(festivalYear, startMonth, startDay),
+    end: new Date(festivalYear, endMonth, endDay),
+  };
+};
 
 // ==============================================
 // FESTIVALS BY PROVINCE
@@ -53,7 +71,7 @@ const cuscoFestivals: Festival[] = [
     id: 'inti-raymi',
     slug: 'inti-raymi',
     name: 'Inti Raymi',
-    date: { start: new Date(currentYear, 5, 24), end: new Date(currentYear, 5, 24) },
+    date: getFestivalDate(5, 24, 5, 24),
     location: 'Sacsayhuamán, Cusco',
     province: 'Cusco',
     coords: [-13.507, -71.982],
@@ -71,7 +89,7 @@ const cuscoFestivals: Festival[] = [
     id: 'corpus-christi',
     slug: 'corpus-christi',
     name: 'Corpus Christi Cusqueño',
-    date: { start: new Date(currentYear, 4, 30), end: new Date(currentYear, 5, 6) },
+    date: getFestivalDate(4, 30, 5, 6),
     location: 'Cusco',
     province: 'Cusco',
     coords: [-13.516, -71.979],
@@ -85,7 +103,7 @@ const cuscoFestivals: Festival[] = [
     id: 'huancaro-fair',
     slug: 'feria-huancaro',
     name: 'Feria de Huancaro',
-    date: { start: new Date(currentYear, 5, 20), end: new Date(currentYear, 5, 30) },
+    date: getFestivalDate(5, 20, 5, 30),
     location: 'Huancaro, Cusco',
     province: 'Cusco',
     coords: [-13.535, -71.992],
@@ -99,7 +117,7 @@ const cuscoFestivals: Festival[] = [
     id: 'wata-qallariy',
     slug: 'wata-qallariy',
     name: 'Wata Qallariy',
-    date: { start: new Date(currentYear, 7, 1), end: new Date(currentYear, 7, 1) },
+    date: getFestivalDate(7, 1, 7, 1),
     location: 'Comunidades Andinas',
     province: 'Cusco',
     coords: [-13.5, -72.0],
@@ -113,7 +131,7 @@ const cuscoFestivals: Festival[] = [
     id: 'fiesta-de-san-sebastian',
     slug: 'fiesta-de-san-sebastian',
     name: 'Fiesta de San Sebastián',
-    date: { start: new Date(currentYear, 0, 18), end: new Date(currentYear, 0, 22) },
+    date: getFestivalDate(0, 18, 0, 22),
     location: 'San Sebastián, Cusco',
     province: 'Cusco',
     coords: [-13.533, -71.944],
@@ -127,7 +145,7 @@ const cuscoFestivals: Festival[] = [
     id: 'navidad-cusquena-santurantikuy',
     slug: 'navidad-cusquena-santurantikuy',
     name: 'Navidad Cusqueña y Santurantikuy',
-    date: { start: new Date(currentYear, 11, 24), end: new Date(currentYear, 11, 24) },
+    date: getFestivalDate(11, 24, 11, 24),
     location: 'Plaza de Armas, Cusco',
     province: 'Cusco',
     coords: [-13.5167, -71.9788],
@@ -142,7 +160,7 @@ const cuscoFestivals: Festival[] = [
     id: 'festividad-santaCecilia',
     slug: 'festividad-santaCecilia',
     name: 'Festividad de Santa Cecilia (Patrona de los Músicos)',
-    date: {start: new Date(currentYear, 10, 22), end: new Date(currentYear, 10, 22) },
+    date: getFestivalDate(10, 22, 10, 22),
     location: 'Templo de la Almudena, Cusco',
     province: 'Cusco',
     coords: [-13.5235, -71.9840], 
@@ -169,7 +187,7 @@ const calcaFestivals: Festival[] = [
       id: 'senor-de-huanca',
       slug: 'senor-de-huanca',
       name: 'Señor de Huanca',
-      date: { start: new Date(currentYear, 8, 14), end: new Date(currentYear, 8, 14) },
+      date: getFestivalDate(8, 14, 8, 14),
       location: 'Santuario de Huanca, Calca',
       province: 'Calca',
       coords: [-13.41, -71.85],
@@ -187,7 +205,7 @@ const canasFestivals: Festival[] = [
       id: 'qeswachaka-bridge-festival',
       slug: 'qeswachaka-bridge-festival',
       name: 'Festival del Puente Q\'eswachaka',
-      date: { start: new Date(currentYear, 5, 9), end: new Date(currentYear, 5, 12) },
+      date: getFestivalDate(5, 9, 5, 12),
       location: 'Quehue, Canas',
       province: 'Canas',
       coords: [-14.37, -71.49],
@@ -205,7 +223,7 @@ const canchisFestivals: Festival[] = [
       id: 'carnaval-de-tinta',
       slug: 'carnaval-de-tinta',
       name: 'Carnaval de Tinta',
-      date: { start: new Date(currentYear, 1, 11), end: new Date(currentYear, 1, 11) },
+      date: getFestivalDate(1, 11, 1, 11),
       location: 'Tinta, Canchis',
       province: 'Canchis',
       coords: [-14.148, -71.408],
@@ -223,7 +241,7 @@ const chumbivilcasFestivals: Festival[] = [
       id: 'takanakuy-chumbivilcas',
       slug: 'takanakuy-chumbivilcas',
       name: 'Takanakuy',
-      date: { start: new Date(currentYear, 11, 25), end: new Date(currentYear, 11, 25) },
+      date: getFestivalDate(11, 25, 11, 25),
       location: 'Santo Tomás, Chumbivilcas',
       province: 'Chumbivilcas',
       coords: [-14.45, -72.08],
@@ -240,7 +258,7 @@ const chumbivilcasFestivals: Festival[] = [
       id: 'chumbivilcas-horses',
       slug: 'chumbivilcas-horses',
       name: 'Carreras de Caballos de Chumbivilcas',
-      date: { start: new Date(currentYear, 5, 10), end: new Date(currentYear, 5, 11) },
+      date: getFestivalDate(5, 10, 5, 11),
       location: 'Santo Tomás, Chumbivilcas',
       province: 'Chumbivilcas',
       coords: [-14.452, -72.082],
@@ -258,7 +276,7 @@ const espinarFestivals: Festival[] = [
       id: 'uywa-chaka-y-chinu',
       slug: 'uywa-chaka-y-chinu',
       name: 'Uywa Ch\'aka y Ch\'inu',
-      date: { start: new Date(currentYear, 7, 24), end: new Date(currentYear, 7, 24) },
+      date: getFestivalDate(7, 24, 7, 24),
       location: 'Comunidades de Espinar',
       province: 'Espinar',
       coords: [-14.78, -71.41],
@@ -276,7 +294,7 @@ const laConvencionFestivals: Festival[] = [
       id: 'quillabamba-anniversary',
       slug: 'aniversario-de-quillabamba',
       name: 'Aniversario de Quillabamba',
-      date: { start: new Date(currentYear, 6, 25), end: new Date(currentYear, 6, 29) },
+      date: getFestivalDate(6, 25, 6, 29),
       location: 'Quillabamba, La Convención',
       province: 'La Convención',
       coords: [-12.86, -72.69],
@@ -294,7 +312,7 @@ const paruroFestivals: Festival[] = [
       id: 'Virgen-Natividad-Paruro',
       slug: 'Virgen-Natividad-Paruro',
       name: 'Virgen de Natividad en Paruro',
-      date: { start: new Date(currentYear, 8, 7), end: new Date(currentYear, 8, 9) },
+      date: getFestivalDate(8, 7, 8, 9),
       location: 'Paruro',
       province: 'Paruro',
       coords: [-13.76, -71.85],
@@ -312,7 +330,7 @@ const paucartamboFestivals: Festival[] = [
       id: 'paucartambo-virgen-del-carmen',
       slug: 'paucartambo-virgen-del-carmen',
       name: 'Fiesta de la Virgen del Carmen de Paucartambo',
-      date: { start: new Date(currentYear, 6, 15), end: new Date(currentYear, 6, 19) },
+      date: getFestivalDate(6, 15, 6, 19),
       location: 'Paucartambo',
       province: 'Paucartambo',
       coords: [-13.31, -71.59],
@@ -338,7 +356,7 @@ const quispicanchiFestivals: Festival[] = [
       id: 'qoyllur-riti',
       slug: 'qoyllur-riti',
       name: 'Qoyllur Rit\'i',
-      date: { start: new Date(currentYear, 4, 26), end: new Date(currentYear, 4, 30) },
+      date: getFestivalDate(4, 26, 4, 30),
       location: 'Santuario de Sinakara, Ocongate',
       province: 'Quispicanchi',
       coords: [-13.62, -71.4],
@@ -360,7 +378,7 @@ const urubambaFestivals: Festival[] = [
     id: 'juramentacion-varayoc-chinchero',
     slug: 'juramentacion-varayoc-chinchero',
     name: 'Juramentación de los Varayoc en Chinchero',
-    date: { start: new Date(currentYear, 0, 1), end: new Date(currentYear, 0, 2) },
+    date: getFestivalDate(0, 1, 0, 2),
     location: 'Chinchero',
     province: 'Urubamba',
     coords: [-13.391, -72.049],
@@ -374,7 +392,7 @@ const urubambaFestivals: Festival[] = [
     id: 'ollantaytambo-reyes',
     slug: 'ollantaytambo-reyes',
     name: 'Bajada de Reyes en Ollantaytambo',
-    date: { start: new Date(currentYear, 0, 6), end: new Date(currentYear, 0, 6) },
+    date: getFestivalDate(0, 6, 0, 6),
     location: 'Ollantaytambo',
     province: 'Urubamba',
     coords: [-13.26, -72.26],
@@ -388,7 +406,7 @@ const urubambaFestivals: Festival[] = [
     id: 'linderaje-chinchero',
     slug: 'linderaje-chinchero',
     name: 'Linderaje en Chinchero',
-    date: { start: new Date(currentYear, 0, 1), end: new Date(currentYear, 0, 1) },
+    date: getFestivalDate(0, 1, 0, 1),
     location: 'Chinchero',
     province: 'Urubamba',
     coords: [-13.39, -72.05],
@@ -406,7 +424,7 @@ const urubambaFestivals: Festival[] = [
     id: 'corpus-chinchero',
     slug: 'corpus-chinchero',
     name: 'Corpus Christi de Chinchero',
-    date: { start: new Date(currentYear, 4, 30), end: new Date(currentYear, 4, 30) },
+    date: getFestivalDate(4, 30, 4, 30),
     location: 'Chinchero',
     province: 'Urubamba',
     coords: [-13.391, -72.049],
