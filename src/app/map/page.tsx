@@ -4,7 +4,7 @@
 import dynamic from 'next/dynamic';
 import { festivals } from '@/lib/festivals';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { format, endOfDay } from 'date-fns';
+import { format, endOfDay, addMonths } from 'date-fns';
 import { useLanguage } from '@/context/language-context';
 import { RegionalFestivalBanner } from '@/components/RegionalFestivalBanner';
 
@@ -14,9 +14,12 @@ export default function MapPage() {
     const { t } = useLanguage();
 
     const now = new Date();
+    const threeMonthsFromNow = addMonths(now, 3);
 
+    // Filter for festivals starting between now and 3 months from now
     const upcomingFestivals = festivals.filter(f => {
-        return f.date.end >= endOfDay(now);
+        const festivalStartDate = new Date(f.date.start);
+        return festivalStartDate >= now && festivalStartDate <= threeMonthsFromNow;
     });
 
     const regionalChristmasFestival = upcomingFestivals.find(f => f.slug === 'navidad-cusquena-santurantikuy' && f.isRegional);
