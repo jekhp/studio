@@ -166,7 +166,7 @@ const cuscoFestivals: Festival[] = [
     coords: [-13.5167, -71.9788],
     image: 'noche-vieja-cusco',
     isFree: true,
-    categories: ['popular', 'fiesta', 'espectaculo', 'tradicional'],
+    categories: ['popular', 'espectaculo', 'tradicional'],
     isRegional: true,
     traditionKeys: ["tradition_1", "tradition_2", "tradition_3"],
     scheduleKeys: [{ dayKey: 'day_1', eventKeys: [{ timeKey: 'event_1_time', descriptionKey: 'event_1_desc' }, { timeKey: 'event_2_time', descriptionKey: 'event_2_desc' }] }]
@@ -196,7 +196,7 @@ const cuscoFestivals: Festival[] = [
     coords: [-13.5235, -71.9840], 
     image: 'santa-cecilia-musicos',
     isFree: true,
-    categories: ['religioso', 'musica', 'tradicional', 'cultural'],
+    categories: ['religioso', 'tradicional'],
     isRegional: true,
     traditionKeys: ["tradition_1", "tradition_2", "tradition_3", "tradition_4"],
     scheduleKeys: [{ dayKey: 'day_1', eventKeys: [{ timeKey: 'event_1_time', descriptionKey: 'event_1_desc' }] },{ dayKey: 'day_2', eventKeys: [{ timeKey: 'event_2_time', descriptionKey: 'event_2_desc' },{ timeKey: 'event_3_time', descriptionKey: 'event_3_desc' }] }]
