@@ -458,6 +458,40 @@
                 "event_1_desc": "Santurantikuy Fair in the Plaza de Armas. Artisans set up from the early morning hours."
             }
         },
+        "noche-vieja": {
+            "location_detail": "Plaza de Armas, Cusco",
+            "description": "A massive celebration in the Plaza de Armas with fireworks and unique traditions.",
+            "longDescription": "New Year's Eve in Cusco is a unique and massive celebration. Thousands of people gather in the Plaza de Armas to say goodbye to the old year. The night is filled with traditions, music, and a spectacular fireworks display at midnight. It is one of the most vibrant nights of the year in the city.",
+            "history": "The celebration blends modern New Year's customs with uniquely Peruvian and Cusco traditions, such as wearing yellow clothing for good luck or running around the plaza with suitcases to ensure travel in the new year.",
+            "traditions": {
+                "tradition_1": "Running around the Plaza de Armas 12 times, one for each month of the year.",
+                "tradition_2": "Wearing yellow clothing and accessories to attract good luck.",
+                "tradition_3": "A massive fireworks show at midnight to welcome the new year."
+            },
+            "schedule": {
+                "day_1": "December 31",
+                "event_1_time": "10:00 PM onwards",
+                "event_1_desc": "People begin to gather in the Plaza de Armas.",
+                "event_2_time": "12:00 AM",
+                "event_2_desc": "Fireworks show and the traditional run around the plaza."
+            }
+        },
+        "ano-nuevo": {
+            "location_detail": "Cusco City and surrounding areas.",
+            "description": "A day of renewal, spiritual cleansing, and family gatherings.",
+            "longDescription": "After the intense celebration of New Year's Eve, New Year's Day in Cusco is a calmer and more spiritual day. Many people take the opportunity to perform rituals of purification and renewal. It is a day to visit family, rest, and start the year with good energy. Many also visit spiritual sites to make offerings.",
+            "history": "The first day of the year has always been a time of renewal. In the Andes, this is combined with ancient practices of spiritual cleansing and connection with nature to ensure a prosperous year.",
+            "traditions": {
+                "tradition_1": "Flowering baths ('baños de florecimiento') for good luck and to cleanse bad energies.",
+                "tradition_2": "Family lunches with traditional dishes like baked pork.",
+                "tradition_3": "Visits to archaeological or sacred sites to 'recharge energy'."
+            },
+            "schedule": {
+                "day_1": "January 1",
+                "event_1_time": "All Day",
+                "event_1_desc": "Family and personal activities. Many restaurants offer special New Year's lunches."
+            }
+        },
         "Virgen-Natividad-Paruro": {
             "location_detail": "Paruro Province, Cusco Region.",
             "description": "A deeply rooted religious festival celebrating the Nativity of the Virgin Mary, known for its traditional dances and devotion.",

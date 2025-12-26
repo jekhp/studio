@@ -157,6 +157,36 @@ const cuscoFestivals: Festival[] = [
     scheduleKeys: [{ dayKey: 'day_1', eventKeys: [{ timeKey: 'event_1_time', descriptionKey: 'event_1_desc' }] }],
   },
   {
+    id: 'noche-vieja',
+    slug: 'noche-vieja',
+    name: 'Noche Vieja en Cusco',
+    date: getFestivalDate(11, 31, 11, 31),
+    location: 'Plaza de Armas, Cusco',
+    province: 'Cusco',
+    coords: [-13.5167, -71.9788],
+    image: 'noche-vieja-cusco',
+    isFree: true,
+    categories: ['popular', 'fiesta', 'espectaculo', 'tradicional'],
+    isRegional: true,
+    traditionKeys: ["tradition_1", "tradition_2", "tradition_3"],
+    scheduleKeys: [{ dayKey: 'day_1', eventKeys: [{ timeKey: 'event_1_time', descriptionKey: 'event_1_desc' }, { timeKey: 'event_2_time', descriptionKey: 'event_2_desc' }] }]
+  },
+  {
+    id: 'ano-nuevo',
+    slug: 'ano-nuevo',
+    name: 'Año Nuevo en Cusco',
+    date: getFestivalDate(0, 1, 0, 1),
+    location: 'Cusco',
+    province: 'Cusco',
+    coords: [-13.5167, -71.9788],
+    image: 'ano-nuevo-cusco',
+    isFree: true,
+    categories: ['popular', 'tradicional', 'espiritual'],
+    isRegional: true,
+    traditionKeys: ["tradition_1", "tradition_2", "tradition_3"],
+    scheduleKeys: [{ dayKey: 'day_1', eventKeys: [{ timeKey: 'event_1_time', descriptionKey: 'event_1_desc' }] }]
+  },
+  {
     id: 'festividad-santaCecilia',
     slug: 'festividad-santaCecilia',
     name: 'Festividad de Santa Cecilia (Patrona de los Músicos)',
@@ -451,3 +481,4 @@ export const festivals: Festival[] = [
   ...quispicanchiFestivals,
   ...urubambaFestivals,
 ];
+

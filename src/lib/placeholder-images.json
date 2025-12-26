@@ -149,6 +149,18 @@
       "description": "A bustling Christmas market at night, filled with artisanal crafts and nativity figures.",
       "imageUrl": "/festivals/santa_cecilia.jpg",
       "imageHint": "christmas market"
+    },
+    {
+      "id": "noche-vieja-cusco",
+      "description": "Fireworks exploding over Cusco's Plaza de Armas during New Year's Eve celebrations.",
+      "imageUrl": "/festivals/ano-nuevo-cusco.jpg",
+      "imageHint": "new year fireworks"
+    },
+    {
+      "id": "ano-nuevo-cusco",
+      "description": "People running around the Plaza de Armas at midnight with suitcases.",
+      "imageUrl": "/festivals/ano-nuevo-cusco.jpg",
+      "imageHint": "new year tradition"
     }
   ]
 }

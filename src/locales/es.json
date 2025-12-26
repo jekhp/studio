@@ -457,6 +457,40 @@
                 "event_1_desc": "Feria de Santurantikuy en la Plaza de Armas. Los artesanos se instalan desde la madrugada."
             }
         },
+        "noche-vieja": {
+            "location_detail": "Plaza de Armas, Cusco",
+            "description": "Una celebración masiva en la Plaza de Armas con fuegos artificiales y tradiciones únicas.",
+            "longDescription": "La Noche Vieja en Cusco es una celebración única y multitudinaria. Miles de personas se congregan en la Plaza de Armas para despedir el año. La noche está llena de tradiciones, música y un espectacular show de fuegos artificiales a la medianoche. Es una de las noches más vibrantes del año en la ciudad.",
+            "history": "La celebración mezcla las costumbres modernas de año nuevo con tradiciones netamente peruanas y cusqueñas, como el uso de ropa amarilla para la suerte o correr por la plaza con maletas para asegurar viajes en el nuevo año.",
+            "traditions": {
+                "tradition_1": "Correr 12 vueltas alrededor de la Plaza de Armas, una por cada mes del año.",
+                "tradition_2": "Uso de ropa y accesorios de color amarillo para atraer la buena suerte.",
+                "tradition_3": "Un masivo show de fuegos artificiales a la medianoche para recibir el año nuevo."
+            },
+            "schedule": {
+                "day_1": "31 de Diciembre",
+                "event_1_time": "10:00 PM en adelante",
+                "event_1_desc": "La gente comienza a congregarse en la Plaza de Armas.",
+                "event_2_time": "12:00 AM",
+                "event_2_desc": "Show de fuegos artificiales y la tradicional carrera alrededor de la plaza."
+            }
+        },
+        "ano-nuevo": {
+            "location_detail": "Ciudad de Cusco y alrededores.",
+            "description": "Un día de renovación, limpiezas espirituales y reuniones familiares.",
+            "longDescription": "Después de la intensa celebración de Noche Vieja, el día de Año Nuevo en Cusco es un día más tranquilo y espiritual. Mucha gente aprovecha para realizar rituales de purificación y renovación. Es un día para visitar a la familia, descansar y empezar el año con buena energía. Muchos también visitan lugares espirituales para hacer ofrendas.",
+            "history": "El primer día del año siempre ha sido un momento de renovación. En los Andes, esto se combina con prácticas ancestrales de limpieza espiritual y conexión con la naturaleza para asegurar un año próspero.",
+            "traditions": {
+                "tradition_1": "Baños de florecimiento para la buena suerte y para limpiar las malas energías.",
+                "tradition_2": "Almuerzos familiares con platos tradicionales como el lechón al horno.",
+                "tradition_3": "Visitas a lugares arqueológicos o sagrados para 'recargar energías'."
+            },
+            "schedule": {
+                "day_1": "1 de Enero",
+                "event_1_time": "Todo el día",
+                "event_1_desc": "Actividades familiares y personales. Muchos restaurantes ofrecen almuerzos especiales de Año Nuevo."
+            }
+        },
         "Virgen-Natividad-Paruro": {
             "location_detail": "Provincia de Paruro, Región Cusco.",
             "description": "Una fiesta religiosa de profundo arraigo que celebra el Nacimiento de la Virgen María, destacando por sus danzas tradicionales y devoción.",
