@@ -3,13 +3,12 @@
 
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
-import { Heart, MapPin, Calendar, Star } from 'lucide-react';
+import { MapPin, Calendar } from 'lucide-react';
 import { format, differenceInHours } from 'date-fns';
 import { cn } from '@/lib/utils';
 import type { Festival } from '@/lib/festivals';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { Countdown } from './Countdown';
 
@@ -70,7 +69,7 @@ export const UpcomingFestivalCard = ({ festival }: { festival: Festival }) => {
         )}
       </div>
       
-      <div className="p-3">
+      <div className="p-4">
         <h3 className="text-md font-headline font-bold text-foreground truncate">🎉 {festival.name}</h3>
         
         <div className="mt-1 flex items-center justify-between text-xs text-muted-foreground">
