@@ -41,11 +41,11 @@ export const Countdown: React.FC<CountdownProps> = ({ targetDate }) => {
     <div className="flex items-baseline gap-2 text-sm">
         <div className="flex items-baseline">
           <span className="font-bold text-white">{timeLeft.days}</span>
-          <span className="text-xs text-amber-300/70">d</span>
+          <span className="text-xs text-primary-foreground/80">d</span>
         </div>
         <div className="flex items-baseline">
             <span className="font-bold text-white">{timeLeft.hours}</span>
-            <span className="text-xs text-amber-300/70">h</span>
+            <span className="text-xs text-primary-foreground/80">h</span>
         </div>
     </div>
   );
