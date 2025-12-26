@@ -14,7 +14,6 @@ import Link from 'next/link';
 import { Countdown } from './Countdown';
 
 export const UpcomingFestivalCard = ({ festival }: { festival: Festival }) => {
-  const [isInterested, setIsInterested] = useState(false);
   const [isClient, setIsClient] = useState(false);
   
   useEffect(() => {
@@ -42,12 +41,6 @@ export const UpcomingFestivalCard = ({ festival }: { festival: Festival }) => {
   });
 
   const formattedDateRange = `${format(festival.date.start, 'dd MMM')} - ${format(festival.date.end, 'dd MMM, yyyy')}`;
-
-  const handleInterestClick = (e: React.MouseEvent) => {
-    e.preventDefault(); // Evita que el enlace se active
-    e.stopPropagation(); // Detiene la propagación del evento al enlace contenedor
-    setIsInterested(!isInterested);
-  }
 
   return (
     <Link href={`/festivals/${festival.slug}`} className={cn("group relative block rounded-xl border bg-card text-card-foreground shadow-md transition-all duration-300 hover:shadow-2xl overflow-hidden", cardStateClasses)}>
@@ -89,18 +82,6 @@ export const UpcomingFestivalCard = ({ festival }: { festival: Festival }) => {
                 <Calendar className="h-3 w-3 text-primary"/>
                 <span>{formattedDateRange}</span>
             </div>
-        </div>
-
-        <div className="mt-2 flex items-center justify-end">
-            <Button 
-              variant={isInterested ? 'default' : 'outline'} 
-              size="sm"
-              onClick={handleInterestClick}
-              className="transition-colors group-hover:bg-primary group-hover:text-primary-foreground h-8 text-xs"
-            >
-              <Heart className={cn("mr-1.5 h-3 w-3", isInterested && "fill-current")} />
-              {isInterested ? 'Me interesa' : 'Me interesa'}
-            </Button>
         </div>
       </div>
     </Link>
