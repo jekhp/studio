@@ -153,13 +153,13 @@
     {
       "id": "noche-vieja-cusco",
       "description": "Fireworks exploding over Cusco's Plaza de Armas during New Year's Eve celebrations.",
-      "imageUrl": "/festivals/ano-nuevo-cusco.jpg",
+      "imageUrl": "/festivals/nocheVieja.jpg",
       "imageHint": "new year fireworks"
     },
     {
       "id": "ano-nuevo-cusco",
       "description": "People running around the Plaza de Armas at midnight with suitcases.",
-      "imageUrl": "/festivals/ano-nuevo-cusco.jpg",
+      "imageUrl": "/festivals/añoNuevo.jpg",
       "imageHint": "new year tradition"
     }
   ]
