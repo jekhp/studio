@@ -49,12 +49,6 @@
       "imageHint": "pachamama ceremony"
     },
     {
-      "id": "quillabamba-coffee",
-      "description": "Close-up of freshly roasted coffee beans in a sack at a market.",
-      "imageUrl": "https://images.unsplash.com/photo-1690983326555-8b8e27843a32?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxjb2ZmZWUlMjBiZWFuc3xlbnwwfHx8fDE3NjE5NDQ1NTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "coffee beans"
-    },
-    {
       "id": "qeswachaka-bridge",
       "description": "A traditional Inca rope bridge spanning a deep river canyon.",
       "imageUrl": "/festivals/Qeswachaka.jpg",
@@ -121,22 +115,10 @@
       "imageHint": "ritual fight chinchero"
     },
     {
-      "id": "quiz-character-1",
-      "description": "A dancer in a 'Saqra' (devil) costume from the Paucartambo festival.",
-      "imageUrl": "https://images.unsplash.com/photo-1758998427892-e579f09c9fa7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxmZXN0aXZhbCUyMGNoYXJhY3RlcnxlbnwwfHx8fDE3NjIxODgwMjF8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "festival character"
-    },
-    {
       "id": "quillabamba-anniversary",
       "description": "A vibrant night-time street parade with glowing floats and a large crowd.",
       "imageUrl": "/festivals/aniversarioQuillabamba.webp",
       "imageHint": "night parade"
-    },
-    {
-      "id": "quiz-character-2",
-      "description": "A dancer in an 'Ukuku' (bear-man) costume from the Qoyllur Rit'i festival.",
-      "imageUrl": "https://images.unsplash.com/photo-1763013373583-376c6675a31a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8YW5kZWFuJTIwY2hhcmFjdGVyfGVufDB8fHx8MTc2MzM5MjY3OHww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "andean character"
     },
     {
       "id": "santurantikuy-market",
