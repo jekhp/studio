@@ -574,6 +574,22 @@
                 "event_2_time": "Tarde",
                 "event_2_desc": "Celebración comunal con música y danzas típicas."
             }
+        },
+        "carnaval-pichigua": {
+            "location_detail": "Plaza de Armas, Pichigua, Espinar",
+            "description": "El vibrante carnaval de Pichigua con sus 'Ch'ukos y Solteras'.",
+            "longDescription": "El Festival Cultural Carnavalesco 'Ch'ukos y Solteras' en Pichigua es una de las celebraciones más auténticas de la provincia de Espinar. El día de compadres, la comunidad se viste de gala con trajes coloridos, jinetes a caballo y danzantes que llenan la plaza de música y alegría. Es una expresión de la cultura viva, la competencia festiva y la tradición del carnaval altoandino.",
+            "history": "Los carnavales en la provincia de Espinar tienen una profunda raíz en la cosmovisión andina, mezclando la celebración de la fertilidad de la tierra (Pachamama) con ritos sociales y competencias entre comunidades. El festival de Pichigua es un claro ejemplo de cómo estas tradiciones se mantienen vivas, reafirmando la identidad local año tras año.",
+            "traditions": {
+                "tradition_1": "Desfile de 'Ch'ukos', jinetes enmascarados que representan el espíritu del carnaval.",
+                "tradition_2": "Competencia de danzas entre las comunidades y barrios.",
+                "tradition_3": "Juegos con agua y talco, típicos de la celebración del carnaval."
+            },
+            "schedule": {
+                "day_1": "4 de Febrero",
+                "event_1_time": "Mediodía",
+                "event_1_desc": "Concentración en la Plaza de Armas de Pichigua para el inicio del pasacalle y concurso de danzas."
+            }
         }
     }
 }

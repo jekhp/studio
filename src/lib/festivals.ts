@@ -47,13 +47,18 @@ const now = new Date();
 // Helper function to adjust dates for upcoming year
 const getFestivalDate = (startMonth: number, startDay: number, endMonth: number, endDay: number) => {
   let festivalYear = currentYear;
+  const festivalStartDate = new Date(festivalYear, startMonth, startDay);
   const festivalEndDate = new Date(festivalYear, endMonth, endDay);
-
-  // If the festival's end date for the current year has already passed,
-  // set the festival for the next year.
-  if (festivalEndDate < now) {
-    festivalYear++;
+  
+  if (festivalEndDate < now && festivalStartDate.getMonth() !== startMonth) {
+      festivalYear++;
+  } else if (festivalEndDate < now) {
+      const specificFestivalDate = new Date(currentYear, startMonth, startDay);
+      if (specificFestivalDate < now) {
+        festivalYear++;
+      }
   }
+
 
   return {
     start: new Date(festivalYear, startMonth, startDay),
@@ -315,6 +320,20 @@ const espinarFestivals: Festival[] = [
       categories: ['agricola', 'andino', 'tradicional'],
       traditionKeys: ["tradition_1", "tradition_2", "tradition_3", "tradition_4"],
       scheduleKeys: [{ dayKey: 'day_1', eventKeys: [{ timeKey: 'event_1_time', descriptionKey: 'event_1_desc' }] }],
+    },
+    {
+      id: 'carnaval-pichigua',
+      slug: 'carnaval-pichigua',
+      name: "Festival Carnavalesco de Pichigua",
+      date: getFestivalDate(1, 4, 1, 4),
+      location: 'Pichigua, Espinar',
+      province: 'Espinar',
+      coords: [-14.65, -71.55],
+      image: 'pichigua-carnival',
+      isFree: true,
+      categories: ['carnaval', 'danza', 'tradicional', 'popular'],
+      traditionKeys: ["tradition_1", "tradition_2", "tradition_3"],
+      scheduleKeys: [{ dayKey: 'day_1', eventKeys: [{ timeKey: 'event_1_time', descriptionKey: 'event_1_desc' }] }],
     }
 ];
 
@@ -481,4 +500,5 @@ export const festivals: Festival[] = [
   ...quispicanchiFestivals,
   ...urubambaFestivals,
 ];
+
 

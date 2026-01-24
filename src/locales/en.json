@@ -575,6 +575,22 @@
                 "event_2_time": "Afternoon",
                 "event_2_desc": "Community celebration with music and typical dances."
             }
+        },
+        "carnaval-pichigua": {
+            "location_detail": "Main Square, Pichigua, Espinar",
+            "description": "The vibrant carnival of Pichigua with its 'Ch'ukos and Solteras'.",
+            "longDescription": "The 'Ch'ukos y Solteras' Cultural Carnival Festival in Pichigua is one of the most authentic celebrations in the province of Espinar. On Compadres' Day, the community dresses up in colorful costumes, with horsemen and dancers filling the square with music and joy. It is an expression of living culture, festive competition, and the tradition of the high Andean carnival.",
+            "history": "Carnivals in the province of Espinar are deeply rooted in the Andean worldview, mixing the celebration of the earth's fertility (Pachamama) with social rites and competitions between communities. The Pichigua festival is a clear example of how these traditions are kept alive, reaffirming local identity year after year.",
+            "traditions": {
+                "tradition_1": "Parade of 'Ch'ukos,' masked horsemen representing the spirit of the carnival.",
+                "tradition_2": "Dance competition between communities and neighborhoods.",
+                "tradition_3": "Playful games with water and powder, typical of carnival celebrations."
+            },
+            "schedule": {
+                "day_1": "February 4th",
+                "event_1_time": "Midday",
+                "event_1_desc": "Gathering in the Main Square of Pichigua for the start of the parade and dance contest."
+            }
         }
     }
 }

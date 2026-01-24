@@ -143,6 +143,12 @@
       "description": "People running around the Plaza de Armas at midnight with suitcases.",
       "imageUrl": "/festivals/añoNuevo.jpg",
       "imageHint": "new year tradition"
+    },
+    {
+      "id": "pichigua-carnival",
+      "description": "Carnival celebration in Pichigua with traditional dancers and horseback riders.",
+      "imageUrl": "https://images.unsplash.com/photo-1601861164303-ae35eaa51682?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxjYXJuaXZhbCUyMGhvcnNlbWVufGVufDB8fHx8MTc2OTIyNDAxMXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "carnival horsemen"
     }
   ]
 }
