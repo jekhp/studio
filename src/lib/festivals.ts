@@ -396,6 +396,26 @@ const paucartamboFestivals: Festival[] = [
         { type: 'video', embedCode: '<iframe width="560" height="315" src="https://www.youtube.com/embed/0tlv3hjVB9Q?si=GTa-eMn5ZKhrh33A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>', alt: 'Virgen del Carmen festival in Paucartambo', thumbnail: 'https://i.ytimg.com/vi/0tlv3hjVB9Q/hqdefault.jpg' },
         { type: 'image', url: '/festivals/virgendelcarmenpaucartambo.jpg', alt: 'Dancers in colorful masks at Paucartambo' },
       ],
+    },
+    {
+      id: 'carnaval-colquepata',
+      slug: 'carnaval-colquepata',
+      name: 'Carnaval de Colquepata (Tinkuy Muruwiqsa)',
+      date: getFestivalDate(1, 5, 1, 18),
+      location: 'Colquepata',
+      province: 'Paucartambo',
+      coords: [-13.25, -71.53],
+      image: 'colquepata-carnival',
+      isFree: true,
+      categories: ['carnaval', 'danza', 'combate-ritual', 'tradicional', 'popular'],
+      traditionKeys: ["tradition_1", "tradition_2", "tradition_3", "tradition_4"],
+      scheduleKeys: [
+        { dayKey: 'day_1', eventKeys: [{ timeKey: 'event_1_time', descriptionKey: 'event_1_desc' }] },
+        { dayKey: 'day_2', eventKeys: [{ timeKey: 'event_1_time', descriptionKey: 'event_1_desc' }] },
+        { dayKey: 'day_3', eventKeys: [{ timeKey: 'event_1_time', descriptionKey: 'event_1_desc' }] },
+        { dayKey: 'day_4', eventKeys: [{ timeKey: 'event_1_time', descriptionKey: 'event_1_desc' }] },
+        { dayKey: 'day_5', eventKeys: [{ timeKey: 'event_1_time', descriptionKey: 'event_1_desc' }] }
+      ],
     }
 ];
 
@@ -500,5 +520,6 @@ export const festivals: Festival[] = [
   ...quispicanchiFestivals,
   ...urubambaFestivals,
 ];
+
 
 

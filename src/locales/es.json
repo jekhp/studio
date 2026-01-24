@@ -590,6 +590,35 @@
                 "event_1_time": "Mediodía",
                 "event_1_desc": "Concentración en la Plaza de Armas de Pichigua para el inicio del pasacalle y concurso de danzas."
             }
+        },
+        "carnaval-colquepata": {
+            "location_detail": "Colquepata, Paucartambo",
+            "description": "El vibrante carnaval de Colquepata, famoso por su 'Tinkuy' y sus coloridas competencias de danza.",
+            "longDescription": "El Carnaval de Colquepata es una de las celebraciones más auténticas de la provincia de Paucartambo. Combina la alegría del carnaval con la intensidad del 'Tinkuy', un combate ritual. Durante varios días, las comunidades compiten en danzas, música y demuestran su fuerza, culminando en el Miércoles de Ceniza con el 'Machu Tusuy'.",
+            "history": "Esta festividad tiene profundas raíces prehispánicas, donde el 'Tinkuy' servía como un rito de fertilidad y orden social. Con la llegada de los españoles, se fusionó con las celebraciones de carnaval, creando una expresión cultural única que reafirma la identidad y la fuerza de las comunidades de Paucartambo.",
+            "traditions": {
+                "tradition_1": "El 'Tinkuy Muruwiqsa', un combate ritual entre comunidades.",
+                "tradition_2": "Concursos de danzas folklóricas con trajes elaborados.",
+                "tradition_3": "El 'Machu Tusuy' o danza de los ancianos en Miércoles de Ceniza.",
+                "tradition_4": "Juegos con agua y talco, característicos del carnaval andino."
+            },
+            "schedule": {
+                "day_1": "Jueves 05 de Febrero",
+                "event_1_time": "Todo el día",
+                "event_1_desc": "Tinkuy Muruwiqsa en las comunidades de Sipascancha Alta y Chahuaytire.",
+                "day_2": "Jueves 12 de Febrero",
+                "event_2_time": "Todo el día",
+                "event_2_desc": "Concurso de Muñecos de carnaval.",
+                "day_3": "Domingo 15 de Febrero",
+                "event_3_time": "Todo el día",
+                "event_3_desc": "Gran Concurso de Danzas.",
+                "day_4": "Martes 17 de Febrero",
+                "event_4_time": "Todo el día",
+                "event_4_desc": "Tinkuy Martes Suyo (Martes de Carnaval).",
+                "day_5": "Miércoles 18 de Febrero",
+                "event_5_time": "Todo el día",
+                "event_5_desc": "Machu Tusuy y fin de fiesta por Miércoles de Ceniza."
+            }
         }
     }
 }

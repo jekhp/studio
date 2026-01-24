@@ -591,6 +591,35 @@
                 "event_1_time": "Midday",
                 "event_1_desc": "Gathering in the Main Square of Pichigua for the start of the parade and dance contest."
             }
+        },
+        "carnaval-colquepata": {
+            "location_detail": "Colquepata, Paucartambo",
+            "description": "The vibrant Colquepata carnival, famous for its 'Tinkuy' and colorful dance competitions.",
+            "longDescription": "The Colquepata Carnival is one of the most authentic celebrations in the province of Paucartambo. It combines the joy of carnival with the intensity of 'Tinkuy,' a ritual combat. For several days, communities compete in dances, music, and show their strength, culminating on Ash Wednesday with the 'Machu Tusuy'.",
+            "history": "This festival has deep pre-Hispanic roots, where the 'Tinkuy' served as a fertility rite and for social order. With the arrival of the Spanish, it merged with carnival celebrations, creating a unique cultural expression that reaffirms the identity and strength of the Paucartambo communities.",
+            "traditions": {
+                "tradition_1": "The 'Tinkuy Muruwiqsa,' a ritual combat between communities.",
+                "tradition_2": "Folk dance contests with elaborate costumes.",
+                "tradition_3": "The 'Machu Tusuy' or dance of the elders on Ash Wednesday.",
+                "tradition_4": "Playful games with water and powder, typical of Andean carnivals."
+            },
+            "schedule": {
+                "day_1": "Thursday, February 5th",
+                "event_1_time": "All day",
+                "event_1_desc": "Tinkuy Muruwiqsa in the communities of Sipascancha Alta and Chahuaytire.",
+                "day_2": "Thursday, February 12th",
+                "event_2_time": "All day",
+                "event_2_desc": "Carnival Puppets Contest.",
+                "day_3": "Sunday, February 15th",
+                "event_3_time": "All day",
+                "event_3_desc": "Grand Dance Contest.",
+                "day_4": "Tuesday, February 17th",
+                "event_4_time": "All day",
+                "event_4_desc": "Tinkuy Martes Suyo (Carnival Tuesday).",
+                "day_5": "Wednesday, February 18th",
+                "event_5_time": "All day",
+                "event_5_desc": "Machu Tusuy and end of the festival for Ash Wednesday."
+            }
         }
     }
 }
