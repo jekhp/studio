@@ -620,6 +620,39 @@
                 "event_5_time": "All day",
                 "event_5_desc": "Machu Tusuy and end of the festival for Ash Wednesday."
             }
+        },
+        "capuli-raymi": {
+            "location_detail": "Plaza de Armas of Cusipata, Quispicanchi",
+            "description": "A celebration honoring the 'capulí' (Andean cherry) and the cultural identity of the Cusipata district during the carnival season.",
+            "longDescription": "The 2026 Capulí Raymi is a vibrant festival organized by the Municipality of Cusipata to honor ancestral customs and the region's agricultural wealth. It brings together producers, artisans, and dancers in an event highlighted by local gastronomy and unique capulí-based products.",
+            "history": "This festivity stems from the agricultural traditions of Cusco's inter-Andean valleys, where the capulí harvest marks the beginning of the carnival season. It represents the land's abundance and the unity of the communities along the Vilcanota River basin.",
+            "traditions": {
+                "tradition_1": "Native carnival dance competitions featuring local and regional groups.",
+                "tradition_2": "Gastronomic festival featuring 'Tímpu Cusipateño' and the traditional 'frutillada' (strawberry cider).",
+                "tradition_3": "Exhibition of honey-based products, corn derivatives, dairy, and local handicrafts."
+            },
+            "schedule": {
+                "day_1": "Sunday, February 8th, 2026",
+                "event_1_time": "09:00 a.m.",
+                "event_1_desc": "Grand opening of the agro-industrial, craft, and gastronomic fair at the Plaza de Armas.",
+                "event_2_time": "11:00 a.m.",
+                "event_2_desc": "Cultural gathering and native carnival dance competition."
+            }
+        },
+        "carnavales-chinchero": {
+            "location_detail": "Parador Turistico, Chinchero",
+            "description": "Water, flour, and streamers at the grand finale of the Chinchero carnivals.",
+            "longDescription": "Traditional carnival grand finale, dance competitions, 'puchero' (traditional stew), and much more.",
+            "history": "A festivity with pre-Hispanic roots dedicated to single men and women.",
+            "traditions": {
+                "tradition_1": "Folk dance competitions with elaborate costumes.",
+                "tradition_2": "Games with water and flour, characteristic of the Andean carnival."
+            },
+            "schedule": {
+                "day_1": "Sunday, February 22nd",
+                "event_1_time": "All day",
+                "event_1_desc": "Dance competition, community and organization categories, and performances by folk artists"
+            }
         }
     }
 }

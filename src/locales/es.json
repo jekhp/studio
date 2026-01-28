@@ -619,6 +619,39 @@
                 "event_5_time": "Todo el día",
                 "event_5_desc": "Machu Tusuy y fin de fiesta por Miércoles de Ceniza."
             }
+        },
+        "capuli-raymi": {
+            "location_detail": "Plaza de Armas de Cusipata, Quispicanchi, Cusco",
+            "description": "Una celebración que rinde homenaje al capulí y a la identidad cultural del distrito de Cusipata durante la época de carnavales.",
+            "longDescription": "El Capulí Raymi 2026 es una festividad organizada por la Municipalidad de Cusipata para revalorar las costumbres ancestrales y la riqueza agrícola de la zona. Reúne a productores, artesanos y danzantes en un evento que destaca por su gastronomía típica y la exhibición de derivados del capulí.",
+            "history": "Esta festividad nace de la tradición agrícola de los valles interandinos de Cusco, donde la cosecha del capulí (cereza andina) marca el inicio de los carnavales. Representa la abundancia de la tierra y la unión de las comunidades de la cuenca del río Vilcanota.",
+            "traditions": {
+                "tradition_1": "Concurso de danzas autóctonas carnavalescas a nivel local y regional.",
+                "tradition_2": "Feria gastronómica destacando el Tímpu Cusipateño y la tradicional frutillada.",
+                "tradition_3": "Exhibición y venta de productos derivados del capulí, miel de abeja, maíz y lácteos."
+            },
+            "schedule": {
+                "day_1": "Domingo, 08 de febrero de 2026",
+                "event_1_time": "09:00 a.m.",
+                "event_1_desc": "Gran inicio de la feria agroindustrial, artesanal y festival gastronómico en la Plaza de Armas.",
+                "event_2_time": "11:00 a.m.",
+                "event_2_desc": "Encuentro cultural y concurso de danzas autóctonas carnavalescas."
+            }
+        },
+        "carnavales-chinchero": {
+            "location_detail": "Parador turístico, Chinchero",
+            "description": "Agua, arina y cerpentian en el remate de carnavales de Chinchero",
+            "longDescription": "Tradicional remate de carnavales, concurso de danzas, puchero y mucho más",
+            "history": "Festividad con raices prehispanicas para los solteros y solteras",
+            "traditions": {
+                "tradition_1": "Concursos de danzas folklóricas con trajes elaborados.",
+                "tradition_2": "Juegos con agua y harina, característicos del carnaval andino."
+            },
+            "schedule": {
+                "day_1": "Domingo 22 de Febrero",
+                "event_1_time": "Todo el día",
+                "event_1_desc": "Concurso de danzas, categoria comunidades, organizaciones y presentacion de artistas folkloricos"
+            }
         }
     }
 }

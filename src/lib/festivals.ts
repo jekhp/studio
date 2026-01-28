@@ -407,7 +407,7 @@ const paucartamboFestivals: Festival[] = [
       coords: [-13.25, -71.53],
       image: 'colquepata-carnival',
       isFree: true,
-      categories: ['carnaval', 'danza', 'combate-ritual', 'tradicional', 'popular'],
+      categories: ['carnaval', 'danza', 'tradicional'],
       traditionKeys: ["tradition_1", "tradition_2", "tradition_3", "tradition_4"],
       scheduleKeys: [
         { dayKey: 'day_1', eventKeys: [{ timeKey: 'event_1_time', descriptionKey: 'event_1_desc' }] },
@@ -438,6 +438,22 @@ const quispicanchiFestivals: Festival[] = [
         { dayKey: 'day_2', eventKeys: [{ timeKey: 'event_1_time', descriptionKey: 'event_1_desc' }] },
         { dayKey: 'day_3', eventKeys: [{ timeKey: 'event_1_time', descriptionKey: 'event_1_desc' }, { timeKey: 'event_2_time', descriptionKey: 'event_2_desc' }] }
       ],
+    },
+    {
+      id: 'capuli-raymi',
+      slug: 'capuli-raymi',
+      name: 'Capuli Raymi',
+      date: getFestivalDate(2, 8, 2, 8),
+      location: 'Plaza de Cusipata',
+      province: 'Quispicanchi',
+      coords: [-13.903797707230893, -71.49686540758236],
+      image: 'capuli-raymi',
+      isFree: true,
+      categories: ['tradicional', 'andino', 'danza'],
+      traditionKeys: ["tradition_1", "tradition_2"],
+      scheduleKeys: [
+        { dayKey: 'day_1', eventKeys: [{ timeKey: 'event_1_time', descriptionKey: 'event_1_desc' }] }
+      ],
     }
 ];
 
@@ -456,6 +472,20 @@ const urubambaFestivals: Festival[] = [
     categories: ['andino', 'tradicional', 'popular'],
     traditionKeys: ["tradition_1", "tradition_2", "tradition_3", "tradition_4"],
     scheduleKeys: [{ dayKey: 'day_1', eventKeys: [{ timeKey: 'event_1_time', descriptionKey: 'event_1_desc' }, { timeKey: 'event_2_time', descriptionKey: 'event_2_desc' }] }],
+  },
+  {
+    id: 'carnavales-chinchero',
+    slug: 'carnavales-chinchero',
+    name: 'Remate de Carnavales Chinchero',
+    date: getFestivalDate(1, 22, 1, 22),
+    location: 'Chinchero',
+    province: 'Urubamba',
+    coords: [-13.391, -72.049],
+    image: 'carnaval-chinchero',
+    isFree: true,
+    categories: ['andino', 'tradicional', 'popular'],
+    traditionKeys: ["tradition_1", "tradition_2"],
+    scheduleKeys: [{ dayKey: 'day_1', eventKeys: [{ timeKey: 'event_1_time', descriptionKey: 'event_1_desc' }] }],
   },
   {
     id: 'ollantaytambo-reyes',

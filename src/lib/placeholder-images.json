@@ -147,13 +147,25 @@
     {
       "id": "pichigua-carnival",
       "description": "Carnival celebration in Pichigua with traditional dancers and horseback riders.",
-      "imageUrl": "https://images.unsplash.com/photo-1601861164303-ae35eaa51682?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxjYXJuaXZhbCUyMGhvcnNlbWVufGVufDB8fHx8MTc2OTIyNDAxMXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/festivals/carnaval_pichihua.webp",
       "imageHint": "carnival horsemen"
     },
     {
       "id": "colquepata-carnival",
       "description": "Dancers in colorful costumes at the Colquepata Carnival.",
-      "imageUrl": "https://images.unsplash.com/photo-1519656249298-a3e8e8f15f75?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxjYXJuaXZhbCUyMGRhbmNlcnMlMjBhbmRlc3xlbnwwfHx8fDE3MTc4NjY3MjV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/festivals/carnaval_colquepata.webp",
+      "imageHint": "andean carnival"
+    },
+    {
+      "id": "capuli-raymi",
+      "description": "Dancers in colorful costumes at the Colquepata Carnival.",
+      "imageUrl": "/festivals/capuli_raymi.webp",
+      "imageHint": "andean carnival"
+    },
+    {
+      "id": "carnaval-chinchero",
+      "description": "Dancers in colorful costumes at the Chinchero Carnival.",
+      "imageUrl": "/festivals/carnaval_chinchero.webp",
       "imageHint": "andean carnival"
     }
   ]
