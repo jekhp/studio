@@ -205,6 +205,52 @@ const cuscoFestivals: Festival[] = [
     isRegional: true,
     traditionKeys: ["tradition_1", "tradition_2", "tradition_3", "tradition_4"],
     scheduleKeys: [{ dayKey: 'day_1', eventKeys: [{ timeKey: 'event_1_time', descriptionKey: 'event_1_desc' }] },{ dayKey: 'day_2', eventKeys: [{ timeKey: 'event_2_time', descriptionKey: 'event_2_desc' },{ timeKey: 'event_3_time', descriptionKey: 'event_3_desc' }] }]
+  },
+  // Semana Santa Cusco
+  {
+    id: 'lunes-santo-temblores',
+    slug: 'lunes-santo-temblores',
+    name: 'Lunes Santo: Señor de los Temblores',
+    date: getFestivalDate(2, 30, 2, 30),
+    location: 'Catedral del Cusco',
+    province: 'Cusco',
+    coords: [-13.5167, -71.9788],
+    image: 'senor-temblores',
+    isFree: true,
+    categories: ['religioso', 'procesion', 'tradicional'],
+    isRegional: true,
+    traditionKeys: ["nyuychu_tradition", "blessing_tradition", "devotion_tradition"],
+    scheduleKeys: [{ dayKey: 'main_day', eventKeys: [{ timeKey: 'procession_time', descriptionKey: 'procession_desc' }] }]
+  },
+  {
+    id: 'viernes-santo-regional',
+    slug: 'viernes-santo-regional',
+    name: 'Viernes Santo: 12 Platos y Procesión',
+    date: getFestivalDate(3, 3, 3, 3),
+    location: 'Toda la Región Cusco',
+    province: 'Cusco',
+    coords: [-13.5167, -71.9788],
+    image: 'viernes-santo',
+    isFree: true,
+    categories: ['religioso', 'gastronomico', 'tradicional'],
+    isRegional: true,
+    traditionKeys: ["twelve_dishes_tradition", "fasting_tradition", "regional_procession"],
+    scheduleKeys: [{ dayKey: 'main_day', eventKeys: [{ timeKey: 'lunch_time', descriptionKey: 'lunch_desc' }, { timeKey: 'evening_procession_time', descriptionKey: 'evening_procession_desc' }] }]
+  },
+  {
+    id: 'pascua-resurreccion',
+    slug: 'pascua-resurreccion',
+    name: 'Pascua de Resurrección',
+    date: getFestivalDate(3, 5, 3, 5),
+    location: 'Cusco',
+    province: 'Cusco',
+    coords: [-13.5167, -71.9788],
+    image: 'pascua-resurreccion-img',
+    isFree: true,
+    categories: ['religioso', 'popular'],
+    isRegional: true,
+    traditionKeys: ["sunrise_mass", "joy_celebration"],
+    scheduleKeys: [{ dayKey: 'main_day', eventKeys: [{ timeKey: 'sunrise_mass_time', descriptionKey: 'sunrise_mass_desc' }] }]
   }
 ];
 
@@ -532,6 +578,37 @@ const urubambaFestivals: Festival[] = [
     categories: ['religioso', 'procesion', 'popular'],
     traditionKeys: ["tradition_1", "tradition_2", "tradition_3"],
     scheduleKeys: [{ dayKey: 'day_1', eventKeys: [{ timeKey: 'event_1_time', descriptionKey: 'event_1_desc' }] }],
+  },
+  // Semana Santa Chinchero
+  {
+    id: 'lunes-santo-sepulcro-chinchero',
+    slug: 'lunes-santo-sepulcro-chinchero',
+    name: 'Lunes Santo: Procesión del Santo Sepulcro',
+    date: getFestivalDate(2, 30, 2, 30),
+    location: 'Templo de Chinchero',
+    province: 'Urubamba',
+    coords: [-13.391, -72.049],
+    image: 'santo-sepulcro',
+    isFree: true,
+    categories: ['religioso', 'procesion', 'tradicional'],
+    isRegional: true,
+    traditionKeys: ["solemn_procession", "devotion_chinchero"],
+    scheduleKeys: [{ dayKey: 'main_day', eventKeys: [{ timeKey: 'procession_time', descriptionKey: 'procession_desc' }] }]
+  },
+  {
+    id: 'miercoles-santo-encuentro-chinchero',
+    slug: 'miercoles-santo-encuentro-chinchero',
+    name: 'Miércoles Santo: Procesión del Encuentro',
+    date: getFestivalDate(3, 1, 3, 1),
+    location: 'Calles de Chinchero',
+    province: 'Urubamba',
+    coords: [-13.391, -72.049],
+    image: 'encuentro-chinchero',
+    isFree: true,
+    categories: ['religioso', 'procesion'],
+    isRegional: true,
+    traditionKeys: ["encounter_ritual", "devotional_meeting"],
+    scheduleKeys: [{ dayKey: 'main_day', eventKeys: [{ timeKey: 'procession_time', descriptionKey: 'procession_desc' }] }]
   }
 ];
 
@@ -550,6 +627,3 @@ export const festivals: Festival[] = [
   ...quispicanchiFestivals,
   ...urubambaFestivals,
 ];
-
-
-

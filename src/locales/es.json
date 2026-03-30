@@ -137,6 +137,79 @@
         }
     },
     "festivals": {
+        "lunes-santo-temblores": {
+            "location_detail": "Centro Histórico, Catedral del Cusco.",
+            "description": "Procesión del Señor de los Temblores, el 'Taitacha Temblores', patrón jurado del Cusco.",
+            "longDescription": "El Lunes Santo es un día de inmensa devoción en el Cusco. Miles de fieles se reúnen para acompañar la procesión del Señor de los Temblores. La imagen, un Cristo de rasgos mestizos oscurecido por el humo de las velas, recorre las calles mientras los devotos arrojan flores rojas de ñuychu. Es el momento de fe más multitudinario de la Semana Santa cusqueña.",
+            "history": "Cuenta la historia que en 1650, un terremoto asolaba la ciudad hasta que la imagen del Cristo fue sacada en procesión, deteniendo los temblores. Desde entonces, es el protector sagrado de la ciudad.",
+            "traditions": {
+                "nyuychu_tradition": "Lluvia de flores de Ñuychu: la flor roja sagrada que simboliza la sangre y la devoción.",
+                "blessing_tradition": "Bendición en la Plaza de Armas: el momento cumbre donde el Señor imparte su bendición a los cuatro puntos cardinales.",
+                "devotion_tradition": "El cambio de vestimenta: el Señor luce túnicas bordadas en oro y plata donadas por los fieles."
+            },
+            "schedule": {
+                "main_day": "30 de Marzo",
+                "procession_time": "14:00 PM",
+                "procession_desc": "La sagrada imagen sale de la Catedral para recorrer el centro histórico, retornando para la bendición final."
+            }
+        },
+        "viernes-santo-regional": {
+            "location_detail": "Plazas y hogares de toda la región Cusco.",
+            "description": "Día de ayuno, reflexión y la tradición gastronómica de los 12 platos.",
+            "longDescription": "El Viernes Santo en Cusco combina la solemnidad religiosa con una tradición familiar única: el consumo de los 12 platos. Durante la mañana se guarda ayuno y reflexión, y al mediodía las familias se reúnen para degustar platos que no contienen carne roja, en conmemoración a la última cena y los 12 apóstoles.",
+            "history": "Esta tradición se remonta a la época colonial y simboliza la abundancia y el compartir en comunidad, respetando la abstinencia de carnes impuesta por la iglesia.",
+            "traditions": {
+                "twelve_dishes_tradition": "Los 12 Platos: sopas como el de lizas o arroz, platos de pescado como bacalao, y postres como mazamorra y arroz con leche.",
+                "fasting_tradition": "Ayuno matutino: muchos fieles se abstienen de comer hasta la hora del almuerzo de los 12 platos.",
+                "regional_procession": "Santo Sepulcro: Procesiones solemnes en cada distrito y provincia, destacando la de Chinchero y Cusco."
+            },
+            "schedule": {
+                "main_day": "3 de Abril",
+                "lunch_time": "12:00 PM",
+                "lunch_desc": "Almuerzo familiar de los 12 platos tradicionales.",
+                "evening_procession_time": "18:00 PM",
+                "evening_procession_desc": "Procesiones del Santo Sepulcro en las principales plazas de la región."
+            }
+        },
+        "lunes-santo-sepulcro-chinchero": {
+            "location_detail": "Templo Colonial de Chinchero.",
+            "description": "Procesión solemne del Señor del Santo Sepulcro en el histórico pueblo de Chinchero.",
+            "longDescription": "En Chinchero, el Lunes Santo se vive con una solemnidad particular. La procesión del Santo Sepulcro recorre las plazas incas del pueblo, acompañada por los Varayocs y la comunidad en un ambiente de profundo respeto.",
+            "history": "Tradición que data de siglos, donde la autoridad comunal y religiosa se unen para rendir culto a la pasión de Cristo.",
+            "traditions": {
+                "solemn_procession": "Recorrido por los cuatro barrios históricos de Chinchero.",
+                "devotion_chinchero": "Participación activa de los Varayoc cargando las andas."
+            },
+            "schedule": {
+                "main_day": "30 de Marzo",
+                "procession_time": "17:00 PM",
+                "procession_desc": "Procesión solemne por el atrio del templo y plazas principales."
+            }
+        },
+        "miercoles-santo-encuentro-chinchero": {
+            "location_detail": "Plaza de Chinchero.",
+            "description": "Ritual del 'Encuentro' entre las imágenes de la Virgen y Jesús.",
+            "longDescription": "El Miércoles Santo se realiza la procesión del Encuentro en Chinchero, una representación dramática y conmovedora de la reunión entre la Virgen María y su hijo camino al calvario.",
+            "schedule": {
+                "main_day": "1 de Abril",
+                "procession_time": "18:00 PM",
+                "procession_desc": "Las imágenes salen de puntos opuestos para encontrarse en la plaza principal."
+            }
+        },
+        "pascua-resurreccion": {
+            "location_detail": "Cusco y distritos.",
+            "description": "Misa de gallo y celebración de la alegría por la resurrección de Cristo.",
+            "longDescription": "La Semana Santa culmina con la alegría de la resurrección. En Cusco, se celebran misas desde la madrugada y el ambiente de duelo se transforma en júbilo y fiesta popular.",
+            "traditions": {
+                "sunrise_mass": "Misa de Aurora: Se celebra a primeras horas de la mañana para recibir el día de resurrección.",
+                "joy_celebration": "Celebración popular con música y campanas en toda la ciudad."
+            },
+            "schedule": {
+                "main_day": "5 de Abril",
+                "sunrise_mass_time": "05:00 AM",
+                "sunrise_mass_desc": "Solemne misa de resurrección en la Catedral y templos."
+            }
+        },
         "inti-raymi": {
             "location_detail": "Eventos principales en Qorikancha, Plaza de Armas y Sacsayhuamán.",
             "description": "El antiguo festival inca del sol, una espectacular recreación teatral.",
@@ -203,454 +276,6 @@
                 "event_1_desc": "Concierto de \"Serenata\" para el Cristo de Qoyllur Rit'i.",
                 "event_2_time": "12:00 PM",
                 "event_2_desc": "Procesiones y danzas de despedida mientras los peregrinos comienzan su viaje a casa."
-            }
-        },
-        "paucartambo-virgen-del-carmen": {
-            "location_detail": "Paucartambo, Paucartambo",
-            "description": "Un festival vibrante y caótico en el pueblo colonial de Paucartambo con danzantes enmascarados.",
-            "longDescription": "La fiesta en honor a la Virgen del Carmen es una de las fiestas más celebradas y salvajes de Perú. Durante varios días, el tranquilo pueblo colonial de Paucartambo estalla en un derroche de color, música y danza. Comparsas de danzantes enmascarados con trajes espectaculares toman las calles, cada uno representando diferentes personajes e historias de la historia y el folclore peruano. El festival culmina con una procesión donde la estatua de la Virgen bendice al pueblo y lucha contra demonios disfrazados en los tejados.",
-            "history": "La devoción a la Virgen del Carmen (también conocida como Mamacha Carmen) se remonta a la época colonial. La leyenda dice que su rostro apareció milagrosamente en una roca, y el festival creció en torno a esta veneración. Las danzas en sí son una mezcla sincrética de influencias católicas, andinas e incluso amazónicas.",
-            "traditions": {
-                "tradition_1": "Desfiles de comparsas de danzantes disfrazados como Saqra (diablos), Qhapaq Negro y Maqta",
-                "tradition_2": "Batallas musicales entre diferentes grupos",
-                "tradition_3": "Exhibiciones acrobáticas y batallas simuladas",
-                "tradition_4": "La \"quema\" de los demonios en el último día"
-            },
-            "schedule": {
-                "day_1": "15 de Julio",
-                "event_1_time": "Mañana",
-                "event_1_desc": "Fuegos artificiales y música marcan el inicio del festival.",
-                "event_2_time": "Tarde",
-                "event_2_desc": "Primera aparición de las comparsas de danza en la plaza principal.",
-                "day_2": "16 de Julio (Día Principal)",
-                "event_1_time": "10:00 AM",
-                "event_1_desc": "Misa principal en honor a la Virgen del Carmen.",
-                "event_2_time": "3:00 PM",
-                "event_2_desc": "Gran procesión por las calles del pueblo con la estatua de la Virgen.",
-                "day_3": "17 de Julio",
-                "event_1_time": "Todo el día",
-                "event_1_desc": "La batalla entre los ángeles y los demonios tiene lugar, con los demonios realizando acrobacias en los tejados."
-            }
-        },
-        "qeswachaka-bridge-festival": {
-            "location_detail": "Quehue, Canas",
-            "description": "La reconstrucción anual del último puente de cuerda inca.",
-            "longDescription": "El Festival del Puente Q'eswachaka es una extraordinaria muestra de patrimonio inca viviente. Cada año, cuatro comunidades se unen para reconstruir este puente de cuerda utilizando técnicas tradicionales transmitidas durante siglos. El proceso de cuatro días es un ritual comunitario que involucra ceremonias, trabajo y celebración, culminando con el cruce del nuevo puente.",
-            "history": "Esta tradición se ha mantenido por más de 500 años, siendo un nexo vital de comunicación entre comunidades. En 2013, los conocimientos, técnicas y rituales asociados a la reconstrucción del puente Q'eswachaka fueron reconocidos por la UNESCO como Patrimonio Cultural Inmaterial de la Humanidad.",
-            "traditions": {
-                "tradition_1": "Ceremonia de ofrenda a los Apus.",
-                "tradition_2": "Recolección y trenzado de la 'q'oya' (fibra vegetal).",
-                "tradition_3": "Desmantelamiento del puente viejo.",
-                "tradition_4": "Tejido y ensamblaje del nuevo puente por especialistas.",
-                "tradition_5": "Cruce inaugural con música y danza."
-            },
-            "schedule": {
-                "day_1": "Segundo Domingo de Junio",
-                "event_1_time": "Todo el día",
-                "event_1_desc": "Desmontaje de las cuerdas viejas y tejido de las nuevas.",
-                "event_2_time": "Día 2-3",
-                "event_2_desc": "Ensamblaje e instalación del nuevo puente.",
-                "event_3_time": "Día 4",
-                "event_3_desc": "Ceremonia de inauguración y festival de celebración."
-            }
-        },
-        "linderaje-chinchero": {
-            "location_detail": "Chinchero, Urubamba",
-            "description": "Combate ritual para definir los límites comunales.",
-            "longDescription": "El Linderaje es una práctica de combate ritual que se lleva a cabo en Chinchero para zanjar disputas de tierras entre comunidades. Lejos de ser una pelea violenta, es un enfrentamiento regulado y simbólico que fortalece los lazos sociales y reafirma la identidad territorial. Es una muestra de fuerza y organización comunal que finaliza con celebración, sin importar el resultado.",
-            "history": "De origen prehispánico, estas batallas rituales eran una forma en que las comunidades gestionaban conflictos y demostraban su vitalidad. Los colonos españoles intentaron suprimirlas, pero la tradición ha perdurado, adaptándose con el tiempo y convirtiéndose en una parte fundamental del calendario cultural local.",
-            "traditions": {
-                "tradition_1": "Enfrentamientos por representantes de las comunidades.",
-                "tradition_2": "Uso de vestimenta tradicional y látigos (warakas).",
-                "tradition_3": "Presencia de música y danzas para alentar a los luchadores.",
-                "tradition_4": "La contienda finaliza con un acuerdo y celebración comunal."
-            },
-            "schedule": {
-                "day_1": "1 de Enero",
-                "event_1_time": "Tarde",
-                "event_1_desc": "Las comunidades se reúnen en los linderos para iniciar el ritual."
-            }
-        },
-        "corpus-chinchero": {
-            "location_detail": "Chinchero, Urubamba",
-            "description": "Versión sincrética del Corpus Christi con danzas únicas.",
-            "longDescription": "Mientras la ciudad de Cusco tiene su gran Corpus Christi, la versión en Chinchero es más íntima y con personalidad propia. También se pasean a los santos, pero con una fuerte presencia de danzas y música local que le dan un carácter andino único. Es un ejemplo perfecto de cómo las grandes fiestas religiosas se adaptan y reinterpretan en las comunidades rurales.",
-            "history": "Al igual que el Corpus Christi de Cusco, se instauró en tiempos coloniales, pero en Chinchero se fusionó aún más con las celebraciones locales de carácter agrícola y social. Se convirtió en un espacio para reafirmar la identidad de los ayllus (grupos de parentesco) de Chinchero.",
-            "traditions": {
-                "tradition_1": "Procesión de los santos acompañada por danzas tradicionales.",
-                "tradition_2": "Feria gastronómica con platos típicos de la zona.",
-                "tradition_3": "Fuerte participación comunitaria."
-            },
-            "schedule": {
-                "day_1": "Día de Corpus Christi",
-                "event_1_time": "Tarde",
-                "event_1_desc": "Procesión principal y presentación de danzas en la plaza principal de Chinchero."
-            }
-        },
-        "carnaval-de-tinta": {
-            "location_detail": "Tinta, Canchis",
-            "description": "Un carnaval tradicional y colorido con danzas en competencia.",
-            "longDescription": "El Carnaval de Tinta es uno de los más reconocidos en la región de Cusco por su espíritu competitivo. Diferentes comunidades presentan a sus mejores danzantes y músicos en una 'qhaswa' (competencia festiva) que llena la plaza principal de energía y color. Es una celebración a la abundancia y la fertilidad, con profundas raíces en la cultura andina.",
-            "history": "Los carnavales en los Andes son un sincretismo de las celebraciones precuaresmales europeas y los rituales andinos de cosecha y alabanza a la Pachamama (Madre Tierra). Tinta ha conservado una versión muy tradicional de esta fiesta.",
-            "traditions": {
-                "tradition_1": "Competencias de danzas entre comunidades.",
-                "tradition_2": "La 'Yunza' o 'Cortamonte', donde se derriba un árbol cargado de regalos.",
-                "tradition_3": "Comida y bebida tradicional.",
-                "tradition_4": "Juegos lúdicos con agua y espuma."
-            },
-            "schedule": {
-                "day_1": "Domingo Principal de Carnaval",
-                "event_1_time": "Todo el día",
-                "event_1_desc": "Competencia principal de comparsas de danza en la Plaza de Armas de Tinta."
-            }
-        },
-        "ollantaytambo-reyes": {
-            "location_detail": "Ollantaytambo, Urubamba",
-            "description": "Procesión del Niño Jesús por el antiguo pueblo inca.",
-            "longDescription": "La Bajada de Reyes en Ollantaytambo es una fiesta encantadora y solemne. Celebra el recorrido del Niño Jesús desde la iglesia de San Blas en Cusco hasta su templo en Marcacocha, cerca de Ollantaytambo. La procesión está acompañada por danzas y música tradicional, serpenteando por las impresionantes calles incas del pueblo.",
-            "history": "Esta fiesta mezcla la celebración católica de la Epifanía con tradiciones locales andinas. La devoción al 'Niño de Marcacocha' es central para la identidad de Ollantaytambo y sus comunidades aledañas.",
-            "traditions": {
-                "tradition_1": "La procesión principal con la imagen del Niño Jesús.",
-                "tradition_2": "Danzas como los 'Huiloconas' y los 'Mollos'.",
-                "tradition_3": "Misas y servicios religiosos.",
-                "tradition_4": "Banquetes comunitarios para celebrar."
-            },
-            "schedule": {
-                "day_1": "6 de Enero",
-                "event_1_time": "Tarde",
-                "event_1_desc": "Procesión principal por las calles de Ollantaytambo."
-            }
-        },
-        "feria-huancaro": {
-            "location_detail": "Huancaro, Cusco",
-            "description": "La feria agropecuaria, artesanal y ganadera más grande de la región de Cusco.",
-            "longDescription": "La Feria de Huancaro es el gran escaparate de la vida económica y cultural de Cusco. Durante una semana, reúne a productores, artesanos y artistas de las 13 provincias. Es un evento masivo con exhibiciones de ganado, venta de productos agrícolas, ferias de artesanía, patios de comida y conciertos de música en vivo. Es una cita ineludible para conocer la cultura contemporánea de Cusco.",
-            "history": "La feria se instituyó como el evento oficial del mes jubilar de Cusco. Su propósito es fomentar la actividad económica regional y servir como punto de encuentro entre las comunidades urbanas y rurales.",
-            "traditions": {
-                "tradition_1": "Juzgamiento de ganado vacuno y camélidos sudamericanos.",
-                "tradition_2": "Exposición y venta de papas nativas y otros productos andinos.",
-                "tradition_3": "Zona gastronómica con platos típicos de todas las provincias.",
-                "tradition_4": "Conciertos nocturnos con artistas nacionales e internacionales."
-            },
-            "schedule": {
-                "day_1": "Tercera semana de Junio",
-                "event_1_time": "Todo el día, todos los días",
-                "event_1_desc": "El campo ferial está abierto desde la mañana hasta la noche con diversas actividades."
-            }
-        },
-        "wata-qallariy": {
-            "location_detail": "Diversas Comunidades Andinas",
-            "description": "Año Nuevo Andino e inicio de las ofrendas a la Pachamama (Madre Tierra).",
-            "longDescription": "El Wata Qallariy marca el inicio del año agrícola andino. El 1 de agosto es el día central, donde las comunidades realizan ceremonias de ofrenda a la Pachamama (Madre Tierra) para agradecerle por sus frutos y pedir un ciclo agrícola próspero. Es un momento de profunda conexión espiritual con la tierra.",
-            "history": "Esta es una práctica milenaria, anterior a los incas, basada en el calendario agrícola andino. Agosto es considerado un mes sagrado en el que la tierra 'se abre' para recibir las ofrendas.",
-            "traditions": {
-                "tradition_1": "Ceremonias de 'despacho' u ofrenda dirigidas por un 'altomisayoq' (sacerdote andino).",
-                "tradition_2": "Quema de la ofrenda para enviar la 'esencia' a los Apus y la Pachamama.",
-                "tradition_3": "Comidas comunitarias y consumo de chicha.",
-                "tradition_4": "Rituales de purificación y florecimiento."
-            },
-            "schedule": {
-                "day_1": "1 de Agosto",
-                "event_1_time": "Todo el día",
-                "event_1_desc": "Las ceremonias de ofrenda se realizan en los hogares y en las montañas sagradas (Apus)."
-            }
-        },
-        "senor-de-huanca": {
-            "location_detail": "Santuario de Huanca, San Salvador, Calca",
-            "description": "Una masiva peregrinación al santuario del Señor de Huanca.",
-            "longDescription": "La peregrinación al Señor de Huanca es uno de los actos de fe más importantes del sur peruano. Miles de devotos viajan, muchos a pie, hasta el santuario ubicado en una quebrada cerca de Cusco. Buscan sanación, milagros y bendiciones de la imagen de un Cristo martirizado pintada sobre una roca.",
-            "history": "Según la tradición, en 1675, Jesucristo se apareció a un minero en una cueva de Huanca. El obispo local ordenó pintar la escena en la roca, que se convirtió en lugar de culto. La devoción ha crecido exponencialmente desde entonces.",
-            "traditions": {
-                "tradition_1": "Peregrinaciones nocturnas desde Cusco y otros puntos.",
-                "tradition_2": "Misas y ceremonias de bendición para los peregrinos y sus vehículos.",
-                "tradition_3": "Baños rituales en el riachuelo que recorre el santuario.",
-                "tradition_4": "Compra de 'alasitas' (miniaturas) que representan los deseos del devoto."
-            },
-            "schedule": {
-                "day_1": "14 de Septiembre",
-                "event_1_time": "Todo el día y la noche",
-                "event_1_desc": "El santuario recibe peregrinos continuamente, con misas y ceremonias durante toda la jornada."
-            }
-        },
-        "takanakuy-chumbivilcas": {
-            "location_detail": "Santo Tomás, Chumbivilcas",
-            "description": "Un festival de lucha ritual para resolver conflictos y empezar el año nuevo.",
-            "longDescription": "Takanakuy (en quechua, 'golpearse mutuamente') es un festival navideño único en la provincia de Chumbivilcas. Los miembros de la comunidad, vestidos con trajes y máscaras elaborados, se enfrentan en peleas públicas a puñetazos para saldar disputas personales acumuladas durante el año. Es una forma socialmente sancionada de resolver conflictos y empezar el año nuevo sin rencores, seguida de bailes y celebración.",
-            "history": "Sus orígenes son inciertos, pero se cree que es una tradición que mezcla el combate ritual prehispánico con una representación colonial de la justicia. Es un mecanismo cultural de resolución de conflictos en una región históricamente alejada del control estatal.",
-            "traditions": {
-                "tradition_1": "Vestimenta de personajes como el 'majeño', 'qarawatana' o 'negro'.",
-                "tradition_2": "Peleas públicas arbitradas por las autoridades comunales.",
-                "tradition_3": "La 'wayliya', una música y danza festiva que acompaña la celebración.",
-                "tradition_4": "Un abrazo y acuerdo para finalizar la pelea."
-            },
-            "schedule": {
-                "day_1": "25 de Diciembre",
-                "event_1_time": "Todo el día",
-                "event_1_desc": "La comunidad se reúne en la plaza principal para las peleas y las celebraciones posteriores."
-            }
-        },
-        "fiesta-de-san-sebastian": {
-            "location_detail": "San Sebastián, Cusco",
-            "description": "Una fiesta patronal con danzas, procesiones y un fuerte sentido de identidad local.",
-            "longDescription": "La fiesta en honor a San Sebastián es la celebración más importante de este tradicional distrito cusqueño. Durante varios días, las calles se llenan de danzantes folclóricos, música y procesiones. El festival refuerza la identidad local y la histórica rivalidad con el distrito vecino de San Jerónimo.",
-            "history": "La devoción a San Sebastián, protector contra las pestes, se instauró durante la colonia. La fiesta ha incorporado muchos elementos prehispánicos, especialmente en sus danzas y música.",
-            "traditions": {
-                "tradition_1": "Procesión del santo patrón por las calles principales.",
-                "tradition_2": "Presentación de comparsas de danzas, como la 'Contradanza'.",
-                "tradition_3": "Ferias gastronómicas con platos típicos locales.",
-                "tradition_4": "Fuegos artificiales y celebraciones populares."
-            },
-            "schedule": {
-                "day_1": "20 de Enero",
-                "event_1_time": "Todo el día",
-                "event_1_desc": "Día principal con misa, procesión y presentaciones de danzas."
-            }
-        },
-        "aniversario-de-quillabamba": {
-            "location_detail": "Quillabamba, La Convención",
-            "description": "El aniversario de la 'Ciudad del Eterno Verano', conocida por su café, cacao y ambiente festivo.",
-            "longDescription": "El aniversario de Quillabamba es la principal fiesta de la provincia de La Convención. Es una celebración de una semana que incluye ferias agrícolas, el certamen de belleza 'Miss Café', competencias de motociclismo y grandes conciertos con artistas nacionales. Refleja la cultura vibrante y moderna de la selva alta cusqueña.",
-            "history": "La fiesta celebra la fundación de la ciudad de Quillabamba. Con los años, se ha convertido en una vitrina para los principales productos de la región, especialmente el café y el cacao.",
-            "traditions": {
-                "tradition_1": "El certamen de belleza 'Miss Café'.",
-                "tradition_2": "Degustaciones y ventas de cafés de especialidad.",
-                "tradition_3": "Competencias de motociclismo y motocross.",
-                "tradition_4": "Grandes conciertos y fiestas populares."
-            },
-            "schedule": {
-                "day_1": "Última semana de Julio",
-                "event_1_time": "Toda la semana",
-                "event_1_desc": "Múltiples actividades en diferentes puntos de la ciudad."
-            }
-        },
-        "uywa-chaka-y-chinu": {
-            "location_detail": "Comunidades de Espinar",
-            "description": "Fiesta del marcado y ritual de fertilidad de las alpacas y llamas.",
-            "longDescription": "Uywa Ch'aka y Ch'inu es una tradición ancestral de las comunidades altoandinas de Espinar. Consiste en marcar a los camélidos (llamas y alpacas) con borlas de colores y realizar rituales para asegurar su fertilidad y salud. Es una celebración del profundo vínculo entre el hombre andino y sus animales.",
-            "history": "Esta práctica tiene orígenes prehispánicos y es fundamental en la economía ganadera y la cosmovisión de las comunidades altoandinas. Es una forma de manejar el rebaño y agradecer a los Apus por su protección.",
-            "traditions": {
-                "tradition_1": "El 'ch'inu' o atado de borlas de colores en las orejas de los animales.",
-                "tradition_2": "Ofrendas rituales con hojas de coca y chicha.",
-                "tradition_3": "Música y danza para celebrar la fertilidad del ganado.",
-                "tradition_4": "El 't'inka', un brindis ritual con chicha."
-            },
-            "schedule": {
-                "day_1": "24 de Agosto",
-                "event_1_time": "Todo el día",
-                "event_1_desc": "El ritual se realiza en el seno de cada familia o comunidad."
-            }
-        },
-        "navidad-cusquena-santurantikuy": {
-            "location_detail": "La feria principal es en la Plaza de Armas, pero la Navidad se celebra en toda la ciudad.",
-            "description": "La feria navideña más importante de Perú, donde los artesanos venden figuras tradicionales para los nacimientos.",
-            "longDescription": "Santurantikuy, que significa 'Venta de Santos' en quechua, es una mágica feria navideña que toma la Plaza de Armas de Cusco cada 24 de diciembre. Cientos de artesanos de toda la región vienen a vender imágenes hechas a mano para los nacimientos, siendo el 'Niño Manuelito' (el niño Jesús) la figura central. Es una vibrante expresión de arte, fe y tradición, esencial para la Navidad cusqueña.",
-            "history": "Sus orígenes se remontan a la época colonial, cuando los españoles introdujeron la tradición de los belenes. Los artesanos andinos adoptaron esta costumbre, creando figuras únicas que mezclan la iconografía católica con elementos y cosmovisión locales. Con los siglos, Santurantikuy se ha convertido en la feria de arte popular más grande de Perú.",
-            "traditions": {
-                "tradition_1": "La venta y exhibición de 'Niños Manuelitos' artesanales en innumerables estilos.",
-                "tradition_2": "Creación de nacimientos completos con musgo, plantas y animales en miniatura.",
-                "tradition_3": "Tomar 'ponche', una bebida caliente y dulce para combatir el frío.",
-                "tradition_4": "La feria dura hasta altas horas de la noche en la víspera de Navidad."
-            },
-            "schedule": {
-                "day_1": "24 de Diciembre",
-                "event_1_time": "Todo el día",
-                "event_1_desc": "Feria de Santurantikuy en la Plaza de Armas. Los artesanos se instalan desde la madrugada."
-            }
-        },
-        "noche-vieja": {
-            "location_detail": "Plaza de Armas, Cusco",
-            "description": "Una celebración masiva en la Plaza de Armas con fuegos artificiales y tradiciones únicas.",
-            "longDescription": "La Noche Vieja en Cusco es una celebración única y multitudinaria. Miles de personas se congregan en la Plaza de Armas para despedir el año. La noche está llena de tradiciones, música y un espectacular show de fuegos artificiales a la medianoche. Es una de las noches más vibrantes del año en la ciudad.",
-            "history": "La celebración mezcla las costumbres modernas de año nuevo con tradiciones netamente peruanas y cusqueñas, como el uso de ropa amarilla para la suerte o correr por la plaza con maletas para asegurar viajes en el nuevo año.",
-            "traditions": {
-                "tradition_1": "Correr 12 vueltas alrededor de la Plaza de Armas, una por cada mes del año.",
-                "tradition_2": "Uso de ropa y accesorios de color amarillo para atraer la buena suerte.",
-                "tradition_3": "Un masivo show de fuegos artificiales a la medianoche para recibir el año nuevo."
-            },
-            "schedule": {
-                "day_1": "31 de Diciembre",
-                "event_1_time": "10:00 PM en adelante",
-                "event_1_desc": "La gente comienza a congregarse en la Plaza de Armas.",
-                "event_2_time": "12:00 AM",
-                "event_2_desc": "Show de fuegos artificiales y la tradicional carrera alrededor de la plaza."
-            }
-        },
-        "ano-nuevo": {
-            "location_detail": "Ciudad de Cusco y alrededores.",
-            "description": "Un día de renovación, limpiezas espirituales y reuniones familiares.",
-            "longDescription": "Después de la intensa celebración de Noche Vieja, el día de Año Nuevo en Cusco es un día más tranquilo y espiritual. Mucha gente aprovecha para realizar rituales de purificación y renovación. Es un día para visitar a la familia, descansar y empezar el año con buena energía. Muchos también visitan lugares espirituales para hacer ofrendas.",
-            "history": "El primer día del año siempre ha sido un momento de renovación. En los Andes, esto se combina con prácticas ancestrales de limpieza espiritual y conexión con la naturaleza para asegurar un año próspero.",
-            "traditions": {
-                "tradition_1": "Baños de florecimiento para la buena suerte y para limpiar las malas energías.",
-                "tradition_2": "Almuerzos familiares con platos tradicionales como el lechón al horno.",
-                "tradition_3": "Visitas a lugares arqueológicos o sagrados para 'recargar energías'."
-            },
-            "schedule": {
-                "day_1": "1 de Enero",
-                "event_1_time": "Todo el día",
-                "event_1_desc": "Actividades familiares y personales. Muchos restaurantes ofrecen almuerzos especiales de Año Nuevo."
-            }
-        },
-        "Virgen-Natividad-Paruro": {
-            "location_detail": "Provincia de Paruro, Región Cusco.",
-            "description": "Una fiesta religiosa de profundo arraigo que celebra el Nacimiento de la Virgen María, destacando por sus danzas tradicionales y devoción.",
-            "longDescription": "La Festividad de la Virgen de la Natividad en Paruro es una de las expresiones religiosas y culturales más importantes de la región Cusco. Se lleva a cabo cada 7, 8 y 9 de septiembre, siendo el día 8 el día central. La celebración fusiona el fervor católico con tradiciones ancestrales andinas, incluyendo misas, procesiones e impresionantes presentaciones de danzas folklóricas que llenan de color y música las calles.",
-            "history": "La devoción a la Natividad de María en Paruro data de la época colonial. La imagen de la Virgen es considerada sumamente milagrosa, atrayendo a miles de fieles. Las festividades han evolucionado a lo largo de los siglos, incorporando danzas tradicionales como los 'Siqllas' y 'Qapaq Negro', convirtiéndose en un símbolo de la identidad cultural local.",
-            "traditions": {
-                "tradition_1": "La procesión principal de la imagen de la Virgen de la Natividad por las calles de Paruro.",
-                "tradition_2": "La ejecución de diversas danzas tradicionales ('Danzas Autóctonas'), cada una con su propio vestuario y significado.",
-                "tradition_3": "La 'Víspera' el 7 de septiembre, marcada por la quema de fuegos artificiales y música, que anuncia el inicio de la fiesta central.",
-                "tradition_4": "Misas y ceremonias religiosas realizadas en el Templo de la Natividad."
-            },
-            "schedule": {
-                "day_1": "7 de septiembre",
-                "event_1_time": "Tarde/Noche",
-                "event_1_desc": "Víspera de la Fiesta con música tradicional, juegos pirotécnicos y la 'entrada' de los conjuntos de danzas.",
-                "day_2": "8 de septiembre",
-                "event_2_time": "Todo el Día",
-                "event_2_desc": "Día Central de la Fiesta. Misa de fiesta y la procesión principal de la Virgen de la Natividad.",
-                "day_3": "9 de septiembre",
-                "event_3_time": "Mañana/Tarde",
-                "event_3_desc": "El 'Och' (despedida) de la Virgen y ceremonias finales, incluyendo la culminación de las presentaciones de danzas."
-            }
-        },
-        "festividad-santaCecilia": {
-            "location_detail": "Templo y Parroquia de Nuestra Señora de la Almudena, Santiago, Cusco.",
-            "description": "Celebración en honor a la patrona de los músicos, marcada por misas especiales y homenajes musicales.",
-            "longDescription": "La Festividad de Santa Cecilia, virgen y mártir, se conmemora en Cusco el 22 de noviembre, aunque los actos litúrgicos y homenajes suelen iniciar en la víspera (21 de noviembre). Es un día en el que los músicos de la ciudad —de orquestas, bandas, coros y asociaciones folklóricas— se congregan para rendir homenaje a su patrona. En el Templo de la Almudena, que alberga una comunidad parroquial muy activa, esta celebración incluye una misa especial para los músicos, donde se bendicen sus instrumentos y se agradece por el arte de la música que acompaña la fe.",
-            "history": "Santa Cecilia de Roma es una mártir de los primeros siglos del cristianismo, cuya tradición cuenta que mientras los músicos tocaban en su boda, ella cantaba a Dios en su corazón, razón por la cual se le atribuye el patronazgo de la música. Su culto se extendió desde Europa. En Cusco, la celebración se integró a las festividades religiosas, siendo un punto de encuentro para los gremios y academias musicales que buscan su protección e inspiración para su arte.",
-            "traditions": {
-                "tradition_1": "Misa de Acción de Gracias o de Homenaje, dedicada a los músicos y sus familias.",
-                "tradition_2": "Bendición de instrumentos musicales (órganos, quenas, charangos, violines, etc.) en la Misa.",
-                "tradition_3": "Presentaciones y serenatas musicales por parte de las bandas y orquestas frente al templo o en el atrio.",
-                "tradition_4": "Reuniones de confraternidad y almuerzos especiales organizados por los gremios de músicos."
-            },
-            "schedule": {
-                "day_1": "21 de noviembre",
-                "event_1_time": "Noche",
-                "event_1_desc": "Víspera de Santa Cecilia. Es posible que haya serenatas y primeras demostraciones musicales en honor a la Santa.",
-                "day_2": "22 de noviembre",
-                "event_2_time": "Mañana",
-                "event_2_desc": "Misa central y solemne en honor a Santa Cecilia, con la participación activa de músicos y coros.",
-                "event_3_time": "Tarde",
-                "event_3_desc": "Actos de homenaje, presentaciones musicales y procesión de la imagen de la Santa (si la hubiere en ese templo)."
-            }
-        },
-        "chumbivilcas-horses": {
-            "location_detail": "Sector Chuñuhuiri de la Comunidad Campesina Hanansaya Orccoma, distrito de Santo Tomás.",
-            "description": "Certamen Hípico Nacional de Chumbivilcas, evento central realizado por el aniversario de la provincia.",
-            "longDescription": "El certamen es una actividad fundamental para revalorar la afición hípica, proteger la riqueza cultural y la identidad costumbrista de la 'Tierra de los Qorilazos'. Atrae la participación de criadores y studs locales, de las diversas provincias de Cusco, y de regiones hermanas del sur peruano como Puno, Arequipa, Apurímac y Ayacucho. Los caballos compiten en diversas categorías recorriendo distancias entre 400 metros a 1000 metros.",
-            "history": "La tradición hípica en Santo Tomás, como en toda Chumbivilcas, está intrínsecamente ligada al 'Qorilazo' (el vaquero andino), siendo una manifestación de coraje y destreza a caballo. El I Certamen Hípico Nacional se realizó en 2023 por el CXCVIII Aniversario de Creación Política de la Provincia. Adicionalmente, se realizan certámenes hípicos interregionales durante las Pascuas (abril) y se han anunciado eventos por el Bicentenario (2025).",
-            "traditions": {
-                "tradition_1": "Carreras de caballos en las categorías Alto Andino (caballos sin mejora genética), Mejorados y Libre.",
-                "tradition_2": "Competencia entre studs (caballos) provenientes de diversas provincias y regiones del sur del país.",
-                "tradition_3": "Dinamización de la economía local con la venta de gastronomía y productos de la zona por parte de los comuneros.",
-                "tradition_4": "Premiación a los propietarios ganadores por parte del Concejo Municipal."
-            },
-            "schedule": {
-                "day_1": "10 de junio (Referencia 2023)",
-                "event_1_time": "Por confirmar",
-                "event_1_desc": "Inicio de la competencia hípica con eliminatorias y participación de los studs.",
-                "day_2": "11 de junio (Referencia 2023)",
-                "event_2_time": "Por confirmar",
-                "event_2_desc": "Continuación y culminación del certamen hípico con las finales y la ceremonia de premiación en diversas categorías."
-            }
-        },
-        "juramentacion-varayoc-chinchero": {
-            "location_detail": "Plaza de Armas, Chinchero",
-            "description": "Ceremonia ancestral de la juramentación de las nuevas autoridades comunales, los Varayocs.",
-            "longDescription": "La Juramentación de los Varayocs es una ceremonia ancestral que marca el inicio del año nuevo en Chinchero. Durante este evento, las nuevas autoridades comunales (Varayocs o Alcaldes) reciben la 'vara' o bastón de mando, un símbolo de poder y responsabilidad. Es un acto solemne que combina rituales andinos con protocolos cívicos, reflejando un sistema de gobierno local único que se ha conservado durante siglos.",
-            "history": "El sistema de Varayoc es una forma de organización comunal de origen prehispánico que ha sobrevivido a través de la colonia hasta nuestros días. La 'vara' en sí es un elemento sincrético, que representa tanto la cruz cristiana como un símbolo andino de autoridad. Esta ceremonia es un testimonio vivo de la resiliencia y adaptabilidad de la cultura andina.",
-            "traditions": {
-                "tradition_1": "El traspaso solemne de la 'vara' de mando de las autoridades salientes a las nuevas.",
-                "tradition_2": "Discursos en quechua reafirmando el compromiso con la comunidad.",
-                "tradition_3": "Acompañamiento de músicos tradicionales que tocan 'pitos' y 'tambores'.",
-                "tradition_4": "Una celebración comunal con comida típica y danzas para recibir a las nuevas autoridades."
-            },
-            "schedule": {
-                "day_1": "1-2 de Enero",
-                "event_1_time": "Mañana",
-                "event_1_desc": "Ceremonia principal en la Plaza de Chinchero, con el traspaso de los bastones de mando.",
-                "event_2_time": "Tarde",
-                "event_2_desc": "Celebración comunal con música y danzas típicas."
-            }
-        },
-        "carnaval-pichigua": {
-            "location_detail": "Plaza de Armas, Pichigua, Espinar",
-            "description": "El vibrante carnaval de Pichigua con sus 'Ch'ukos y Solteras'.",
-            "longDescription": "El Festival Cultural Carnavalesco 'Ch'ukos y Solteras' en Pichigua es una de las celebraciones más auténticas de la provincia de Espinar. El día de compadres, la comunidad se viste de gala con trajes coloridos, jinetes a caballo y danzantes que llenan la plaza de música y alegría. Es una expresión de la cultura viva, la competencia festiva y la tradición del carnaval altoandino.",
-            "history": "Los carnavales en la provincia de Espinar tienen una profunda raíz en la cosmovisión andina, mezclando la celebración de la fertilidad de la tierra (Pachamama) con ritos sociales y competencias entre comunidades. El festival de Pichigua es un claro ejemplo de cómo estas tradiciones se mantienen vivas, reafirmando la identidad local año tras año.",
-            "traditions": {
-                "tradition_1": "Desfile de 'Ch'ukos', jinetes enmascarados que representan el espíritu del carnaval.",
-                "tradition_2": "Competencia de danzas entre las comunidades y barrios.",
-                "tradition_3": "Juegos con agua y talco, típicos de la celebración del carnaval."
-            },
-            "schedule": {
-                "day_1": "4 de Febrero",
-                "event_1_time": "Mediodía",
-                "event_1_desc": "Concentración en la Plaza de Armas de Pichigua para el inicio del pasacalle y concurso de danzas."
-            }
-        },
-        "carnaval-colquepata": {
-            "location_detail": "Colquepata, Paucartambo",
-            "description": "El vibrante carnaval de Colquepata, famoso por su 'Tinkuy' y sus coloridas competencias de danza.",
-            "longDescription": "El Carnaval de Colquepata es una de las celebraciones más auténticas de la provincia de Paucartambo. Combina la alegría del carnaval con la intensidad del 'Tinkuy', un combate ritual. Durante varios días, las comunidades compiten en danzas, música y demuestran su fuerza, culminando en el Miércoles de Ceniza con el 'Machu Tusuy'.",
-            "history": "Esta festividad tiene profundas raíces prehispánicas, donde el 'Tinkuy' servía como un rito de fertilidad y orden social. Con la llegada de los españoles, se fusionó con las celebraciones de carnaval, creando una expresión cultural única que reafirma la identidad y la fuerza de las comunidades de Paucartambo.",
-            "traditions": {
-                "tradition_1": "El 'Tinkuy Muruwiqsa', un combate ritual entre comunidades.",
-                "tradition_2": "Concursos de danzas folklóricas con trajes elaborados.",
-                "tradition_3": "El 'Machu Tusuy' o danza de los ancianos en Miércoles de Ceniza.",
-                "tradition_4": "Juegos con agua y talco, característicos del carnaval andino."
-            },
-            "schedule": {
-                "day_1": "Jueves 05 de Febrero",
-                "event_1_time": "Todo el día",
-                "event_1_desc": "Tinkuy Muruwiqsa en las comunidades de Sipascancha Alta y Chahuaytire.",
-                "day_2": "Jueves 12 de Febrero",
-                "event_2_time": "Todo el día",
-                "event_2_desc": "Concurso de Muñecos de carnaval.",
-                "day_3": "Domingo 15 de Febrero",
-                "event_3_time": "Todo el día",
-                "event_3_desc": "Gran Concurso de Danzas.",
-                "day_4": "Martes 17 de Febrero",
-                "event_4_time": "Todo el día",
-                "event_4_desc": "Tinkuy Martes Suyo (Martes de Carnaval).",
-                "day_5": "Miércoles 18 de Febrero",
-                "event_5_time": "Todo el día",
-                "event_5_desc": "Machu Tusuy y fin de fiesta por Miércoles de Ceniza."
-            }
-        },
-        "capuli-raymi": {
-            "location_detail": "Plaza de Armas de Cusipata, Quispicanchi, Cusco",
-            "description": "Una celebración que rinde homenaje al capulí y a la identidad cultural del distrito de Cusipata durante la época de carnavales.",
-            "longDescription": "El Capulí Raymi 2026 es una festividad organizada por la Municipalidad de Cusipata para revalorar las costumbres ancestrales y la riqueza agrícola de la zona. Reúne a productores, artesanos y danzantes en un evento que destaca por su gastronomía típica y la exhibición de derivados del capulí.",
-            "history": "Esta festividad nace de la tradición agrícola de los valles interandinos de Cusco, donde la cosecha del capulí (cereza andina) marca el inicio de los carnavales. Representa la abundancia de la tierra y la unión de las comunidades de la cuenca del río Vilcanota.",
-            "traditions": {
-                "tradition_1": "Concurso de danzas autóctonas carnavalescas a nivel local y regional.",
-                "tradition_2": "Feria gastronómica destacando el Tímpu Cusipateño y la tradicional frutillada.",
-                "tradition_3": "Exhibición y venta de productos derivados del capulí, miel de abeja, maíz y lácteos."
-            },
-            "schedule": {
-                "day_1": "Domingo, 08 de febrero de 2026",
-                "event_1_time": "09:00 a.m.",
-                "event_1_desc": "Gran inicio de la feria agroindustrial, artesanal y festival gastronómico en la Plaza de Armas.",
-                "event_2_time": "11:00 a.m.",
-                "event_2_desc": "Encuentro cultural y concurso de danzas autóctonas carnavalescas."
-            }
-        },
-        "carnavales-chinchero": {
-            "location_detail": "Parador turístico, Chinchero",
-            "description": "Agua, arina y cerpentian en el remate de carnavales de Chinchero",
-            "longDescription": "Tradicional remate de carnavales, concurso de danzas, puchero y mucho más",
-            "history": "Festividad con raices prehispanicas para los solteros y solteras",
-            "traditions": {
-                "tradition_1": "Concursos de danzas folklóricas con trajes elaborados.",
-                "tradition_2": "Juegos con agua y harina, característicos del carnaval andino."
-            },
-            "schedule": {
-                "day_1": "Domingo 22 de Febrero",
-                "event_1_time": "Todo el día",
-                "event_1_desc": "Concurso de danzas, categoria comunidades, organizaciones y presentacion de artistas folkloricos"
             }
         }
     }

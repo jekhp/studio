@@ -148,7 +148,7 @@
       "id": "pichigua-carnival",
       "description": "Carnival celebration in Pichigua with traditional dancers and horseback riders.",
       "imageUrl": "/festivals/carnaval_pichihua.webp",
-      "imageHint": "carnival horsemen"
+      "imageHint": "carnaval horsemen"
     },
     {
       "id": "colquepata-carnival",
@@ -167,6 +167,36 @@
       "description": "Dancers in colorful costumes at the Chinchero Carnival.",
       "imageUrl": "/festivals/carnaval_chinchero.webp",
       "imageHint": "andean carnival"
+    },
+    {
+      "id": "senor-temblores",
+      "description": "Devotos arrojando flores de ñuychu al Señor de los Temblores en Cusco.",
+      "imageUrl": "https://picsum.photos/seed/temblores/800/600",
+      "imageHint": "religious procession"
+    },
+    {
+      "id": "viernes-santo",
+      "description": "Mesa servida con los 12 platos tradicionales de Viernes Santo en Cusco.",
+      "imageUrl": "https://picsum.photos/seed/viernessanto/800/600",
+      "imageHint": "peruvian food"
+    },
+    {
+      "id": "santo-sepulcro",
+      "description": "Procesión solemne del Santo Sepulcro en las calles de Chinchero.",
+      "imageUrl": "https://picsum.photos/seed/sepulcro/800/600",
+      "imageHint": "solemn procession"
+    },
+    {
+      "id": "encuentro-chinchero",
+      "description": "Encuentro ritual de las imágenes sagradas en Chinchero.",
+      "imageUrl": "https://picsum.photos/seed/encuentro/800/600",
+      "imageHint": "religious encounter"
+    },
+    {
+      "id": "pascua-resurreccion-img",
+      "description": "Celebración de la resurrección con fuegos artificiales y alegría.",
+      "imageUrl": "https://picsum.photos/seed/pascua/800/600",
+      "imageHint": "joyful celebration"
     }
   ]
 }

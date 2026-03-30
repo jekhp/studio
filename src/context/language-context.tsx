@@ -1,14 +1,16 @@
+
 "use client";
 
 import React, { createContext, useState, useContext, ReactNode, useEffect, useCallback } from 'react';
 import en from '@/locales/en.json';
 import es from '@/locales/es.json';
+import fr from '@/locales/fr.json';
 
-type Language = 'en' | 'es';
+type Language = 'en' | 'es' | 'fr';
 
 type Translations = { [key: string]: any };
 
-const translations: { [key in Language]: Translations } = { en, es };
+const translations: { [key in Language]: Translations } = { en, es, fr };
 
 interface LanguageContextType {
   language: Language;
@@ -32,6 +34,8 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
     const browserLang = navigator.language.split('-')[0];
     if (browserLang === 'es') {
       setLanguage('es');
+    } else if (browserLang === 'fr') {
+      setLanguage('fr');
     }
   }, []);
 

@@ -137,521 +137,77 @@
         }
     },
     "festivals": {
-        "inti-raymi": {
-            "location_detail": "Main events at Qorikancha, Plaza de Armas and Sacsayhuamán.",
-            "description": "The ancient Inca festival of the sun, a spectacular theatrical reenactment.",
-            "longDescription": "Inti Raymi, the \"Festival of the Sun,\" was the most important religious ceremony of the Inca Empire in honor of the god Inti. Today, it is a massive theatrical representation held every year on June 24 in Cusco. It involves hundreds of actors in vibrant costumes, with historical rituals, dances, and processions that take place at Qorikancha, the Plaza de Armas, and the fortress of Sacsayhuamán.",
-            "history": "Originally established by the Inca Pachacuti in the 15th century, the festival marked the winter solstice and the start of the new year. It was banned by the Spanish in the 16th century but was revived in the 20th century as a theatrical event to honor Cusco's heritage.",
+        "lunes-santo-temblores": {
+            "location_detail": "Historical Center, Cusco Cathedral.",
+            "description": "Procession of the Lord of the Tremors, the 'Taitacha Temblores', sworn patron of Cusco.",
+            "longDescription": "Holy Monday is a day of immense devotion in Cusco. Thousands of faithful gather to accompany the procession of the Lord of the Tremors. The image, a Christ of mestizo features darkened by the smoke of candles, travels through the streets while devotees throw red ñuychu flowers. It is the most crowded moment of faith during Holy Week in Cusco.",
+            "history": "Story goes that in 1650, an earthquake devastated the city until the image of Christ was brought out in procession, stopping the tremors. Since then, he is the sacred protector of the city.",
             "traditions": {
-                "tradition_1": "Processions with traditional music",
-                "tradition_2": "Symbolic sacrifice of a llama",
-                "tradition_3": "Ritual offerings of chicha (corn beer)",
-                "tradition_4": "Folkloric dances from the four suyus (regions) of the Inca Empire"
+                "nyuychu_tradition": "Rain of Ñuychu flowers: the sacred red flower that symbolizes blood and devotion.",
+                "blessing_tradition": "Blessing at the Plaza de Armas: the peak moment where the Lord gives his blessing to the four cardinal points.",
+                "devotion_tradition": "Change of robes: the Lord wears gold and silver embroidered robes donated by the faithful."
             },
             "schedule": {
-                "day_1": "June 24",
-                "event_1_time": "9:00 AM",
-                "event_1_desc": "Ceremony begins at Qorikancha (Temple of the Sun).",
-                "event_2_time": "11:00 AM",
-                "event_2_desc": "Procession moves to the Plaza de Armas for the \"Encounter of the Times\".",
-                "event_3_time": "1:30 PM",
-                "event_3_desc": "Main ceremony at the esplanade of Sacsayhuamán."
+                "main_day": "March 30",
+                "procession_time": "2:00 PM",
+                "procession_desc": "The sacred image leaves the Cathedral to tour the historical center, returning for the final blessing."
             }
         },
-        "corpus-christi": {
-            "location_detail": "Plaza de Armas, Cusco",
-            "description": "A massive religious procession where 15 saints and virgins parade through Cusco.",
-            "longDescription": "Corpus Christi in Cusco is a vibrant and unique syncretic festival, blending Catholic faith with ancient Andean traditions. Fifteen statues of saints and virgins from different parishes are carried in a grand procession to the Cusco Cathedral, where they 'visit' the body of Christ for eight days. The festival is famous for its elaborate decorations, music, and the traditional dish called Chiriuchu.",
-            "history": "Introduced by the Spanish in the 16th century, the festival was used to replace the Inca practice of parading ancestral mummies. The Andean people adapted the Catholic tradition, assigning their own sacred meanings to the saints, thus creating a powerful symbol of cultural resistance and fusion.",
+        "viernes-santo-regional": {
+            "location_detail": "Squares and homes throughout the Cusco region.",
+            "description": "Day of fasting, reflection and the gastronomic tradition of the 12 dishes.",
+            "longDescription": "Good Friday in Cusco combines religious solemnity with a unique family tradition: the consumption of the 12 dishes. During the morning, fasting and reflection are observed, and at noon, families gather to taste dishes that do not contain red meat, commemorating the Last Supper and the 12 apostles.",
+            "history": "This tradition dates back to colonial times and symbolizes abundance and community sharing, respecting the abstinence from meat imposed by the church.",
             "traditions": {
-                "tradition_1": "The entry of the 15 saints into the Plaza de Armas.",
-                "tradition_2": "The consumption of 'Chiriuchu', a cold dish with various meats and ingredients.",
-                "tradition_3": "Musical bands accompanying each saint.",
-                "tradition_4": "The 'Octave of Corpus', where the saints return to their parishes a week later."
+                "twelve_dishes_tradition": "The 12 Dishes: soups like lizas or rice, fish dishes like cod, and desserts like mazamorra and rice pudding.",
+                "fasting_tradition": "Morning fasting: many faithful abstain from eating until the time of the 12 dishes lunch.",
+                "regional_procession": "Holy Sepulcher: Solemn processions in every district and province, notably in Chinchero and Cusco."
             },
             "schedule": {
-                "day_1": "Main Day (May 30)",
-                "event_1_time": "11:00 AM",
-                "event_1_desc": "Main procession of all saints and virgins around the Plaza de Armas.",
-                "event_2_time": "All Day",
-                "event_2_desc": "Gastronomic fairs in Plaza San Francisco to try Chiriuchu.",
-                "day_2": "Octave of Corpus (June 6)",
-                "event_1_time": "Afternoon",
-                "event_1_desc": "Second procession as the saints return to their home parishes."
+                "main_day": "April 3",
+                "lunch_time": "12:00 PM",
+                "lunch_desc": "Family lunch of the traditional 12 dishes.",
+                "evening_procession_time": "6:00 PM",
+                "evening_procession_desc": "Holy Sepulcher processions in the main squares of the region."
             }
         },
-        "qoyllur-riti": {
-            "location_detail": "Sinakara Valley, Ocongate, Quispicanchi",
-            "description": "A spiritual pilgrimage to the Sinakara Valley, blending Catholic and Andean beliefs.",
-            "longDescription": "Qoyllur Rit'i, or the \"Snow Star Festival,\" is a centuries-old religious pilgrimage that takes place in the remote Sinakara Valley at the foot of Mount Ausangate. Tens of thousands of pilgrims from surrounding villages travel for days, bringing large crosses to the sanctuary. The festival is a unique syncretism of Catholic and Andean beliefs, celebrating the stars, the mountain spirits (Apus), and the Lord of Qoyllur Rit'i.",
-            "history": "The festival's origins are a blend of an 18th-century Catholic miracle story and ancient Andean mountain worship. It centers on the appearance of the Christ child to a young shepherd boy. It has been recognized by UNESCO as part of the Intangible Cultural Heritage of Humanity.",
+        "lunes-santo-sepulcro-chinchero": {
+            "location_detail": "Colonial Temple of Chinchero.",
+            "description": "Solemn procession of the Lord of the Holy Sepulcher in the historical town of Chinchero.",
+            "longDescription": "In Chinchero, Holy Monday is experienced with particular solemnity. The procession of the Holy Sepulcher travels through the town's Inca squares, accompanied by the Varayocs and the community in an atmosphere of deep respect.",
+            "history": "A tradition dating back centuries, where communal and religious authority unite to worship the passion of Christ.",
             "traditions": {
-                "tradition_1": "Night-long vigils with music and dance",
-                "tradition_2": "Processions of \"Ukukus\" (bear-men dancers) to the glacier",
-                "tradition_3": "Elaborate dance performances by different \"nations\" representing their communities",
-                "tradition_4": "A final 24-hour procession for the Corpus Christi festival in Cusco"
+                "solemn_procession": "Tour through the four historical neighborhoods of Chinchero.",
+                "devotion_chinchero": "Active participation of the Varayocs carrying the litters."
             },
             "schedule": {
-                "day_1": "Day 1",
-                "event_1_time": "All Day",
-                "event_1_desc": "Pilgrims arrive at Mahuayani, beginning the 8km walk to the sanctuary.",
-                "day_2": "Day 2",
-                "event_1_time": "All Day",
-                "event_1_desc": "Main day of celebration with continuous music, dancing, and religious services.",
-                "day_3": "Day 3",
-                "event_1_time": "4:00 AM",
-                "event_1_desc": "\"Serenata\" concert for the Christ of Qoyllur Rit'i.",
-                "event_2_time": "12:00 PM",
-                "event_2_desc": "Processions and farewell dances as pilgrims begin their journey home."
+                "main_day": "March 30",
+                "procession_time": "5:00 PM",
+                "procession_desc": "Solemn procession through the temple's atrium and main squares."
             }
         },
-        "paucartambo-virgen-del-carmen": {
-            "location_detail": "Paucartambo, Paucartambo",
-            "description": "A vibrant and chaotic festival in the colonial town of Paucartambo with masked dancers.",
-            "longDescription": "The festival in honor of the Virgen del Carmen is one of Peru's most celebrated and wild parties. For several days, the quiet colonial town of Paucartambo erupts in a riot of color, music, and dance. Troupes of masked dancers in spectacular costumes take over the streets, each representing different characters and stories from Peruvian history and folklore. The festival culminates in a procession where the statue of the Virgin blesses the town and battles costumed demons on the rooftops.",
-            "history": "The devotion to the Virgen del Carmen (also known as Mamacha Carmen) dates back to the colonial era. Legend says her face miraculously appeared on a rock, and the festival grew around this veneration. The dances themselves are a syncretic mix of Catholic, Andean, and even Amazonian influences.",
-            "traditions": {
-                "tradition_1": "Parades of costumed dance troupes like Saqra (devils), Qhapaq Negro, and Maqta",
-                "tradition_2": "Musical battles between different groups",
-                "tradition_3": "Acrobatic displays and mock battles",
-                "tradition_4": "The \"burning\" of the demons on the final day"
-            },
+        "miercoles-santo-encuentro-chinchero": {
+            "location_detail": "Plaza of Chinchero.",
+            "description": "Ritual of the 'Encounter' between the images of the Virgin and Jesus.",
+            "longDescription": "Holy Wednesday features the Encounter procession in Chinchero, a dramatic and moving representation of the meeting between the Virgin Mary and her son on the way to Calvary.",
             "schedule": {
-                "day_1": "July 15",
-                "event_1_time": "Morning",
-                "event_1_desc": "Fireworks and music mark the beginning of the festival.",
-                "event_2_time": "Afternoon",
-                "event_2_desc": "First appearance of the dance troupes in the main square.",
-                "day_2": "July 16 (Main Day)",
-                "event_1_time": "10:00 AM",
-                "event_1_desc": "Main mass in honor of the Virgen del Carmen.",
-                "event_2_time": "3:00 PM",
-                "event_2_desc": "Grand procession through the town streets with the statue of the Virgin.",
-                "day_3": "July 17",
-                "event_1_time": "All Day",
-                "event_1_desc": "The battle between the angels and demons takes place, with demons performing acrobatics on the rooftops."
+                "main_day": "April 1",
+                "procession_time": "6:00 PM",
+                "procession_desc": "The images leave from opposite points to meet in the main square."
             }
         },
-        "qeswachaka-bridge-festival": {
-            "location_detail": "Quehue, Canas",
-            "description": "The annual reconstruction of the last Inca rope bridge.",
-            "longDescription": "The Q'eswachaka Bridge Festival is an extraordinary example of living Inca heritage. Every year, four communities come together to rebuild this rope bridge using traditional techniques passed down for centuries. The four-day process is a communal ritual that involves ceremonies, work, and celebration, culminating in the crossing of the new bridge.",
-            "history": "This tradition has been maintained for over 500 years, being a vital link for communication between communities. In 2013, the knowledge, techniques, and rituals associated with the reconstruction of the Q'eswachaka bridge were recognized by UNESCO as Intangible Cultural Heritage of Humanity.",
+        "pascua-resurreccion": {
+            "location_detail": "Cusco and districts.",
+            "description": "Easter Mass and celebration of joy for the resurrection of Christ.",
+            "longDescription": "Holy Week culminates with the joy of the resurrection. In Cusco, masses are celebrated from early morning and the atmosphere of mourning turns into jubilee and popular celebration.",
             "traditions": {
-                "tradition_1": "Offering ceremony to the Apus.",
-                "tradition_2": "Collection and braiding of 'q'oya' (vegetable fiber).",
-                "tradition_3": "Dismantling of the old bridge.",
-                "tradition_4": "Weaving and assembly of the new bridge by specialists.",
-                "tradition_5": "Inaugural crossing with music and dance."
+                "sunrise_mass": "Sunrise Mass: Celebrated in the early hours of the morning to welcome the day of resurrection.",
+                "joy_celebration": "Popular celebration with music and bells throughout the city."
             },
             "schedule": {
-                "day_1": "Second Sunday of June",
-                "event_1_time": "All Day",
-                "event_1_desc": "Dismantling of the old ropes and weaving of the new ones.",
-                "event_2_time": "Day 2-3",
-                "event_2_desc": "Assembly and installation of the new bridge.",
-                "event_3_time": "Day 4",
-                "event_3_desc": "Inauguration ceremony and celebratory festival."
-            }
-        },
-        "linderaje-chinchero": {
-            "location_detail": "Chinchero, Urubamba",
-            "description": "Ritual combat to define communal boundaries.",
-            "longDescription": "Linderaje is a ritual combat practice that takes place in Chinchero to settle land disputes between communities. Far from being a violent brawl, it is a regulated and symbolic confrontation that strengthens social ties and reaffirms territorial identity. It is a display of strength and community organization that ends with celebration, regardless of the outcome.",
-            "history": "Of pre-Hispanic origin, these ritual battles were a way for communities to manage conflicts and demonstrate their vitality. The Spanish colonists tried to suppress them, but the tradition has endured, adapting over time and becoming a fundamental part of the local cultural calendar.",
-            "traditions": {
-                "tradition_1": "Confrontations by community representatives.",
-                "tradition_2": "Use of traditional clothing and whips (warakas).",
-                "tradition_3": "Presence of music and dance to encourage the fighters.",
-                "tradition_4": "The fight ends with a communal agreement and celebration."
-            },
-            "schedule": {
-                "day_1": "January 1",
-                "event_1_time": "Afternoon",
-                "event_1_desc": "The communities gather at the boundary lines to begin the ritual."
-            }
-        },
-        "corpus-chinchero": {
-            "location_detail": "Chinchero, Urubamba",
-            "description": "Syncretic version of Corpus Christi with unique dances.",
-            "longDescription": "While Cusco city has its grand Corpus Christi, the version in Chinchero is more intimate and has its own personality. The saints are also paraded, but with a strong presence of local dances and music that give it a unique Andean character. It is a perfect example of how large religious festivals are adapted and reinterpreted in rural communities.",
-            "history": "Like the Corpus Christi of Cusco, it was established in colonial times, but in Chinchero it merged even more deeply with local agricultural and social celebrations. It became a space to reaffirm the identity of the Chinchero ayllus (kin groups).",
-            "traditions": {
-                "tradition_1": "Procession of the saints accompanied by traditional dances.",
-                "tradition_2": "Gastronomic fair with typical dishes of the area.",
-                "tradition_3": "Strong community participation."
-            },
-            "schedule": {
-                "day_1": "Corpus Christi Day",
-                "event_1_time": "Afternoon",
-                "event_1_desc": "Main procession and dance presentation in the main square of Chinchero."
-            }
-        },
-        "carnaval-de-tinta": {
-            "location_detail": "Tinta, Canchis",
-            "description": "A traditional and colorful carnival with competitive dances.",
-            "longDescription": "The Carnival of Tinta is one of the most recognized in the Cusco region for its competitive spirit. Different communities present their best dancers and musicians in a 'qhaswa' (celebratory competition) that fills the main square with energy and color. It's a celebration of abundance and fertility, with deep roots in Andean culture.",
-            "history": "Carnivals in the Andes are a syncretism of European pre-Lenten celebrations and Andean rituals of harvest and praise to the Pachamama (Mother Earth). Tinta has preserved a very traditional version of this festival.",
-            "traditions": {
-                "tradition_1": "Dance competitions between communities.",
-                "tradition_2": "The 'Yunza' or 'Cortamonte,' where a tree laden with gifts is cut down.",
-                "tradition_3": "Traditional food and drink.",
-                "tradition_4": "Playful games with water and foam."
-            },
-            "schedule": {
-                "day_1": "Main Sunday of Carnival",
-                "event_1_time": "All Day",
-                "event_1_desc": "Main competition of dance troupes in the Plaza de Armas of Tinta."
-            }
-        },
-        "ollantaytambo-reyes": {
-            "location_detail": "Ollantaytambo, Urubamba",
-            "description": "A procession of the Christ Child, 'Niño Jesús', through the ancient Inca town.",
-            "longDescription": "The Adoration of the Magi in Ollantaytambo is a charming and solemn festival. It celebrates the journey of the Christ Child from the church of San Blas in Cusco to his temple in Marcacocha, near Ollantaytambo. The procession is accompanied by traditional dances and music, winding through the impressive Inca streets of the town.",
-            "history": "This festival blends the Catholic celebration of the Epiphany with local Andean traditions. The devotion to the 'Niño de Marcacocha' is central to the identity of Ollantaytambo and its surrounding communities.",
-            "traditions": {
-                "tradition_1": "The main procession with the statue of the Christ Child.",
-                "tradition_2": "Dances such as 'Huiloconas' and 'Mollos'.",
-                "tradition_3": "Masses and religious services.",
-                "tradition_4": "Community feasts to celebrate."
-            },
-            "schedule": {
-                "day_1": "January 6",
-                "event_1_time": "Afternoon",
-                "event_1_desc": "Main procession through the streets of Ollantaytambo."
-            }
-        },
-        "feria-huancaro": {
-            "location_detail": "Huancaro, Cusco",
-            "description": "The largest agricultural, livestock, and craft fair in the Cusco region.",
-            "longDescription": "The Huancaro Fair is the great showcase of Cusco's economic and cultural life. For a week, it brings together producers, artisans, and artists from all 13 provinces. It's a massive event with livestock exhibitions, sales of agricultural products, craft fairs, food courts, and live music concerts. It's an unmissable event to get to know the contemporary culture of Cusco.",
-            "history": "The fair was established as the official event for the month of celebrations in Cusco. Its purpose is to promote regional economic activity and serve as a meeting point for urban and rural communities.",
-            "traditions": {
-                "tradition_1": "Judging of cattle and South American camelids.",
-                "tradition_2": "Exhibition and sale of native potatoes and other Andean products.",
-                "tradition_3": "Gastronomic area with typical dishes from all provinces.",
-                "tradition_4": "Nightly concerts with national and international artists."
-            },
-            "schedule": {
-                "day_1": "Third week of June",
-                "event_1_time": "All Day, Every Day",
-                "event_1_desc": "The fairgrounds are open from morning until night with various activities."
-            }
-        },
-        "wata-qallariy": {
-            "location_detail": "Various Andean Communities",
-            "description": "Andean New Year and the beginning of the offerings to Pachamama (Mother Earth).",
-            "longDescription": "Wata Qallariy marks the beginning of the Andean agricultural year. August 1st is the central day, when communities perform ceremonies of offering to Pachamama (Mother Earth) to thank her for her fruits and ask for a prosperous new agricultural cycle. It is a time of deep spiritual connection with the earth.",
-            "history": "This is an ancient practice, predating the Incas, based on the Andean agricultural calendar. August is considered a sacred month when the earth 'opens up' to receive offerings.",
-            "traditions": {
-                "tradition_1": "Despacho' or offering ceremonies led by an 'altomisayoq' (Andean priest).",
-                "tradition_2": "Burning of the offering to send the 'essence' to the Apus and Pachamama.",
-                "tradition_3": "Communal meals and chicha drinking.",
-                "tradition_4": "Rituals of purification and flowering."
-            },
-            "schedule": {
-                "day_1": "August 1",
-                "event_1_time": "All Day",
-                "event_1_desc": "Offering ceremonies are held in homes and on sacred mountains (Apus)."
-            }
-        },
-        "senor-de-huanca": {
-            "location_detail": "Sanctuary of Huanca, San Salvador, Calca",
-            "description": "A massive pilgrimage to the sanctuary of the Lord of Huanca.",
-            "longDescription": "The pilgrimage to the Lord of Huanca is one of the most important acts of faith in southern Peru. Thousands of devotees travel, many on foot, to the sanctuary located in a ravine near Cusco. They seek healing, miracles, and blessings from the image of a martyred Christ painted on a rock.",
-            "history": "According to tradition, in 1675, Jesus Christ appeared to a miner in a cave in Huanca. The local bishop ordered a painting of the scene on the rock, which became a place of worship. The devotion has grown exponentially since then.",
-            "traditions": {
-                "tradition_1": "Night pilgrimages from Cusco and other points.",
-                "tradition_2": "Masses and blessing ceremonies for pilgrims and their vehicles.",
-                "tradition_3": "Ritual baths in the stream that runs through the sanctuary.",
-                "tradition_4": "Purchase of 'alasitas' (miniatures) representing the devotee's desires."
-            },
-            "schedule": {
-                "day_1": "September 14",
-                "event_1_time": "All Day & Night",
-                "event_1_desc": "The sanctuary receives pilgrims continuously, with masses and ceremonies throughout the day."
-            }
-        },
-        "takanakuy-chumbivilcas": {
-            "location_detail": "Santo Tomás, Chumbivilcas",
-            "description": "A ritual fighting festival to resolve conflicts and start the new year fresh.",
-            "longDescription": "Takanakuy (Quechua for 'to hit each other') is a unique Christmas festival in the province of Chumbivilcas. Community members, dressed in elaborate costumes and masks, engage in public fistfights to settle personal disputes accumulated over the year. It's a socially sanctioned way to resolve conflicts and start the new year without grudges, followed by dancing and celebration.",
-            "history": "Its origins are uncertain, but it is believed to be a tradition that mixes pre-Hispanic ritual combat with a colonial representation of justice. It is a cultural mechanism for conflict resolution in a region historically far from state control.",
-            "traditions": {
-                "tradition_1": "Dressing up as characters like the 'majeño', 'qarawatana', or 'negro'.",
-                "tradition_2": "Public fights refereed by community authorities.",
-                "tradition_3": "The 'wayliya', a festive music and dance that accompanies the celebration.",
-                "tradition_4": "A hug and agreement to end the fight."
-            },
-            "schedule": {
-                "day_1": "December 25",
-                "event_1_time": "All Day",
-                "event_1_desc": "The community gathers in the main square for the fights and subsequent celebrations."
-            }
-        },
-        "fiesta-de-san-sebastian": {
-            "location_detail": "San Sebastián, Cusco",
-            "description": "A patronal feast with dances, processions, and a strong sense of local identity.",
-            "longDescription": "The festival in honor of Saint Sebastian is the most important celebration in this traditional Cusco district. For several days, the streets are filled with folkloric dancers, music, and processions. The festival reinforces the local identity and the historical rivalry with the neighboring district of San Jerónimo.",
-            "history": "The devotion to Saint Sebastian, protector against plagues, was established during the colonial era. The festival has incorporated many pre-Hispanic elements, especially in its dances and music.",
-            "traditions": {
-                "tradition_1": "Procession of the patron saint through the main streets.",
-                "tradition_2": "Presentation of dance troupes, such as the 'Contradanza'.",
-                "tradition_3": "Gastronomic fairs with typical local dishes.",
-                "tradition_4": "Fireworks and popular celebrations."
-            },
-            "schedule": {
-                "day_1": "January 20",
-                "event_1_time": "All Day",
-                "event_1_desc": "Main day with mass, procession, and dance presentations."
-            }
-        }, 
-        "aniversario-de-quillabamba": {
-            "location_detail": "Quillabamba, La Convención",
-            "description": "The anniversary of the 'City of Eternal Summer', known for its coffee, cocoa, and festive atmosphere.",
-            "longDescription": "The anniversary of Quillabamba is the main festival of the province of La Convención. It is a week-long celebration that includes agricultural fairs, a Miss Coffee beauty pageant, motorcycle racing competitions, and large concerts with national artists. It reflects the vibrant and modern culture of Cusco's high jungle.",
-            "history": "The festival celebrates the founding of the city of Quillabamba. Over the years, it has become a showcase for the region's main products, especially coffee and cocoa.",
-            "traditions": {
-                "tradition_1": "The 'Miss Coffee' beauty pageant.",
-                "tradition_2": "Tastings and sales of specialty coffees.",
-                "tradition_3": "Motorcycle and motocross competitions.",
-                "tradition_4": "Large popular concerts and parties."
-            },
-            "schedule": {
-                "day_1": "Last week of July",
-                "event_1_time": "All Week",
-                "event_1_desc": "Multiple activities in different parts of the city."
-            }
-
-        },
-        "uywa-chaka-y-chinu": {
-            "location_detail": "Communities of Espinar",
-            "description": "A festival for the marking and fertility ritual of alpacas and llamas.",
-            "longDescription": "Uywa Ch'aka y Ch'inu is an ancestral tradition in the high Andean communities of Espinar. It consists of marking the camelids (llamas and alpacas) with colorful tassels and performing rituals to ensure their fertility and health. It is a celebration of the deep bond between the Andean people and their animals.",
-            "history": "This practice has pre-Hispanic origins and is fundamental to the livestock economy and worldview of the high Andean communities. It is a way of managing the herd and thanking the Apus for their protection.",
-            "traditions": {
-                "tradition_1": "The 'ch'inu' or tying of colorful tassels on the animals' ears.",
-                "tradition_2": "Ritual offerings with coca leaves and chicha.",
-                "tradition_3": "Music and dance to celebrate the herd's fertility.",
-                "tradition_4": "The 't'inka', a ritual toast with chicha."
-            },
-            "schedule": {
-                "day_1": "August 24",
-                "event_1_time": "All Day",
-                "event_1_desc": "The ritual is performed within each family or community."
-            }
-        },
-        "navidad-cusquena-santurantikuy": {
-            "location_detail": "The main fair is in the Plaza de Armas, but Christmas is celebrated throughout the city.",
-            "description": "The most important Christmas fair in Peru, where artisans sell traditional nativity figures.",
-            "longDescription": "Santurantikuy, which means 'Sale of Saints' in Quechua, is a magical Christmas fair that takes over Cusco's Plaza de Armas every December 24th. Hundreds of artisans from all over the region come to sell handcrafted images for nativity scenes, with the 'Niño Manuelito' (the baby Jesus) being the central figure. It's a vibrant expression of art, faith, and tradition that is essential to the Cusco Christmas.",
-            "history": "Its origins date back to the colonial era, when the Spanish introduced the tradition of nativity scenes. The Andean artisans adopted this custom, creating unique figures that blend Catholic iconography with local elements and worldview. Over the centuries, Santurantikuy has become the largest folk art fair in Peru.",
-            "traditions": {
-                "tradition_1": "The sale and exhibition of handcrafted 'Niño Manuelitos' in countless styles.",
-                "tradition_2": "Creation of complete nativity scenes with moss, plants, and miniature animals.",
-                "tradition_3": "Drinking 'ponche', a hot, sweet drink to combat the cold.",
-                "tradition_4": "The fair lasts until late at night on Christmas Eve."
-            },
-            "schedule": {
-                "day_1": "December 24",
-                "event_1_time": "All Day",
-                "event_1_desc": "Santurantikuy Fair in the Plaza de Armas. Artisans set up from the early morning hours."
-            }
-        },
-        "noche-vieja": {
-            "location_detail": "Plaza de Armas, Cusco",
-            "description": "A massive celebration in the Plaza de Armas with fireworks and unique traditions.",
-            "longDescription": "New Year's Eve in Cusco is a unique and massive celebration. Thousands of people gather in the Plaza de Armas to say goodbye to the old year. The night is filled with traditions, music, and a spectacular fireworks display at midnight. It is one of the most vibrant nights of the year in the city.",
-            "history": "The celebration blends modern New Year's customs with uniquely Peruvian and Cusco traditions, such as wearing yellow clothing for good luck or running around the plaza with suitcases to ensure travel in the new year.",
-            "traditions": {
-                "tradition_1": "Running around the Plaza de Armas 12 times, one for each month of the year.",
-                "tradition_2": "Wearing yellow clothing and accessories to attract good luck.",
-                "tradition_3": "A massive fireworks show at midnight to welcome the new year."
-            },
-            "schedule": {
-                "day_1": "December 31",
-                "event_1_time": "10:00 PM onwards",
-                "event_1_desc": "People begin to gather in the Plaza de Armas.",
-                "event_2_time": "12:00 AM",
-                "event_2_desc": "Fireworks show and the traditional run around the plaza."
-            }
-        },
-        "ano-nuevo": {
-            "location_detail": "Cusco City and surrounding areas.",
-            "description": "A day of renewal, spiritual cleansing, and family gatherings.",
-            "longDescription": "After the intense celebration of New Year's Eve, New Year's Day in Cusco is a calmer and more spiritual day. Many people take the opportunity to perform rituals of purification and renewal. It is a day to visit family, rest, and start the year with good energy. Many also visit spiritual sites to make offerings.",
-            "history": "The first day of the year has always been a time of renewal. In the Andes, this is combined with ancient practices of spiritual cleansing and connection with nature to ensure a prosperous year.",
-            "traditions": {
-                "tradition_1": "Flowering baths ('baños de florecimiento') for good luck and to cleanse bad energies.",
-                "tradition_2": "Family lunches with traditional dishes like baked pork.",
-                "tradition_3": "Visits to archaeological or sacred sites to 'recharge energy'."
-            },
-            "schedule": {
-                "day_1": "January 1",
-                "event_1_time": "All Day",
-                "event_1_desc": "Family and personal activities. Many restaurants offer special New Year's lunches."
-            }
-        },
-        "Virgen-Natividad-Paruro": {
-            "location_detail": "Paruro Province, Cusco Region.",
-            "description": "A deeply rooted religious festival celebrating the Nativity of the Virgin Mary, known for its traditional dances and devotion.",
-            "longDescription": "The Feast of the Virgen de la Natividad in Paruro is one of the most significant religious and cultural expressions in the Cusco region. It takes place every September 7th, 8th, and 9th, with the 8th being the central day. The celebration combines Catholic fervor with Andean ancestral traditions, featuring masses, processions, and impressive folk dance performances that fill the streets with color and music.",
-            "history": "The devotion to the Nativity of Mary in Paruro dates back to the colonial era. The image of the Virgin is considered highly miraculous, attracting thousands of faithful. The festivities have evolved over the centuries, incorporating traditional dances like the 'Siqllas' and 'Qapaq Negro', becoming a symbol of the local cultural identity.",
-            "traditions": {
-                "tradition_1": "The main procession of the image of the Virgen de la Natividad through the streets of Paruro.",
-                "tradition_2": "The execution of various traditional dances ('Danzas Autóctonas'), each with its own costume and meaning.",
-                "tradition_3": "The 'Víspera' (Eve) on September 7th, marked by firecrackers and music, signaling the start of the central celebration.",
-                "tradition_4": "Masses and religious ceremonies held in the Temple of the Nativity."
-            },
-            "schedule": {
-                "day_1": "September 7",
-                "event_1_time": "Evening",
-                "event_1_desc": "Víspera (Eve) of the Feast with traditional music, fireworks, and the 'entrada' (entry) of the dance groups.",
-                "day_2": "September 8",
-                "event_2_time": "All Day",
-                "event_2_desc": "Central Day of the Feast. Solemn Mass and the main procession of the Virgen de la Natividad.",
-                "day_3": "September 9",
-                "event_3_time": "Morning/Afternoon",
-                "event_3_desc": "The 'Och' (farewell) of the Virgin and final ceremonies, including the culmination of the dance presentations."
-            }
-        },
-        "festividad-santaCecilia": {
-            "location_detail": "Temple and Parish of Nuestra Señora de la Almudena, Santiago district, Cusco.",
-            "description": "A celebration in honor of the patron saint of musicians, marked by special masses and musical tributes.",
-            "longDescription": "The Feast of Santa Cecilia, virgin and martyr, is commemorated in Cusco on November 22, although the liturgical acts and tributes usually begin on the eve (November 21). This is a day when the city's musicians—from orchestras, bands, choirs, and folkloric associations—gather to pay tribute to their patron saint. In the Temple of Almudena, which houses a very active parish community, this celebration includes a special mass for musicians, where their instruments are blessed, and thanks are given for the art of music that accompanies the faith.",
-            "history": "Saint Cecilia of Rome is a martyr from the early centuries of Christianity. Tradition holds that while musicians played at her wedding, she sang to God in her heart, which is why she is attributed the patronage of music. Her cult spread from Europe. In Cusco, the celebration integrated into the religious festivities, becoming a meeting point for musical guilds and academies seeking her protection and inspiration for their art.",
-            "traditions": {
-                "tradition_1": "Thanksgiving or Tribute Mass, dedicated to the musicians and their families.",
-                "tradition_2": "Blessing of musical instruments (organs, quenas, charangos, violins, etc.) during the Mass.",
-                "tradition_3": "Musical performances and serenades by bands and orchestras in front of the temple or in the atrium.",
-                "tradition_4": "Confraternity gatherings and special lunches organized by the musicians' guilds."
-            },
-            "schedule": {
-                "day_1": "November 21",
-                "event_1_time": "Evening",
-                "event_1_desc": "Vigil (Víspera) of Saint Cecilia. There may be serenades and initial musical demonstrations in honor of the Saint.",
-                "day_2": "November 22",
-                "event_2_time": "Morning",
-                "event_2_desc": "Central and solemn Mass in honor of Saint Cecilia, with the active participation of musicians and choirs.",
-                "event_3_time": "Afternoon",
-                "event_3_desc": "Tribute acts, musical presentations, and procession of the Saint's image (if there is one in that temple)."
-            }
-        },
-        "chumbivilcas-horses": {
-            "location_detail": "Chuñuhuiri Sector of the Hanansaya Orccoma Peasant Community, Santo Tomás district.",
-            "description": "Chumbivilcas National Horse Racing Contest, a central event held for the province's anniversary.",
-            "longDescription": "The contest is a fundamental activity to re-evaluate the equestrian hobby, protect the cultural richness, and the customary identity of the 'Land of the Qorilazos.' It attracts the participation of local breeders and studs, as well as those from various provinces in Cusco and neighboring southern Peruvian regions such as Puno, Arequipa, Apurímac, and Ayacucho. Horses compete in various categories, covering distances between 400 meters and 1000 meters.",
-            "history": "The equestrian tradition in Santo Tomás, as in all of Chumbivilcas, is intrinsically linked to the 'Qorilazo' (the Andean cowboy), being a manifestation of courage and skill on horseback. The 1st National Horse Racing Contest was held in 2023 for the 198th Anniversary of the Province's Political Creation. Additionally, interregional horse racing contests are held during Easter (April), and events have been announced for the Bicentennial (2025).",
-            "traditions": {
-                "tradition_1": "Horse races in the High Andean (horses without genetic improvement), Improved, and Open categories.",
-                "tradition_2": "Competition between studs (horses) coming from various provinces and regions of the southern part of the country.",
-                "tradition_3": "Revitalization of the local economy with the sale of gastronomy and local products by community members.",
-                "tradition_4": "Award ceremony for the winning owners by the Municipal Council."
-            },
-            "schedule": {
-                "day_1": "June 10 (2023 Reference)",
-                "event_1_time": "TBD",
-                "event_1_desc": "Start of the equestrian competition with qualifying races and participation of the studs.",
-                "day_2": "June 11 (2023 Reference)",
-                "event_2_time": "TBD",
-                "event_2_desc": "Continuation and culmination of the equestrian contest with the finals and the award ceremony in various categories."
-            }
-        },
-        "juramentacion-varayoc-chinchero": {
-            "location_detail": "Plaza de Armas, Chinchero",
-            "description": "Ancestral ceremony of the swearing-in of the new community authorities, the Varayocs.",
-            "longDescription": "The Swearing-in of the Varayocs is an ancestral ceremony that marks the beginning of the new year in Chinchero. During this event, the new community authorities (Varayocs or Alcaldes) receive the 'vara' or staff of office, a symbol of power and responsibility. It is a solemn act that combines Andean rituals with civic protocols, reflecting a unique system of local governance that has been preserved for centuries.",
-            "history": "The Varayoc system is a form of communal organization of pre-Hispanic origin that has survived through the colonial period to the present day. The 'vara' (staff) itself is a syncretic element, representing both the Christian cross and an Andean symbol of authority. This ceremony is a living testimony to the resilience and adaptability of Andean culture.",
-            "traditions": {
-                "tradition_1": "The solemn transfer of the 'vara' (staff of office) from the outgoing authorities to the new ones.",
-                "tradition_2": "Speeches in Quechua reaffirming commitment to the community.",
-                "tradition_3": "Accompaniment of traditional musicians playing 'pitos' (flutes) and 'tambores' (drums).",
-                "tradition_4": "A community celebration with typical food and dances to welcome the new authorities."
-            },
-            "schedule": {
-                "day_1": "January 1-2",
-                "event_1_time": "Morning",
-                "event_1_desc": "Main ceremony in the Plaza de Chinchero, with the transfer of the staffs of office.",
-                "event_2_time": "Afternoon",
-                "event_2_desc": "Community celebration with music and typical dances."
-            }
-        },
-        "carnaval-pichigua": {
-            "location_detail": "Main Square, Pichigua, Espinar",
-            "description": "The vibrant carnival of Pichigua with its 'Ch'ukos and Solteras'.",
-            "longDescription": "The 'Ch'ukos y Solteras' Cultural Carnival Festival in Pichigua is one of the most authentic celebrations in the province of Espinar. On Compadres' Day, the community dresses up in colorful costumes, with horsemen and dancers filling the square with music and joy. It is an expression of living culture, festive competition, and the tradition of the high Andean carnival.",
-            "history": "Carnivals in the province of Espinar are deeply rooted in the Andean worldview, mixing the celebration of the earth's fertility (Pachamama) with social rites and competitions between communities. The Pichigua festival is a clear example of how these traditions are kept alive, reaffirming local identity year after year.",
-            "traditions": {
-                "tradition_1": "Parade of 'Ch'ukos,' masked horsemen representing the spirit of the carnival.",
-                "tradition_2": "Dance competition between communities and neighborhoods.",
-                "tradition_3": "Playful games with water and powder, typical of carnival celebrations."
-            },
-            "schedule": {
-                "day_1": "February 4th",
-                "event_1_time": "Midday",
-                "event_1_desc": "Gathering in the Main Square of Pichigua for the start of the parade and dance contest."
-            }
-        },
-        "carnaval-colquepata": {
-            "location_detail": "Colquepata, Paucartambo",
-            "description": "The vibrant Colquepata carnival, famous for its 'Tinkuy' and colorful dance competitions.",
-            "longDescription": "The Colquepata Carnival is one of the most authentic celebrations in the province of Paucartambo. It combines the joy of carnival with the intensity of 'Tinkuy,' a ritual combat. For several days, communities compete in dances, music, and show their strength, culminating on Ash Wednesday with the 'Machu Tusuy'.",
-            "history": "This festival has deep pre-Hispanic roots, where the 'Tinkuy' served as a fertility rite and for social order. With the arrival of the Spanish, it merged with carnival celebrations, creating a unique cultural expression that reaffirms the identity and strength of the Paucartambo communities.",
-            "traditions": {
-                "tradition_1": "The 'Tinkuy Muruwiqsa,' a ritual combat between communities.",
-                "tradition_2": "Folk dance contests with elaborate costumes.",
-                "tradition_3": "The 'Machu Tusuy' or dance of the elders on Ash Wednesday.",
-                "tradition_4": "Playful games with water and powder, typical of Andean carnivals."
-            },
-            "schedule": {
-                "day_1": "Thursday, February 5th",
-                "event_1_time": "All day",
-                "event_1_desc": "Tinkuy Muruwiqsa in the communities of Sipascancha Alta and Chahuaytire.",
-                "day_2": "Thursday, February 12th",
-                "event_2_time": "All day",
-                "event_2_desc": "Carnival Puppets Contest.",
-                "day_3": "Sunday, February 15th",
-                "event_3_time": "All day",
-                "event_3_desc": "Grand Dance Contest.",
-                "day_4": "Tuesday, February 17th",
-                "event_4_time": "All day",
-                "event_4_desc": "Tinkuy Martes Suyo (Carnival Tuesday).",
-                "day_5": "Wednesday, February 18th",
-                "event_5_time": "All day",
-                "event_5_desc": "Machu Tusuy and end of the festival for Ash Wednesday."
-            }
-        },
-        "capuli-raymi": {
-            "location_detail": "Plaza de Armas of Cusipata, Quispicanchi",
-            "description": "A celebration honoring the 'capulí' (Andean cherry) and the cultural identity of the Cusipata district during the carnival season.",
-            "longDescription": "The 2026 Capulí Raymi is a vibrant festival organized by the Municipality of Cusipata to honor ancestral customs and the region's agricultural wealth. It brings together producers, artisans, and dancers in an event highlighted by local gastronomy and unique capulí-based products.",
-            "history": "This festivity stems from the agricultural traditions of Cusco's inter-Andean valleys, where the capulí harvest marks the beginning of the carnival season. It represents the land's abundance and the unity of the communities along the Vilcanota River basin.",
-            "traditions": {
-                "tradition_1": "Native carnival dance competitions featuring local and regional groups.",
-                "tradition_2": "Gastronomic festival featuring 'Tímpu Cusipateño' and the traditional 'frutillada' (strawberry cider).",
-                "tradition_3": "Exhibition of honey-based products, corn derivatives, dairy, and local handicrafts."
-            },
-            "schedule": {
-                "day_1": "Sunday, February 8th, 2026",
-                "event_1_time": "09:00 a.m.",
-                "event_1_desc": "Grand opening of the agro-industrial, craft, and gastronomic fair at the Plaza de Armas.",
-                "event_2_time": "11:00 a.m.",
-                "event_2_desc": "Cultural gathering and native carnival dance competition."
-            }
-        },
-        "carnavales-chinchero": {
-            "location_detail": "Parador Turistico, Chinchero",
-            "description": "Water, flour, and streamers at the grand finale of the Chinchero carnivals.",
-            "longDescription": "Traditional carnival grand finale, dance competitions, 'puchero' (traditional stew), and much more.",
-            "history": "A festivity with pre-Hispanic roots dedicated to single men and women.",
-            "traditions": {
-                "tradition_1": "Folk dance competitions with elaborate costumes.",
-                "tradition_2": "Games with water and flour, characteristic of the Andean carnival."
-            },
-            "schedule": {
-                "day_1": "Sunday, February 22nd",
-                "event_1_time": "All day",
-                "event_1_desc": "Dance competition, community and organization categories, and performances by folk artists"
+                "main_day": "April 5",
+                "sunrise_mass_time": "5:00 AM",
+                "sunrise_mass_desc": "Solemn Easter mass at the Cathedral and temples."
             }
         }
     }

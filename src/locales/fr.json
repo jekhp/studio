@@ -1,0 +1,160 @@
+
+{
+    "ui": {
+        "nav": {
+            "home": "Accueil",
+            "festivals": "Festivals",
+            "calendar": "Calendrier",
+            "map": "Carte",
+            "recommendations": "Recommandations"
+        },
+        "hero": {
+            "title": "Le Guide Ultime des Festivals de Cusco",
+            "subtitle": "Bienvenue sur la seule plateforme qui documente chaque célébration dans les 13 provinces de la région. De l'Inti Raymi aux trésors cachés de chaque district, votre aventure commence ici.",
+            "exploreButton": "Explorer les Festivals"
+        },
+        "featured": {
+            "title": "Festivals Vedettes",
+            "subtitle": "Découvrez les célébrations les plus emblématiques de la culture de Cusco."
+        },
+        "upcoming": {
+            "title": "Festivals à Venir",
+            "subtitle": "Ne les manquez pas ! Ces festivals arrivent bientôt."
+        },
+        "common": {
+            "viewDetails": "Voir Détails"
+        },
+        "calendar": {
+            "title": "Calendrier des Festivals de Cusco",
+            "subtitle": "Planifiez votre visite dans la capitale historique du Pérou. Cliquez sur une date pour voir les événements.",
+            "eventsOn": "Événements du {date}",
+            "festivalsOn": "Festivals le {date}",
+            "noFestivals": "Aucun Festival Programmé",
+            "tryAnotherDate": "Essayez une autre date pour voir les événements."
+        },
+        "festivalsPage": {
+            "title": "Festivals de Cusco",
+            "subtitle": "Plongez dans la culture et la tradition des Andes.",
+            "searchPlaceholder": "Rechercher par nom...",
+            "filterByMonth": "Filtrer par mois",
+            "allMonths": "Tous les mois",
+            "filterByCategory": "Filtrer par catégorie",
+            "allCategories": "Toutes les catégories",
+            "clearFilters": "Effacer",
+            "loadMore": "Charger Plus",
+            "noFestivalsFound": "Aucun festival trouvé."
+        },
+        "months": {
+            "january": "Janvier", "february": "Février", "march": "Mars", "april": "Avril", "may": "Mai", "june": "Juin",
+            "july": "Juillet", "august": "Août", "september": "Septembre", "october": "Octobre", "november": "Novembre", "december": "Décembre"
+        },
+        "categories": {
+            "religioso": "Religieux", "gastronomico": "Gastronomique", "tradicional": "Traditionnel", "espectaculo": "Spectacle",
+            "feria": "Foire", "conciertos": "Concerts", "artesania": "Artisanat", "andino": "Andin",
+            "historico": "Historique", "danza": "Danse", "peregrinacion": "Pèlerinage", "aventura": "Aventure",
+            "carreras": "Courses", "combate-ritual": "Combat Rituel", "agricola": "Agricole", "taurino": "Tauromachie",
+            "carnaval": "Carnaval", "moderno": "Moderne", "popular": "Populaire", "procesion": "Procession",
+            "espiritual": "Spirituel"
+        },
+        "recommendations": {
+            "title": "Trouveur de Festival",
+            "subtitle": "Répondez à quelques questions pour trouver votre festival idéal."
+        },
+        "quiz": {
+            "step": "Étape {step} sur {total}",
+            "vibe": {
+                "question": "Quelle ambiance recherchez-vous ?",
+                "options": {
+                    "espiritual": { "label": "Spirituel", "description": "Connexion, tradition et pèlerinage." },
+                    "fiesta": { "label": "Fête", "description": "Musique, danse et célébrations." },
+                    "cultural": { "label": "Culturel", "description": "Histoire et spectacles uniques." },
+                    "aventura": { "label": "Aventure", "description": "Exploration et défis." }
+                }
+            },
+            "season": {
+                "question": "À quel moment souhaitez-vous voyager ?",
+                "options": {
+                    "summer": { "label": "Été (Déc-Mar)", "description": "Saison des pluies." },
+                    "autumn": { "label": "Automne (Avr-Juin)", "description": "Saison sèche." },
+                    "winter": { "label": "Hiver (Juil-Sep)", "description": "Ensoleillé." },
+                    "spring": { "label": "Printemps (Oct-Nov)", "description": "Climat agréable." }
+                }
+            },
+            "company": {
+                "question": "Avec qui voyagez-vous ?",
+                "options": {
+                    "solo": { "label": "Seul", "description": "Une aventure personnelle." },
+                    "couple": { "label": "En Couple", "description": "Une escapade romantique." },
+                    "friends": { "label": "Entre Amis", "description": "Fun et expériences." },
+                    "family": { "label": "En Famille", "description": "Pour tous les âges." }
+                }
+            },
+            "results": {
+                "title": "Voici vos recommandations !",
+                "subtitle": "Basé sur vos réponses, vous aimerez ces festivals.",
+                "retakeButton": "Recommencer le Quiz",
+                "seeAllButton": "Voir tous les festivals"
+            }
+        },
+        "chat": {
+            "title": "Assistant Virtuel",
+            "description": "Bonjour ! Je suis là pour vous aider à explorer les festivals de Cusco."
+        },
+        "tabs": {
+            "schedule": "Programme",
+            "history": "Histoire",
+            "traditions": "Traditions",
+            "location": "Lieu"
+        }
+    },
+    "festivals": {
+        "lunes-santo-temblores": {
+            "location_detail": "Centre Historique, Cathédrale de Cusco.",
+            "description": "Procession du Seigneur des Tremblements de terre, patron protecteur de Cusco.",
+            "longDescription": "Le Lundi Saint est un jour d'immense dévotion à Cusco. Des milliers de fidèles accompagnent la procession du Seigneur des Tremblements de terre. Les dévots lancent des fleurs rouges de ñuychu sur l'image sacrée.",
+            "history": "En 1650, un séisme dévastait la ville jusqu'à ce que la procession du Christ arrête les tremblements.",
+            "traditions": {
+                "nyuychu_tradition": "Pluie de fleurs de Ñuychu : la fleur rouge sacrée symbolisant la dévotion.",
+                "blessing_tradition": "Bénédiction sur la Place d'Armes.",
+                "devotion_tradition": "Changement de tuniques brodées."
+            },
+            "schedule": {
+                "main_day": "30 Mars",
+                "procession_time": "14:00",
+                "procession_desc": "La procession parcourt le centre historique."
+            }
+        },
+        "viernes-santo-regional": {
+            "location_detail": "Places et foyers de toute la région de Cusco.",
+            "description": "Jour de jeûne, de réflexion et tradition des 12 plats.",
+            "longDescription": "Le Vendredi Saint à Cusco combine solennité et tradition familiale avec les 12 plats, sans viande rouge.",
+            "traditions": {
+                "twelve_dishes_tradition": "Les 12 Plats : soupes, plats de poisson (morue) et desserts traditionnels.",
+                "fasting_tradition": "Jeûne matinal jusqu'au déjeuner.",
+                "regional_procession": "Saint Sépulcre : Processions solennelles dans toute la région."
+            },
+            "schedule": {
+                "main_day": "3 Avril",
+                "lunch_time": "12:00",
+                "lunch_desc": "Déjeuner familial des 12 plats.",
+                "evening_procession_time": "18:00",
+                "evening_procession_desc": "Processions solennelles."
+            }
+        },
+        "pascua-resurreccion": {
+            "location_detail": "Cusco et districts.",
+            "description": "Messe de l'Aurore et célébration de la joie.",
+            "longDescription": "La Semaine Sainte se termine par la joie de la résurrection avec des messes matinales.",
+            "schedule": {
+                "main_day": "5 Avril",
+                "sunrise_mass_time": "05:00",
+                "sunrise_mass_desc": "Messe solennelle de résurrection."
+            }
+        },
+        "inti-raymi": {
+            "location_detail": "Qorikancha et Sacsayhuamán.",
+            "description": "Ancien festival inca du soleil.",
+            "longDescription": "L'Inti Raymi est la plus importante cérémonie inca en l'honneur du dieu soleil Inti."
+        }
+    }
+}
